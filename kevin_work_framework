@@ -1,0 +1,15 @@
+NOTES
+
+residue data:: --> run mcce
+will have to use the automater for mcce. must check whether fort36 is produced using kamrans code
+fort36 follows this framework
+
+
+PH  ENERGY |    average val for each ph produced by mcce. This wil be a method in the class that will be created
+0   43.454 |	i will attempt to inherit kamrans class in python and use its methods
+0   44.545 |	with the average fort36's, the ph energi	es for all residues at their particular ph will be added 
+0   44.545 |	
+1   43.880 |	REQUIREMENTS TO RUN MCCE
+1   44.540 |    run.prm --> set all to t all params; prot.pdb will represent the residues indivually.
+1   45.311 |
+...        |
