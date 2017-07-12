@@ -42,7 +42,7 @@ class MCCEParams(object):
       Should there be an option to initialize with quick or full (?)
     """
 
-    def __init__(self, mcce_directory, calculation_type="quick"):
+    def __init__(self, mcce_directory, calculation_type="default"):
         """Initialize parameters for an MCCE calculation.
         """
 
@@ -51,7 +51,7 @@ class MCCEParams(object):
         if calculation_type not in ["quick", "full", "default"]:
             sys.exit(
             "Unrecognized MCCE calculation type, allowed values are: quick, full or default.")
-        #self.mcce_params = self.load_params()
+        self.mcce_params = self.load_params()
 
     def load_params(self):
         """Loads parameters for MCCE calculation from run.prm file in MCCE installation directory.
@@ -180,7 +180,7 @@ def automated_run(input_dir, destination_dir, mcce_dir, local=False):
         os.chdir(output_dir)
         prm = MCCEParams(mcce_dir)
         prm.edit_parameters(DO_PREMCCE="t", DO_ROTAMERS="t",
-                            DO_ENERGY="t", DO_MONTE="f")
+                            DO_ENERGY="t", DO_MONTE="t")
         prm.write_runprm("")
         prm.write_submitsh("", run_name=pdb_file[0:-4])
         call("qsub submit.sh", shell=True)
@@ -219,5 +219,5 @@ def main():
 def entry_point():
     main()
 
-# if __name__ == '__main__':
-#     entry_point()
+if __name__ == '__main__':
+	entry_point()

@@ -23,9 +23,9 @@ class res_energies(object):
 	be stored in a master_fort36.txt file. 
 	'''
 	
-	def __init__(self, protein_data_file):
+	def __init__(self, protein_data_file, automate_object):
 		self.original = protein_data_file # will be required in later methods
-		#self.AMC = automate_object # reference to the automating class
+		self.AMC = automate_object # reference to the automating class
 
 	def remove_comments(self):
 		'''Grabs a pdb file and analyzes it, removing all comments and producing
@@ -61,7 +61,6 @@ class res_energies(object):
 		Utilises a small utility function that is located at the end of the 
 		class definition.
 		'''
-		self.remove_comments()
 		self.data = np.genfromtxt(self.nocmts_filename, dtype = int, usecols = (5))
 		self.cutoff_list = [0] # initialize the cutoff list with the first line
 
@@ -79,21 +78,25 @@ class res_energies(object):
 
 		# new method using python inbuilt open function
 		import os.path
-		newpath = "generated_residues"
-		if not os.path.exists(newpath): # checks whether existing dir present
-			os.makedirs(newpath)
-		save_path = "generated_residues"
+		master_folder = "generated_residues"
+		if not os.path.exists(master_folder): # checks whether existing dir present
+			os.makedirs(master_folder)
 
 		lines = open(self.nocmts_filename, 'r').readlines()
 		for i in range(len(self.cutoff_list) - 1):
+			subfolder = master_folder + "/res" + str(i+1) + "/"
+			if not os.path.exists(subfolder):
+				os.makedirs(subfolder)
+			#save_path = subfolder
 			outputData = lines[self.cutoff_list[i]:self.cutoff_list[i+1]]
 
-			file_name = os.path.join(save_path, 'res' + str(i+1) + '.pdb')
+			file_name = os.path.join(subfolder, 'res' + str(i+1) + '.pdb')
 			produced_pdb = open(file_name, 'w')
 			#   produced_pdb = open('res' + str(i+1) + '.pdb', 'w') 	   
 			produced_pdb.write(''.join(outputData))
 			produced_pdb.close()
+			# here is a test comment to see how github works
+			# this is also a test comment to see how github works
 
-#	def do_automation(self):
-		
+	
 		
