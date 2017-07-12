@@ -95,6 +95,8 @@ class res_energies(object):
 			#   produced_pdb = open('res' + str(i+1) + '.pdb', 'w') 	   
 			produced_pdb.write(''.join(outputData))
 			produced_pdb.close()
+			# here is a test comment to see how github works
+			# this is also a test comment to see how github works
 
 	
 		
