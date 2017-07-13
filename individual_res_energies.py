@@ -127,7 +127,7 @@ class res_energies(object):
 	                                vals = AverE_df_by_pH.values.reshape(len(AverE_df_by_pH.values), 1)
         	                        energies = energies + vals
 
-	        frame_to_write = pd.DataFrame(energies, index = np.linspace(0,14,15))
+	        frame_to_write = pd.DataFrame(energies, index = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 		frame_to_write.index.name = 'pH'
 	        frame_to_write.columns = ['Energy']
 	        frame_to_write.to_csv(finalresult_location)
