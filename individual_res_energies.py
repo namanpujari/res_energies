@@ -93,7 +93,7 @@ class res_energies(object):
 			#   produced_pdb = open('res' + str(i+1) + '.pdb', 'w') 	   
 			produced_pdb.write(''.join(outputData))
 			produced_pdb.close()
+	
 
-#	def do_automation(self):
 		
 		
