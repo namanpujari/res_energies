@@ -23,6 +23,8 @@ import re
 
 from collections import OrderedDict
 from argparse import ArgumentParser
+sys.dont_write_bytecode = True
+
 
 
 class MCCEParams(object):

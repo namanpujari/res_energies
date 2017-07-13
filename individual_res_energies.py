@@ -1,5 +1,8 @@
 import numpy as np 
 import os.path
+import sys
+import pandas as pd
+import numpy as np
 
 class res_energies(object):
 	''' Class that calculated the energies of individial residues of a given protein
@@ -24,6 +27,7 @@ class res_energies(object):
 	'''
 	
 	def __init__(self, protein_data_file):
+		sys.dont_write_bytecode = True
 		self.original = protein_data_file # will be required in later methods
 		#self.AMC = automate_object # reference to the automating class
 
@@ -52,7 +56,7 @@ class res_energies(object):
 		out.write(''.join(write_data))
 		out.close()
 
-	def generate_res_files(self):
+	def generate_res_files(self, masterfolder_destination):
 		''' Enumerates self.cutoff_list, which is used in later methods to 
 			generate res_x.pdb files
 
@@ -79,10 +83,10 @@ class res_energies(object):
 
 		# new method using python inbuilt open function
 		import os.path
-		newpath = "generated_residues"
+		newpath = masterfolder_destination
 		if not os.path.exists(newpath): # checks whether existing dir present
 			os.makedirs(newpath)
-		save_path = "generated_residues"
+		save_path = masterfolder_destination
 
 		lines = open(self.nocmts_filename, 'r').readlines()
 		for i in range(len(self.cutoff_list) - 1):
@@ -94,6 +98,39 @@ class res_energies(object):
 			produced_pdb.write(''.join(outputData))
 			produced_pdb.close()
 	
+	def analyze_fort36(self, mcceres_location, finalresult_location):
+        	'''Goes into the results folder and extracts data
+        	from fort.36 files for each residue (if present).
+	        '''
+	        masterfolder = mcceres_location  # preferably absolute path
+	        fort36_list = []
+	        subfolder_list = os.listdir(masterfolder) # this name will
+	        # be changed according to the argument given by the
+	        # user
+	        energies = np.zeros((15, 1))
+	        for subfolder_index in range(3):
+	                subfolder_destination = masterfolder + '/' + subfolder_list[subfolder_index]
+	                file_list = os.listdir(subfolder_destination)
+	                for file_index in range(len(file_list)):
+	                        if(file_list[file_index] == 'fort.36'):
+	                                try:
+	                                        df = pd.read_csv(subfolder_destination + '/' + file_list[file_index],
+	                                                sep="\s+", header=None, usecols=[2, 6, 9],
+	                                                names=['pH', 'E_type', 'E'] )
+	                                except:
+	                                        print( "Could not read the input \
+	                                                file: " + file_list[file_index])
+	
+	                                AverE_df = df[df['E_type'] == 'Ave.']
+	                                AverE_df_by_pH = AverE_df.groupby(['pH'], sort=False).mean().E
+	                                #ph_index = AverE_df_by_pH.index
+	                                vals = AverE_df_by_pH.values.reshape(len(AverE_df_by_pH.values), 1)
+        	                        energies = energies + vals
+
+	        frame_to_write = pd.DataFrame(energies, index = np.linspace(0,14,15))
+		frame_to_write.index.name = 'pH'
+	        frame_to_write.columns = ['Energy']
+	        frame_to_write.to_csv(finalresult_location)
 
 		
 		
