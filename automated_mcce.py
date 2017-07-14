@@ -169,7 +169,7 @@ def automated_run(input_dir, destination_dir, mcce_dir, local=False):
         input_dir) if pdb_file.endswith(".pdb")]
     for pdb_file in input_pdb_files:
         print("Preparing input files for: ", pdb_file[0:-4])
-        output_dir = destination_dir + "/mcee_results_" + pdb_file[0:-4]
+        output_dir = destination_dir + "/mcce_results_" + pdb_file[0:-4]
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
         output_dir = output_dir.replace("//", "/")

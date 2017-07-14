@@ -1,6 +1,6 @@
 from individual_res_energies import *
 from automated_mcce import * 
-
+import sys
 
 def gather_args():
 	'''Parses arguments to run the program
@@ -21,8 +21,6 @@ def gather_args():
 				automation will be stored''')				
 	required.add_argument('-e', '--mcce_directory', required = True, type=str,
                           help='''path to the directory where MCCE is installed.''')
-	required.add_argument('-result', '--final_result_csv', required = True, type = str,
-			 	help = '''Absolute path of result csv, including name of csv in .csv format''')
 	optional = parser.add_argument_group('Optional arguments')
 	optional.add_argument('-s', '--submit_job', required = False, type = bool, help =
 				 '''Flag whether to submit calculation for processing through
@@ -32,13 +30,13 @@ def gather_args():
 	return args
 
 if __name__ == '__main__':
+	sys.dont_write_bytecode = True
 	argument = gather_args()
 	R = res_energies(argument.pdb_location)
 	R.generate_res_files(argument.res_input_directory)
 	automated_run(argument.res_input_directory, 
 			argument.automation_results_directory,
 			argument.mcce_directory)
-	R.analyze_fort36(argument.automation_results_directory,
-			argument.final_result_csv)
+	R.analyze_fort36(argument.automation_results_directory)
 
 	

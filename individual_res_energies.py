@@ -26,10 +26,11 @@ class res_energies(object):
 	be stored in a master_fort36.txt file. 
 	'''
 	
-	def __init__(self, protein_data_file):
+	def __init__(self, protein_data_file, output_pathname):
 		sys.dont_write_bytecode = True
 		self.original = protein_data_file # will be required in later methods
 		#self.AMC = automate_object # reference to the automating class
+		self.out_folder = output_pathname
 
 	def remove_comments(self):
 		'''Grabs a pdb file and analyzes it, removing all comments and producing
@@ -48,8 +49,12 @@ class res_energies(object):
 		for i in range(len(file)):
 			if(words[i][0] == 'ATOM'):
 				is_atom.append(i)
+		
+		if not os.path.exists(self.out_folder):
+			os.makedirs(self.out_folder)
 
-		self.nocmts_filename = 'data_no_comments.pdb'
+
+		self.nocmts_filename = self.out_folder + '/data_no_comments.pdb'
 		# saving pdb without comments
 		write_data = file[is_atom[0]:(is_atom[-1] + 1)]
 		out = open(self.nocmts_filename, 'w')
@@ -77,12 +82,7 @@ class res_energies(object):
 				self.cutoff_list.append(i+1)
 		self.cutoff_list.append(len(self.data))
 
-		# using the cutoff list, a folder called "Generated Residues" is created.
-		# This hold all of the individual resX.pdb files which will be later
-		# processed using MCCE.
-
 		# new method using python inbuilt open function
-		import os.path
 		newpath = masterfolder_destination
 		if not os.path.exists(newpath): # checks whether existing dir present
 			os.makedirs(newpath)
@@ -98,7 +98,7 @@ class res_energies(object):
 			produced_pdb.write(''.join(outputData))
 			produced_pdb.close()
 	
-	def analyze_fort36(self, mcceres_location, finalresult_location):
+	def analyze_fort36(self, mcceres_location)
         	'''Goes into the results folder and extracts data
         	from fort.36 files for each residue (if present).
 	        '''
@@ -123,14 +123,17 @@ class res_energies(object):
 	
 	                                AverE_df = df[df['E_type'] == 'Ave.']
 	                                AverE_df_by_pH = AverE_df.groupby(['pH'], sort=False).mean().E
-	                                #ph_index = AverE_df_by_pH.index
+					df_savepath = self.out_folder + '/aveEnergies_for_each_residue'
+					if not os.path.exists(df_savepath):
+						os.makedirs(df_savepath)
+					AverE_df_by_pH.to_csv(df_savepath + '/aveEnergy_res' + subfolder_index + '.csv')
 	                                vals = AverE_df_by_pH.values.reshape(len(AverE_df_by_pH.values), 1)
         	                        energies = energies + vals
 
 	        frame_to_write = pd.DataFrame(energies, index = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 		frame_to_write.index.name = 'pH'
 	        frame_to_write.columns = ['Energy']
-	        frame_to_write.to_csv(finalresult_location)
+	        frame_to_write.to_csv(self.out_folder + '/final_result.csv')
 
 		
 		
