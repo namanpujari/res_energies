@@ -41,11 +41,18 @@ Optional arguments:
 Please note that `SUBMIT_JOB` is not implemented as of yet.
 
 #### What it does
+---
 
 1. Grabs the targeted pdb, and strips it of comments (basically any line not classified) as `ATOM` or `HETATM`.
 2. Using a splitting algorithm defined in `individual_res_energies.py` it produces all the residues as their own pdb files 
 3. Using `automated_mcce.py`, it runs MCCE on each, individual residue.
 4. Analyses all the fort.36 (wherever present) for all residue and finds average at each pH. Sums the values for all residues and provides a neat .csv for the final result. Csv files are also produced for each individual residues average energie for reference. 
+
+#### Example
+---
+An example, and how the `generated_residue`, `mcce_results`, and `analysis` folders were created in this repository. 
+
+`python main.py -pdb /home/naman/res_energies/gfp46.pdb -i /home/naman/res_energies/generated_residues -d /home/naman/res_energies/mcce_results -e /home/mcce/mcce3.5/ -out /home/naman/res_energies/analysis`
 
 	
 

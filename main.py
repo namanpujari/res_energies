@@ -1,6 +1,7 @@
 from individual_res_energies import *
 from automated_mcce import * 
 import sys
+import time
 
 def gather_args():
 	'''Parses arguments to run the program
@@ -39,6 +40,7 @@ if __name__ == '__main__':
 	automated_run(argument.res_input_directory, 
 			argument.automation_results_directory,
 			argument.mcce_directory)
+	time.sleep(30)
 	R.analyze_fort36(argument.automation_results_directory)
 
 	
