@@ -14,14 +14,14 @@ def gather_args():
 	required.add_argument('-pdb', '--pdb_location', required = True, type = str,
 				help = '''Location where pdb (to be analysed is stored''')
 	required.add_argument('-i', '--res_input_directory', required = True,
-				 type = str, help = '''the path where all
+				 type = str, help = '''The path where all
 				 residue snippets will be stored. This is also
 				 the input directory for the automation process.''')
 	required.add_argument('-d', '--automation_results_directory', required = True, 
 				type=str, help = '''Path where all the results of
 				automation will be stored''')				
 	required.add_argument('-e', '--mcce_directory', required = True, type=str,
-                          help='''path to the directory where MCCE is installed.''')
+                          help='''Path to the directory where MCCE is installed.''')
 	required.add_argument('-out', '--output_directory', required = True, type = str,
 				help = '''Location where analysis will be stored''')
 	optional = parser.add_argument_group('Optional arguments')
