@@ -47,7 +47,7 @@ class res_energies(object):
 		i = 0 # iterator along lines
 		is_atom = []
 		for i in range(len(file)):
-			if(words[i][0] == 'ATOM'):
+			if(words[i][0] == 'ATOM' or words[i][0] == 'HETATM'):
 				is_atom.append(i)
 		
 		if not os.path.exists(self.out_folder):
@@ -56,7 +56,8 @@ class res_energies(object):
 
 		self.nocmts_filename = self.out_folder + '/data_no_comments.pdb'
 		# saving pdb without comments
-		write_data = file[is_atom[0]:(is_atom[-1] + 1)]
+		#write_data = file[is_atom[0]:(is_atom[-1] + 1)]
+		write_data = [file[write] for write in is_atom]
 		out = open(self.nocmts_filename, 'w')
 		out.write(''.join(write_data))
 		out.close()
@@ -98,17 +99,16 @@ class res_energies(object):
 			produced_pdb.write(''.join(outputData))
 			produced_pdb.close()
 	
-	def analyze_fort36(self, mcceres_location)
+	def analyze_fort36(self, mcceres_location):
         	'''Goes into the results folder and extracts data
         	from fort.36 files for each residue (if present).
 	        '''
 	        masterfolder = mcceres_location  # preferably absolute path
-	        fort36_list = []
 	        subfolder_list = os.listdir(masterfolder) # this name will
 	        # be changed according to the argument given by the
 	        # user
 	        energies = np.zeros((15, 1))
-	        for subfolder_index in range(3):
+	        for subfolder_index in range(len(subfolder_list)):
 	                subfolder_destination = masterfolder + '/' + subfolder_list[subfolder_index]
 	                file_list = os.listdir(subfolder_destination)
 	                for file_index in range(len(file_list)):
@@ -123,17 +123,22 @@ class res_energies(object):
 	
 	                                AverE_df = df[df['E_type'] == 'Ave.']
 	                                AverE_df_by_pH = AverE_df.groupby(['pH'], sort=False).mean().E
-					df_savepath = self.out_folder + '/aveEnergies_for_each_residue'
+					df_savepath = self.out_folder +  '/aveEnergies_for_each_residue/'
 					if not os.path.exists(df_savepath):
 						os.makedirs(df_savepath)
-					AverE_df_by_pH.to_csv(df_savepath + '/aveEnergy_res' + subfolder_index + '.csv')
+					file_name = os.path.join(df_savepath, 'aveEnergy_res' + str(subfolder_index+1) + '.csv')
+					print('>>>>>>>>>>saved    ' + str(file_name))
+					AverE_df_by_pH.to_csv(file_name)
 	                                vals = AverE_df_by_pH.values.reshape(len(AverE_df_by_pH.values), 1)
         	                        energies = energies + vals
-
+			
+	
 	        frame_to_write = pd.DataFrame(energies, index = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 		frame_to_write.index.name = 'pH'
 	        frame_to_write.columns = ['Energy']
-	        frame_to_write.to_csv(self.out_folder + '/final_result.csv')
+		res_file_name = os.path.join(self.out_folder, 'final_result.csv')
+	        frame_to_write.to_csv(res_file_name)
+		print('>>>>>>>>>>>>saved      results')
 
 		
 		

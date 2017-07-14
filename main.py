@@ -21,6 +21,8 @@ def gather_args():
 				automation will be stored''')				
 	required.add_argument('-e', '--mcce_directory', required = True, type=str,
                           help='''path to the directory where MCCE is installed.''')
+	required.add_argument('-out', '--output_directory', required = True, type = str,
+				help = '''Location where analysis will be stored''')
 	optional = parser.add_argument_group('Optional arguments')
 	optional.add_argument('-s', '--submit_job', required = False, type = bool, help =
 				 '''Flag whether to submit calculation for processing through
@@ -32,7 +34,7 @@ def gather_args():
 if __name__ == '__main__':
 	sys.dont_write_bytecode = True
 	argument = gather_args()
-	R = res_energies(argument.pdb_location)
+	R = res_energies(argument.pdb_location, argument.output_directory)
 	R.generate_res_files(argument.res_input_directory)
 	automated_run(argument.res_input_directory, 
 			argument.automation_results_directory,
