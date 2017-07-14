@@ -1,0 +1,196 @@
+
+pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   0.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   0.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  0.00 ILE01A0089_001 occ=0.000 trial=     694/    2000 t
+  0.00 ILE01A0089_002 occ=1.000 trial=     639/    2000 t
+  0.00 ILE01A0089_003 occ=0.000 trial=     667/    2000 t
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  1.00 ILE01A0089_001 occ=0.000 trial=     332/    1000 t
+  1.00 ILE01A0089_002 occ=1.000 trial=     353/    1000 t
+  1.00 ILE01A0089_003 occ=0.000 trial=     315/    1000 t
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  2.00 ILE01A0089_001 occ=0.001 trial=    3305/   10000 t
+  2.00 ILE01A0089_002 occ=0.999 trial=    3280/   10000 t
+  2.00 ILE01A0089_003 occ=0.000 trial=    3415/   10000 t
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  2.00 ILE01A0089_001 occ=0.002 trial=    8101/   16000 t
+  2.00 ILE01A0089_002 occ=0.998 trial=    7899/   16000 t
+  2.00 ILE01A0089_003 occ=0.000 trial=       0/   16000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  2.00 ILE01A0089_001 occ=0.001 trial=    3554/    7000 t
+  2.00 ILE01A0089_002 occ=0.999 trial=    3446/    7000 t
+  2.00 ILE01A0089_003 occ=0.000 trial=       0/    7000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  3.00 ILE01A0089_001 occ=0.002 trial=    5714/   17000 t
+  3.00 ILE01A0089_002 occ=0.998 trial=    5671/   17000 t
+  3.00 ILE01A0089_003 occ=0.000 trial=    5615/   17000 t
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  3.00 ILE01A0089_001 occ=0.001 trial=    1994/    4000 t
+  3.00 ILE01A0089_002 occ=0.999 trial=    2006/    4000 t
+  3.00 ILE01A0089_003 occ=0.000 trial=       0/    4000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  4.00 ILE01A0089_001 occ=0.000 trial=    2028/    6000 t
+  4.00 ILE01A0089_002 occ=0.999 trial=    2061/    6000 t
+  4.00 ILE01A0089_003 occ=0.000 trial=    1911/    6000 t
+
+pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   5.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  5.00 ILE01A0089_001 occ=0.001 trial=    1971/    6000 t
+  5.00 ILE01A0089_002 occ=0.999 trial=    1990/    6000 t
+  5.00 ILE01A0089_003 occ=0.000 trial=    2039/    6000 t
+
+pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  6.00 ILE01A0089_001 occ=0.001 trial=    1993/    6000 t
+  6.00 ILE01A0089_002 occ=0.999 trial=    2092/    6000 t
+  6.00 ILE01A0089_003 occ=0.000 trial=    1915/    6000 t
+
+pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -5.68 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  7.00 ILE01A0089_001 occ=0.003 trial=    1689/    5000 t
+  7.00 ILE01A0089_002 occ=0.997 trial=    1640/    5000 t
+  7.00 ILE01A0089_003 occ=0.000 trial=    1671/    5000 t
+
+pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  7.00 ILE01A0089_001 occ=0.001 trial=    4031/    8000 t
+  7.00 ILE01A0089_002 occ=0.999 trial=    3969/    8000 t
+  7.00 ILE01A0089_003 occ=0.000 trial=       0/    8000 f
+
+pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  7.00 ILE01A0089_001 occ=0.001 trial=    3047/    6000 t
+  7.00 ILE01A0089_002 occ=0.999 trial=    2953/    6000 t
+  7.00 ILE01A0089_003 occ=0.000 trial=       0/    6000 f
+
+pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  7.00 ILE01A0089_001 occ=0.001 trial=     505/    1000 t
+  7.00 ILE01A0089_002 occ=0.999 trial=     495/    1000 t
+  7.00 ILE01A0089_003 occ=0.000 trial=       0/    1000 f
+
+pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  7.00 ILE01A0089_001 occ=0.001 trial=    3502/    7000 t
+  7.00 ILE01A0089_002 occ=0.999 trial=    3498/    7000 t
+  7.00 ILE01A0089_003 occ=0.000 trial=       0/    7000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  8.00 ILE01A0089_001 occ=0.001 trial=    4292/   13000 t
+  8.00 ILE01A0089_002 occ=0.999 trial=    4245/   13000 t
+  8.00 ILE01A0089_003 occ=0.000 trial=    4463/   13000 t
+
+pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  8.00 ILE01A0089_001 occ=0.000 trial=    2939/    6000 t
+  8.00 ILE01A0089_002 occ=1.000 trial=    3061/    6000 t
+  8.00 ILE01A0089_003 occ=0.000 trial=       0/    6000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -5.68 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  9.00 ILE01A0089_001 occ=0.002 trial=    3230/   10000 t
+  9.00 ILE01A0089_002 occ=0.998 trial=    3402/   10000 t
+  9.00 ILE01A0089_003 occ=0.000 trial=    3368/   10000 t
+
+pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -5.68 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  9.00 ILE01A0089_001 occ=0.003 trial=    4489/    9000 t
+  9.00 ILE01A0089_002 occ=0.997 trial=    4511/    9000 t
+  9.00 ILE01A0089_003 occ=0.000 trial=       0/    9000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+  9.00 ILE01A0089_001 occ=0.000 trial=    1004/    2000 t
+  9.00 ILE01A0089_002 occ=1.000 trial=     996/    2000 t
+  9.00 ILE01A0089_003 occ=0.000 trial=       0/    2000 f
+
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+ 10.00 ILE01A0089_001 occ=0.001 trial=    1279/    4000 t
+ 10.00 ILE01A0089_002 occ=0.999 trial=    1340/    4000 t
+ 10.00 ILE01A0089_003 occ=0.000 trial=    1381/    4000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+ 11.00 ILE01A0089_001 occ=0.000 trial=     680/    2000 t
+ 11.00 ILE01A0089_002 occ=1.000 trial=     661/    2000 t
+ 11.00 ILE01A0089_003 occ=0.000 trial=     659/    2000 t
+
+pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+ 12.00 ILE01A0089_001 occ=0.000 trial=     336/    1000 t
+ 12.00 ILE01A0089_002 occ=1.000 trial=     342/    1000 t
+ 12.00 ILE01A0089_003 occ=0.000 trial=     322/    1000 t
+
+pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =    -5.68 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+ 13.00 ILE01A0089_001 occ=0.002 trial=    5309/   16000 t
+ 13.00 ILE01A0089_002 occ=0.997 trial=    5360/   16000 t
+ 13.00 ILE01A0089_003 occ=0.000 trial=    5331/   16000 t
+
+pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =    -5.68 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+ 13.00 ILE01A0089_001 occ=0.003 trial=    6432/   13000 t
+ 13.00 ILE01A0089_002 occ=0.997 trial=    6568/   13000 t
+ 13.00 ILE01A0089_003 occ=0.000 trial=       0/   13000 f
+
+pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+ 13.00 ILE01A0089_001 occ=0.001 trial=    2492/    5000 t
+ 13.00 ILE01A0089_002 occ=0.999 trial=    2508/    5000 t
+ 13.00 ILE01A0089_003 occ=0.000 trial=       0/    5000 f
+
+pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+ 13.00 ILE01A0089_001 occ=0.000 trial=     956/    2000 t
+ 13.00 ILE01A0089_002 occ=1.000 trial=    1044/    2000 t
+ 13.00 ILE01A0089_003 occ=0.000 trial=       0/    2000 f
+
+pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =    -5.69 Kcal/mol
+pH =  14.00 Eh =   0.00, Min. Energy =    -5.69 Kcal/mol
+ 14.00 ILE01A0089_001 occ=0.000 trial=     648/    2000 t
+ 14.00 ILE01A0089_002 occ=1.000 trial=     662/    2000 t
+ 14.00 ILE01A0089_003 occ=0.000 trial=     690/    2000 t

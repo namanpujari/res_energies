@@ -1,0 +1,15 @@
+   Error! get_connect12(): connectivity of atom " N   CYS A0071" is not complete:
+
+          get_connect12(): atom  C   of residue i-1 is not found 
+
+   Error! get_connect12(): connectivity of atom " C   CYS A0071" is not complete:
+
+          get_connect12(): atom  N   of residue i+1 is not found 
+
+TORSION  CYSBK  H    N    CA   C    f        0.0         2    180.00
+CHARGE   CYSBK  HA      0.000
+CHARGE   CYS01  CB      0.000
+CHARGE   CYS01 1HB      0.000
+CHARGE   CYS01 2HB      0.000
+CHARGE   CYS-1 1HB      0.000
+CHARGE   CYS-1 2HB      0.000

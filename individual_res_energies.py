@@ -124,10 +124,12 @@ class res_energies(object):
 	                                AverE_df = df[df['E_type'] == 'Ave.']
 	                                AverE_df_by_pH = AverE_df.groupby(['pH'], sort=False).mean().E
 					df_savepath = self.out_folder +  '/aveEnergies_for_each_residue/'
+
 					if not os.path.exists(df_savepath):
 						os.makedirs(df_savepath)
+
 					file_name = os.path.join(df_savepath, 'aveEnergy_res' + str(subfolder_index+1) + '.csv')
-					print('>>>>>>>>>>saved    ' + str(file_name))
+					#print('>>>>>>>>>>saved    ' + str(file_name))
 					AverE_df_by_pH.to_csv(file_name)
 	                                vals = AverE_df_by_pH.values.reshape(len(AverE_df_by_pH.values), 1)
         	                        energies = energies + vals
@@ -138,7 +140,7 @@ class res_energies(object):
 	        frame_to_write.columns = ['Energy']
 		res_file_name = os.path.join(self.out_folder, 'final_result.csv')
 	        frame_to_write.to_csv(res_file_name)
-		print('>>>>>>>>>>>>saved      results')
+		#print('>>>>>>>>>>>>saved      results')
 
 		
 		
