@@ -10,7 +10,8 @@ def gather_args():
 	Inspired by the definition of parse_args() in automated_mcce.py
 	'''
 	parser = ArgumentParser(description='''Run MCCE on multiple PDB files''')
-	required = parser.add_argument_group('''Required arguments (please write absolute paths for all locations''')
+	required = parser.add_argument_group('''Required arguments (please write absolute
+						paths for all locations''')
 	required.add_argument('-pdb', '--pdb_location', required = True, type = str,
 				help = '''Location where pdb (to be analysed is stored''')
 	required.add_argument('-i', '--res_input_directory', required = True,
@@ -33,14 +34,12 @@ def gather_args():
 	return args
 
 if __name__ == '__main__':
-	sys.dont_write_bytecode = True
 	argument = gather_args()
 	R = res_energies(argument.pdb_location, argument.output_directory)
 	R.generate_res_files(argument.res_input_directory)
 	automated_run(argument.res_input_directory, 
 			argument.automation_results_directory,
 			argument.mcce_directory)
-	time.sleep(30)
 	R.analyze_fort36(argument.automation_results_directory)
 
 	

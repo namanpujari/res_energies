@@ -113,34 +113,44 @@ class res_energies(object):
 	                file_list = os.listdir(subfolder_destination)
 	                for file_index in range(len(file_list)):
 	                        if(file_list[file_index] == 'fort.36'):
-	                                try:
-	                                        df = pd.read_csv(subfolder_destination + '/' + file_list[file_index],
-	                                                sep="\s+", header=None, usecols=[2, 6, 9],
-	                                                names=['pH', 'E_type', 'E'] )
-	                                except:
-	                                        print( "Could not read the input \
-	                                                file: " + file_list[file_index])
+					
+					#df = pd.read_csv(subfolder_destination + '/' + file_list[file_index],
+					#	sep = "\s+", header = None, usecols = [2, 6, 9],
+					#	names = ['pH', 'E_type', 'E'])
+
+	                                #AverE_df = df[df['E_type'] == 'Ave.']
+	                                #AverE_df_by_pH = AverE_df.groupby(['pH'], sort=False).mean().E
+					cont = False
+					while(cont == False):
+						print('>>>>>>>>>reading res' + str(subfolder_index + 1))
+						df = pd.read_csv(subfolder_destination + '/' + file_list[file_index],
+							sep = "\s+", header = None, usecols = [2, 6, 9],
+							names = ['pH', 'E_type', 'E'])
 	
-	                                AverE_df = df[df['E_type'] == 'Ave.']
-	                                AverE_df_by_pH = AverE_df.groupby(['pH'], sort=False).mean().E
+		                                AverE_df = df[df['E_type'] == 'Ave.']
+	        	                        AverE_df_by_pH = AverE_df.groupby(['pH'], sort=False).mean().E
+	
+						vals = AverE_df_by_pH.values.reshape(len(AverE_df_by_pH.values), 1)
+						if(vals.shape[0] == 15): 
+							energies = energies + vals
+							print('>>>>>>>>PASSED!')
+							cont = True
+                                       
 					df_savepath = self.out_folder +  '/aveEnergies_for_each_residue/'
 
 					if not os.path.exists(df_savepath):
-						os.makedirs(df_savepath)
+                                                os.makedirs(df_savepath)
 
-					file_name = os.path.join(df_savepath, 'aveEnergy_res' + str(subfolder_index+1) + '.csv')
-					#print('>>>>>>>>>>saved    ' + str(file_name))
-					AverE_df_by_pH.to_csv(file_name)
-	                                vals = AverE_df_by_pH.values.reshape(len(AverE_df_by_pH.values), 1)
-        	                        energies = energies + vals
-			
-	
+                                        file_name = os.path.join(df_savepath, 'aveEnergy_res' + str(subfolder_index+1) + '.csv')
+                                        #print('>>>>>>>>>>saved    ' + str(file_name))
+                                        AverE_df_by_pH.to_csv(file_name)
+
 	        frame_to_write = pd.DataFrame(energies, index = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 		frame_to_write.index.name = 'pH'
 	        frame_to_write.columns = ['Energy']
 		res_file_name = os.path.join(self.out_folder, 'final_result.csv')
 	        frame_to_write.to_csv(res_file_name)
 		#print('>>>>>>>>>>>>saved      results')
-
-		
+	
+			
 		
