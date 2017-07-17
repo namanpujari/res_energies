@@ -5000,26 +5000,24 @@
    Repacking 4998: 0
    Repacking 4999: 0
    Relaxation Cycle =   1, n_relaxed =     6, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   1, rmsd =  0.013, max displacement =  0.050, time used 0 seconds
+   Relaxation Cycle =   1, rmsd =  0.012, max displacement =  0.051, time used 0 seconds
    Relaxation Cycle =   1, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   1, # of success =     6, avg_success_vdw =  5.342, deviation =  1.747, maximum =  6.824
+   Relaxation Cycle =   1, # of success =     6, avg_success_vdw =  5.341, deviation =  1.808, maximum =  7.199
    Relaxation Cycle =   2, n_relaxed =     6, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   2, rmsd =  0.023, max displacement =  0.091, time used 0 seconds
+   Relaxation Cycle =   2, rmsd =  0.021, max displacement =  0.088, time used 0 seconds
    Relaxation Cycle =   2, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   2, # of success =     6, avg_success_vdw =  5.204, deviation =  1.687, maximum =  6.811
+   Relaxation Cycle =   2, # of success =     6, avg_success_vdw =  5.201, deviation =  1.776, maximum =  7.185
    Relaxation Cycle =   3, n_relaxed =     6, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   3, rmsd =  0.031, max displacement =  0.123, time used 0 seconds
+   Relaxation Cycle =   3, rmsd =  0.028, max displacement =  0.115, time used 0 seconds
    Relaxation Cycle =   3, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   3, # of success =     6, avg_success_vdw =  5.123, deviation =  1.661, maximum =  6.810
+   Relaxation Cycle =   3, # of success =     6, avg_success_vdw =  5.119, deviation =  1.766, maximum =  7.177
    Configure atoms for hydrogen relaxation...
    THR A0100 (n_subres= 4,n_conf= 16) has   1 neighbors and               4 states... Loop over     4 states...
-   Doing pairwise     1 of     5 conformers.    0 seconds
-   Doing pairwise     2 of     5 conformers.    1 seconds
-   Doing pairwise     3 of     5 conformers.    0 seconds
-   Doing pairwise     4 of     5 conformers.    1 seconds
-   Doing pairwise     5 of     5 conformers.    0 seconds
-   Doing rxn     1 of     5 conformers.    1 seconds
-   Doing rxn     2 of     5 conformers.    0 seconds
-   Doing rxn     3 of     5 conformers.    1 seconds
-   Doing rxn     4 of     5 conformers.    0 seconds
-   Doing rxn     5 of     5 conformers.    1 seconds
+   Doing pairwise     1 of     4 conformers.    1 seconds
+   Doing pairwise     2 of     4 conformers.    0 seconds
+   Doing pairwise     3 of     4 conformers.    0 seconds
+   Doing pairwise     4 of     4 conformers.    0 seconds
+   Doing rxn     1 of     4 conformers.    1 seconds
+   Doing rxn     2 of     4 conformers.    0 seconds
+   Doing rxn     3 of     4 conformers.    0 seconds
+   Doing rxn     4 of     4 conformers.    1 seconds

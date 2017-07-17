@@ -5002,18 +5002,18 @@
    Relaxation Cycle =   1, n_relaxed =    14, shake convergence rate = 100.00 %, success rate = 100.00 %
    Relaxation Cycle =   1, rmsd =  0.021, max displacement =  0.050, time used 0 seconds
    Relaxation Cycle =   1, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   1, # of success =    14, avg_success_vdw =  5.292, deviation =  1.601, maximum =  8.267
+   Relaxation Cycle =   1, # of success =    14, avg_success_vdw =  5.238, deviation =  1.654, maximum =  8.267
    Relaxation Cycle =   2, n_relaxed =    14, shake convergence rate = 100.00 %, success rate = 100.00 %
    Relaxation Cycle =   2, rmsd =  0.038, max displacement =  0.092, time used 0 seconds
    Relaxation Cycle =   2, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   2, # of success =    14, avg_success_vdw =  5.163, deviation =  1.594, maximum =  8.231
+   Relaxation Cycle =   2, # of success =    14, avg_success_vdw =  5.108, deviation =  1.648, maximum =  8.231
    Relaxation Cycle =   3, n_relaxed =    14, shake convergence rate = 100.00 %, success rate = 100.00 %
    Relaxation Cycle =   3, rmsd =  0.052, max displacement =  0.127, time used 0 seconds
    Relaxation Cycle =   3, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   3, # of success =    14, avg_success_vdw =  5.078, deviation =  1.591, maximum =  8.208
+   Relaxation Cycle =   3, # of success =    14, avg_success_vdw =  5.021, deviation =  1.646, maximum =  8.208
    Configure atoms for hydrogen relaxation...
    THR A0156 (n_subres= 4,n_conf= 26) has   1 neighbors and               4 states... Loop over     4 states...
-   Doing pairwise     1 of     5 conformers.    1 seconds
+   Doing pairwise     1 of     5 conformers.    0 seconds
    Doing pairwise     2 of     5 conformers.    0 seconds
    Doing pairwise     3 of     5 conformers.    0 seconds
    Doing pairwise     4 of     5 conformers.    0 seconds
@@ -5021,5 +5021,5 @@
    Doing rxn     1 of     5 conformers.    1 seconds
    Doing rxn     2 of     5 conformers.    0 seconds
    Doing rxn     3 of     5 conformers.    0 seconds
-   Doing rxn     4 of     5 conformers.    1 seconds
-   Doing rxn     5 of     5 conformers.    1 seconds
+   Doing rxn     4 of     5 conformers.    0 seconds
+   Doing rxn     5 of     5 conformers.    0 seconds

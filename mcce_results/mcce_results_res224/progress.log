@@ -5008,7 +5008,7 @@
    Relaxation Cycle =   2, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
    Relaxation Cycle =   2, # of success =    10, avg_success_vdw =  8.194, deviation =  1.516, maximum = 10.145
    Relaxation Cycle =   3, n_relaxed =    10, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   3, rmsd =  0.029, max displacement =  0.125, time used 0 seconds
+   Relaxation Cycle =   3, rmsd =  0.029, max displacement =  0.125, time used 1 seconds
    Relaxation Cycle =   3, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
    Relaxation Cycle =   3, # of success =    10, avg_success_vdw =  8.063, deviation =  1.579, maximum = 10.075
    Configure atoms for hydrogen relaxation...

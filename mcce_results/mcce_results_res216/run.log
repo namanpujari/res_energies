@@ -38,7 +38,7 @@ Jan  2017, Added DelPhi potential map.
 
 Mar  2017, Added DelPhi dielectric map.
 
-Fri Jul 14 15:32:38 2017
+Mon Jul 17 13:44:08 2017
 Step 0. Initialize enviroment
    Load run control file "run.prm"...
    Done
@@ -269,16 +269,16 @@ Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 31443.279, dist=  1.2302
    Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
    Done
 
-       23 conformers deleted in this cycle at    2.000    2.000    2.000
+       25 conformers deleted in this cycle at    2.000    2.000    2.000
 
    Relaxation...
    Start setting up for relaxation.
    Setup for relaxation done.
    Start relaxation.
-   Done. Time spent = 3
+   Done. Time spent = 5
 
    Optimizing hydroxyl and water...
-   Total number of atoms 889
+   Total number of atoms 829
    Done. Time spent = 0
 
 
@@ -287,7 +287,7 @@ Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 31443.279, dist=  1.2302
 
    Skip writing full rotamer file step2_out.full.
    Delete duplicate conformers ...
-      51 conformers deleted in this cycle at    2.000    2.000    2.000
+      44 conformers deleted in this cycle at    2.000    2.000    2.000
    Done. Time spent = 0
 
 
@@ -321,11 +321,11 @@ Step 3. Compute energy lookup table
 
 Running delphi surface calculations ...
 
-   Computing pairwise from conformer 1 to 38 of 38 total conformers
+   Computing pairwise from conformer 1 to 39 of 39 total conformers
       see progress.log for progress...
    Done
 
-   Computing RXN from conformer 1 to 38 of 38 total conformers
+   Computing RXN from conformer 1 to 39 of 39 total conformers
       see progress.log for progress...
    Done
 
@@ -337,7 +337,7 @@ energies.opp not found
    Done
 
    Skiping writing step 3 rotamer file step3_out.pdb.
-   Total time for step3 (energy calculation) is 6 seconds.
+   Total time for step3 (energy calculation) is 13 seconds.
 
    Output files (epsilon = 4.00):
       energies.opp    : energy lookup table, use opp to decode the file
@@ -394,7 +394,7 @@ Jan  2017, Added DelPhi potential map.
 
 Mar  2017, Added DelPhi dielectric map.
 
-Fri Jul 14 15:33:08 2017
+Mon Jul 17 13:44:53 2017
 Step 0. Initialize enviroment
    Load run control file "run.prm"...
    Done
@@ -625,7 +625,7 @@ Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 31443.279, dist=  1.2302
    Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
    Done
 
-       23 conformers deleted in this cycle at    2.000    2.000    2.000
+       24 conformers deleted in this cycle at    2.000    2.000    2.000
 
    Relaxation...
    Start setting up for relaxation.
@@ -634,8 +634,8 @@ Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 31443.279, dist=  1.2302
    Done. Time spent = 3
 
    Optimizing hydroxyl and water...
-   Total number of atoms 889
-   Done. Time spent = 1
+   Total number of atoms 859
+   Done. Time spent = 0
 
 
    Sorting conformers...
@@ -677,11 +677,11 @@ Step 3. Compute energy lookup table
 
 Running delphi surface calculations ...
 
-   Computing pairwise from conformer 1 to 38 of 38 total conformers
+   Computing pairwise from conformer 1 to 35 of 35 total conformers
       see progress.log for progress...
    Done
 
-   Computing RXN from conformer 1 to 38 of 38 total conformers
+   Computing RXN from conformer 1 to 35 of 35 total conformers
       see progress.log for progress...
    Done
 
@@ -689,7 +689,6 @@ Running delphi surface calculations ...
    Done
 
    Making pairwise energy matrices and conformer summary ... 
-   File /home/naman/res_energies/mcce_results/mcce_results_res216/energies.opp exists, energy calculation will update this file
    Done
 
    Skiping writing step 3 rotamer file step3_out.pdb.
@@ -750,7 +749,7 @@ Jan  2017, Added DelPhi potential map.
 
 Mar  2017, Added DelPhi dielectric map.
 
-Fri Jul 14 15:35:38 2017
+Mon Jul 17 13:45:23 2017
 Step 0. Initialize enviroment
    Load run control file "run.prm"...
    Done
@@ -987,7 +986,7 @@ Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 31443.279, dist=  1.2302
    Start setting up for relaxation.
    Setup for relaxation done.
    Start relaxation.
-   Done. Time spent = 2
+   Done. Time spent = 3
 
    Optimizing hydroxyl and water...
    Total number of atoms 889
@@ -1000,7 +999,7 @@ Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 31443.279, dist=  1.2302
    Skip writing full rotamer file step2_out.full.
    Delete duplicate conformers ...
       52 conformers deleted in this cycle at    2.000    2.000    2.000
-   Done. Time spent = 1
+   Done. Time spent = 0
 
 
    Write output...
@@ -1048,7 +1047,362 @@ Running delphi surface calculations ...
    Done
 
    Skiping writing step 3 rotamer file step3_out.pdb.
-   Total time for step3 (energy calculation) is 10 seconds.
+   Total time for step3 (energy calculation) is 6 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Mon Jul 17 13:45:53 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...7 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":   15.914, dist=  2.3613
+Large vdw btw " OE2 GLU A0216" and " O   GLU A0216":   37.571, dist=  2.1297
+Large vdw btw " OE1 GLU A0216" and " C   GLU A0216":  172.868, dist=  1.9893
+Large vdw btw " OE1 GLU A0216" and " N   GLU A0216":   72.121, dist=  2.1419
+Large vdw btw " OE1 GLU A0216" and " H   GLU A0216":  127.234, dist=  1.2172
+Large vdw btw "1HG  GLU A0216" and " N   GLU A0216":   20.231, dist=  1.9963
+Large vdw btw "2HG  GLU A0216" and " N   GLU A0216":   19.718, dist=  2.0004
+Large vdw btw " OE1 GLU A0216" and " N   GLU A0216":  290.635, dist=  1.9152
+Large vdw btw " OE1 GLU A0216" and " H   GLU A0216":  999.000, dist=  0.9789
+Large vdw btw " CD  GLU A0216" and " N   GLU A0216":  219.702, dist=  1.9890
+Large vdw btw " OE1 GLU A0216" and " N   GLU A0216":  228.063, dist=  1.9532
+Large vdw btw " OE1 GLU A0216" and " N   GLU A0216":   88.190, dist=  2.1080
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":   36.947, dist=  2.2128
+Large vdw btw " OE1 GLU A0216" and " C   GLU A0216":   40.590, dist=  2.2335
+Large vdw btw " OE1 GLU A0216" and " O   GLU A0216": 28010.537, dist=  1.2646
+Large vdw btw "1HG  GLU A0216" and " C   GLU A0216":   19.841, dist=  1.9954
+Large vdw btw "1HG  GLU A0216" and " O   GLU A0216":   13.722, dist=  1.9733
+Large vdw btw "2HG  GLU A0216" and " C   GLU A0216":   19.580, dist=  1.9975
+Large vdw btw "2HG  GLU A0216" and " O   GLU A0216":   12.345, dist=  1.9896
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":   80.528, dist=  2.0804
+Large vdw btw " OE1 GLU A0216" and " C   GLU A0216":  189.307, dist=  1.9747
+Large vdw btw " OE1 GLU A0216" and " O   GLU A0216": 450611.906, dist=  1.0036
+Large vdw btw " CD  GLU A0216" and " C   GLU A0216":  229.327, dist=  1.9711
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":  402.414, dist=  1.8262
+Large vdw btw " OE1 GLU A0216" and " C   GLU A0216":  419.377, dist=  1.8507
+Large vdw btw " OE1 GLU A0216" and " O   GLU A0216":   35.463, dist=  2.1779
+Large vdw btw " OE2 GLU A0216" and " O   GLU A0216":  627.685, dist=  1.7002
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216":  100.894, dist=  2.0502
+Large vdw btw " OE2 GLU A0216" and " H   GLU A0216":  144.782, dist=  1.1733
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216":   26.991, dist=  2.2730
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216":   41.426, dist=  2.1992
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":   15.914, dist=  2.3613
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216":   66.606, dist=  2.1121
+Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 26385.838, dist=  1.2483
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":   15.914, dist=  2.3613
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216":   25.144, dist=  2.2801
+Large vdw btw " OE2 GLU A0216" and " O   GLU A0216":  176.331, dist=  1.8849
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216":   74.680, dist=  2.0930
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216":  987.212, dist=  1.6965
+Large vdw btw " OE2 GLU A0216" and " O   GLU A0216":  216.731, dist=  1.8538
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216":  311.880, dist=  1.8647
+Large vdw btw " OE2 GLU A0216" and " CA  GLU A0216":   53.714, dist=  2.1691
+Large vdw btw " OE2 GLU A0216" and " HA  GLU A0216":   31.614, dist=  1.7888
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216":   79.660, dist=  2.0822
+Large vdw btw " OE2 GLU A0216" and " HA  GLU A0216":   62.103, dist=  1.6944
+Large vdw btw " OE2 GLU A0216" and " CA  GLU A0216":   53.713, dist=  2.1691
+Large vdw btw " OE2 GLU A0216" and " HA  GLU A0216": 3526.137, dist=  1.2154
+Large vdw btw " OE2 GLU A0216" and " HA  GLU A0216":   16.942, dist=  1.8793
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216":  743.978, dist=  1.7437
+Large vdw btw " OE2 GLU A0216" and " H   GLU A0216":  169.361, dist=  1.1584
+Large vdw btw " OE2 GLU A0216" and " CA  GLU A0216":   53.717, dist=  2.1691
+Large vdw btw "1HG  GLU A0216" and " N   GLU A0216":   20.231, dist=  1.9963
+Large vdw btw "1HG  GLU A0216" and " N   GLU A0216":   20.231, dist=  1.9963
+Large vdw btw "2HG  GLU A0216" and " N   GLU A0216":   19.718, dist=  2.0004
+Large vdw btw "2HG  GLU A0216" and " N   GLU A0216":   19.718, dist=  2.0004
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216":   38.873, dist=  2.2101
+Large vdw btw " OE2 GLU A0216" and " H   GLU A0216":   10.570, dist=  1.4463
+Large vdw btw " CD  GLU A0216" and " N   GLU A0216":  219.702, dist=  1.9890
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216": 6392.947, dist=  1.4601
+Large vdw btw " OE2 GLU A0216" and " H   GLU A0216":  999.000, dist=  0.6333
+Large vdw btw " CD  GLU A0216" and " N   GLU A0216":  219.702, dist=  1.9890
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216":  999.000, dist=  0.9961
+Large vdw btw " OE2 GLU A0216" and " H   GLU A0216":  279.349, dist=  1.1118
+Large vdw btw " OE2 GLU A0216" and " CA  GLU A0216":   53.717, dist=  2.1691
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216":  649.864, dist=  1.7631
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":   36.947, dist=  2.2128
+Large vdw btw " OE1 GLU A0216" and " O   GLU A0216":   16.182, dist=  2.3108
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216":  145.859, dist=  1.9906
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":   36.947, dist=  2.2128
+Large vdw btw " OE2 GLU A0216" and " N   GLU A0216":   45.485, dist=  2.1833
+Large vdw btw " OE2 GLU A0216" and " CA  GLU A0216":   53.712, dist=  2.1691
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216":  282.940, dist=  1.8795
+Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 17396.279, dist=  1.2923
+Large vdw btw "1HG  GLU A0216" and " C   GLU A0216":   19.841, dist=  1.9954
+Large vdw btw "1HG  GLU A0216" and " O   GLU A0216":   13.722, dist=  1.9733
+Large vdw btw "1HG  GLU A0216" and " C   GLU A0216":   19.841, dist=  1.9954
+Large vdw btw "1HG  GLU A0216" and " O   GLU A0216":   13.722, dist=  1.9733
+Large vdw btw "2HG  GLU A0216" and " C   GLU A0216":   19.580, dist=  1.9975
+Large vdw btw "2HG  GLU A0216" and " O   GLU A0216":   12.345, dist=  1.9896
+Large vdw btw "2HG  GLU A0216" and " C   GLU A0216":   19.580, dist=  1.9975
+Large vdw btw "2HG  GLU A0216" and " O   GLU A0216":   12.345, dist=  1.9896
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":   80.528, dist=  2.0804
+Large vdw btw " OE1 GLU A0216" and " O   GLU A0216":  202.349, dist=  1.8978
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":   80.528, dist=  2.0804
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216":   19.829, dist=  2.3221
+Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 1516.985, dist=  1.5814
+Large vdw btw " CD  GLU A0216" and " C   GLU A0216":  229.327, dist=  1.9711
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":  402.414, dist=  1.8262
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216": 4647.076, dist=  1.4926
+Large vdw btw " OE2 GLU A0216" and " O   GLU A0216":  999.000, dist=  0.6829
+Large vdw btw " CD  GLU A0216" and " C   GLU A0216":  229.327, dist=  1.9711
+Large vdw btw " CD  GLU A0216" and " O   GLU A0216":  402.414, dist=  1.8262
+Large vdw btw " OE2 GLU A0216" and " CA  GLU A0216":   53.716, dist=  2.1691
+Large vdw btw " OE2 GLU A0216" and " C   GLU A0216":  999.000, dist=  0.9193
+Large vdw btw " OE2 GLU A0216" and " O   GLU A0216": 31443.279, dist=  1.2302
+   Pruning rotamers...62 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 0
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...0 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 0 seconds.
+      Actual time is 1
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 1
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+   Done
+
+       23 conformers deleted in this cycle at    2.000    2.000    2.000
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+   Done. Time spent = 4
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 889
+   Done. Time spent = 0
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      53 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 5 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      1 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 36 of 36 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 36 of 36 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 6 seconds.
 
    Output files (epsilon = 4.00):
       energies.opp    : energy lookup table, use opp to decode the file

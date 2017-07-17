@@ -5000,7 +5000,7 @@
    Repacking 4998: 0
    Repacking 4999: 0
    Relaxation Cycle =   1, n_relaxed =    22, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   1, rmsd =  0.030, max displacement =  0.087, time used 0 seconds
+   Relaxation Cycle =   1, rmsd =  0.030, max displacement =  0.087, time used 1 seconds
    Relaxation Cycle =   1, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
    Relaxation Cycle =   1, # of success =    22, avg_success_vdw =  8.276, deviation =  1.933, maximum = 11.428
    Relaxation Cycle =   2, n_relaxed =    22, shake convergence rate = 100.00 %, success rate = 100.00 %
@@ -5008,7 +5008,7 @@
    Relaxation Cycle =   2, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
    Relaxation Cycle =   2, # of success =    22, avg_success_vdw =  7.797, deviation =  1.790, maximum = 10.914
    Relaxation Cycle =   3, n_relaxed =    22, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   3, rmsd =  0.083, max displacement =  0.233, time used 0 seconds
+   Relaxation Cycle =   3, rmsd =  0.083, max displacement =  0.233, time used 1 seconds
    Relaxation Cycle =   3, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
    Relaxation Cycle =   3, # of success =    22, avg_success_vdw =  7.460, deviation =  1.692, maximum = 10.474
    Configure atoms for hydrogen relaxation...

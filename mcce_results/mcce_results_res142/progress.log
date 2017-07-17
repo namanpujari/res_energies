@@ -4999,100 +4999,100 @@
    Repacking 4997: 0
    Repacking 4998: 0
    Repacking 4999: 0
-   Relaxation Cycle =   1, n_relaxed =   120, shake convergence rate = 100.00 %, success rate = 100.00 %
+   Relaxation Cycle =   1, n_relaxed =   119, shake convergence rate = 100.00 %, success rate = 100.00 %
    Relaxation Cycle =   1, rmsd =  0.018, max displacement =  0.108, time used 1 seconds
    Relaxation Cycle =   1, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   1, # of success =   120, avg_success_vdw =  5.247, deviation =  3.140, maximum = 10.693
-   Relaxation Cycle =   2, n_relaxed =   120, shake convergence rate = 100.00 %, success rate = 100.00 %
+   Relaxation Cycle =   1, # of success =   119, avg_success_vdw =  5.225, deviation =  3.174, maximum = 10.693
+   Relaxation Cycle =   2, n_relaxed =   119, shake convergence rate = 100.00 %, success rate = 100.00 %
    Relaxation Cycle =   2, rmsd =  0.031, max displacement =  0.187, time used 1 seconds
    Relaxation Cycle =   2, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   2, # of success =   120, avg_success_vdw =  4.983, deviation =  2.952, maximum = 10.492
-   Relaxation Cycle =   3, n_relaxed =   120, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   3, rmsd =  0.041, max displacement =  0.244, time used 1 seconds
+   Relaxation Cycle =   2, # of success =   119, avg_success_vdw =  4.962, deviation =  2.984, maximum = 10.492
+   Relaxation Cycle =   3, n_relaxed =   119, shake convergence rate = 100.00 %, success rate = 100.00 %
+   Relaxation Cycle =   3, rmsd =  0.041, max displacement =  0.244, time used 2 seconds
    Relaxation Cycle =   3, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   3, # of success =   120, avg_success_vdw =  4.846, deviation =  2.895, maximum = 10.427
+   Relaxation Cycle =   3, # of success =   119, avg_success_vdw =  4.825, deviation =  2.927, maximum = 10.427
    Configure atoms for hydrogen relaxation...
-   Doing pairwise     1 of    56 conformers.    1 seconds
+   Doing pairwise     1 of    56 conformers.    0 seconds
    Doing pairwise     2 of    56 conformers.    0 seconds
-   Doing pairwise     3 of    56 conformers.    0 seconds
+   Doing pairwise     3 of    56 conformers.    1 seconds
    Doing pairwise     4 of    56 conformers.    0 seconds
    Doing pairwise     5 of    56 conformers.    0 seconds
    Doing pairwise     6 of    56 conformers.    0 seconds
    Doing pairwise     7 of    56 conformers.    0 seconds
    Doing pairwise     8 of    56 conformers.    0 seconds
-   Doing pairwise     9 of    56 conformers.    1 seconds
-   Doing pairwise    10 of    56 conformers.    0 seconds
+   Doing pairwise     9 of    56 conformers.    0 seconds
+   Doing pairwise    10 of    56 conformers.    1 seconds
    Doing pairwise    11 of    56 conformers.    0 seconds
-   Doing pairwise    12 of    56 conformers.    0 seconds
+   Doing pairwise    12 of    56 conformers.    1 seconds
    Doing pairwise    13 of    56 conformers.    0 seconds
    Doing pairwise    14 of    56 conformers.    0 seconds
    Doing pairwise    15 of    56 conformers.    0 seconds
    Doing pairwise    16 of    56 conformers.    0 seconds
-   Doing pairwise    17 of    56 conformers.    0 seconds
-   Doing pairwise    18 of    56 conformers.    1 seconds
+   Doing pairwise    17 of    56 conformers.    1 seconds
+   Doing pairwise    18 of    56 conformers.    0 seconds
    Doing pairwise    19 of    56 conformers.    0 seconds
    Doing pairwise    20 of    56 conformers.    0 seconds
    Doing pairwise    21 of    56 conformers.    0 seconds
-   Doing pairwise    22 of    56 conformers.    0 seconds
+   Doing pairwise    22 of    56 conformers.    1 seconds
    Doing pairwise    23 of    56 conformers.    0 seconds
    Doing pairwise    24 of    56 conformers.    0 seconds
-   Doing pairwise    25 of    56 conformers.    0 seconds
+   Doing pairwise    25 of    56 conformers.    1 seconds
    Doing pairwise    26 of    56 conformers.    0 seconds
    Doing pairwise    27 of    56 conformers.    0 seconds
-   Doing pairwise    28 of    56 conformers.    1 seconds
+   Doing pairwise    28 of    56 conformers.    0 seconds
    Doing pairwise    29 of    56 conformers.    0 seconds
-   Doing pairwise    30 of    56 conformers.    0 seconds
+   Doing pairwise    30 of    56 conformers.    1 seconds
    Doing pairwise    31 of    56 conformers.    0 seconds
    Doing pairwise    32 of    56 conformers.    0 seconds
    Doing pairwise    33 of    56 conformers.    0 seconds
-   Doing pairwise    34 of    56 conformers.    0 seconds
+   Doing pairwise    34 of    56 conformers.    1 seconds
    Doing pairwise    35 of    56 conformers.    0 seconds
-   Doing pairwise    36 of    56 conformers.    0 seconds
+   Doing pairwise    36 of    56 conformers.    1 seconds
    Doing pairwise    37 of    56 conformers.    0 seconds
    Doing pairwise    38 of    56 conformers.    0 seconds
    Doing pairwise    39 of    56 conformers.    0 seconds
-   Doing pairwise    40 of    56 conformers.    1 seconds
-   Doing pairwise    41 of    56 conformers.    0 seconds
+   Doing pairwise    40 of    56 conformers.    0 seconds
+   Doing pairwise    41 of    56 conformers.    1 seconds
    Doing pairwise    42 of    56 conformers.    0 seconds
    Doing pairwise    43 of    56 conformers.    0 seconds
-   Doing pairwise    44 of    56 conformers.    0 seconds
+   Doing pairwise    44 of    56 conformers.    1 seconds
    Doing pairwise    45 of    56 conformers.    0 seconds
    Doing pairwise    46 of    56 conformers.    0 seconds
    Doing pairwise    47 of    56 conformers.    0 seconds
-   Doing pairwise    48 of    56 conformers.    0 seconds
+   Doing pairwise    48 of    56 conformers.    1 seconds
    Doing pairwise    49 of    56 conformers.    0 seconds
    Doing pairwise    50 of    56 conformers.    0 seconds
-   Doing pairwise    51 of    56 conformers.    1 seconds
+   Doing pairwise    51 of    56 conformers.    0 seconds
    Doing pairwise    52 of    56 conformers.    0 seconds
    Doing pairwise    53 of    56 conformers.    0 seconds
-   Doing pairwise    54 of    56 conformers.    0 seconds
+   Doing pairwise    54 of    56 conformers.    1 seconds
    Doing pairwise    55 of    56 conformers.    0 seconds
    Doing pairwise    56 of    56 conformers.    0 seconds
    Doing rxn     1 of    56 conformers.    0 seconds
    Doing rxn     2 of    56 conformers.    0 seconds
    Doing rxn     3 of    56 conformers.    0 seconds
    Doing rxn     4 of    56 conformers.    0 seconds
-   Doing rxn     5 of    56 conformers.    0 seconds
-   Doing rxn     6 of    56 conformers.    1 seconds
+   Doing rxn     5 of    56 conformers.    1 seconds
+   Doing rxn     6 of    56 conformers.    0 seconds
    Doing rxn     7 of    56 conformers.    0 seconds
    Doing rxn     8 of    56 conformers.    0 seconds
    Doing rxn     9 of    56 conformers.    0 seconds
    Doing rxn    10 of    56 conformers.    0 seconds
    Doing rxn    11 of    56 conformers.    0 seconds
    Doing rxn    12 of    56 conformers.    0 seconds
-   Doing rxn    13 of    56 conformers.    0 seconds
+   Doing rxn    13 of    56 conformers.    1 seconds
    Doing rxn    14 of    56 conformers.    0 seconds
-   Doing rxn    15 of    56 conformers.    1 seconds
+   Doing rxn    15 of    56 conformers.    0 seconds
    Doing rxn    16 of    56 conformers.    0 seconds
-   Doing rxn    17 of    56 conformers.    0 seconds
-   Doing rxn    18 of    56 conformers.    1 seconds
+   Doing rxn    17 of    56 conformers.    1 seconds
+   Doing rxn    18 of    56 conformers.    0 seconds
    Doing rxn    19 of    56 conformers.    0 seconds
    Doing rxn    20 of    56 conformers.    0 seconds
    Doing rxn    21 of    56 conformers.    0 seconds
-   Doing rxn    22 of    56 conformers.    0 seconds
+   Doing rxn    22 of    56 conformers.    1 seconds
    Doing rxn    23 of    56 conformers.    0 seconds
    Doing rxn    24 of    56 conformers.    0 seconds
-   Doing rxn    25 of    56 conformers.    1 seconds
+   Doing rxn    25 of    56 conformers.    0 seconds
    Doing rxn    26 of    56 conformers.    0 seconds
    Doing rxn    27 of    56 conformers.    0 seconds
    Doing rxn    28 of    56 conformers.    0 seconds
@@ -5105,8 +5105,8 @@
    Doing rxn    35 of    56 conformers.    0 seconds
    Doing rxn    36 of    56 conformers.    0 seconds
    Doing rxn    37 of    56 conformers.    0 seconds
-   Doing rxn    38 of    56 conformers.    1 seconds
-   Doing rxn    39 of    56 conformers.    0 seconds
+   Doing rxn    38 of    56 conformers.    0 seconds
+   Doing rxn    39 of    56 conformers.    1 seconds
    Doing rxn    40 of    56 conformers.    0 seconds
    Doing rxn    41 of    56 conformers.    0 seconds
    Doing rxn    42 of    56 conformers.    0 seconds
@@ -5114,8 +5114,8 @@
    Doing rxn    44 of    56 conformers.    0 seconds
    Doing rxn    45 of    56 conformers.    0 seconds
    Doing rxn    46 of    56 conformers.    0 seconds
-   Doing rxn    47 of    56 conformers.    0 seconds
-   Doing rxn    48 of    56 conformers.    1 seconds
+   Doing rxn    47 of    56 conformers.    1 seconds
+   Doing rxn    48 of    56 conformers.    0 seconds
    Doing rxn    49 of    56 conformers.    0 seconds
    Doing rxn    50 of    56 conformers.    0 seconds
    Doing rxn    51 of    56 conformers.    0 seconds
@@ -5123,4 +5123,4 @@
    Doing rxn    53 of    56 conformers.    0 seconds
    Doing rxn    54 of    56 conformers.    0 seconds
    Doing rxn    55 of    56 conformers.    0 seconds
-   Doing rxn    56 of    56 conformers.    0 seconds
+   Doing rxn    56 of    56 conformers.    1 seconds

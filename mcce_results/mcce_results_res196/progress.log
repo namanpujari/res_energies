@@ -5000,7 +5000,7 @@
    Repacking 4998: 0
    Repacking 4999: 0
    Relaxation Cycle =   1, n_relaxed =     8, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   1, rmsd =  0.007, max displacement =  0.019, time used 0 seconds
+   Relaxation Cycle =   1, rmsd =  0.007, max displacement =  0.019, time used 1 seconds
    Relaxation Cycle =   1, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
    Relaxation Cycle =   1, # of success =     8, avg_success_vdw =  7.627, deviation =  3.046, maximum = 10.764
    Relaxation Cycle =   2, n_relaxed =     8, shake convergence rate = 100.00 %, success rate = 100.00 %

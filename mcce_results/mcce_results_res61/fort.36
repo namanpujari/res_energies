@@ -1,33 +1,55 @@
 
 pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   0.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   0.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
 pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  0.00 LEU01A0061_001 occ=0.935 trial=    4469/   31000 t
-  0.00 LEU01A0061_002 occ=0.001 trial=    4418/   31000 t
-  0.00 LEU01A0061_003 occ=0.031 trial=    4423/   31000 t
-  0.00 LEU01A0061_004 occ=0.031 trial=    4464/   31000 t
-  0.00 LEU01A0061_005 occ=0.000 trial=    4401/   31000 t
-  0.00 LEU01A0061_006 occ=0.001 trial=    4472/   31000 t
-  0.00 LEU01A0061_007 occ=0.000 trial=    4353/   31000 t
+  0.00 LEU01A0061_001 occ=0.931 trial=    2815/   20000 t
+  0.00 LEU01A0061_002 occ=0.037 trial=    2927/   20000 t
+  0.00 LEU01A0061_003 occ=0.030 trial=    2759/   20000 t
+  0.00 LEU01A0061_004 occ=0.001 trial=    2832/   20000 t
+  0.00 LEU01A0061_005 occ=0.001 trial=    2861/   20000 t
+  0.00 LEU01A0061_006 occ=0.000 trial=    2943/   20000 t
+  0.00 LEU01A0061_007 occ=0.000 trial=    2863/   20000 t
 
 pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   0.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  0.00 LEU01A0061_001 occ=0.937 trial=    6742/   27000 t
-  0.00 LEU01A0061_002 occ=0.000 trial=       0/   27000 f
-  0.00 LEU01A0061_003 occ=0.034 trial=    6814/   27000 t
-  0.00 LEU01A0061_004 occ=0.029 trial=    6735/   27000 t
-  0.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
-  0.00 LEU01A0061_006 occ=0.001 trial=    6709/   27000 t
-  0.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
+  0.00 LEU01A0061_001 occ=0.934 trial=    5238/   21000 t
+  0.00 LEU01A0061_002 occ=0.031 trial=    5255/   21000 t
+  0.00 LEU01A0061_003 occ=0.034 trial=    5254/   21000 t
+  0.00 LEU01A0061_004 occ=0.001 trial=    5253/   21000 t
+  0.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
+  0.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
+  0.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
+
+pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   0.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  0.00 LEU01A0061_001 occ=0.938 trial=    6524/   26000 t
+  0.00 LEU01A0061_002 occ=0.032 trial=    6474/   26000 t
+  0.00 LEU01A0061_003 occ=0.029 trial=    6482/   26000 t
+  0.00 LEU01A0061_004 occ=0.001 trial=    6520/   26000 t
+  0.00 LEU01A0061_005 occ=0.000 trial=       0/   26000 f
+  0.00 LEU01A0061_006 occ=0.000 trial=       0/   26000 f
+  0.00 LEU01A0061_007 occ=0.000 trial=       0/   26000 f
 
 pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   0.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  0.00 LEU01A0061_001 occ=0.936 trial=    9046/   27000 t
-  0.00 LEU01A0061_002 occ=0.000 trial=       0/   27000 f
-  0.00 LEU01A0061_003 occ=0.035 trial=    9035/   27000 t
-  0.00 LEU01A0061_004 occ=0.029 trial=    8919/   27000 t
+  0.00 LEU01A0061_001 occ=0.932 trial=    7761/   31000 t
+  0.00 LEU01A0061_002 occ=0.036 trial=    7688/   31000 t
+  0.00 LEU01A0061_003 occ=0.031 trial=    7661/   31000 t
+  0.00 LEU01A0061_004 occ=0.001 trial=    7890/   31000 t
+  0.00 LEU01A0061_005 occ=0.000 trial=       0/   31000 f
+  0.00 LEU01A0061_006 occ=0.000 trial=       0/   31000 f
+  0.00 LEU01A0061_007 occ=0.000 trial=       0/   31000 f
+
+pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   0.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  0.00 LEU01A0061_001 occ=0.935 trial=    6738/   27000 t
+  0.00 LEU01A0061_002 occ=0.032 trial=    6735/   27000 t
+  0.00 LEU01A0061_003 occ=0.031 trial=    6865/   27000 t
+  0.00 LEU01A0061_004 occ=0.001 trial=    6662/   27000 t
   0.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
   0.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
   0.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
@@ -35,10 +57,10 @@ pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
 pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   0.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  0.00 LEU01A0061_001 occ=0.941 trial=    7311/   22000 t
-  0.00 LEU01A0061_002 occ=0.000 trial=       0/   22000 f
-  0.00 LEU01A0061_003 occ=0.032 trial=    7221/   22000 t
-  0.00 LEU01A0061_004 occ=0.027 trial=    7468/   22000 t
+  0.00 LEU01A0061_001 occ=0.937 trial=    5483/   22000 t
+  0.00 LEU01A0061_002 occ=0.033 trial=    5423/   22000 t
+  0.00 LEU01A0061_003 occ=0.028 trial=    5526/   22000 t
+  0.00 LEU01A0061_004 occ=0.001 trial=    5568/   22000 t
   0.00 LEU01A0061_005 occ=0.000 trial=       0/   22000 f
   0.00 LEU01A0061_006 occ=0.000 trial=       0/   22000 f
   0.00 LEU01A0061_007 occ=0.000 trial=       0/   22000 f
@@ -46,175 +68,296 @@ pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
 pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   0.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  0.00 LEU01A0061_001 occ=0.936 trial=    5039/   15000 t
-  0.00 LEU01A0061_002 occ=0.000 trial=       0/   15000 f
-  0.00 LEU01A0061_003 occ=0.034 trial=    5006/   15000 t
-  0.00 LEU01A0061_004 occ=0.030 trial=    4955/   15000 t
-  0.00 LEU01A0061_005 occ=0.000 trial=       0/   15000 f
-  0.00 LEU01A0061_006 occ=0.000 trial=       0/   15000 f
-  0.00 LEU01A0061_007 occ=0.000 trial=       0/   15000 f
-
-pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   0.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  0.00 LEU01A0061_001 occ=0.940 trial=    9043/   27000 t
-  0.00 LEU01A0061_002 occ=0.000 trial=       0/   27000 f
-  0.00 LEU01A0061_003 occ=0.033 trial=    9093/   27000 t
-  0.00 LEU01A0061_004 occ=0.027 trial=    8864/   27000 t
-  0.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
-  0.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
-  0.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
-
-pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   0.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   0.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  0.00 LEU01A0061_001 occ=0.936 trial=   14298/   43000 t
-  0.00 LEU01A0061_002 occ=0.000 trial=       0/   43000 f
-  0.00 LEU01A0061_003 occ=0.034 trial=   14288/   43000 t
-  0.00 LEU01A0061_004 occ=0.030 trial=   14414/   43000 t
-  0.00 LEU01A0061_005 occ=0.000 trial=       0/   43000 f
-  0.00 LEU01A0061_006 occ=0.000 trial=       0/   43000 f
-  0.00 LEU01A0061_007 occ=0.000 trial=       0/   43000 f
-
-pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   1.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  1.00 LEU01A0061_001 occ=0.936 trial=    4266/   29000 t
-  1.00 LEU01A0061_002 occ=0.001 trial=    4174/   29000 t
-  1.00 LEU01A0061_003 occ=0.030 trial=    4130/   29000 t
-  1.00 LEU01A0061_004 occ=0.031 trial=    4127/   29000 t
-  1.00 LEU01A0061_005 occ=0.000 trial=    4130/   29000 t
-  1.00 LEU01A0061_006 occ=0.001 trial=    4106/   29000 t
-  1.00 LEU01A0061_007 occ=0.000 trial=    4067/   29000 t
+  0.00 LEU01A0061_001 occ=0.933 trial=    8642/   35000 t
+  0.00 LEU01A0061_002 occ=0.035 trial=    8777/   35000 t
+  0.00 LEU01A0061_003 occ=0.030 trial=    8849/   35000 t
+  0.00 LEU01A0061_004 occ=0.001 trial=    8732/   35000 t
+  0.00 LEU01A0061_005 occ=0.000 trial=       0/   35000 f
+  0.00 LEU01A0061_006 occ=0.000 trial=       0/   35000 f
+  0.00 LEU01A0061_007 occ=0.000 trial=       0/   35000 f
 
 pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   1.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
 pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  1.00 LEU01A0061_001 occ=0.944 trial=    4595/   18000 t
-  1.00 LEU01A0061_002 occ=0.001 trial=    4430/   18000 t
-  1.00 LEU01A0061_003 occ=0.028 trial=    4519/   18000 t
-  1.00 LEU01A0061_004 occ=0.027 trial=    4456/   18000 t
-  1.00 LEU01A0061_005 occ=0.000 trial=       0/   18000 f
-  1.00 LEU01A0061_006 occ=0.000 trial=       0/   18000 f
-  1.00 LEU01A0061_007 occ=0.000 trial=       0/   18000 f
-
-pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   1.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  1.00 LEU01A0061_001 occ=0.934 trial=    7630/   23000 t
-  1.00 LEU01A0061_002 occ=0.000 trial=       0/   23000 f
-  1.00 LEU01A0061_003 occ=0.035 trial=    7624/   23000 t
-  1.00 LEU01A0061_004 occ=0.031 trial=    7746/   23000 t
-  1.00 LEU01A0061_005 occ=0.000 trial=       0/   23000 f
-  1.00 LEU01A0061_006 occ=0.000 trial=       0/   23000 f
-  1.00 LEU01A0061_007 occ=0.000 trial=       0/   23000 f
-
-pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   1.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  1.00 LEU01A0061_001 occ=0.934 trial=   10529/   32000 t
-  1.00 LEU01A0061_002 occ=0.000 trial=       0/   32000 f
-  1.00 LEU01A0061_003 occ=0.034 trial=   10635/   32000 t
-  1.00 LEU01A0061_004 occ=0.032 trial=   10836/   32000 t
-  1.00 LEU01A0061_005 occ=0.000 trial=       0/   32000 f
-  1.00 LEU01A0061_006 occ=0.000 trial=       0/   32000 f
-  1.00 LEU01A0061_007 occ=0.000 trial=       0/   32000 f
-
-pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   1.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  1.00 LEU01A0061_001 occ=0.935 trial=   11362/   34000 t
-  1.00 LEU01A0061_002 occ=0.000 trial=       0/   34000 f
-  1.00 LEU01A0061_003 occ=0.034 trial=   11302/   34000 t
-  1.00 LEU01A0061_004 occ=0.030 trial=   11336/   34000 t
-  1.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
-  1.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
-  1.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
+  1.00 LEU01A0061_001 occ=0.946 trial=    4733/   33000 t
+  1.00 LEU01A0061_002 occ=0.030 trial=    4650/   33000 t
+  1.00 LEU01A0061_003 occ=0.023 trial=    4765/   33000 t
+  1.00 LEU01A0061_004 occ=0.001 trial=    4685/   33000 t
+  1.00 LEU01A0061_005 occ=0.001 trial=    4683/   33000 t
+  1.00 LEU01A0061_006 occ=0.000 trial=    4744/   33000 t
+  1.00 LEU01A0061_007 occ=0.000 trial=    4740/   33000 t
 
 pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   1.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  1.00 LEU01A0061_001 occ=0.937 trial=    8284/   25000 t
-  1.00 LEU01A0061_002 occ=0.000 trial=       0/   25000 f
-  1.00 LEU01A0061_003 occ=0.032 trial=    8272/   25000 t
-  1.00 LEU01A0061_004 occ=0.031 trial=    8444/   25000 t
+  1.00 LEU01A0061_001 occ=0.937 trial=    5330/   16000 t
+  1.00 LEU01A0061_002 occ=0.033 trial=    5305/   16000 t
+  1.00 LEU01A0061_003 occ=0.031 trial=    5365/   16000 t
+  1.00 LEU01A0061_004 occ=0.000 trial=       0/   16000 f
+  1.00 LEU01A0061_005 occ=0.000 trial=       0/   16000 f
+  1.00 LEU01A0061_006 occ=0.000 trial=       0/   16000 f
+  1.00 LEU01A0061_007 occ=0.000 trial=       0/   16000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  1.00 LEU01A0061_001 occ=0.939 trial=    6364/   19000 t
+  1.00 LEU01A0061_002 occ=0.032 trial=    6300/   19000 t
+  1.00 LEU01A0061_003 occ=0.029 trial=    6336/   19000 t
+  1.00 LEU01A0061_004 occ=0.000 trial=       0/   19000 f
+  1.00 LEU01A0061_005 occ=0.000 trial=       0/   19000 f
+  1.00 LEU01A0061_006 occ=0.000 trial=       0/   19000 f
+  1.00 LEU01A0061_007 occ=0.000 trial=       0/   19000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  1.00 LEU01A0061_001 occ=0.936 trial=    8290/   25000 t
+  1.00 LEU01A0061_002 occ=0.033 trial=    8362/   25000 t
+  1.00 LEU01A0061_003 occ=0.031 trial=    8348/   25000 t
+  1.00 LEU01A0061_004 occ=0.000 trial=       0/   25000 f
   1.00 LEU01A0061_005 occ=0.000 trial=       0/   25000 f
   1.00 LEU01A0061_006 occ=0.000 trial=       0/   25000 f
   1.00 LEU01A0061_007 occ=0.000 trial=       0/   25000 f
 
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  1.00 LEU01A0061_001 occ=0.938 trial=    5217/   16000 t
+  1.00 LEU01A0061_002 occ=0.032 trial=    5333/   16000 t
+  1.00 LEU01A0061_003 occ=0.030 trial=    5450/   16000 t
+  1.00 LEU01A0061_004 occ=0.000 trial=       0/   16000 f
+  1.00 LEU01A0061_005 occ=0.000 trial=       0/   16000 f
+  1.00 LEU01A0061_006 occ=0.000 trial=       0/   16000 f
+  1.00 LEU01A0061_007 occ=0.000 trial=       0/   16000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  1.00 LEU01A0061_001 occ=0.937 trial=   12892/   39000 t
+  1.00 LEU01A0061_002 occ=0.033 trial=   12991/   39000 t
+  1.00 LEU01A0061_003 occ=0.030 trial=   13117/   39000 t
+  1.00 LEU01A0061_004 occ=0.000 trial=       0/   39000 f
+  1.00 LEU01A0061_005 occ=0.000 trial=       0/   39000 f
+  1.00 LEU01A0061_006 occ=0.000 trial=       0/   39000 f
+  1.00 LEU01A0061_007 occ=0.000 trial=       0/   39000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  1.00 LEU01A0061_001 occ=0.939 trial=   10607/   32000 t
+  1.00 LEU01A0061_002 occ=0.032 trial=   10736/   32000 t
+  1.00 LEU01A0061_003 occ=0.029 trial=   10657/   32000 t
+  1.00 LEU01A0061_004 occ=0.000 trial=       0/   32000 f
+  1.00 LEU01A0061_005 occ=0.000 trial=       0/   32000 f
+  1.00 LEU01A0061_006 occ=0.000 trial=       0/   32000 f
+  1.00 LEU01A0061_007 occ=0.000 trial=       0/   32000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -7.10 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  2.00 LEU01A0061_001 occ=0.926 trial=    3986/   28000 t
+  2.00 LEU01A0061_002 occ=0.039 trial=    3935/   28000 t
+  2.00 LEU01A0061_003 occ=0.033 trial=    4051/   28000 t
+  2.00 LEU01A0061_004 occ=0.001 trial=    4015/   28000 t
+  2.00 LEU01A0061_005 occ=0.001 trial=    4074/   28000 t
+  2.00 LEU01A0061_006 occ=0.000 trial=    3964/   28000 t
+  2.00 LEU01A0061_007 occ=0.000 trial=    3975/   28000 t
+
 pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   2.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
 pH =   2.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  2.00 LEU01A0061_001 occ=0.943 trial=    4390/   31000 t
-  2.00 LEU01A0061_002 occ=0.001 trial=    4444/   31000 t
-  2.00 LEU01A0061_003 occ=0.029 trial=    4451/   31000 t
-  2.00 LEU01A0061_004 occ=0.027 trial=    4379/   31000 t
-  2.00 LEU01A0061_005 occ=0.000 trial=    4451/   31000 t
-  2.00 LEU01A0061_006 occ=0.001 trial=    4489/   31000 t
-  2.00 LEU01A0061_007 occ=0.000 trial=    4396/   31000 t
+  2.00 LEU01A0061_001 occ=0.942 trial=    7632/   23000 t
+  2.00 LEU01A0061_002 occ=0.030 trial=    7715/   23000 t
+  2.00 LEU01A0061_003 occ=0.028 trial=    7653/   23000 t
+  2.00 LEU01A0061_004 occ=0.000 trial=       0/   23000 f
+  2.00 LEU01A0061_005 occ=0.000 trial=       0/   23000 f
+  2.00 LEU01A0061_006 occ=0.000 trial=       0/   23000 f
+  2.00 LEU01A0061_007 occ=0.000 trial=       0/   23000 f
 
 pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   2.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   2.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  2.00 LEU01A0061_001 occ=0.939 trial=    6825/   27000 t
-  2.00 LEU01A0061_002 occ=0.001 trial=    6790/   27000 t
-  2.00 LEU01A0061_003 occ=0.030 trial=    6704/   27000 t
-  2.00 LEU01A0061_004 occ=0.030 trial=    6681/   27000 t
-  2.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
-  2.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
-  2.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
+  2.00 LEU01A0061_001 occ=0.937 trial=   13355/   40000 t
+  2.00 LEU01A0061_002 occ=0.034 trial=   13354/   40000 t
+  2.00 LEU01A0061_003 occ=0.030 trial=   13291/   40000 t
+  2.00 LEU01A0061_004 occ=0.000 trial=       0/   40000 f
+  2.00 LEU01A0061_005 occ=0.000 trial=       0/   40000 f
+  2.00 LEU01A0061_006 occ=0.000 trial=       0/   40000 f
+  2.00 LEU01A0061_007 occ=0.000 trial=       0/   40000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  2.00 LEU01A0061_001 occ=0.943 trial=   10561/   32000 t
+  2.00 LEU01A0061_002 occ=0.029 trial=   10699/   32000 t
+  2.00 LEU01A0061_003 occ=0.029 trial=   10740/   32000 t
+  2.00 LEU01A0061_004 occ=0.000 trial=       0/   32000 f
+  2.00 LEU01A0061_005 occ=0.000 trial=       0/   32000 f
+  2.00 LEU01A0061_006 occ=0.000 trial=       0/   32000 f
+  2.00 LEU01A0061_007 occ=0.000 trial=       0/   32000 f
 
 pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   2.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   2.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  2.00 LEU01A0061_001 occ=0.933 trial=    7214/   29000 t
-  2.00 LEU01A0061_002 occ=0.001 trial=    7306/   29000 t
-  2.00 LEU01A0061_003 occ=0.035 trial=    7306/   29000 t
-  2.00 LEU01A0061_004 occ=0.031 trial=    7174/   29000 t
-  2.00 LEU01A0061_005 occ=0.000 trial=       0/   29000 f
-  2.00 LEU01A0061_006 occ=0.000 trial=       0/   29000 f
-  2.00 LEU01A0061_007 occ=0.000 trial=       0/   29000 f
+  2.00 LEU01A0061_001 occ=0.934 trial=   11025/   33000 t
+  2.00 LEU01A0061_002 occ=0.035 trial=   10974/   33000 t
+  2.00 LEU01A0061_003 occ=0.031 trial=   11001/   33000 t
+  2.00 LEU01A0061_004 occ=0.000 trial=       0/   33000 f
+  2.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
+  2.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
+  2.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
 
 pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   2.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   2.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  2.00 LEU01A0061_001 occ=0.938 trial=    8509/   34000 t
-  2.00 LEU01A0061_002 occ=0.001 trial=    8521/   34000 t
-  2.00 LEU01A0061_003 occ=0.032 trial=    8416/   34000 t
-  2.00 LEU01A0061_004 occ=0.029 trial=    8554/   34000 t
-  2.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
-  2.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
-  2.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
+  2.00 LEU01A0061_001 occ=0.939 trial=   11181/   33000 t
+  2.00 LEU01A0061_002 occ=0.033 trial=   11060/   33000 t
+  2.00 LEU01A0061_003 occ=0.027 trial=   10759/   33000 t
+  2.00 LEU01A0061_004 occ=0.000 trial=       0/   33000 f
+  2.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
+  2.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
+  2.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
 
-pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   3.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
-pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  3.00 LEU01A0061_001 occ=0.948 trial=    3486/   24000 t
-  3.00 LEU01A0061_002 occ=0.001 trial=    3454/   24000 t
-  3.00 LEU01A0061_003 occ=0.027 trial=    3424/   24000 t
-  3.00 LEU01A0061_004 occ=0.023 trial=    3471/   24000 t
-  3.00 LEU01A0061_005 occ=0.000 trial=    3368/   24000 t
-  3.00 LEU01A0061_006 occ=0.001 trial=    3444/   24000 t
-  3.00 LEU01A0061_007 occ=0.000 trial=    3353/   24000 t
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  2.00 LEU01A0061_001 occ=0.935 trial=   14873/   45000 t
+  2.00 LEU01A0061_002 occ=0.035 trial=   15041/   45000 t
+  2.00 LEU01A0061_003 occ=0.030 trial=   15086/   45000 t
+  2.00 LEU01A0061_004 occ=0.000 trial=       0/   45000 f
+  2.00 LEU01A0061_005 occ=0.000 trial=       0/   45000 f
+  2.00 LEU01A0061_006 occ=0.000 trial=       0/   45000 f
+  2.00 LEU01A0061_007 occ=0.000 trial=       0/   45000 f
 
-pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   3.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
-pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  3.00 LEU01A0061_001 occ=0.930 trial=    8359/   34000 t
-  3.00 LEU01A0061_002 occ=0.001 trial=    8566/   34000 t
-  3.00 LEU01A0061_003 occ=0.038 trial=    8540/   34000 t
-  3.00 LEU01A0061_004 occ=0.031 trial=    8535/   34000 t
-  3.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
-  3.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
-  3.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  2.00 LEU01A0061_001 occ=0.933 trial=     683/    2000 t
+  2.00 LEU01A0061_002 occ=0.039 trial=     696/    2000 t
+  2.00 LEU01A0061_003 occ=0.028 trial=     621/    2000 t
+  2.00 LEU01A0061_004 occ=0.000 trial=       0/    2000 f
+  2.00 LEU01A0061_005 occ=0.000 trial=       0/    2000 f
+  2.00 LEU01A0061_006 occ=0.000 trial=       0/    2000 f
+  2.00 LEU01A0061_007 occ=0.000 trial=       0/    2000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  2.00 LEU01A0061_001 occ=0.936 trial=   11669/   35000 t
+  2.00 LEU01A0061_002 occ=0.033 trial=   11619/   35000 t
+  2.00 LEU01A0061_003 occ=0.031 trial=   11712/   35000 t
+  2.00 LEU01A0061_004 occ=0.000 trial=       0/   35000 f
+  2.00 LEU01A0061_005 occ=0.000 trial=       0/   35000 f
+  2.00 LEU01A0061_006 occ=0.000 trial=       0/   35000 f
+  2.00 LEU01A0061_007 occ=0.000 trial=       0/   35000 f
 
 pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   3.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  3.00 LEU01A0061_001 occ=0.936 trial=    8307/   33000 t
-  3.00 LEU01A0061_002 occ=0.001 trial=    8179/   33000 t
-  3.00 LEU01A0061_003 occ=0.034 trial=    8364/   33000 t
-  3.00 LEU01A0061_004 occ=0.029 trial=    8150/   33000 t
+  3.00 LEU01A0061_001 occ=0.936 trial=    3813/   27000 t
+  3.00 LEU01A0061_002 occ=0.033 trial=    3876/   27000 t
+  3.00 LEU01A0061_003 occ=0.029 trial=    3848/   27000 t
+  3.00 LEU01A0061_004 occ=0.001 trial=    3900/   27000 t
+  3.00 LEU01A0061_005 occ=0.001 trial=    3887/   27000 t
+  3.00 LEU01A0061_006 occ=0.000 trial=    3885/   27000 t
+  3.00 LEU01A0061_007 occ=0.000 trial=    3791/   27000 t
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  3.00 LEU01A0061_001 occ=0.935 trial=    7526/   30000 t
+  3.00 LEU01A0061_002 occ=0.033 trial=    7525/   30000 t
+  3.00 LEU01A0061_003 occ=0.031 trial=    7556/   30000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   30000 f
+  3.00 LEU01A0061_005 occ=0.001 trial=    7393/   30000 t
+  3.00 LEU01A0061_006 occ=0.000 trial=       0/   30000 f
+  3.00 LEU01A0061_007 occ=0.000 trial=       0/   30000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  3.00 LEU01A0061_001 occ=0.928 trial=    6628/   27000 t
+  3.00 LEU01A0061_002 occ=0.035 trial=    6651/   27000 t
+  3.00 LEU01A0061_003 occ=0.035 trial=    6875/   27000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   27000 f
+  3.00 LEU01A0061_005 occ=0.002 trial=    6846/   27000 t
+  3.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
+  3.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  3.00 LEU01A0061_001 occ=0.936 trial=    7874/   31000 t
+  3.00 LEU01A0061_002 occ=0.033 trial=    7656/   31000 t
+  3.00 LEU01A0061_003 occ=0.030 trial=    7752/   31000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   31000 f
+  3.00 LEU01A0061_005 occ=0.001 trial=    7718/   31000 t
+  3.00 LEU01A0061_006 occ=0.000 trial=       0/   31000 f
+  3.00 LEU01A0061_007 occ=0.000 trial=       0/   31000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  3.00 LEU01A0061_001 occ=0.941 trial=    3729/   15000 t
+  3.00 LEU01A0061_002 occ=0.030 trial=    3750/   15000 t
+  3.00 LEU01A0061_003 occ=0.028 trial=    3798/   15000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   15000 f
+  3.00 LEU01A0061_005 occ=0.001 trial=    3723/   15000 t
+  3.00 LEU01A0061_006 occ=0.000 trial=       0/   15000 f
+  3.00 LEU01A0061_007 occ=0.000 trial=       0/   15000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  3.00 LEU01A0061_001 occ=0.938 trial=    4456/   18000 t
+  3.00 LEU01A0061_002 occ=0.031 trial=    4625/   18000 t
+  3.00 LEU01A0061_003 occ=0.031 trial=    4474/   18000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   18000 f
+  3.00 LEU01A0061_005 occ=0.001 trial=    4445/   18000 t
+  3.00 LEU01A0061_006 occ=0.000 trial=       0/   18000 f
+  3.00 LEU01A0061_007 occ=0.000 trial=       0/   18000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  3.00 LEU01A0061_001 occ=0.933 trial=    8050/   24000 t
+  3.00 LEU01A0061_002 occ=0.035 trial=    7918/   24000 t
+  3.00 LEU01A0061_003 occ=0.032 trial=    8032/   24000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   24000 f
+  3.00 LEU01A0061_005 occ=0.000 trial=       0/   24000 f
+  3.00 LEU01A0061_006 occ=0.000 trial=       0/   24000 f
+  3.00 LEU01A0061_007 occ=0.000 trial=       0/   24000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  3.00 LEU01A0061_001 occ=0.932 trial=    8344/   25000 t
+  3.00 LEU01A0061_002 occ=0.036 trial=    8412/   25000 t
+  3.00 LEU01A0061_003 occ=0.032 trial=    8244/   25000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   25000 f
+  3.00 LEU01A0061_005 occ=0.000 trial=       0/   25000 f
+  3.00 LEU01A0061_006 occ=0.000 trial=       0/   25000 f
+  3.00 LEU01A0061_007 occ=0.000 trial=       0/   25000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  3.00 LEU01A0061_001 occ=0.939 trial=    9011/   27000 t
+  3.00 LEU01A0061_002 occ=0.033 trial=    9060/   27000 t
+  3.00 LEU01A0061_003 occ=0.028 trial=    8929/   27000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   27000 f
+  3.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
+  3.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
+  3.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  3.00 LEU01A0061_001 occ=0.929 trial=   11073/   33000 t
+  3.00 LEU01A0061_002 occ=0.037 trial=   10909/   33000 t
+  3.00 LEU01A0061_003 occ=0.034 trial=   11018/   33000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   33000 f
   3.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
   3.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
   3.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
@@ -222,175 +365,131 @@ pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
 pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   3.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  3.00 LEU01A0061_001 occ=0.940 trial=   11878/   35000 t
-  3.00 LEU01A0061_002 occ=0.000 trial=       0/   35000 f
-  3.00 LEU01A0061_003 occ=0.031 trial=   11615/   35000 t
-  3.00 LEU01A0061_004 occ=0.029 trial=   11507/   35000 t
-  3.00 LEU01A0061_005 occ=0.000 trial=       0/   35000 f
-  3.00 LEU01A0061_006 occ=0.000 trial=       0/   35000 f
-  3.00 LEU01A0061_007 occ=0.000 trial=       0/   35000 f
-
-pH =   3.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   3.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   3.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  3.00 LEU01A0061_001 occ=0.939 trial=    4070/   12000 t
-  3.00 LEU01A0061_002 occ=0.000 trial=       0/   12000 f
-  3.00 LEU01A0061_003 occ=0.033 trial=    4089/   12000 t
-  3.00 LEU01A0061_004 occ=0.028 trial=    3841/   12000 t
-  3.00 LEU01A0061_005 occ=0.000 trial=       0/   12000 f
-  3.00 LEU01A0061_006 occ=0.000 trial=       0/   12000 f
-  3.00 LEU01A0061_007 occ=0.000 trial=       0/   12000 f
-
-pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   4.00 Eh =   0.00, Ave. Energy =    -7.10 Kcal/mol
-pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.925 trial=    4872/   34000 t
-  4.00 LEU01A0061_002 occ=0.001 trial=    4842/   34000 t
-  4.00 LEU01A0061_003 occ=0.037 trial=    4741/   34000 t
-  4.00 LEU01A0061_004 occ=0.035 trial=    4892/   34000 t
-  4.00 LEU01A0061_005 occ=0.000 trial=    4897/   34000 t
-  4.00 LEU01A0061_006 occ=0.001 trial=    4838/   34000 t
-  4.00 LEU01A0061_007 occ=0.000 trial=    4918/   34000 t
-
-pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.939 trial=    5317/   21000 t
-  4.00 LEU01A0061_002 occ=0.001 trial=    5230/   21000 t
-  4.00 LEU01A0061_003 occ=0.032 trial=    5288/   21000 t
-  4.00 LEU01A0061_004 occ=0.028 trial=    5165/   21000 t
-  4.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
-  4.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
-  4.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
+  3.00 LEU01A0061_001 occ=0.937 trial=   13163/   40000 t
+  3.00 LEU01A0061_002 occ=0.034 trial=   13412/   40000 t
+  3.00 LEU01A0061_003 occ=0.030 trial=   13425/   40000 t
+  3.00 LEU01A0061_004 occ=0.000 trial=       0/   40000 f
+  3.00 LEU01A0061_005 occ=0.000 trial=       0/   40000 f
+  3.00 LEU01A0061_006 occ=0.000 trial=       0/   40000 f
+  3.00 LEU01A0061_007 occ=0.000 trial=       0/   40000 f
 
 pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   4.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.935 trial=    7666/   31000 t
-  4.00 LEU01A0061_002 occ=0.001 trial=    7763/   31000 t
-  4.00 LEU01A0061_003 occ=0.034 trial=    7762/   31000 t
-  4.00 LEU01A0061_004 occ=0.031 trial=    7809/   31000 t
+  4.00 LEU01A0061_001 occ=0.936 trial=    2360/   16000 t
+  4.00 LEU01A0061_002 occ=0.034 trial=    2221/   16000 t
+  4.00 LEU01A0061_003 occ=0.029 trial=    2323/   16000 t
+  4.00 LEU01A0061_004 occ=0.001 trial=    2212/   16000 t
+  4.00 LEU01A0061_005 occ=0.001 trial=    2279/   16000 t
+  4.00 LEU01A0061_006 occ=0.000 trial=    2307/   16000 t
+  4.00 LEU01A0061_007 occ=0.000 trial=    2298/   16000 t
+
+pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  4.00 LEU01A0061_001 occ=0.937 trial=    5615/   22000 t
+  4.00 LEU01A0061_002 occ=0.034 trial=    5516/   22000 t
+  4.00 LEU01A0061_003 occ=0.028 trial=    5419/   22000 t
+  4.00 LEU01A0061_004 occ=0.001 trial=    5450/   22000 t
+  4.00 LEU01A0061_005 occ=0.000 trial=       0/   22000 f
+  4.00 LEU01A0061_006 occ=0.000 trial=       0/   22000 f
+  4.00 LEU01A0061_007 occ=0.000 trial=       0/   22000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  4.00 LEU01A0061_001 occ=0.939 trial=    3012/    9000 t
+  4.00 LEU01A0061_002 occ=0.032 trial=    3015/    9000 t
+  4.00 LEU01A0061_003 occ=0.029 trial=    2973/    9000 t
+  4.00 LEU01A0061_004 occ=0.000 trial=       0/    9000 f
+  4.00 LEU01A0061_005 occ=0.000 trial=       0/    9000 f
+  4.00 LEU01A0061_006 occ=0.000 trial=       0/    9000 f
+  4.00 LEU01A0061_007 occ=0.000 trial=       0/    9000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  4.00 LEU01A0061_001 occ=0.937 trial=    6738/   20000 t
+  4.00 LEU01A0061_002 occ=0.034 trial=    6706/   20000 t
+  4.00 LEU01A0061_003 occ=0.029 trial=    6556/   20000 t
+  4.00 LEU01A0061_004 occ=0.000 trial=       0/   20000 f
+  4.00 LEU01A0061_005 occ=0.000 trial=       0/   20000 f
+  4.00 LEU01A0061_006 occ=0.000 trial=       0/   20000 f
+  4.00 LEU01A0061_007 occ=0.000 trial=       0/   20000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  4.00 LEU01A0061_001 occ=0.935 trial=    6384/   19000 t
+  4.00 LEU01A0061_002 occ=0.036 trial=    6352/   19000 t
+  4.00 LEU01A0061_003 occ=0.030 trial=    6264/   19000 t
+  4.00 LEU01A0061_004 occ=0.000 trial=       0/   19000 f
+  4.00 LEU01A0061_005 occ=0.000 trial=       0/   19000 f
+  4.00 LEU01A0061_006 occ=0.000 trial=       0/   19000 f
+  4.00 LEU01A0061_007 occ=0.000 trial=       0/   19000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  4.00 LEU01A0061_001 occ=0.933 trial=   10293/   31000 t
+  4.00 LEU01A0061_002 occ=0.036 trial=   10422/   31000 t
+  4.00 LEU01A0061_003 occ=0.032 trial=   10285/   31000 t
+  4.00 LEU01A0061_004 occ=0.000 trial=       0/   31000 f
   4.00 LEU01A0061_005 occ=0.000 trial=       0/   31000 f
   4.00 LEU01A0061_006 occ=0.000 trial=       0/   31000 f
   4.00 LEU01A0061_007 occ=0.000 trial=       0/   31000 f
 
 pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.938 trial=    9224/   37000 t
-  4.00 LEU01A0061_002 occ=0.001 trial=    9334/   37000 t
-  4.00 LEU01A0061_003 occ=0.031 trial=    9185/   37000 t
-  4.00 LEU01A0061_004 occ=0.030 trial=    9257/   37000 t
-  4.00 LEU01A0061_005 occ=0.000 trial=       0/   37000 f
-  4.00 LEU01A0061_006 occ=0.000 trial=       0/   37000 f
-  4.00 LEU01A0061_007 occ=0.000 trial=       0/   37000 f
+  4.00 LEU01A0061_001 occ=0.934 trial=    6259/   19000 t
+  4.00 LEU01A0061_002 occ=0.034 trial=    6354/   19000 t
+  4.00 LEU01A0061_003 occ=0.032 trial=    6387/   19000 t
+  4.00 LEU01A0061_004 occ=0.000 trial=       0/   19000 f
+  4.00 LEU01A0061_005 occ=0.000 trial=       0/   19000 f
+  4.00 LEU01A0061_006 occ=0.000 trial=       0/   19000 f
+  4.00 LEU01A0061_007 occ=0.000 trial=       0/   19000 f
 
 pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.936 trial=    9041/   27000 t
-  4.00 LEU01A0061_002 occ=0.000 trial=       0/   27000 f
-  4.00 LEU01A0061_003 occ=0.033 trial=    8940/   27000 t
-  4.00 LEU01A0061_004 occ=0.031 trial=    9019/   27000 t
-  4.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
-  4.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
-  4.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
+  4.00 LEU01A0061_001 occ=0.931 trial=    9660/   29000 t
+  4.00 LEU01A0061_002 occ=0.038 trial=    9757/   29000 t
+  4.00 LEU01A0061_003 occ=0.030 trial=    9583/   29000 t
+  4.00 LEU01A0061_004 occ=0.000 trial=       0/   29000 f
+  4.00 LEU01A0061_005 occ=0.000 trial=       0/   29000 f
+  4.00 LEU01A0061_006 occ=0.000 trial=       0/   29000 f
+  4.00 LEU01A0061_007 occ=0.000 trial=       0/   29000 f
 
 pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.936 trial=   15347/   46000 t
-  4.00 LEU01A0061_002 occ=0.000 trial=       0/   46000 f
-  4.00 LEU01A0061_003 occ=0.035 trial=   15468/   46000 t
-  4.00 LEU01A0061_004 occ=0.029 trial=   15185/   46000 t
-  4.00 LEU01A0061_005 occ=0.000 trial=       0/   46000 f
-  4.00 LEU01A0061_006 occ=0.000 trial=       0/   46000 f
-  4.00 LEU01A0061_007 occ=0.000 trial=       0/   46000 f
-
-pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.939 trial=    7963/   24000 t
-  4.00 LEU01A0061_002 occ=0.000 trial=       0/   24000 f
-  4.00 LEU01A0061_003 occ=0.031 trial=    8011/   24000 t
-  4.00 LEU01A0061_004 occ=0.029 trial=    8026/   24000 t
-  4.00 LEU01A0061_005 occ=0.000 trial=       0/   24000 f
-  4.00 LEU01A0061_006 occ=0.000 trial=       0/   24000 f
-  4.00 LEU01A0061_007 occ=0.000 trial=       0/   24000 f
-
-pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.938 trial=   11382/   34000 t
-  4.00 LEU01A0061_002 occ=0.000 trial=       0/   34000 f
-  4.00 LEU01A0061_003 occ=0.034 trial=   11333/   34000 t
-  4.00 LEU01A0061_004 occ=0.028 trial=   11285/   34000 t
-  4.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
-  4.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
-  4.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
-
-pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.940 trial=    5825/   17000 t
-  4.00 LEU01A0061_002 occ=0.000 trial=       0/   17000 f
-  4.00 LEU01A0061_003 occ=0.032 trial=    5608/   17000 t
-  4.00 LEU01A0061_004 occ=0.028 trial=    5567/   17000 t
-  4.00 LEU01A0061_005 occ=0.000 trial=       0/   17000 f
-  4.00 LEU01A0061_006 occ=0.000 trial=       0/   17000 f
-  4.00 LEU01A0061_007 occ=0.000 trial=       0/   17000 f
-
-pH =   4.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   4.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   4.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  4.00 LEU01A0061_001 occ=0.936 trial=   11010/   33000 t
-  4.00 LEU01A0061_002 occ=0.000 trial=       0/   33000 f
-  4.00 LEU01A0061_003 occ=0.034 trial=   11020/   33000 t
-  4.00 LEU01A0061_004 occ=0.030 trial=   10970/   33000 t
-  4.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
-  4.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
-  4.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
+  4.00 LEU01A0061_001 occ=0.934 trial=    3377/   10000 t
+  4.00 LEU01A0061_002 occ=0.035 trial=    3308/   10000 t
+  4.00 LEU01A0061_003 occ=0.031 trial=    3315/   10000 t
+  4.00 LEU01A0061_004 occ=0.000 trial=       0/   10000 f
+  4.00 LEU01A0061_005 occ=0.000 trial=       0/   10000 f
+  4.00 LEU01A0061_006 occ=0.000 trial=       0/   10000 f
+  4.00 LEU01A0061_007 occ=0.000 trial=       0/   10000 f
 
 pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   5.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  5.00 LEU01A0061_001 occ=0.931 trial=    4902/   34000 t
-  5.00 LEU01A0061_002 occ=0.001 trial=    4948/   34000 t
-  5.00 LEU01A0061_003 occ=0.035 trial=    4906/   34000 t
-  5.00 LEU01A0061_004 occ=0.032 trial=    4816/   34000 t
-  5.00 LEU01A0061_005 occ=0.000 trial=    4853/   34000 t
-  5.00 LEU01A0061_006 occ=0.001 trial=    4808/   34000 t
-  5.00 LEU01A0061_007 occ=0.000 trial=    4767/   34000 t
+  5.00 LEU01A0061_001 occ=0.940 trial=    6402/   44000 t
+  5.00 LEU01A0061_002 occ=0.030 trial=    6311/   44000 t
+  5.00 LEU01A0061_003 occ=0.027 trial=    6175/   44000 t
+  5.00 LEU01A0061_004 occ=0.001 trial=    6211/   44000 t
+  5.00 LEU01A0061_005 occ=0.001 trial=    6292/   44000 t
+  5.00 LEU01A0061_006 occ=0.000 trial=    6391/   44000 t
+  5.00 LEU01A0061_007 occ=0.000 trial=    6218/   44000 t
 
 pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   5.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
 pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  5.00 LEU01A0061_001 occ=0.932 trial=    6515/   33000 t
-  5.00 LEU01A0061_002 occ=0.001 trial=    6618/   33000 t
-  5.00 LEU01A0061_003 occ=0.034 trial=    6561/   33000 t
-  5.00 LEU01A0061_004 occ=0.032 trial=    6746/   33000 t
-  5.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
-  5.00 LEU01A0061_006 occ=0.001 trial=    6560/   33000 t
-  5.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
-
-pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   5.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  5.00 LEU01A0061_001 occ=0.933 trial=    6761/   34000 t
-  5.00 LEU01A0061_002 occ=0.001 trial=    6762/   34000 t
-  5.00 LEU01A0061_003 occ=0.033 trial=    6826/   34000 t
-  5.00 LEU01A0061_004 occ=0.031 trial=    6887/   34000 t
-  5.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
-  5.00 LEU01A0061_006 occ=0.001 trial=    6764/   34000 t
-  5.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
-
-pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   5.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  5.00 LEU01A0061_001 occ=0.936 trial=    8094/   32000 t
-  5.00 LEU01A0061_002 occ=0.001 trial=    7920/   32000 t
-  5.00 LEU01A0061_003 occ=0.034 trial=    7995/   32000 t
-  5.00 LEU01A0061_004 occ=0.029 trial=    7991/   32000 t
+  5.00 LEU01A0061_001 occ=0.941 trial=   10644/   32000 t
+  5.00 LEU01A0061_002 occ=0.031 trial=   10585/   32000 t
+  5.00 LEU01A0061_003 occ=0.028 trial=   10771/   32000 t
+  5.00 LEU01A0061_004 occ=0.000 trial=       0/   32000 f
   5.00 LEU01A0061_005 occ=0.000 trial=       0/   32000 f
   5.00 LEU01A0061_006 occ=0.000 trial=       0/   32000 f
   5.00 LEU01A0061_007 occ=0.000 trial=       0/   32000 f
@@ -398,450 +497,362 @@ pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
 pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   5.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  5.00 LEU01A0061_001 occ=0.940 trial=    7962/   24000 t
-  5.00 LEU01A0061_002 occ=0.000 trial=       0/   24000 f
-  5.00 LEU01A0061_003 occ=0.032 trial=    7932/   24000 t
-  5.00 LEU01A0061_004 occ=0.028 trial=    8106/   24000 t
-  5.00 LEU01A0061_005 occ=0.000 trial=       0/   24000 f
-  5.00 LEU01A0061_006 occ=0.000 trial=       0/   24000 f
-  5.00 LEU01A0061_007 occ=0.000 trial=       0/   24000 f
-
-pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   5.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  5.00 LEU01A0061_001 occ=0.940 trial=    6618/   20000 t
-  5.00 LEU01A0061_002 occ=0.000 trial=       0/   20000 f
-  5.00 LEU01A0061_003 occ=0.033 trial=    6625/   20000 t
-  5.00 LEU01A0061_004 occ=0.028 trial=    6757/   20000 t
-  5.00 LEU01A0061_005 occ=0.000 trial=       0/   20000 f
-  5.00 LEU01A0061_006 occ=0.000 trial=       0/   20000 f
-  5.00 LEU01A0061_007 occ=0.000 trial=       0/   20000 f
+  5.00 LEU01A0061_001 occ=0.937 trial=   12178/   37000 t
+  5.00 LEU01A0061_002 occ=0.033 trial=   12393/   37000 t
+  5.00 LEU01A0061_003 occ=0.030 trial=   12429/   37000 t
+  5.00 LEU01A0061_004 occ=0.000 trial=       0/   37000 f
+  5.00 LEU01A0061_005 occ=0.000 trial=       0/   37000 f
+  5.00 LEU01A0061_006 occ=0.000 trial=       0/   37000 f
+  5.00 LEU01A0061_007 occ=0.000 trial=       0/   37000 f
 
 pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   5.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
 pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  5.00 LEU01A0061_001 occ=0.941 trial=    7617/   23000 t
-  5.00 LEU01A0061_002 occ=0.000 trial=       0/   23000 f
-  5.00 LEU01A0061_003 occ=0.030 trial=    7788/   23000 t
-  5.00 LEU01A0061_004 occ=0.029 trial=    7595/   23000 t
+  5.00 LEU01A0061_001 occ=0.941 trial=    7755/   23000 t
+  5.00 LEU01A0061_002 occ=0.032 trial=    7690/   23000 t
+  5.00 LEU01A0061_003 occ=0.026 trial=    7555/   23000 t
+  5.00 LEU01A0061_004 occ=0.000 trial=       0/   23000 f
   5.00 LEU01A0061_005 occ=0.000 trial=       0/   23000 f
   5.00 LEU01A0061_006 occ=0.000 trial=       0/   23000 f
   5.00 LEU01A0061_007 occ=0.000 trial=       0/   23000 f
 
 pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  5.00 LEU01A0061_001 occ=0.935 trial=    5669/   17000 t
+  5.00 LEU01A0061_002 occ=0.033 trial=    5649/   17000 t
+  5.00 LEU01A0061_003 occ=0.032 trial=    5682/   17000 t
+  5.00 LEU01A0061_004 occ=0.000 trial=       0/   17000 f
+  5.00 LEU01A0061_005 occ=0.000 trial=       0/   17000 f
+  5.00 LEU01A0061_006 occ=0.000 trial=       0/   17000 f
+  5.00 LEU01A0061_007 occ=0.000 trial=       0/   17000 f
+
+pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   5.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  5.00 LEU01A0061_001 occ=0.938 trial=    9096/   27000 t
-  5.00 LEU01A0061_002 occ=0.000 trial=       0/   27000 f
-  5.00 LEU01A0061_003 occ=0.033 trial=    8817/   27000 t
-  5.00 LEU01A0061_004 occ=0.029 trial=    9087/   27000 t
-  5.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
-  5.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
-  5.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
+  5.00 LEU01A0061_001 occ=0.940 trial=    8719/   26000 t
+  5.00 LEU01A0061_002 occ=0.031 trial=    8652/   26000 t
+  5.00 LEU01A0061_003 occ=0.029 trial=    8629/   26000 t
+  5.00 LEU01A0061_004 occ=0.000 trial=       0/   26000 f
+  5.00 LEU01A0061_005 occ=0.000 trial=       0/   26000 f
+  5.00 LEU01A0061_006 occ=0.000 trial=       0/   26000 f
+  5.00 LEU01A0061_007 occ=0.000 trial=       0/   26000 f
 
-pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   6.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  6.00 LEU01A0061_001 occ=0.936 trial=    5910/   41000 t
-  6.00 LEU01A0061_002 occ=0.001 trial=    5871/   41000 t
-  6.00 LEU01A0061_003 occ=0.033 trial=    5797/   41000 t
-  6.00 LEU01A0061_004 occ=0.029 trial=    5834/   41000 t
-  6.00 LEU01A0061_005 occ=0.000 trial=    5900/   41000 t
-  6.00 LEU01A0061_006 occ=0.001 trial=    5849/   41000 t
-  6.00 LEU01A0061_007 occ=0.000 trial=    5839/   41000 t
-
-pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   6.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  6.00 LEU01A0061_001 occ=0.938 trial=    5608/   22000 t
-  6.00 LEU01A0061_002 occ=0.001 trial=    5472/   22000 t
-  6.00 LEU01A0061_003 occ=0.032 trial=    5553/   22000 t
-  6.00 LEU01A0061_004 occ=0.029 trial=    5367/   22000 t
-  6.00 LEU01A0061_005 occ=0.000 trial=       0/   22000 f
-  6.00 LEU01A0061_006 occ=0.000 trial=       0/   22000 f
-  6.00 LEU01A0061_007 occ=0.000 trial=       0/   22000 f
-
-pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   6.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  6.00 LEU01A0061_001 occ=0.932 trial=   11041/   33000 t
-  6.00 LEU01A0061_002 occ=0.000 trial=       0/   33000 f
-  6.00 LEU01A0061_003 occ=0.036 trial=   11067/   33000 t
-  6.00 LEU01A0061_004 occ=0.032 trial=   10892/   33000 t
-  6.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
-  6.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
-  6.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
-
-pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   6.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  6.00 LEU01A0061_001 occ=0.935 trial=    9038/   27000 t
-  6.00 LEU01A0061_002 occ=0.000 trial=       0/   27000 f
-  6.00 LEU01A0061_003 occ=0.034 trial=    8893/   27000 t
-  6.00 LEU01A0061_004 occ=0.030 trial=    9069/   27000 t
-  6.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
-  6.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
-  6.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
-
-pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   6.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  6.00 LEU01A0061_001 occ=0.933 trial=    8624/   26000 t
-  6.00 LEU01A0061_002 occ=0.000 trial=       0/   26000 f
-  6.00 LEU01A0061_003 occ=0.034 trial=    8614/   26000 t
-  6.00 LEU01A0061_004 occ=0.033 trial=    8762/   26000 t
-  6.00 LEU01A0061_005 occ=0.000 trial=       0/   26000 f
-  6.00 LEU01A0061_006 occ=0.000 trial=       0/   26000 f
-  6.00 LEU01A0061_007 occ=0.000 trial=       0/   26000 f
+pH =   5.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   5.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  5.00 LEU01A0061_001 occ=0.939 trial=    9429/   28000 t
+  5.00 LEU01A0061_002 occ=0.033 trial=    9363/   28000 t
+  5.00 LEU01A0061_003 occ=0.028 trial=    9208/   28000 t
+  5.00 LEU01A0061_004 occ=0.000 trial=       0/   28000 f
+  5.00 LEU01A0061_005 occ=0.000 trial=       0/   28000 f
+  5.00 LEU01A0061_006 occ=0.000 trial=       0/   28000 f
+  5.00 LEU01A0061_007 occ=0.000 trial=       0/   28000 f
 
 pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   6.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  6.00 LEU01A0061_001 occ=0.939 trial=    7402/   22000 t
-  6.00 LEU01A0061_002 occ=0.000 trial=       0/   22000 f
-  6.00 LEU01A0061_003 occ=0.033 trial=    7277/   22000 t
-  6.00 LEU01A0061_004 occ=0.029 trial=    7321/   22000 t
-  6.00 LEU01A0061_005 occ=0.000 trial=       0/   22000 f
-  6.00 LEU01A0061_006 occ=0.000 trial=       0/   22000 f
-  6.00 LEU01A0061_007 occ=0.000 trial=       0/   22000 f
+  6.00 LEU01A0061_001 occ=0.940 trial=    4687/   33000 t
+  6.00 LEU01A0061_002 occ=0.029 trial=    4686/   33000 t
+  6.00 LEU01A0061_003 occ=0.029 trial=    4800/   33000 t
+  6.00 LEU01A0061_004 occ=0.001 trial=    4682/   33000 t
+  6.00 LEU01A0061_005 occ=0.001 trial=    4690/   33000 t
+  6.00 LEU01A0061_006 occ=0.000 trial=    4765/   33000 t
+  6.00 LEU01A0061_007 occ=0.000 trial=    4690/   33000 t
 
 pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   6.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  6.00 LEU01A0061_001 occ=0.943 trial=    6943/   21000 t
-  6.00 LEU01A0061_002 occ=0.000 trial=       0/   21000 f
-  6.00 LEU01A0061_003 occ=0.029 trial=    6977/   21000 t
-  6.00 LEU01A0061_004 occ=0.028 trial=    7080/   21000 t
-  6.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
-  6.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
-  6.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
+  6.00 LEU01A0061_001 occ=0.933 trial=   13572/   41000 t
+  6.00 LEU01A0061_002 occ=0.035 trial=   13740/   41000 t
+  6.00 LEU01A0061_003 occ=0.032 trial=   13688/   41000 t
+  6.00 LEU01A0061_004 occ=0.000 trial=       0/   41000 f
+  6.00 LEU01A0061_005 occ=0.000 trial=       0/   41000 f
+  6.00 LEU01A0061_006 occ=0.000 trial=       0/   41000 f
+  6.00 LEU01A0061_007 occ=0.000 trial=       0/   41000 f
 
 pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   6.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  6.00 LEU01A0061_001 occ=0.937 trial=    9444/   28000 t
-  6.00 LEU01A0061_002 occ=0.000 trial=       0/   28000 f
-  6.00 LEU01A0061_003 occ=0.033 trial=    9176/   28000 t
-  6.00 LEU01A0061_004 occ=0.029 trial=    9380/   28000 t
-  6.00 LEU01A0061_005 occ=0.000 trial=       0/   28000 f
-  6.00 LEU01A0061_006 occ=0.000 trial=       0/   28000 f
-  6.00 LEU01A0061_007 occ=0.000 trial=       0/   28000 f
+  6.00 LEU01A0061_001 occ=0.939 trial=    2983/    9000 t
+  6.00 LEU01A0061_002 occ=0.032 trial=    3037/    9000 t
+  6.00 LEU01A0061_003 occ=0.028 trial=    2980/    9000 t
+  6.00 LEU01A0061_004 occ=0.000 trial=       0/    9000 f
+  6.00 LEU01A0061_005 occ=0.000 trial=       0/    9000 f
+  6.00 LEU01A0061_006 occ=0.000 trial=       0/    9000 f
+  6.00 LEU01A0061_007 occ=0.000 trial=       0/    9000 f
 
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.936 trial=    4969/   35000 t
-  7.00 LEU01A0061_002 occ=0.001 trial=    5048/   35000 t
-  7.00 LEU01A0061_003 occ=0.034 trial=    5039/   35000 t
-  7.00 LEU01A0061_004 occ=0.029 trial=    4943/   35000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=    4809/   35000 t
-  7.00 LEU01A0061_006 occ=0.000 trial=    5133/   35000 t
-  7.00 LEU01A0061_007 occ=0.000 trial=    5059/   35000 t
+pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  6.00 LEU01A0061_001 occ=0.935 trial=   12223/   37000 t
+  6.00 LEU01A0061_002 occ=0.034 trial=   12420/   37000 t
+  6.00 LEU01A0061_003 occ=0.031 trial=   12357/   37000 t
+  6.00 LEU01A0061_004 occ=0.000 trial=       0/   37000 f
+  6.00 LEU01A0061_005 occ=0.000 trial=       0/   37000 f
+  6.00 LEU01A0061_006 occ=0.000 trial=       0/   37000 f
+  6.00 LEU01A0061_007 occ=0.000 trial=       0/   37000 f
 
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.941 trial=    7086/   21000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   21000 f
-  7.00 LEU01A0061_003 occ=0.030 trial=    6913/   21000 t
-  7.00 LEU01A0061_004 occ=0.029 trial=    7001/   21000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
+pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  6.00 LEU01A0061_001 occ=0.937 trial=   12700/   38000 t
+  6.00 LEU01A0061_002 occ=0.033 trial=   12592/   38000 t
+  6.00 LEU01A0061_003 occ=0.029 trial=   12708/   38000 t
+  6.00 LEU01A0061_004 occ=0.000 trial=       0/   38000 f
+  6.00 LEU01A0061_005 occ=0.000 trial=       0/   38000 f
+  6.00 LEU01A0061_006 occ=0.000 trial=       0/   38000 f
+  6.00 LEU01A0061_007 occ=0.000 trial=       0/   38000 f
 
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.939 trial=    9318/   28000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   28000 f
-  7.00 LEU01A0061_003 occ=0.034 trial=    9439/   28000 t
-  7.00 LEU01A0061_004 occ=0.028 trial=    9243/   28000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   28000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   28000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   28000 f
+pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  6.00 LEU01A0061_001 occ=0.934 trial=   12299/   37000 t
+  6.00 LEU01A0061_002 occ=0.035 trial=   12376/   37000 t
+  6.00 LEU01A0061_003 occ=0.031 trial=   12325/   37000 t
+  6.00 LEU01A0061_004 occ=0.000 trial=       0/   37000 f
+  6.00 LEU01A0061_005 occ=0.000 trial=       0/   37000 f
+  6.00 LEU01A0061_006 occ=0.000 trial=       0/   37000 f
+  6.00 LEU01A0061_007 occ=0.000 trial=       0/   37000 f
 
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.937 trial=    8951/   27000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   27000 f
-  7.00 LEU01A0061_003 occ=0.033 trial=    9029/   27000 t
-  7.00 LEU01A0061_004 occ=0.030 trial=    9020/   27000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
+pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  6.00 LEU01A0061_001 occ=0.934 trial=    4419/   13000 t
+  6.00 LEU01A0061_002 occ=0.035 trial=    4286/   13000 t
+  6.00 LEU01A0061_003 occ=0.032 trial=    4295/   13000 t
+  6.00 LEU01A0061_004 occ=0.000 trial=       0/   13000 f
+  6.00 LEU01A0061_005 occ=0.000 trial=       0/   13000 f
+  6.00 LEU01A0061_006 occ=0.000 trial=       0/   13000 f
+  6.00 LEU01A0061_007 occ=0.000 trial=       0/   13000 f
 
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.936 trial=   11008/   33000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   33000 f
-  7.00 LEU01A0061_003 occ=0.034 trial=   10990/   33000 t
-  7.00 LEU01A0061_004 occ=0.030 trial=   11002/   33000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
-
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.939 trial=    9889/   30000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   30000 f
-  7.00 LEU01A0061_003 occ=0.032 trial=    9957/   30000 t
-  7.00 LEU01A0061_004 occ=0.029 trial=   10154/   30000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   30000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   30000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   30000 f
-
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.927 trial=    3185/   10000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   10000 f
-  7.00 LEU01A0061_003 occ=0.038 trial=    3402/   10000 t
-  7.00 LEU01A0061_004 occ=0.035 trial=    3413/   10000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   10000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   10000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   10000 f
+pH =   6.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  6.00 LEU01A0061_001 occ=0.936 trial=   13037/   39000 t
+  6.00 LEU01A0061_002 occ=0.033 trial=   13018/   39000 t
+  6.00 LEU01A0061_003 occ=0.031 trial=   12945/   39000 t
+  6.00 LEU01A0061_004 occ=0.000 trial=       0/   39000 f
+  6.00 LEU01A0061_005 occ=0.000 trial=       0/   39000 f
+  6.00 LEU01A0061_006 occ=0.000 trial=       0/   39000 f
+  6.00 LEU01A0061_007 occ=0.000 trial=       0/   39000 f
 
 pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   7.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.938 trial=    7062/   21000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   21000 f
-  7.00 LEU01A0061_003 occ=0.033 trial=    6918/   21000 t
-  7.00 LEU01A0061_004 occ=0.029 trial=    7020/   21000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
+  7.00 LEU01A0061_001 occ=0.940 trial=    3969/   28000 t
+  7.00 LEU01A0061_002 occ=0.030 trial=    4069/   28000 t
+  7.00 LEU01A0061_003 occ=0.029 trial=    3863/   28000 t
+  7.00 LEU01A0061_004 occ=0.001 trial=    4081/   28000 t
+  7.00 LEU01A0061_005 occ=0.001 trial=    3991/   28000 t
+  7.00 LEU01A0061_006 occ=0.000 trial=    4030/   28000 t
+  7.00 LEU01A0061_007 occ=0.000 trial=    3997/   28000 t
 
 pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
 pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.934 trial=    7674/   23000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   23000 f
-  7.00 LEU01A0061_003 occ=0.034 trial=    7662/   23000 t
-  7.00 LEU01A0061_004 occ=0.032 trial=    7664/   23000 t
+  7.00 LEU01A0061_001 occ=0.941 trial=   12460/   37000 t
+  7.00 LEU01A0061_002 occ=0.031 trial=   12267/   37000 t
+  7.00 LEU01A0061_003 occ=0.028 trial=   12273/   37000 t
+  7.00 LEU01A0061_004 occ=0.000 trial=       0/   37000 f
+  7.00 LEU01A0061_005 occ=0.000 trial=       0/   37000 f
+  7.00 LEU01A0061_006 occ=0.000 trial=       0/   37000 f
+  7.00 LEU01A0061_007 occ=0.000 trial=       0/   37000 f
+
+pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  7.00 LEU01A0061_001 occ=0.938 trial=    6573/   20000 t
+  7.00 LEU01A0061_002 occ=0.033 trial=    6711/   20000 t
+  7.00 LEU01A0061_003 occ=0.030 trial=    6716/   20000 t
+  7.00 LEU01A0061_004 occ=0.000 trial=       0/   20000 f
+  7.00 LEU01A0061_005 occ=0.000 trial=       0/   20000 f
+  7.00 LEU01A0061_006 occ=0.000 trial=       0/   20000 f
+  7.00 LEU01A0061_007 occ=0.000 trial=       0/   20000 f
+
+pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  7.00 LEU01A0061_001 occ=0.939 trial=    7828/   23000 t
+  7.00 LEU01A0061_002 occ=0.032 trial=    7416/   23000 t
+  7.00 LEU01A0061_003 occ=0.029 trial=    7756/   23000 t
+  7.00 LEU01A0061_004 occ=0.000 trial=       0/   23000 f
   7.00 LEU01A0061_005 occ=0.000 trial=       0/   23000 f
   7.00 LEU01A0061_006 occ=0.000 trial=       0/   23000 f
   7.00 LEU01A0061_007 occ=0.000 trial=       0/   23000 f
 
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.941 trial=    3284/   10000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   10000 f
-  7.00 LEU01A0061_003 occ=0.033 trial=    3365/   10000 t
-  7.00 LEU01A0061_004 occ=0.026 trial=    3351/   10000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   10000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   10000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   10000 f
-
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.942 trial=   12524/   38000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   38000 f
-  7.00 LEU01A0061_003 occ=0.031 trial=   12813/   38000 t
-  7.00 LEU01A0061_004 occ=0.026 trial=   12663/   38000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   38000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   38000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   38000 f
-
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.943 trial=    8138/   24000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   24000 f
-  7.00 LEU01A0061_003 occ=0.031 trial=    7938/   24000 t
-  7.00 LEU01A0061_004 occ=0.027 trial=    7924/   24000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   24000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   24000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   24000 f
-
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.934 trial=   14341/   43000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   43000 f
-  7.00 LEU01A0061_003 occ=0.035 trial=   14336/   43000 t
-  7.00 LEU01A0061_004 occ=0.031 trial=   14323/   43000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   43000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   43000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   43000 f
-
-pH =   7.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   7.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   7.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  7.00 LEU01A0061_001 occ=0.935 trial=   12949/   39000 t
-  7.00 LEU01A0061_002 occ=0.000 trial=       0/   39000 f
-  7.00 LEU01A0061_003 occ=0.034 trial=   12922/   39000 t
-  7.00 LEU01A0061_004 occ=0.030 trial=   13129/   39000 t
-  7.00 LEU01A0061_005 occ=0.000 trial=       0/   39000 f
-  7.00 LEU01A0061_006 occ=0.000 trial=       0/   39000 f
-  7.00 LEU01A0061_007 occ=0.000 trial=       0/   39000 f
-
-pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   8.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
-pH =   8.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  8.00 LEU01A0061_001 occ=0.931 trial=    4365/   30000 t
-  8.00 LEU01A0061_002 occ=0.001 trial=    4359/   30000 t
-  8.00 LEU01A0061_003 occ=0.033 trial=    4266/   30000 t
-  8.00 LEU01A0061_004 occ=0.034 trial=    4216/   30000 t
-  8.00 LEU01A0061_005 occ=0.000 trial=    4270/   30000 t
-  8.00 LEU01A0061_006 occ=0.001 trial=    4279/   30000 t
-  8.00 LEU01A0061_007 occ=0.000 trial=    4245/   30000 t
-
 pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   8.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   8.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  8.00 LEU01A0061_001 occ=0.937 trial=    6677/   27000 t
-  8.00 LEU01A0061_002 occ=0.000 trial=       0/   27000 f
-  8.00 LEU01A0061_003 occ=0.033 trial=    6773/   27000 t
-  8.00 LEU01A0061_004 occ=0.029 trial=    6764/   27000 t
-  8.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
-  8.00 LEU01A0061_006 occ=0.001 trial=    6786/   27000 t
-  8.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
-
-pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   8.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =   8.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  8.00 LEU01A0061_001 occ=0.932 trial=   10478/   42000 t
-  8.00 LEU01A0061_002 occ=0.000 trial=       0/   42000 f
-  8.00 LEU01A0061_003 occ=0.036 trial=   10546/   42000 t
-  8.00 LEU01A0061_004 occ=0.030 trial=   10555/   42000 t
-  8.00 LEU01A0061_005 occ=0.000 trial=       0/   42000 f
-  8.00 LEU01A0061_006 occ=0.001 trial=   10421/   42000 t
-  8.00 LEU01A0061_007 occ=0.000 trial=       0/   42000 f
+  8.00 LEU01A0061_001 occ=0.935 trial=    2770/   19000 t
+  8.00 LEU01A0061_002 occ=0.032 trial=    2776/   19000 t
+  8.00 LEU01A0061_003 occ=0.031 trial=    2688/   19000 t
+  8.00 LEU01A0061_004 occ=0.001 trial=    2636/   19000 t
+  8.00 LEU01A0061_005 occ=0.001 trial=    2709/   19000 t
+  8.00 LEU01A0061_006 occ=0.000 trial=    2765/   19000 t
+  8.00 LEU01A0061_007 occ=0.000 trial=    2656/   19000 t
 
 pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   8.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   8.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  8.00 LEU01A0061_001 occ=0.936 trial=    8101/   24000 t
-  8.00 LEU01A0061_002 occ=0.000 trial=       0/   24000 f
-  8.00 LEU01A0061_003 occ=0.034 trial=    7904/   24000 t
-  8.00 LEU01A0061_004 occ=0.030 trial=    7995/   24000 t
-  8.00 LEU01A0061_005 occ=0.000 trial=       0/   24000 f
-  8.00 LEU01A0061_006 occ=0.000 trial=       0/   24000 f
-  8.00 LEU01A0061_007 occ=0.000 trial=       0/   24000 f
+  8.00 LEU01A0061_001 occ=0.936 trial=   14964/   45000 t
+  8.00 LEU01A0061_002 occ=0.034 trial=   15075/   45000 t
+  8.00 LEU01A0061_003 occ=0.030 trial=   14961/   45000 t
+  8.00 LEU01A0061_004 occ=0.000 trial=       0/   45000 f
+  8.00 LEU01A0061_005 occ=0.000 trial=       0/   45000 f
+  8.00 LEU01A0061_006 occ=0.000 trial=       0/   45000 f
+  8.00 LEU01A0061_007 occ=0.000 trial=       0/   45000 f
 
 pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   8.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   8.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  8.00 LEU01A0061_001 occ=0.933 trial=    5354/   16000 t
-  8.00 LEU01A0061_002 occ=0.000 trial=       0/   16000 f
-  8.00 LEU01A0061_003 occ=0.036 trial=    5243/   16000 t
-  8.00 LEU01A0061_004 occ=0.031 trial=    5403/   16000 t
-  8.00 LEU01A0061_005 occ=0.000 trial=       0/   16000 f
-  8.00 LEU01A0061_006 occ=0.000 trial=       0/   16000 f
-  8.00 LEU01A0061_007 occ=0.000 trial=       0/   16000 f
+  8.00 LEU01A0061_001 occ=0.935 trial=   11958/   36000 t
+  8.00 LEU01A0061_002 occ=0.034 trial=   12079/   36000 t
+  8.00 LEU01A0061_003 occ=0.031 trial=   11963/   36000 t
+  8.00 LEU01A0061_004 occ=0.000 trial=       0/   36000 f
+  8.00 LEU01A0061_005 occ=0.000 trial=       0/   36000 f
+  8.00 LEU01A0061_006 occ=0.000 trial=       0/   36000 f
+  8.00 LEU01A0061_007 occ=0.000 trial=       0/   36000 f
 
 pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   8.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
 pH =   8.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  8.00 LEU01A0061_001 occ=0.940 trial=   12389/   37000 t
-  8.00 LEU01A0061_002 occ=0.000 trial=       0/   37000 f
-  8.00 LEU01A0061_003 occ=0.030 trial=   12280/   37000 t
-  8.00 LEU01A0061_004 occ=0.030 trial=   12331/   37000 t
-  8.00 LEU01A0061_005 occ=0.000 trial=       0/   37000 f
-  8.00 LEU01A0061_006 occ=0.000 trial=       0/   37000 f
-  8.00 LEU01A0061_007 occ=0.000 trial=       0/   37000 f
-
-pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   8.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   8.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  8.00 LEU01A0061_001 occ=0.938 trial=    5595/   17000 t
-  8.00 LEU01A0061_002 occ=0.000 trial=       0/   17000 f
-  8.00 LEU01A0061_003 occ=0.032 trial=    5688/   17000 t
-  8.00 LEU01A0061_004 occ=0.030 trial=    5717/   17000 t
-  8.00 LEU01A0061_005 occ=0.000 trial=       0/   17000 f
-  8.00 LEU01A0061_006 occ=0.000 trial=       0/   17000 f
-  8.00 LEU01A0061_007 occ=0.000 trial=       0/   17000 f
+  8.00 LEU01A0061_001 occ=0.946 trial=   12663/   38000 t
+  8.00 LEU01A0061_002 occ=0.029 trial=   12735/   38000 t
+  8.00 LEU01A0061_003 occ=0.025 trial=   12602/   38000 t
+  8.00 LEU01A0061_004 occ=0.000 trial=       0/   38000 f
+  8.00 LEU01A0061_005 occ=0.000 trial=       0/   38000 f
+  8.00 LEU01A0061_006 occ=0.000 trial=       0/   38000 f
+  8.00 LEU01A0061_007 occ=0.000 trial=       0/   38000 f
 
 pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   8.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   8.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  8.00 LEU01A0061_001 occ=0.936 trial=    6975/   21000 t
-  8.00 LEU01A0061_002 occ=0.000 trial=       0/   21000 f
-  8.00 LEU01A0061_003 occ=0.035 trial=    7050/   21000 t
-  8.00 LEU01A0061_004 occ=0.029 trial=    6975/   21000 t
-  8.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
-  8.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
-  8.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
+  8.00 LEU01A0061_001 occ=0.935 trial=   11723/   35000 t
+  8.00 LEU01A0061_002 occ=0.034 trial=   11687/   35000 t
+  8.00 LEU01A0061_003 occ=0.031 trial=   11590/   35000 t
+  8.00 LEU01A0061_004 occ=0.000 trial=       0/   35000 f
+  8.00 LEU01A0061_005 occ=0.000 trial=       0/   35000 f
+  8.00 LEU01A0061_006 occ=0.000 trial=       0/   35000 f
+  8.00 LEU01A0061_007 occ=0.000 trial=       0/   35000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  8.00 LEU01A0061_001 occ=0.938 trial=    4448/   13000 t
+  8.00 LEU01A0061_002 occ=0.032 trial=    4289/   13000 t
+  8.00 LEU01A0061_003 occ=0.030 trial=    4263/   13000 t
+  8.00 LEU01A0061_004 occ=0.000 trial=       0/   13000 f
+  8.00 LEU01A0061_005 occ=0.000 trial=       0/   13000 f
+  8.00 LEU01A0061_006 occ=0.000 trial=       0/   13000 f
+  8.00 LEU01A0061_007 occ=0.000 trial=       0/   13000 f
 
 pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   9.00 Eh =   0.00, Ave. Energy =    -7.09 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
 pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.923 trial=    4013/   28000 t
-  9.00 LEU01A0061_002 occ=0.001 trial=    3910/   28000 t
-  9.00 LEU01A0061_003 occ=0.040 trial=    4128/   28000 t
-  9.00 LEU01A0061_004 occ=0.035 trial=    3963/   28000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=    4015/   28000 t
-  9.00 LEU01A0061_006 occ=0.001 trial=    4014/   28000 t
-  9.00 LEU01A0061_007 occ=0.000 trial=    3957/   28000 t
-
-pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.937 trial=   10307/   42000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   42000 f
-  9.00 LEU01A0061_003 occ=0.033 trial=   10629/   42000 t
-  9.00 LEU01A0061_004 occ=0.029 trial=   10500/   42000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   42000 f
-  9.00 LEU01A0061_006 occ=0.001 trial=   10564/   42000 t
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   42000 f
-
-pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.937 trial=    6655/   20000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   20000 f
-  9.00 LEU01A0061_003 occ=0.033 trial=    6623/   20000 t
-  9.00 LEU01A0061_004 occ=0.030 trial=    6722/   20000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   20000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   20000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   20000 f
-
-pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.937 trial=    5001/   15000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   15000 f
-  9.00 LEU01A0061_003 occ=0.033 trial=    5045/   15000 t
-  9.00 LEU01A0061_004 occ=0.029 trial=    4954/   15000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   15000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   15000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   15000 f
+  9.00 LEU01A0061_001 occ=0.931 trial=    2985/   21000 t
+  9.00 LEU01A0061_002 occ=0.039 trial=    3023/   21000 t
+  9.00 LEU01A0061_003 occ=0.029 trial=    2964/   21000 t
+  9.00 LEU01A0061_004 occ=0.001 trial=    2946/   21000 t
+  9.00 LEU01A0061_005 occ=0.001 trial=    2996/   21000 t
+  9.00 LEU01A0061_006 occ=0.000 trial=    3012/   21000 t
+  9.00 LEU01A0061_007 occ=0.000 trial=    3074/   21000 t
 
 pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   9.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.935 trial=   11544/   34000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   34000 f
-  9.00 LEU01A0061_003 occ=0.034 trial=   11184/   34000 t
-  9.00 LEU01A0061_004 occ=0.031 trial=   11272/   34000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
+  9.00 LEU01A0061_001 occ=0.933 trial=   14240/   43000 t
+  9.00 LEU01A0061_002 occ=0.035 trial=   14365/   43000 t
+  9.00 LEU01A0061_003 occ=0.031 trial=   14395/   43000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   43000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   43000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   43000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   43000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  9.00 LEU01A0061_001 occ=0.934 trial=    6980/   21000 t
+  9.00 LEU01A0061_002 occ=0.033 trial=    7008/   21000 t
+  9.00 LEU01A0061_003 occ=0.032 trial=    7012/   21000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   21000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
 
 pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.939 trial=   11847/   35000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   35000 f
-  9.00 LEU01A0061_003 occ=0.032 trial=   11455/   35000 t
-  9.00 LEU01A0061_004 occ=0.029 trial=   11698/   35000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   35000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   35000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   35000 f
+  9.00 LEU01A0061_001 occ=0.940 trial=    7391/   22000 t
+  9.00 LEU01A0061_002 occ=0.032 trial=    7292/   22000 t
+  9.00 LEU01A0061_003 occ=0.028 trial=    7317/   22000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   22000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   22000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   22000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   22000 f
 
 pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.941 trial=   15974/   48000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   48000 f
-  9.00 LEU01A0061_003 occ=0.031 trial=   15951/   48000 t
-  9.00 LEU01A0061_004 occ=0.029 trial=   16075/   48000 t
+  9.00 LEU01A0061_001 occ=0.938 trial=   10920/   33000 t
+  9.00 LEU01A0061_002 occ=0.032 trial=   11112/   33000 t
+  9.00 LEU01A0061_003 occ=0.029 trial=   10968/   33000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   33000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  9.00 LEU01A0061_001 occ=0.933 trial=    9007/   27000 t
+  9.00 LEU01A0061_002 occ=0.035 trial=    9019/   27000 t
+  9.00 LEU01A0061_003 occ=0.032 trial=    8974/   27000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   27000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   27000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   27000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   27000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  9.00 LEU01A0061_001 occ=0.942 trial=     686/    2000 t
+  9.00 LEU01A0061_002 occ=0.025 trial=     663/    2000 t
+  9.00 LEU01A0061_003 occ=0.033 trial=     651/    2000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/    2000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/    2000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/    2000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/    2000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  9.00 LEU01A0061_001 occ=0.933 trial=   10547/   32000 t
+  9.00 LEU01A0061_002 occ=0.035 trial=   10740/   32000 t
+  9.00 LEU01A0061_003 occ=0.032 trial=   10713/   32000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   32000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   32000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   32000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   32000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  9.00 LEU01A0061_001 occ=0.929 trial=    7627/   23000 t
+  9.00 LEU01A0061_002 occ=0.038 trial=    7762/   23000 t
+  9.00 LEU01A0061_003 occ=0.034 trial=    7611/   23000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   23000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   23000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   23000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   23000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+  9.00 LEU01A0061_001 occ=0.939 trial=   15916/   48000 t
+  9.00 LEU01A0061_002 occ=0.031 trial=   15854/   48000 t
+  9.00 LEU01A0061_003 occ=0.030 trial=   16230/   48000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   48000 f
   9.00 LEU01A0061_005 occ=0.000 trial=       0/   48000 f
   9.00 LEU01A0061_006 occ=0.000 trial=       0/   48000 f
   9.00 LEU01A0061_007 occ=0.000 trial=       0/   48000 f
@@ -849,505 +860,494 @@ pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
 pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.939 trial=   11099/   33000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   33000 f
-  9.00 LEU01A0061_003 occ=0.032 trial=   10950/   33000 t
-  9.00 LEU01A0061_004 occ=0.029 trial=   10951/   33000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
+  9.00 LEU01A0061_001 occ=0.939 trial=    8121/   24000 t
+  9.00 LEU01A0061_002 occ=0.031 trial=    7950/   24000 t
+  9.00 LEU01A0061_003 occ=0.030 trial=    7929/   24000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   24000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   24000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   24000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   24000 f
 
 pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.936 trial=    7341/   22000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   22000 f
-  9.00 LEU01A0061_003 occ=0.036 trial=    7406/   22000 t
-  9.00 LEU01A0061_004 occ=0.028 trial=    7253/   22000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   22000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   22000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   22000 f
+  9.00 LEU01A0061_001 occ=0.939 trial=   11608/   35000 t
+  9.00 LEU01A0061_002 occ=0.033 trial=   11735/   35000 t
+  9.00 LEU01A0061_003 occ=0.028 trial=   11657/   35000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   35000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   35000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   35000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   35000 f
 
 pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.940 trial=    6396/   19000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   19000 f
-  9.00 LEU01A0061_003 occ=0.031 trial=    6336/   19000 t
-  9.00 LEU01A0061_004 occ=0.029 trial=    6268/   19000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   19000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   19000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   19000 f
+  9.00 LEU01A0061_001 occ=0.938 trial=    6713/   20000 t
+  9.00 LEU01A0061_002 occ=0.030 trial=    6561/   20000 t
+  9.00 LEU01A0061_003 occ=0.032 trial=    6726/   20000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   20000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   20000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   20000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   20000 f
 
 pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.939 trial=    7269/   22000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   22000 f
-  9.00 LEU01A0061_003 occ=0.034 trial=    7412/   22000 t
-  9.00 LEU01A0061_004 occ=0.028 trial=    7319/   22000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   22000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   22000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   22000 f
-
-pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   9.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
-pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.944 trial=    4674/   14000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   14000 f
-  9.00 LEU01A0061_003 occ=0.026 trial=    4641/   14000 t
-  9.00 LEU01A0061_004 occ=0.029 trial=    4685/   14000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   14000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   14000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   14000 f
-
-pH =   9.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =   9.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =   9.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
-  9.00 LEU01A0061_001 occ=0.938 trial=    8569/   26000 t
-  9.00 LEU01A0061_002 occ=0.000 trial=       0/   26000 f
-  9.00 LEU01A0061_003 occ=0.034 trial=    8718/   26000 t
-  9.00 LEU01A0061_004 occ=0.028 trial=    8713/   26000 t
-  9.00 LEU01A0061_005 occ=0.000 trial=       0/   26000 f
-  9.00 LEU01A0061_006 occ=0.000 trial=       0/   26000 f
-  9.00 LEU01A0061_007 occ=0.000 trial=       0/   26000 f
-
-pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  10.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 10.00 LEU01A0061_001 occ=0.940 trial=    1416/   10000 t
- 10.00 LEU01A0061_002 occ=0.001 trial=    1378/   10000 t
- 10.00 LEU01A0061_003 occ=0.029 trial=    1426/   10000 t
- 10.00 LEU01A0061_004 occ=0.029 trial=    1482/   10000 t
- 10.00 LEU01A0061_005 occ=0.000 trial=    1408/   10000 t
- 10.00 LEU01A0061_006 occ=0.001 trial=    1425/   10000 t
- 10.00 LEU01A0061_007 occ=0.000 trial=    1465/   10000 t
-
-pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  10.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
-pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 10.00 LEU01A0061_001 occ=0.944 trial=    3195/   13000 t
- 10.00 LEU01A0061_002 occ=0.000 trial=       0/   13000 f
- 10.00 LEU01A0061_003 occ=0.027 trial=    3292/   13000 t
- 10.00 LEU01A0061_004 occ=0.028 trial=    3269/   13000 t
- 10.00 LEU01A0061_005 occ=0.000 trial=       0/   13000 f
- 10.00 LEU01A0061_006 occ=0.001 trial=    3244/   13000 t
- 10.00 LEU01A0061_007 occ=0.000 trial=       0/   13000 f
-
-pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  10.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
-pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 10.00 LEU01A0061_001 occ=0.942 trial=    6114/   18000 t
- 10.00 LEU01A0061_002 occ=0.000 trial=       0/   18000 f
- 10.00 LEU01A0061_003 occ=0.032 trial=    5912/   18000 t
- 10.00 LEU01A0061_004 occ=0.026 trial=    5974/   18000 t
- 10.00 LEU01A0061_005 occ=0.000 trial=       0/   18000 f
- 10.00 LEU01A0061_006 occ=0.000 trial=       0/   18000 f
- 10.00 LEU01A0061_007 occ=0.000 trial=       0/   18000 f
-
-pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  10.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
-pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 10.00 LEU01A0061_001 occ=0.930 trial=   13534/   41000 t
- 10.00 LEU01A0061_002 occ=0.000 trial=       0/   41000 f
- 10.00 LEU01A0061_003 occ=0.037 trial=   13813/   41000 t
- 10.00 LEU01A0061_004 occ=0.033 trial=   13653/   41000 t
- 10.00 LEU01A0061_005 occ=0.000 trial=       0/   41000 f
- 10.00 LEU01A0061_006 occ=0.000 trial=       0/   41000 f
- 10.00 LEU01A0061_007 occ=0.000 trial=       0/   41000 f
+  9.00 LEU01A0061_001 occ=0.935 trial=    6077/   18000 t
+  9.00 LEU01A0061_002 occ=0.035 trial=    5915/   18000 t
+  9.00 LEU01A0061_003 occ=0.031 trial=    6008/   18000 t
+  9.00 LEU01A0061_004 occ=0.000 trial=       0/   18000 f
+  9.00 LEU01A0061_005 occ=0.000 trial=       0/   18000 f
+  9.00 LEU01A0061_006 occ=0.000 trial=       0/   18000 f
+  9.00 LEU01A0061_007 occ=0.000 trial=       0/   18000 f
 
 pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  10.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 10.00 LEU01A0061_001 occ=0.932 trial=    8051/   24000 t
- 10.00 LEU01A0061_002 occ=0.000 trial=       0/   24000 f
- 10.00 LEU01A0061_003 occ=0.037 trial=    8019/   24000 t
- 10.00 LEU01A0061_004 occ=0.031 trial=    7930/   24000 t
- 10.00 LEU01A0061_005 occ=0.000 trial=       0/   24000 f
- 10.00 LEU01A0061_006 occ=0.000 trial=       0/   24000 f
- 10.00 LEU01A0061_007 occ=0.000 trial=       0/   24000 f
+ 10.00 LEU01A0061_001 occ=0.935 trial=    5457/   38000 t
+ 10.00 LEU01A0061_002 occ=0.034 trial=    5505/   38000 t
+ 10.00 LEU01A0061_003 occ=0.028 trial=    5387/   38000 t
+ 10.00 LEU01A0061_004 occ=0.001 trial=    5456/   38000 t
+ 10.00 LEU01A0061_005 occ=0.001 trial=    5320/   38000 t
+ 10.00 LEU01A0061_006 occ=0.000 trial=    5468/   38000 t
+ 10.00 LEU01A0061_007 occ=0.000 trial=    5407/   38000 t
+
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 10.00 LEU01A0061_001 occ=0.936 trial=    5167/   21000 t
+ 10.00 LEU01A0061_002 occ=0.033 trial=    5306/   21000 t
+ 10.00 LEU01A0061_003 occ=0.030 trial=    5254/   21000 t
+ 10.00 LEU01A0061_004 occ=0.001 trial=    5273/   21000 t
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
+
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 10.00 LEU01A0061_001 occ=0.944 trial=    6208/   25000 t
+ 10.00 LEU01A0061_002 occ=0.030 trial=    6231/   25000 t
+ 10.00 LEU01A0061_003 occ=0.026 trial=    6220/   25000 t
+ 10.00 LEU01A0061_004 occ=0.001 trial=    6341/   25000 t
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   25000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   25000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   25000 f
+
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 10.00 LEU01A0061_001 occ=0.929 trial=    4373/   13000 t
+ 10.00 LEU01A0061_002 occ=0.037 trial=    4270/   13000 t
+ 10.00 LEU01A0061_003 occ=0.033 trial=    4357/   13000 t
+ 10.00 LEU01A0061_004 occ=0.000 trial=       0/   13000 f
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   13000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   13000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   13000 f
 
 pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  10.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 10.00 LEU01A0061_001 occ=0.937 trial=    8024/   24000 t
- 10.00 LEU01A0061_002 occ=0.000 trial=       0/   24000 f
- 10.00 LEU01A0061_003 occ=0.034 trial=    7916/   24000 t
- 10.00 LEU01A0061_004 occ=0.029 trial=    8060/   24000 t
- 10.00 LEU01A0061_005 occ=0.000 trial=       0/   24000 f
- 10.00 LEU01A0061_006 occ=0.000 trial=       0/   24000 f
- 10.00 LEU01A0061_007 occ=0.000 trial=       0/   24000 f
+ 10.00 LEU01A0061_001 occ=0.938 trial=    8646/   26000 t
+ 10.00 LEU01A0061_002 occ=0.032 trial=    8621/   26000 t
+ 10.00 LEU01A0061_003 occ=0.030 trial=    8733/   26000 t
+ 10.00 LEU01A0061_004 occ=0.000 trial=       0/   26000 f
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   26000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   26000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   26000 f
 
-pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  11.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 11.00 LEU01A0061_001 occ=0.940 trial=    4809/   34000 t
- 11.00 LEU01A0061_002 occ=0.001 trial=    4703/   34000 t
- 11.00 LEU01A0061_003 occ=0.030 trial=    4974/   34000 t
- 11.00 LEU01A0061_004 occ=0.028 trial=    4915/   34000 t
- 11.00 LEU01A0061_005 occ=0.000 trial=    4838/   34000 t
- 11.00 LEU01A0061_006 occ=0.001 trial=    4885/   34000 t
- 11.00 LEU01A0061_007 occ=0.000 trial=    4876/   34000 t
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 10.00 LEU01A0061_001 occ=0.938 trial=    7646/   23000 t
+ 10.00 LEU01A0061_002 occ=0.032 trial=    7735/   23000 t
+ 10.00 LEU01A0061_003 occ=0.030 trial=    7619/   23000 t
+ 10.00 LEU01A0061_004 occ=0.000 trial=       0/   23000 f
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   23000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   23000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   23000 f
 
-pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  11.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 11.00 LEU01A0061_001 occ=0.938 trial=    6546/   26000 t
- 11.00 LEU01A0061_002 occ=0.001 trial=    6469/   26000 t
- 11.00 LEU01A0061_003 occ=0.032 trial=    6479/   26000 t
- 11.00 LEU01A0061_004 occ=0.029 trial=    6506/   26000 t
- 11.00 LEU01A0061_005 occ=0.000 trial=       0/   26000 f
- 11.00 LEU01A0061_006 occ=0.000 trial=       0/   26000 f
- 11.00 LEU01A0061_007 occ=0.000 trial=       0/   26000 f
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 10.00 LEU01A0061_001 occ=0.931 trial=    6578/   20000 t
+ 10.00 LEU01A0061_002 occ=0.036 trial=    6702/   20000 t
+ 10.00 LEU01A0061_003 occ=0.032 trial=    6720/   20000 t
+ 10.00 LEU01A0061_004 occ=0.000 trial=       0/   20000 f
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   20000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   20000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   20000 f
 
-pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  11.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 11.00 LEU01A0061_001 occ=0.939 trial=    8105/   33000 t
- 11.00 LEU01A0061_002 occ=0.001 trial=    8377/   33000 t
- 11.00 LEU01A0061_003 occ=0.031 trial=    8132/   33000 t
- 11.00 LEU01A0061_004 occ=0.029 trial=    8386/   33000 t
- 11.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
- 11.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
- 11.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 10.00 LEU01A0061_001 occ=0.934 trial=   10392/   31000 t
+ 10.00 LEU01A0061_002 occ=0.034 trial=   10334/   31000 t
+ 10.00 LEU01A0061_003 occ=0.032 trial=   10274/   31000 t
+ 10.00 LEU01A0061_004 occ=0.000 trial=       0/   31000 f
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   31000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   31000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   31000 f
 
-pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  11.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 11.00 LEU01A0061_001 occ=0.938 trial=   11313/   34000 t
- 11.00 LEU01A0061_002 occ=0.000 trial=       0/   34000 f
- 11.00 LEU01A0061_003 occ=0.033 trial=   11246/   34000 t
- 11.00 LEU01A0061_004 occ=0.029 trial=   11441/   34000 t
- 11.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
- 11.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
- 11.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 10.00 LEU01A0061_001 occ=0.939 trial=   11251/   34000 t
+ 10.00 LEU01A0061_002 occ=0.032 trial=   11360/   34000 t
+ 10.00 LEU01A0061_003 occ=0.029 trial=   11389/   34000 t
+ 10.00 LEU01A0061_004 occ=0.000 trial=       0/   34000 f
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
 
-pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  11.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 11.00 LEU01A0061_001 occ=0.935 trial=   11046/   33000 t
- 11.00 LEU01A0061_002 occ=0.000 trial=       0/   33000 f
- 11.00 LEU01A0061_003 occ=0.035 trial=   11025/   33000 t
- 11.00 LEU01A0061_004 occ=0.031 trial=   10929/   33000 t
- 11.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
- 11.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
- 11.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 10.00 LEU01A0061_001 occ=0.943 trial=    7080/   21000 t
+ 10.00 LEU01A0061_002 occ=0.030 trial=    6947/   21000 t
+ 10.00 LEU01A0061_003 occ=0.027 trial=    6973/   21000 t
+ 10.00 LEU01A0061_004 occ=0.000 trial=       0/   21000 f
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
 
-pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  11.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 11.00 LEU01A0061_001 occ=0.934 trial=    8348/   25000 t
- 11.00 LEU01A0061_002 occ=0.000 trial=       0/   25000 f
- 11.00 LEU01A0061_003 occ=0.036 trial=    8383/   25000 t
- 11.00 LEU01A0061_004 occ=0.030 trial=    8269/   25000 t
- 11.00 LEU01A0061_005 occ=0.000 trial=       0/   25000 f
- 11.00 LEU01A0061_006 occ=0.000 trial=       0/   25000 f
- 11.00 LEU01A0061_007 occ=0.000 trial=       0/   25000 f
-
-pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  11.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 11.00 LEU01A0061_001 occ=0.936 trial=   10646/   32000 t
- 11.00 LEU01A0061_002 occ=0.000 trial=       0/   32000 f
- 11.00 LEU01A0061_003 occ=0.032 trial=   10689/   32000 t
- 11.00 LEU01A0061_004 occ=0.031 trial=   10665/   32000 t
- 11.00 LEU01A0061_005 occ=0.000 trial=       0/   32000 f
- 11.00 LEU01A0061_006 occ=0.000 trial=       0/   32000 f
- 11.00 LEU01A0061_007 occ=0.000 trial=       0/   32000 f
+pH =  10.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 10.00 LEU01A0061_001 occ=0.938 trial=    9579/   29000 t
+ 10.00 LEU01A0061_002 occ=0.033 trial=    9712/   29000 t
+ 10.00 LEU01A0061_003 occ=0.030 trial=    9709/   29000 t
+ 10.00 LEU01A0061_004 occ=0.000 trial=       0/   29000 f
+ 10.00 LEU01A0061_005 occ=0.000 trial=       0/   29000 f
+ 10.00 LEU01A0061_006 occ=0.000 trial=       0/   29000 f
+ 10.00 LEU01A0061_007 occ=0.000 trial=       0/   29000 f
 
 pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  11.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 11.00 LEU01A0061_001 occ=0.936 trial=   11121/   33000 t
- 11.00 LEU01A0061_002 occ=0.000 trial=       0/   33000 f
- 11.00 LEU01A0061_003 occ=0.034 trial=   10937/   33000 t
- 11.00 LEU01A0061_004 occ=0.031 trial=   10942/   33000 t
- 11.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
- 11.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
- 11.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
+ 11.00 LEU01A0061_001 occ=0.938 trial=    5047/   35000 t
+ 11.00 LEU01A0061_002 occ=0.030 trial=    4997/   35000 t
+ 11.00 LEU01A0061_003 occ=0.030 trial=    5057/   35000 t
+ 11.00 LEU01A0061_004 occ=0.001 trial=    5083/   35000 t
+ 11.00 LEU01A0061_005 occ=0.001 trial=    4931/   35000 t
+ 11.00 LEU01A0061_006 occ=0.000 trial=    4955/   35000 t
+ 11.00 LEU01A0061_007 occ=0.000 trial=    4930/   35000 t
 
 pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  11.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 11.00 LEU01A0061_001 occ=0.937 trial=    5934/   18000 t
- 11.00 LEU01A0061_002 occ=0.000 trial=       0/   18000 f
- 11.00 LEU01A0061_003 occ=0.034 trial=    6015/   18000 t
- 11.00 LEU01A0061_004 occ=0.029 trial=    6051/   18000 t
- 11.00 LEU01A0061_005 occ=0.000 trial=       0/   18000 f
- 11.00 LEU01A0061_006 occ=0.000 trial=       0/   18000 f
- 11.00 LEU01A0061_007 occ=0.000 trial=       0/   18000 f
+ 11.00 LEU01A0061_001 occ=0.941 trial=    7139/   29000 t
+ 11.00 LEU01A0061_002 occ=0.032 trial=    7274/   29000 t
+ 11.00 LEU01A0061_003 occ=0.027 trial=    7304/   29000 t
+ 11.00 LEU01A0061_004 occ=0.000 trial=       0/   29000 f
+ 11.00 LEU01A0061_005 occ=0.001 trial=    7283/   29000 t
+ 11.00 LEU01A0061_006 occ=0.000 trial=       0/   29000 f
+ 11.00 LEU01A0061_007 occ=0.000 trial=       0/   29000 f
+
+pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 11.00 LEU01A0061_001 occ=0.941 trial=   11682/   35000 t
+ 11.00 LEU01A0061_002 occ=0.032 trial=   11756/   35000 t
+ 11.00 LEU01A0061_003 occ=0.027 trial=   11562/   35000 t
+ 11.00 LEU01A0061_004 occ=0.000 trial=       0/   35000 f
+ 11.00 LEU01A0061_005 occ=0.000 trial=       0/   35000 f
+ 11.00 LEU01A0061_006 occ=0.000 trial=       0/   35000 f
+ 11.00 LEU01A0061_007 occ=0.000 trial=       0/   35000 f
+
+pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 11.00 LEU01A0061_001 occ=0.937 trial=    9613/   29000 t
+ 11.00 LEU01A0061_002 occ=0.034 trial=    9704/   29000 t
+ 11.00 LEU01A0061_003 occ=0.029 trial=    9683/   29000 t
+ 11.00 LEU01A0061_004 occ=0.000 trial=       0/   29000 f
+ 11.00 LEU01A0061_005 occ=0.000 trial=       0/   29000 f
+ 11.00 LEU01A0061_006 occ=0.000 trial=       0/   29000 f
+ 11.00 LEU01A0061_007 occ=0.000 trial=       0/   29000 f
+
+pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 11.00 LEU01A0061_001 occ=0.942 trial=    5667/   17000 t
+ 11.00 LEU01A0061_002 occ=0.031 trial=    5693/   17000 t
+ 11.00 LEU01A0061_003 occ=0.028 trial=    5640/   17000 t
+ 11.00 LEU01A0061_004 occ=0.000 trial=       0/   17000 f
+ 11.00 LEU01A0061_005 occ=0.000 trial=       0/   17000 f
+ 11.00 LEU01A0061_006 occ=0.000 trial=       0/   17000 f
+ 11.00 LEU01A0061_007 occ=0.000 trial=       0/   17000 f
+
+pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 11.00 LEU01A0061_001 occ=0.934 trial=   14487/   44000 t
+ 11.00 LEU01A0061_002 occ=0.035 trial=   14718/   44000 t
+ 11.00 LEU01A0061_003 occ=0.031 trial=   14795/   44000 t
+ 11.00 LEU01A0061_004 occ=0.000 trial=       0/   44000 f
+ 11.00 LEU01A0061_005 occ=0.000 trial=       0/   44000 f
+ 11.00 LEU01A0061_006 occ=0.000 trial=       0/   44000 f
+ 11.00 LEU01A0061_007 occ=0.000 trial=       0/   44000 f
+
+pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 11.00 LEU01A0061_001 occ=0.941 trial=   10272/   31000 t
+ 11.00 LEU01A0061_002 occ=0.031 trial=   10360/   31000 t
+ 11.00 LEU01A0061_003 occ=0.029 trial=   10368/   31000 t
+ 11.00 LEU01A0061_004 occ=0.000 trial=       0/   31000 f
+ 11.00 LEU01A0061_005 occ=0.000 trial=       0/   31000 f
+ 11.00 LEU01A0061_006 occ=0.000 trial=       0/   31000 f
+ 11.00 LEU01A0061_007 occ=0.000 trial=       0/   31000 f
+
+pH =  11.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 11.00 LEU01A0061_001 occ=0.938 trial=   12406/   37000 t
+ 11.00 LEU01A0061_002 occ=0.034 trial=   12357/   37000 t
+ 11.00 LEU01A0061_003 occ=0.029 trial=   12237/   37000 t
+ 11.00 LEU01A0061_004 occ=0.000 trial=       0/   37000 f
+ 11.00 LEU01A0061_005 occ=0.000 trial=       0/   37000 f
+ 11.00 LEU01A0061_006 occ=0.000 trial=       0/   37000 f
+ 11.00 LEU01A0061_007 occ=0.000 trial=       0/   37000 f
+
+pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 12.00 LEU01A0061_001 occ=0.935 trial=    5341/   37000 t
+ 12.00 LEU01A0061_002 occ=0.032 trial=    5283/   37000 t
+ 12.00 LEU01A0061_003 occ=0.031 trial=    5185/   37000 t
+ 12.00 LEU01A0061_004 occ=0.001 trial=    5316/   37000 t
+ 12.00 LEU01A0061_005 occ=0.001 trial=    5261/   37000 t
+ 12.00 LEU01A0061_006 occ=0.000 trial=    5363/   37000 t
+ 12.00 LEU01A0061_007 occ=0.000 trial=    5251/   37000 t
 
 pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  12.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
 pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.932 trial=    5675/   40000 t
- 12.00 LEU01A0061_002 occ=0.001 trial=    5723/   40000 t
- 12.00 LEU01A0061_003 occ=0.036 trial=    5718/   40000 t
- 12.00 LEU01A0061_004 occ=0.029 trial=    5673/   40000 t
- 12.00 LEU01A0061_005 occ=0.000 trial=    5773/   40000 t
- 12.00 LEU01A0061_006 occ=0.001 trial=    5775/   40000 t
- 12.00 LEU01A0061_007 occ=0.000 trial=    5663/   40000 t
+ 12.00 LEU01A0061_001 occ=0.932 trial=    8900/   44000 t
+ 12.00 LEU01A0061_002 occ=0.034 trial=    8761/   44000 t
+ 12.00 LEU01A0061_003 occ=0.032 trial=    8802/   44000 t
+ 12.00 LEU01A0061_004 occ=0.001 trial=    8709/   44000 t
+ 12.00 LEU01A0061_005 occ=0.001 trial=    8828/   44000 t
+ 12.00 LEU01A0061_006 occ=0.000 trial=       0/   44000 f
+ 12.00 LEU01A0061_007 occ=0.000 trial=       0/   44000 f
+
+pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 12.00 LEU01A0061_001 occ=0.932 trial=   10429/   42000 t
+ 12.00 LEU01A0061_002 occ=0.034 trial=   10570/   42000 t
+ 12.00 LEU01A0061_003 occ=0.033 trial=   10626/   42000 t
+ 12.00 LEU01A0061_004 occ=0.001 trial=   10375/   42000 t
+ 12.00 LEU01A0061_005 occ=0.000 trial=       0/   42000 f
+ 12.00 LEU01A0061_006 occ=0.000 trial=       0/   42000 f
+ 12.00 LEU01A0061_007 occ=0.000 trial=       0/   42000 f
+
+pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 12.00 LEU01A0061_001 occ=0.937 trial=    3542/   14000 t
+ 12.00 LEU01A0061_002 occ=0.032 trial=    3439/   14000 t
+ 12.00 LEU01A0061_003 occ=0.030 trial=    3561/   14000 t
+ 12.00 LEU01A0061_004 occ=0.001 trial=    3458/   14000 t
+ 12.00 LEU01A0061_005 occ=0.000 trial=       0/   14000 f
+ 12.00 LEU01A0061_006 occ=0.000 trial=       0/   14000 f
+ 12.00 LEU01A0061_007 occ=0.000 trial=       0/   14000 f
 
 pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  12.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.938 trial=    5524/   22000 t
- 12.00 LEU01A0061_002 occ=0.001 trial=    5522/   22000 t
- 12.00 LEU01A0061_003 occ=0.031 trial=    5335/   22000 t
- 12.00 LEU01A0061_004 occ=0.030 trial=    5619/   22000 t
+ 12.00 LEU01A0061_001 occ=0.940 trial=    4260/   17000 t
+ 12.00 LEU01A0061_002 occ=0.030 trial=    4209/   17000 t
+ 12.00 LEU01A0061_003 occ=0.029 trial=    4248/   17000 t
+ 12.00 LEU01A0061_004 occ=0.001 trial=    4283/   17000 t
+ 12.00 LEU01A0061_005 occ=0.000 trial=       0/   17000 f
+ 12.00 LEU01A0061_006 occ=0.000 trial=       0/   17000 f
+ 12.00 LEU01A0061_007 occ=0.000 trial=       0/   17000 f
+
+pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 12.00 LEU01A0061_001 occ=0.936 trial=    5755/   17000 t
+ 12.00 LEU01A0061_002 occ=0.035 trial=    5559/   17000 t
+ 12.00 LEU01A0061_003 occ=0.029 trial=    5686/   17000 t
+ 12.00 LEU01A0061_004 occ=0.000 trial=       0/   17000 f
+ 12.00 LEU01A0061_005 occ=0.000 trial=       0/   17000 f
+ 12.00 LEU01A0061_006 occ=0.000 trial=       0/   17000 f
+ 12.00 LEU01A0061_007 occ=0.000 trial=       0/   17000 f
+
+pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 12.00 LEU01A0061_001 occ=0.935 trial=   12265/   37000 t
+ 12.00 LEU01A0061_002 occ=0.035 trial=   12233/   37000 t
+ 12.00 LEU01A0061_003 occ=0.030 trial=   12502/   37000 t
+ 12.00 LEU01A0061_004 occ=0.000 trial=       0/   37000 f
+ 12.00 LEU01A0061_005 occ=0.000 trial=       0/   37000 f
+ 12.00 LEU01A0061_006 occ=0.000 trial=       0/   37000 f
+ 12.00 LEU01A0061_007 occ=0.000 trial=       0/   37000 f
+
+pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 12.00 LEU01A0061_001 occ=0.940 trial=    7222/   22000 t
+ 12.00 LEU01A0061_002 occ=0.032 trial=    7408/   22000 t
+ 12.00 LEU01A0061_003 occ=0.028 trial=    7370/   22000 t
+ 12.00 LEU01A0061_004 occ=0.000 trial=       0/   22000 f
  12.00 LEU01A0061_005 occ=0.000 trial=       0/   22000 f
  12.00 LEU01A0061_006 occ=0.000 trial=       0/   22000 f
  12.00 LEU01A0061_007 occ=0.000 trial=       0/   22000 f
 
 pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  12.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.942 trial=    5110/   20000 t
- 12.00 LEU01A0061_002 occ=0.002 trial=    4971/   20000 t
- 12.00 LEU01A0061_003 occ=0.030 trial=    5042/   20000 t
- 12.00 LEU01A0061_004 occ=0.027 trial=    4877/   20000 t
- 12.00 LEU01A0061_005 occ=0.000 trial=       0/   20000 f
- 12.00 LEU01A0061_006 occ=0.000 trial=       0/   20000 f
- 12.00 LEU01A0061_007 occ=0.000 trial=       0/   20000 f
-
-pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  12.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.932 trial=    7905/   32000 t
- 12.00 LEU01A0061_002 occ=0.001 trial=    7976/   32000 t
- 12.00 LEU01A0061_003 occ=0.035 trial=    8099/   32000 t
- 12.00 LEU01A0061_004 occ=0.032 trial=    8020/   32000 t
- 12.00 LEU01A0061_005 occ=0.000 trial=       0/   32000 f
- 12.00 LEU01A0061_006 occ=0.000 trial=       0/   32000 f
- 12.00 LEU01A0061_007 occ=0.000 trial=       0/   32000 f
-
-pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  12.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.932 trial=    4926/   15000 t
- 12.00 LEU01A0061_002 occ=0.000 trial=       0/   15000 f
- 12.00 LEU01A0061_003 occ=0.035 trial=    5025/   15000 t
- 12.00 LEU01A0061_004 occ=0.033 trial=    5049/   15000 t
- 12.00 LEU01A0061_005 occ=0.000 trial=       0/   15000 f
- 12.00 LEU01A0061_006 occ=0.000 trial=       0/   15000 f
- 12.00 LEU01A0061_007 occ=0.000 trial=       0/   15000 f
+ 12.00 LEU01A0061_001 occ=0.935 trial=   10348/   31000 t
+ 12.00 LEU01A0061_002 occ=0.035 trial=   10316/   31000 t
+ 12.00 LEU01A0061_003 occ=0.031 trial=   10336/   31000 t
+ 12.00 LEU01A0061_004 occ=0.000 trial=       0/   31000 f
+ 12.00 LEU01A0061_005 occ=0.000 trial=       0/   31000 f
+ 12.00 LEU01A0061_006 occ=0.000 trial=       0/   31000 f
+ 12.00 LEU01A0061_007 occ=0.000 trial=       0/   31000 f
 
 pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  12.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.941 trial=    6002/   18000 t
- 12.00 LEU01A0061_002 occ=0.000 trial=       0/   18000 f
- 12.00 LEU01A0061_003 occ=0.031 trial=    5998/   18000 t
- 12.00 LEU01A0061_004 occ=0.028 trial=    6000/   18000 t
- 12.00 LEU01A0061_005 occ=0.000 trial=       0/   18000 f
- 12.00 LEU01A0061_006 occ=0.000 trial=       0/   18000 f
- 12.00 LEU01A0061_007 occ=0.000 trial=       0/   18000 f
-
-pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  12.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.934 trial=    8691/   26000 t
- 12.00 LEU01A0061_002 occ=0.000 trial=       0/   26000 f
- 12.00 LEU01A0061_003 occ=0.036 trial=    8809/   26000 t
- 12.00 LEU01A0061_004 occ=0.030 trial=    8500/   26000 t
- 12.00 LEU01A0061_005 occ=0.000 trial=       0/   26000 f
- 12.00 LEU01A0061_006 occ=0.000 trial=       0/   26000 f
- 12.00 LEU01A0061_007 occ=0.000 trial=       0/   26000 f
-
-pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  12.00 Eh =   0.00, Ave. Energy =    -7.15 Kcal/mol
-pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.949 trial=    2307/    7000 t
- 12.00 LEU01A0061_002 occ=0.000 trial=       0/    7000 f
- 12.00 LEU01A0061_003 occ=0.028 trial=    2353/    7000 t
- 12.00 LEU01A0061_004 occ=0.023 trial=    2340/    7000 t
- 12.00 LEU01A0061_005 occ=0.000 trial=       0/    7000 f
- 12.00 LEU01A0061_006 occ=0.000 trial=       0/    7000 f
- 12.00 LEU01A0061_007 occ=0.000 trial=       0/    7000 f
-
-pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  12.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
-pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.942 trial=    6986/   21000 t
- 12.00 LEU01A0061_002 occ=0.000 trial=       0/   21000 f
- 12.00 LEU01A0061_003 occ=0.029 trial=    6922/   21000 t
- 12.00 LEU01A0061_004 occ=0.028 trial=    7092/   21000 t
- 12.00 LEU01A0061_005 occ=0.000 trial=       0/   21000 f
- 12.00 LEU01A0061_006 occ=0.000 trial=       0/   21000 f
- 12.00 LEU01A0061_007 occ=0.000 trial=       0/   21000 f
-
-pH =  12.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  12.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  12.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 12.00 LEU01A0061_001 occ=0.938 trial=   11293/   34000 t
- 12.00 LEU01A0061_002 occ=0.000 trial=       0/   34000 f
- 12.00 LEU01A0061_003 occ=0.033 trial=   11260/   34000 t
- 12.00 LEU01A0061_004 occ=0.029 trial=   11447/   34000 t
- 12.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
- 12.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
- 12.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
-
-pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  13.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
-pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.932 trial=    4501/   31000 t
- 13.00 LEU01A0061_002 occ=0.001 trial=    4403/   31000 t
- 13.00 LEU01A0061_003 occ=0.037 trial=    4429/   31000 t
- 13.00 LEU01A0061_004 occ=0.029 trial=    4502/   31000 t
- 13.00 LEU01A0061_005 occ=0.000 trial=    4290/   31000 t
- 13.00 LEU01A0061_006 occ=0.001 trial=    4317/   31000 t
- 13.00 LEU01A0061_007 occ=0.000 trial=    4558/   31000 t
+ 12.00 LEU01A0061_001 occ=0.937 trial=   12033/   36000 t
+ 12.00 LEU01A0061_002 occ=0.033 trial=   12126/   36000 t
+ 12.00 LEU01A0061_003 occ=0.029 trial=   11841/   36000 t
+ 12.00 LEU01A0061_004 occ=0.000 trial=       0/   36000 f
+ 12.00 LEU01A0061_005 occ=0.000 trial=       0/   36000 f
+ 12.00 LEU01A0061_006 occ=0.000 trial=       0/   36000 f
+ 12.00 LEU01A0061_007 occ=0.000 trial=       0/   36000 f
 
 pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  13.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.937 trial=    7675/   31000 t
- 13.00 LEU01A0061_002 occ=0.001 trial=    7853/   31000 t
- 13.00 LEU01A0061_003 occ=0.034 trial=    7757/   31000 t
- 13.00 LEU01A0061_004 occ=0.028 trial=    7715/   31000 t
- 13.00 LEU01A0061_005 occ=0.000 trial=       0/   31000 f
- 13.00 LEU01A0061_006 occ=0.000 trial=       0/   31000 f
- 13.00 LEU01A0061_007 occ=0.000 trial=       0/   31000 f
+ 13.00 LEU01A0061_001 occ=0.939 trial=    2561/   18000 t
+ 13.00 LEU01A0061_002 occ=0.031 trial=    2640/   18000 t
+ 13.00 LEU01A0061_003 occ=0.029 trial=    2547/   18000 t
+ 13.00 LEU01A0061_004 occ=0.001 trial=    2558/   18000 t
+ 13.00 LEU01A0061_005 occ=0.001 trial=    2620/   18000 t
+ 13.00 LEU01A0061_006 occ=0.000 trial=    2548/   18000 t
+ 13.00 LEU01A0061_007 occ=0.000 trial=    2526/   18000 t
 
 pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  13.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
 pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.935 trial=   11271/   34000 t
- 13.00 LEU01A0061_002 occ=0.000 trial=       0/   34000 f
- 13.00 LEU01A0061_003 occ=0.035 trial=   11433/   34000 t
- 13.00 LEU01A0061_004 occ=0.029 trial=   11296/   34000 t
- 13.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
- 13.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
- 13.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
+ 13.00 LEU01A0061_001 occ=0.934 trial=    8060/   24000 t
+ 13.00 LEU01A0061_002 occ=0.034 trial=    7957/   24000 t
+ 13.00 LEU01A0061_003 occ=0.031 trial=    7983/   24000 t
+ 13.00 LEU01A0061_004 occ=0.000 trial=       0/   24000 f
+ 13.00 LEU01A0061_005 occ=0.000 trial=       0/   24000 f
+ 13.00 LEU01A0061_006 occ=0.000 trial=       0/   24000 f
+ 13.00 LEU01A0061_007 occ=0.000 trial=       0/   24000 f
 
 pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  13.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.939 trial=   11302/   34000 t
- 13.00 LEU01A0061_002 occ=0.000 trial=       0/   34000 f
- 13.00 LEU01A0061_003 occ=0.032 trial=   11365/   34000 t
- 13.00 LEU01A0061_004 occ=0.028 trial=   11333/   34000 t
- 13.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
- 13.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
- 13.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
-
-pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  13.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.938 trial=   11238/   34000 t
- 13.00 LEU01A0061_002 occ=0.000 trial=       0/   34000 f
- 13.00 LEU01A0061_003 occ=0.033 trial=   11425/   34000 t
- 13.00 LEU01A0061_004 occ=0.029 trial=   11337/   34000 t
- 13.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
- 13.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
- 13.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
-
-pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  13.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
-pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.940 trial=   10011/   30000 t
- 13.00 LEU01A0061_002 occ=0.000 trial=       0/   30000 f
- 13.00 LEU01A0061_003 occ=0.031 trial=    9932/   30000 t
- 13.00 LEU01A0061_004 occ=0.028 trial=   10057/   30000 t
- 13.00 LEU01A0061_005 occ=0.000 trial=       0/   30000 f
- 13.00 LEU01A0061_006 occ=0.000 trial=       0/   30000 f
- 13.00 LEU01A0061_007 occ=0.000 trial=       0/   30000 f
-
-pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  13.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.934 trial=   14804/   44000 t
- 13.00 LEU01A0061_002 occ=0.000 trial=       0/   44000 f
- 13.00 LEU01A0061_003 occ=0.035 trial=   14651/   44000 t
- 13.00 LEU01A0061_004 occ=0.031 trial=   14545/   44000 t
- 13.00 LEU01A0061_005 occ=0.000 trial=       0/   44000 f
- 13.00 LEU01A0061_006 occ=0.000 trial=       0/   44000 f
- 13.00 LEU01A0061_007 occ=0.000 trial=       0/   44000 f
-
-pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  13.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
-pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.944 trial=    5833/   17000 t
- 13.00 LEU01A0061_002 occ=0.000 trial=       0/   17000 f
- 13.00 LEU01A0061_003 occ=0.028 trial=    5544/   17000 t
- 13.00 LEU01A0061_004 occ=0.027 trial=    5623/   17000 t
+ 13.00 LEU01A0061_001 occ=0.938 trial=    5686/   17000 t
+ 13.00 LEU01A0061_002 occ=0.033 trial=    5588/   17000 t
+ 13.00 LEU01A0061_003 occ=0.029 trial=    5726/   17000 t
+ 13.00 LEU01A0061_004 occ=0.000 trial=       0/   17000 f
  13.00 LEU01A0061_005 occ=0.000 trial=       0/   17000 f
  13.00 LEU01A0061_006 occ=0.000 trial=       0/   17000 f
  13.00 LEU01A0061_007 occ=0.000 trial=       0/   17000 f
 
 pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  13.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =    -7.14 Kcal/mol
 pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.938 trial=    4274/   13000 t
- 13.00 LEU01A0061_002 occ=0.000 trial=       0/   13000 f
- 13.00 LEU01A0061_003 occ=0.031 trial=    4327/   13000 t
- 13.00 LEU01A0061_004 occ=0.030 trial=    4399/   13000 t
- 13.00 LEU01A0061_005 occ=0.000 trial=       0/   13000 f
- 13.00 LEU01A0061_006 occ=0.000 trial=       0/   13000 f
- 13.00 LEU01A0061_007 occ=0.000 trial=       0/   13000 f
+ 13.00 LEU01A0061_001 occ=0.942 trial=    2982/    9000 t
+ 13.00 LEU01A0061_002 occ=0.029 trial=    3048/    9000 t
+ 13.00 LEU01A0061_003 occ=0.029 trial=    2970/    9000 t
+ 13.00 LEU01A0061_004 occ=0.000 trial=       0/    9000 f
+ 13.00 LEU01A0061_005 occ=0.000 trial=       0/    9000 f
+ 13.00 LEU01A0061_006 occ=0.000 trial=       0/    9000 f
+ 13.00 LEU01A0061_007 occ=0.000 trial=       0/    9000 f
 
 pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  13.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =    -7.11 Kcal/mol
 pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 13.00 LEU01A0061_001 occ=0.936 trial=    7362/   22000 t
- 13.00 LEU01A0061_002 occ=0.000 trial=       0/   22000 f
- 13.00 LEU01A0061_003 occ=0.033 trial=    7358/   22000 t
- 13.00 LEU01A0061_004 occ=0.031 trial=    7280/   22000 t
+ 13.00 LEU01A0061_001 occ=0.929 trial=    7188/   22000 t
+ 13.00 LEU01A0061_002 occ=0.037 trial=    7370/   22000 t
+ 13.00 LEU01A0061_003 occ=0.034 trial=    7442/   22000 t
+ 13.00 LEU01A0061_004 occ=0.000 trial=       0/   22000 f
  13.00 LEU01A0061_005 occ=0.000 trial=       0/   22000 f
  13.00 LEU01A0061_006 occ=0.000 trial=       0/   22000 f
  13.00 LEU01A0061_007 occ=0.000 trial=       0/   22000 f
 
-pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  14.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 14.00 LEU01A0061_001 occ=0.937 trial=    7342/   51000 t
- 14.00 LEU01A0061_002 occ=0.001 trial=    7173/   51000 t
- 14.00 LEU01A0061_003 occ=0.032 trial=    7329/   51000 t
- 14.00 LEU01A0061_004 occ=0.029 trial=    7304/   51000 t
- 14.00 LEU01A0061_005 occ=0.000 trial=    7348/   51000 t
- 14.00 LEU01A0061_006 occ=0.001 trial=    7225/   51000 t
- 14.00 LEU01A0061_007 occ=0.000 trial=    7279/   51000 t
+pH =  13.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 13.00 LEU01A0061_001 occ=0.936 trial=    4716/   14000 t
+ 13.00 LEU01A0061_002 occ=0.034 trial=    4712/   14000 t
+ 13.00 LEU01A0061_003 occ=0.030 trial=    4572/   14000 t
+ 13.00 LEU01A0061_004 occ=0.000 trial=       0/   14000 f
+ 13.00 LEU01A0061_005 occ=0.000 trial=       0/   14000 f
+ 13.00 LEU01A0061_006 occ=0.000 trial=       0/   14000 f
+ 13.00 LEU01A0061_007 occ=0.000 trial=       0/   14000 f
 
 pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  14.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 14.00 LEU01A0061_001 occ=0.940 trial=    8401/   34000 t
- 14.00 LEU01A0061_002 occ=0.000 trial=       0/   34000 f
- 14.00 LEU01A0061_003 occ=0.031 trial=    8559/   34000 t
- 14.00 LEU01A0061_004 occ=0.028 trial=    8442/   34000 t
+ 14.00 LEU01A0061_001 occ=0.939 trial=    2567/   18000 t
+ 14.00 LEU01A0061_002 occ=0.032 trial=    2536/   18000 t
+ 14.00 LEU01A0061_003 occ=0.027 trial=    2555/   18000 t
+ 14.00 LEU01A0061_004 occ=0.001 trial=    2585/   18000 t
+ 14.00 LEU01A0061_005 occ=0.001 trial=    2586/   18000 t
+ 14.00 LEU01A0061_006 occ=0.000 trial=    2597/   18000 t
+ 14.00 LEU01A0061_007 occ=0.000 trial=    2574/   18000 t
+
+pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 14.00 LEU01A0061_001 occ=0.935 trial=    7137/   29000 t
+ 14.00 LEU01A0061_002 occ=0.032 trial=    7145/   29000 t
+ 14.00 LEU01A0061_003 occ=0.032 trial=    7333/   29000 t
+ 14.00 LEU01A0061_004 occ=0.000 trial=       0/   29000 f
+ 14.00 LEU01A0061_005 occ=0.001 trial=    7385/   29000 t
+ 14.00 LEU01A0061_006 occ=0.000 trial=       0/   29000 f
+ 14.00 LEU01A0061_007 occ=0.000 trial=       0/   29000 f
+
+pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 14.00 LEU01A0061_001 occ=0.938 trial=   11260/   34000 t
+ 14.00 LEU01A0061_002 occ=0.032 trial=   11293/   34000 t
+ 14.00 LEU01A0061_003 occ=0.030 trial=   11447/   34000 t
+ 14.00 LEU01A0061_004 occ=0.000 trial=       0/   34000 f
  14.00 LEU01A0061_005 occ=0.000 trial=       0/   34000 f
- 14.00 LEU01A0061_006 occ=0.001 trial=    8598/   34000 t
+ 14.00 LEU01A0061_006 occ=0.000 trial=       0/   34000 f
  14.00 LEU01A0061_007 occ=0.000 trial=       0/   34000 f
 
 pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  14.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 14.00 LEU01A0061_001 occ=0.935 trial=   14394/   57000 t
- 14.00 LEU01A0061_002 occ=0.000 trial=       0/   57000 f
- 14.00 LEU01A0061_003 occ=0.032 trial=   14102/   57000 t
- 14.00 LEU01A0061_004 occ=0.032 trial=   14249/   57000 t
- 14.00 LEU01A0061_005 occ=0.000 trial=       0/   57000 f
- 14.00 LEU01A0061_006 occ=0.001 trial=   14255/   57000 t
- 14.00 LEU01A0061_007 occ=0.000 trial=       0/   57000 f
-
-pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
-pH =  14.00 Eh =   0.00, Ave. Energy =    -7.12 Kcal/mol
-pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 14.00 LEU01A0061_001 occ=0.932 trial=   10254/   41000 t
- 14.00 LEU01A0061_002 occ=0.000 trial=       0/   41000 f
- 14.00 LEU01A0061_003 occ=0.035 trial=   10241/   41000 t
- 14.00 LEU01A0061_004 occ=0.032 trial=   10335/   41000 t
- 14.00 LEU01A0061_005 occ=0.000 trial=       0/   41000 f
- 14.00 LEU01A0061_006 occ=0.001 trial=   10170/   41000 t
- 14.00 LEU01A0061_007 occ=0.000 trial=       0/   41000 f
+ 14.00 LEU01A0061_001 occ=0.940 trial=    9797/   29000 t
+ 14.00 LEU01A0061_002 occ=0.032 trial=    9540/   29000 t
+ 14.00 LEU01A0061_003 occ=0.027 trial=    9663/   29000 t
+ 14.00 LEU01A0061_004 occ=0.000 trial=       0/   29000 f
+ 14.00 LEU01A0061_005 occ=0.000 trial=       0/   29000 f
+ 14.00 LEU01A0061_006 occ=0.000 trial=       0/   29000 f
+ 14.00 LEU01A0061_007 occ=0.000 trial=       0/   29000 f
 
 pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  14.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 14.00 LEU01A0061_001 occ=0.939 trial=    5944/   18000 t
- 14.00 LEU01A0061_002 occ=0.000 trial=       0/   18000 f
- 14.00 LEU01A0061_003 occ=0.034 trial=    6074/   18000 t
- 14.00 LEU01A0061_004 occ=0.027 trial=    5982/   18000 t
+ 14.00 LEU01A0061_001 occ=0.937 trial=   10937/   33000 t
+ 14.00 LEU01A0061_002 occ=0.032 trial=   11017/   33000 t
+ 14.00 LEU01A0061_003 occ=0.030 trial=   11046/   33000 t
+ 14.00 LEU01A0061_004 occ=0.000 trial=       0/   33000 f
+ 14.00 LEU01A0061_005 occ=0.000 trial=       0/   33000 f
+ 14.00 LEU01A0061_006 occ=0.000 trial=       0/   33000 f
+ 14.00 LEU01A0061_007 occ=0.000 trial=       0/   33000 f
+
+pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 14.00 LEU01A0061_001 occ=0.940 trial=    6042/   18000 t
+ 14.00 LEU01A0061_002 occ=0.032 trial=    5991/   18000 t
+ 14.00 LEU01A0061_003 occ=0.027 trial=    5967/   18000 t
+ 14.00 LEU01A0061_004 occ=0.000 trial=       0/   18000 f
  14.00 LEU01A0061_005 occ=0.000 trial=       0/   18000 f
  14.00 LEU01A0061_006 occ=0.000 trial=       0/   18000 f
  14.00 LEU01A0061_007 occ=0.000 trial=       0/   18000 f
@@ -1355,10 +1355,21 @@ pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
 pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
 pH =  14.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
 pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
- 14.00 LEU01A0061_001 occ=0.936 trial=   12326/   37000 t
- 14.00 LEU01A0061_002 occ=0.000 trial=       0/   37000 f
- 14.00 LEU01A0061_003 occ=0.033 trial=   12393/   37000 t
- 14.00 LEU01A0061_004 occ=0.031 trial=   12281/   37000 t
- 14.00 LEU01A0061_005 occ=0.000 trial=       0/   37000 f
- 14.00 LEU01A0061_006 occ=0.000 trial=       0/   37000 f
- 14.00 LEU01A0061_007 occ=0.000 trial=       0/   37000 f
+ 14.00 LEU01A0061_001 occ=0.941 trial=   10058/   30000 t
+ 14.00 LEU01A0061_002 occ=0.031 trial=   10084/   30000 t
+ 14.00 LEU01A0061_003 occ=0.028 trial=    9858/   30000 t
+ 14.00 LEU01A0061_004 occ=0.000 trial=       0/   30000 f
+ 14.00 LEU01A0061_005 occ=0.000 trial=       0/   30000 f
+ 14.00 LEU01A0061_006 occ=0.000 trial=       0/   30000 f
+ 14.00 LEU01A0061_007 occ=0.000 trial=       0/   30000 f
+
+pH =  14.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =    -7.13 Kcal/mol
+pH =  14.00 Eh =   0.00, Min. Energy =    -7.25 Kcal/mol
+ 14.00 LEU01A0061_001 occ=0.938 trial=   12011/   36000 t
+ 14.00 LEU01A0061_002 occ=0.033 trial=   11987/   36000 t
+ 14.00 LEU01A0061_003 occ=0.030 trial=   12002/   36000 t
+ 14.00 LEU01A0061_004 occ=0.000 trial=       0/   36000 f
+ 14.00 LEU01A0061_005 occ=0.000 trial=       0/   36000 f
+ 14.00 LEU01A0061_006 occ=0.000 trial=       0/   36000 f
+ 14.00 LEU01A0061_007 occ=0.000 trial=       0/   36000 f

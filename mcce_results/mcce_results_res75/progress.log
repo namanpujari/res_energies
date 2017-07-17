@@ -5002,55 +5002,55 @@
    Relaxation Cycle =   1, n_relaxed =    76, shake convergence rate = 100.00 %, success rate = 100.00 %
    Relaxation Cycle =   1, rmsd =  0.021, max displacement =  0.129, time used 2 seconds
    Relaxation Cycle =   1, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   1, # of success =    76, avg_success_vdw =  8.719, deviation =  2.261, maximum = 14.787
+   Relaxation Cycle =   1, # of success =    76, avg_success_vdw =  8.609, deviation =  2.332, maximum = 14.787
    Relaxation Cycle =   2, n_relaxed =    76, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   2, rmsd =  0.038, max displacement =  0.225, time used 1 seconds
+   Relaxation Cycle =   2, rmsd =  0.037, max displacement =  0.225, time used 2 seconds
    Relaxation Cycle =   2, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   2, # of success =    76, avg_success_vdw =  8.500, deviation =  2.041, maximum = 13.731
+   Relaxation Cycle =   2, # of success =    76, avg_success_vdw =  8.387, deviation =  2.113, maximum = 13.731
    Relaxation Cycle =   3, n_relaxed =    76, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   3, rmsd =  0.053, max displacement =  0.286, time used 2 seconds
+   Relaxation Cycle =   3, rmsd =  0.052, max displacement =  0.286, time used 2 seconds
    Relaxation Cycle =   3, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   3, # of success =    76, avg_success_vdw =  8.377, deviation =  1.946, maximum = 13.226
+   Relaxation Cycle =   3, # of success =    76, avg_success_vdw =  8.261, deviation =  2.018, maximum = 13.226
    Configure atoms for hydrogen relaxation...
    TYR A0075 (n_subres=40,n_conf= 99) has   1 neighbors and              40 states... Loop over    40 states...
-   Doing pairwise     1 of    40 conformers.    0 seconds
-   Doing pairwise     2 of    40 conformers.    1 seconds
+   Doing pairwise     1 of    40 conformers.    1 seconds
+   Doing pairwise     2 of    40 conformers.    0 seconds
    Doing pairwise     3 of    40 conformers.    0 seconds
    Doing pairwise     4 of    40 conformers.    0 seconds
    Doing pairwise     5 of    40 conformers.    0 seconds
    Doing pairwise     6 of    40 conformers.    0 seconds
    Doing pairwise     7 of    40 conformers.    0 seconds
-   Doing pairwise     8 of    40 conformers.    1 seconds
+   Doing pairwise     8 of    40 conformers.    0 seconds
    Doing pairwise     9 of    40 conformers.    0 seconds
-   Doing pairwise    10 of    40 conformers.    0 seconds
+   Doing pairwise    10 of    40 conformers.    1 seconds
    Doing pairwise    11 of    40 conformers.    0 seconds
    Doing pairwise    12 of    40 conformers.    0 seconds
    Doing pairwise    13 of    40 conformers.    0 seconds
    Doing pairwise    14 of    40 conformers.    0 seconds
-   Doing pairwise    15 of    40 conformers.    1 seconds
+   Doing pairwise    15 of    40 conformers.    0 seconds
    Doing pairwise    16 of    40 conformers.    0 seconds
    Doing pairwise    17 of    40 conformers.    0 seconds
-   Doing pairwise    18 of    40 conformers.    0 seconds
+   Doing pairwise    18 of    40 conformers.    1 seconds
    Doing pairwise    19 of    40 conformers.    0 seconds
    Doing pairwise    20 of    40 conformers.    0 seconds
    Doing pairwise    21 of    40 conformers.    0 seconds
-   Doing pairwise    22 of    40 conformers.    1 seconds
+   Doing pairwise    22 of    40 conformers.    0 seconds
    Doing pairwise    23 of    40 conformers.    0 seconds
    Doing pairwise    24 of    40 conformers.    0 seconds
    Doing pairwise    25 of    40 conformers.    0 seconds
    Doing pairwise    26 of    40 conformers.    0 seconds
    Doing pairwise    27 of    40 conformers.    0 seconds
-   Doing pairwise    28 of    40 conformers.    0 seconds
+   Doing pairwise    28 of    40 conformers.    1 seconds
    Doing pairwise    29 of    40 conformers.    0 seconds
-   Doing pairwise    30 of    40 conformers.    1 seconds
+   Doing pairwise    30 of    40 conformers.    0 seconds
    Doing pairwise    31 of    40 conformers.    0 seconds
    Doing pairwise    32 of    40 conformers.    0 seconds
    Doing pairwise    33 of    40 conformers.    0 seconds
    Doing pairwise    34 of    40 conformers.    0 seconds
    Doing pairwise    35 of    40 conformers.    0 seconds
    Doing pairwise    36 of    40 conformers.    0 seconds
-   Doing pairwise    37 of    40 conformers.    0 seconds
-   Doing pairwise    38 of    40 conformers.    1 seconds
+   Doing pairwise    37 of    40 conformers.    1 seconds
+   Doing pairwise    38 of    40 conformers.    0 seconds
    Doing pairwise    39 of    40 conformers.    0 seconds
    Doing pairwise    40 of    40 conformers.    0 seconds
    Doing rxn     1 of    40 conformers.    0 seconds
@@ -5058,38 +5058,38 @@
    Doing rxn     3 of    40 conformers.    0 seconds
    Doing rxn     4 of    40 conformers.    0 seconds
    Doing rxn     5 of    40 conformers.    0 seconds
-   Doing rxn     6 of    40 conformers.    1 seconds
-   Doing rxn     7 of    40 conformers.    0 seconds
+   Doing rxn     6 of    40 conformers.    0 seconds
+   Doing rxn     7 of    40 conformers.    1 seconds
    Doing rxn     8 of    40 conformers.    0 seconds
    Doing rxn     9 of    40 conformers.    0 seconds
    Doing rxn    10 of    40 conformers.    0 seconds
    Doing rxn    11 of    40 conformers.    0 seconds
-   Doing rxn    12 of    40 conformers.    1 seconds
+   Doing rxn    12 of    40 conformers.    0 seconds
    Doing rxn    13 of    40 conformers.    0 seconds
    Doing rxn    14 of    40 conformers.    0 seconds
    Doing rxn    15 of    40 conformers.    0 seconds
-   Doing rxn    16 of    40 conformers.    1 seconds
+   Doing rxn    16 of    40 conformers.    0 seconds
    Doing rxn    17 of    40 conformers.    0 seconds
-   Doing rxn    18 of    40 conformers.    0 seconds
+   Doing rxn    18 of    40 conformers.    1 seconds
    Doing rxn    19 of    40 conformers.    0 seconds
    Doing rxn    20 of    40 conformers.    0 seconds
    Doing rxn    21 of    40 conformers.    0 seconds
-   Doing rxn    22 of    40 conformers.    1 seconds
+   Doing rxn    22 of    40 conformers.    0 seconds
    Doing rxn    23 of    40 conformers.    0 seconds
    Doing rxn    24 of    40 conformers.    0 seconds
    Doing rxn    25 of    40 conformers.    0 seconds
    Doing rxn    26 of    40 conformers.    0 seconds
    Doing rxn    27 of    40 conformers.    0 seconds
-   Doing rxn    28 of    40 conformers.    1 seconds
-   Doing rxn    29 of    40 conformers.    0 seconds
+   Doing rxn    28 of    40 conformers.    0 seconds
+   Doing rxn    29 of    40 conformers.    1 seconds
    Doing rxn    30 of    40 conformers.    0 seconds
    Doing rxn    31 of    40 conformers.    0 seconds
    Doing rxn    32 of    40 conformers.    0 seconds
-   Doing rxn    33 of    40 conformers.    1 seconds
+   Doing rxn    33 of    40 conformers.    0 seconds
    Doing rxn    34 of    40 conformers.    0 seconds
    Doing rxn    35 of    40 conformers.    0 seconds
-   Doing rxn    36 of    40 conformers.    0 seconds
+   Doing rxn    36 of    40 conformers.    1 seconds
    Doing rxn    37 of    40 conformers.    0 seconds
-   Doing rxn    38 of    40 conformers.    1 seconds
+   Doing rxn    38 of    40 conformers.    0 seconds
    Doing rxn    39 of    40 conformers.    0 seconds
-   Doing rxn    40 of    40 conformers.    0 seconds
+   Doing rxn    40 of    40 conformers.    1 seconds

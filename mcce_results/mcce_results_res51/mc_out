@@ -1,4 +1,4 @@
-random number seed = 1500060931
+random number seed = 1500313542
 Monte Carlo set up time: 0 seconds.
 Starting number of residue = 1, number of conformer = 2
 
@@ -9,7 +9,7 @@ Equilibrating:       1 cycle(s) at temperature =       0.00K
 Annealling:          1 cycle(s) at temperature =     298.15K
 Collecting data:                at temperature =     298.15K
    Minimum/maximum number of cycles:     1/   -1
-   Actual  number of cycles to converge:     2
+   Actual  number of cycles to converge:     8
 Monte Carlo running time: 0 seconds.
 
 pH =   1.00  Eh =   0.00
@@ -19,7 +19,7 @@ Equilibrating:       1 cycle(s) at temperature =       0.00K
 Annealling:          1 cycle(s) at temperature =     298.15K
 Collecting data:                at temperature =     298.15K
    Minimum/maximum number of cycles:     1/   -1
-   Actual  number of cycles to converge:     1
+   Actual  number of cycles to converge:     2
 Monte Carlo running time: 0 seconds.
 
 pH =   2.00  Eh =   0.00
@@ -59,7 +59,7 @@ Equilibrating:       1 cycle(s) at temperature =       0.00K
 Annealling:          1 cycle(s) at temperature =     298.15K
 Collecting data:                at temperature =     298.15K
    Minimum/maximum number of cycles:     1/   -1
-   Actual  number of cycles to converge:     1
+   Actual  number of cycles to converge:     7
 Monte Carlo running time: 0 seconds.
 
 pH =   6.00  Eh =   0.00
@@ -69,7 +69,7 @@ Equilibrating:       1 cycle(s) at temperature =       0.00K
 Annealling:          1 cycle(s) at temperature =     298.15K
 Collecting data:                at temperature =     298.15K
    Minimum/maximum number of cycles:     1/   -1
-   Actual  number of cycles to converge:     1
+   Actual  number of cycles to converge:     2
 Monte Carlo running time: 0 seconds.
 
 pH =   7.00  Eh =   0.00

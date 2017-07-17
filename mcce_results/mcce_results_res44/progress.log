@@ -5013,9 +5013,9 @@
    Relaxation Cycle =   3, # of success =     4, avg_success_vdw =  5.441, deviation =  1.913, maximum =  7.354
    Configure atoms for hydrogen relaxation...
    THR A0044 (n_subres= 3,n_conf= 22) has   1 neighbors and               3 states... Loop over     3 states...
-   Doing pairwise     1 of     3 conformers.    3 seconds
+   Doing pairwise     1 of     3 conformers.    1 seconds
    Doing pairwise     2 of     3 conformers.    0 seconds
    Doing pairwise     3 of     3 conformers.    0 seconds
-   Doing rxn     1 of     3 conformers.    1 seconds
-   Doing rxn     2 of     3 conformers.    1 seconds
-   Doing rxn     3 of     3 conformers.    0 seconds
+   Doing rxn     1 of     3 conformers.    0 seconds
+   Doing rxn     2 of     3 conformers.    0 seconds
+   Doing rxn     3 of     3 conformers.    1 seconds

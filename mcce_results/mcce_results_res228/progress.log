@@ -5014,10 +5014,10 @@
    Configure atoms for hydrogen relaxation...
    THR A0228 (n_subres= 4,n_conf= 16) has   1 neighbors and               4 states... Loop over     4 states...
    Doing pairwise     1 of     4 conformers.    0 seconds
-   Doing pairwise     2 of     4 conformers.    0 seconds
-   Doing pairwise     3 of     4 conformers.    1 seconds
+   Doing pairwise     2 of     4 conformers.    1 seconds
+   Doing pairwise     3 of     4 conformers.    0 seconds
    Doing pairwise     4 of     4 conformers.    0 seconds
-   Doing rxn     1 of     4 conformers.    1 seconds
+   Doing rxn     1 of     4 conformers.    0 seconds
    Doing rxn     2 of     4 conformers.    0 seconds
-   Doing rxn     3 of     4 conformers.    1 seconds
+   Doing rxn     3 of     4 conformers.    0 seconds
    Doing rxn     4 of     4 conformers.    0 seconds

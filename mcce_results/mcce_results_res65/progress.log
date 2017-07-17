@@ -5004,7 +5004,7 @@
    Relaxation Cycle =   1, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
    Relaxation Cycle =   1, # of success =    12, avg_success_vdw =  9.256, deviation =  1.242, maximum = 11.597
    Relaxation Cycle =   2, n_relaxed =    12, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   2, rmsd =  0.036, max displacement =  0.135, time used 1 seconds
+   Relaxation Cycle =   2, rmsd =  0.036, max displacement =  0.135, time used 0 seconds
    Relaxation Cycle =   2, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
    Relaxation Cycle =   2, # of success =    12, avg_success_vdw =  8.627, deviation =  1.370, maximum = 11.274
    Relaxation Cycle =   3, n_relaxed =    12, shake convergence rate = 100.00 %, success rate = 100.00 %

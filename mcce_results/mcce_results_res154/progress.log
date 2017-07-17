@@ -5000,54 +5000,54 @@
    Repacking 4998: 0
    Repacking 4999: 0
    Relaxation Cycle =   1, n_relaxed =    32, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   1, rmsd =  0.018, max displacement =  0.109, time used 0 seconds
+   Relaxation Cycle =   1, rmsd =  0.018, max displacement =  0.108, time used 0 seconds
    Relaxation Cycle =   1, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
    Relaxation Cycle =   1, # of success =    32, avg_success_vdw = 10.018, deviation =  2.600, maximum = 13.265
    Relaxation Cycle =   2, n_relaxed =    32, shake convergence rate = 100.00 %, success rate = 100.00 %
-   Relaxation Cycle =   2, rmsd =  0.030, max displacement =  0.173, time used 0 seconds
+   Relaxation Cycle =   2, rmsd =  0.030, max displacement =  0.174, time used 1 seconds
    Relaxation Cycle =   2, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   2, # of success =    32, avg_success_vdw =  9.646, deviation =  2.510, maximum = 13.087
+   Relaxation Cycle =   2, # of success =    32, avg_success_vdw =  9.646, deviation =  2.511, maximum = 13.088
    Relaxation Cycle =   3, n_relaxed =    32, shake convergence rate = 100.00 %, success rate = 100.00 %
    Relaxation Cycle =   3, rmsd =  0.039, max displacement =  0.199, time used 1 seconds
    Relaxation Cycle =   3, # of failed  =     0, avg_failed_vdw  =   -nan, deviation =   -nan, maximum = -9999.000
-   Relaxation Cycle =   3, # of success =    32, avg_success_vdw =  9.465, deviation =  2.484, maximum = 13.030
+   Relaxation Cycle =   3, # of success =    32, avg_success_vdw =  9.466, deviation =  2.484, maximum = 13.030
    Configure atoms for hydrogen relaxation...
    TYR A0154 (n_subres=18,n_conf= 44) has   1 neighbors and              18 states... Loop over    18 states...
-   Doing pairwise     1 of    19 conformers.    1 seconds
+   Doing pairwise     1 of    19 conformers.    0 seconds
    Doing pairwise     2 of    19 conformers.    0 seconds
-   Doing pairwise     3 of    19 conformers.    0 seconds
+   Doing pairwise     3 of    19 conformers.    1 seconds
    Doing pairwise     4 of    19 conformers.    0 seconds
    Doing pairwise     5 of    19 conformers.    0 seconds
    Doing pairwise     6 of    19 conformers.    0 seconds
-   Doing pairwise     7 of    19 conformers.    1 seconds
-   Doing pairwise     8 of    19 conformers.    0 seconds
+   Doing pairwise     7 of    19 conformers.    0 seconds
+   Doing pairwise     8 of    19 conformers.    1 seconds
    Doing pairwise     9 of    19 conformers.    0 seconds
    Doing pairwise    10 of    19 conformers.    0 seconds
    Doing pairwise    11 of    19 conformers.    0 seconds
    Doing pairwise    12 of    19 conformers.    0 seconds
    Doing pairwise    13 of    19 conformers.    0 seconds
-   Doing pairwise    14 of    19 conformers.    0 seconds
-   Doing pairwise    15 of    19 conformers.    1 seconds
+   Doing pairwise    14 of    19 conformers.    1 seconds
+   Doing pairwise    15 of    19 conformers.    0 seconds
    Doing pairwise    16 of    19 conformers.    0 seconds
    Doing pairwise    17 of    19 conformers.    0 seconds
    Doing pairwise    18 of    19 conformers.    0 seconds
    Doing pairwise    19 of    19 conformers.    0 seconds
    Doing rxn     1 of    19 conformers.    0 seconds
-   Doing rxn     2 of    19 conformers.    0 seconds
-   Doing rxn     3 of    19 conformers.    1 seconds
+   Doing rxn     2 of    19 conformers.    1 seconds
+   Doing rxn     3 of    19 conformers.    0 seconds
    Doing rxn     4 of    19 conformers.    0 seconds
    Doing rxn     5 of    19 conformers.    0 seconds
    Doing rxn     6 of    19 conformers.    0 seconds
    Doing rxn     7 of    19 conformers.    0 seconds
-   Doing rxn     8 of    19 conformers.    0 seconds
+   Doing rxn     8 of    19 conformers.    1 seconds
    Doing rxn     9 of    19 conformers.    0 seconds
    Doing rxn    10 of    19 conformers.    0 seconds
-   Doing rxn    11 of    19 conformers.    1 seconds
+   Doing rxn    11 of    19 conformers.    0 seconds
    Doing rxn    12 of    19 conformers.    0 seconds
    Doing rxn    13 of    19 conformers.    0 seconds
    Doing rxn    14 of    19 conformers.    0 seconds
-   Doing rxn    15 of    19 conformers.    0 seconds
+   Doing rxn    15 of    19 conformers.    1 seconds
    Doing rxn    16 of    19 conformers.    0 seconds
    Doing rxn    17 of    19 conformers.    0 seconds
-   Doing rxn    18 of    19 conformers.    1 seconds
+   Doing rxn    18 of    19 conformers.    0 seconds
    Doing rxn    19 of    19 conformers.    0 seconds
