@@ -2,7 +2,7 @@
 Python programs that process pdb files to generate individual residue energies of an entire protein structure. Can be used in theory to calculate the energy of an unfolded protein.
 
 ### PLEASE NOTE
-DUE TO THE FACT THAT THE ANALYSIS RUNS IMMEDIATELY AFTER MCCE AUTOMATION IS SUBMITTED, BUT NOT COMPLETE (COMPLETE MEANS FINISHING THE RUN OF MCCE ON EACH RESIDUE), THERE IS OFTEN AN ERROR THAT IS ALWAYS THE RESULT OF THE ANALYSIS NOT GIVING TIME FOR THE AUTOMATION TO FULLY PROVIDE ITS RESULTS FOR EACH RESIDUE FILE. A QUICK SOLUTION TO THIS IS TO ADD A `time.sleep(30)` LINE IN THE SCRIPT OF MAIN.PY (INCLUDED) BETWEEN THE MCCE AUTOMATION AND ANALYSIS. 
+Run the program once similiar to how it was run in the example (except with your pdb file and desired output locations), then wait 5 minutes (or less, depending on how big/small your pdb file is and how many residues it has). Run the entire tthing again. In the first attempt nothing will be outputted. In the second, everything will magically appear. I know this technique sounds very unprofessional and stupid. I am coming up with a solution.  
 
 #### Usage
 ---
