@@ -1,0 +1,427 @@
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 13:37:08 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...7 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154":   27.101, dist=  2.3115
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   32.398, dist=  2.2946
+Large vdw btw " OE1 GLU A0154" and " HA  GLU A0154":   97.861, dist=  1.6652
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154":   11.133, dist=  2.4701
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   44.645, dist=  2.2607
+Large vdw btw " CD  GLU A0154" and " H   GLU A0154":   12.114, dist=  1.5329
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154": 94395.508, dist=  1.1876
+Large vdw btw " OE1 GLU A0154" and " H   GLU A0154":  999.000, dist=  0.4098
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   32.399, dist=  2.2946
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   15.520, dist=  2.4539
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154":  105.285, dist=  2.0785
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   19.327, dist=  2.4131
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154":  581.193, dist=  1.8100
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   32.399, dist=  2.2946
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   34.335, dist=  2.2973
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   32.398, dist=  2.2946
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154": 68129.789, dist=  1.2142
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":   61.574, dist=  2.0865
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   27.329, dist=  2.3391
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":   20.288, dist=  2.3570
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":   47.631, dist=  2.1287
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":  160.156, dist=  2.0016
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   60.015, dist=  2.1973
+Large vdw btw " CD  GLU A0154" and " O   GLU A0154":  111.908, dist=  2.0262
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   32.399, dist=  2.2946
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154": 3471.769, dist=  1.5548
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":  999.000, dist=  0.8812
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":  102.046, dist=  2.0048
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   32.397, dist=  2.2946
+Large vdw btw " OE1 GLU A0154" and " HA  GLU A0154": 1290.865, dist=  1.3470
+Large vdw btw " OE2 GLU A0154" and " CA  GLU A0154":   10.445, dist=  2.4586
+Large vdw btw " OE2 GLU A0154" and " HA  GLU A0154":  285.669, dist=  1.4961
+Large vdw btw " OE2 GLU A0154" and " HA  GLU A0154":   24.127, dist=  1.8276
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   33.760, dist=  2.2873
+Large vdw btw " OE1 GLU A0154" and " HA  GLU A0154": 1900.036, dist=  1.3046
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154":   76.566, dist=  2.0957
+Large vdw btw " OE2 GLU A0154" and " H   GLU A0154":   51.350, dist=  1.2763
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154":  364.397, dist=  1.8803
+Large vdw btw " OE1 GLU A0154" and " H   GLU A0154":  347.263, dist=  1.1211
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   17.519, dist=  2.4054
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   44.645, dist=  2.2607
+Large vdw btw " CD  GLU A0154" and " H   GLU A0154":   12.114, dist=  1.5329
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154":   33.285, dist=  2.2753
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   44.645, dist=  2.2607
+Large vdw btw " CD  GLU A0154" and " H   GLU A0154":   12.114, dist=  1.5329
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154":  592.392, dist=  1.7766
+Large vdw btw " OE2 GLU A0154" and " H   GLU A0154":  999.000, dist=  0.9414
+Large vdw btw " OE2 GLU A0154" and " CA  GLU A0154":   10.446, dist=  2.4586
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   44.645, dist=  2.2607
+Large vdw btw " CD  GLU A0154" and " H   GLU A0154":   12.114, dist=  1.5329
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154": 9105.464, dist=  1.4179
+Large vdw btw " OE2 GLU A0154" and " H   GLU A0154":  999.000, dist=  0.5333
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   44.645, dist=  2.2607
+Large vdw btw " CD  GLU A0154" and " H   GLU A0154":   12.114, dist=  1.5329
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154":   21.239, dist=  2.3148
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   44.645, dist=  2.2607
+Large vdw btw " CD  GLU A0154" and " H   GLU A0154":   12.114, dist=  1.5329
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154": 1003.248, dist=  1.7307
+Large vdw btw " OE1 GLU A0154" and " H   GLU A0154": 1195.152, dist=  1.0124
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   33.761, dist=  2.2873
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   15.520, dist=  2.4539
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154":  142.005, dist=  1.9949
+Large vdw btw " OE2 GLU A0154" and " H   GLU A0154":   17.207, dist=  1.3924
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   15.520, dist=  2.4539
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154":  730.233, dist=  1.7464
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   15.520, dist=  2.4539
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   15.520, dist=  2.4539
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154":  303.768, dist=  1.9084
+Large vdw btw " OE1 GLU A0154" and " H   GLU A0154":  134.135, dist=  1.2120
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   15.520, dist=  2.4539
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154": 5138.938, dist=  1.5124
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   17.520, dist=  2.4054
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154":   21.996, dist=  2.3087
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   19.327, dist=  2.4131
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154":   15.409, dist=  2.3711
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   19.327, dist=  2.4131
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154": 4373.935, dist=  1.5067
+Large vdw btw " OE2 GLU A0154" and " CA  GLU A0154":   10.446, dist=  2.4586
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   19.327, dist=  2.4131
+Large vdw btw " OE2 GLU A0154" and " N   GLU A0154":  194.586, dist=  1.9449
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   19.327, dist=  2.4131
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154":   14.310, dist=  2.4252
+Large vdw btw " CD  GLU A0154" and " N   GLU A0154":   19.327, dist=  2.4131
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154": 26150.721, dist=  1.3214
+Large vdw btw " OE1 GLU A0154" and " H   GLU A0154":   17.417, dist=  1.4280
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   33.763, dist=  2.2873
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154":   30.087, dist=  2.2485
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   17.521, dist=  2.4054
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":  124.458, dist=  2.0428
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   34.335, dist=  2.2973
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":   48.411, dist=  2.2027
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   34.335, dist=  2.2973
+Large vdw btw " OE2 GLU A0154" and " CA  GLU A0154":   10.445, dist=  2.4586
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154":  193.481, dist=  1.9385
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   34.335, dist=  2.2973
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154": 6434.130, dist=  1.4529
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":   14.533, dist=  2.2878
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   34.335, dist=  2.2973
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154":   26.867, dist=  2.2684
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   34.335, dist=  2.2973
+Large vdw btw " OE1 GLU A0154" and " N   GLU A0154":   10.897, dist=  2.4740
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   33.761, dist=  2.2873
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":  286.308, dist=  1.9093
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   27.329, dist=  2.3391
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154":  227.614, dist=  1.9131
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":   12.266, dist=  2.3163
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   27.329, dist=  2.3391
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154": 2968.139, dist=  1.5491
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154": 1850.038, dist=  1.5557
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   27.329, dist=  2.3391
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154":   12.076, dist=  2.4107
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":   26.489, dist=  2.1875
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   27.329, dist=  2.3391
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":  401.601, dist=  1.8573
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":   10.375, dist=  2.3868
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   27.329, dist=  2.3391
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   17.520, dist=  2.4054
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154": 26791.619, dist=  1.3123
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154": 7275.280, dist=  1.4143
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":   11.734, dist=  2.4566
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":   12.788, dist=  2.3511
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154":   35.073, dist=  2.2218
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   60.015, dist=  2.1973
+Large vdw btw " CD  GLU A0154" and " O   GLU A0154":  111.908, dist=  2.0262
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":  119.389, dist=  1.9799
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154":   40.546, dist=  2.1967
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":   28.801, dist=  2.1736
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   60.015, dist=  2.1973
+Large vdw btw " CD  GLU A0154" and " O   GLU A0154":  111.908, dist=  2.0262
+Large vdw btw " OE2 GLU A0154" and " CA  GLU A0154":   10.446, dist=  2.4586
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154": 28345.146, dist=  1.2845
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154": 47966.586, dist=  1.1878
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   60.015, dist=  2.1973
+Large vdw btw " CD  GLU A0154" and " O   GLU A0154":  111.908, dist=  2.0262
+Large vdw btw " OE2 GLU A0154" and " C   GLU A0154": 1070.101, dist=  1.6853
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":  999.000, dist=  0.9322
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   60.015, dist=  2.1973
+Large vdw btw " CD  GLU A0154" and " O   GLU A0154":  111.908, dist=  2.0262
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":   33.133, dist=  2.2693
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":   12.232, dist=  2.3587
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":  151.393, dist=  1.9081
+Large vdw btw " CD  GLU A0154" and " C   GLU A0154":   60.015, dist=  2.1973
+Large vdw btw " CD  GLU A0154" and " O   GLU A0154":  111.908, dist=  2.0262
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   33.762, dist=  2.2873
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154": 187057.797, dist=  1.1163
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154": 28104.201, dist=  1.2642
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":  456.961, dist=  1.7449
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":   51.822, dist=  2.0773
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":   20.473, dist=  2.3554
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154": 1980.084, dist=  1.5750
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   17.520, dist=  2.4054
+Large vdw btw " OE1 GLU A0154" and " HA  GLU A0154":   15.654, dist=  1.9283
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":   14.010, dist=  2.4242
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":  171.814, dist=  1.9229
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":   22.564, dist=  2.2142
+Large vdw btw " OE2 GLU A0154" and " CA  GLU A0154":   10.445, dist=  2.4586
+Large vdw btw " OE2 GLU A0154" and " HA  GLU A0154":   16.147, dist=  1.8864
+Large vdw btw " OE2 GLU A0154" and " O   GLU A0154":  111.024, dist=  1.9560
+Large vdw btw " OE2 GLU A0154" and " HA  GLU A0154":  139.619, dist=  1.5864
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   33.760, dist=  2.2873
+Large vdw btw " OE1 GLU A0154" and " HA  GLU A0154":   35.550, dist=  1.8070
+Large vdw btw " OE1 GLU A0154" and " C   GLU A0154":   32.546, dist=  2.2724
+Large vdw btw " OE1 GLU A0154" and " O   GLU A0154":  489.565, dist=  1.7665
+Large vdw btw " OE2 GLU A0154" and " HA  GLU A0154":   58.955, dist=  1.7015
+Large vdw btw " OE1 GLU A0154" and " CA  GLU A0154":   17.518, dist=  2.4054
+Large vdw btw " OE1 GLU A0154" and " HA  GLU A0154":  491.470, dist=  1.4589
+   Pruning rotamers...101 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 0
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...1 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 0 seconds.
+      Actual time is 1
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 1
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+   Done
+
+       35 conformers deleted in this cycle at    2.000    2.000    2.000
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+   Done. Time spent = 8
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 1582
+   Done. Time spent = 1
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      93 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 12 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      2 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 66 of 66 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 66 of 66 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+energies.opp not found
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 28 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+

@@ -1,0 +1,2424 @@
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 13:37:23 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...12 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   14.544, dist=  2.0489
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   14.544, dist=  2.0489
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   14.543, dist=  2.0489
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   14.543, dist=  2.0489
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   14.544, dist=  2.0489
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   14.544, dist=  2.0489
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   14.543, dist=  2.0489
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   14.543, dist=  2.0489
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   14.543, dist=  2.0489
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   14.543, dist=  2.0489
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   14.543, dist=  2.0489
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   14.543, dist=  2.0489
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   18.096, dist=  2.0140
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   18.096, dist=  2.0140
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   15.360, dist=  2.0402
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   15.360, dist=  2.0402
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   17.118, dist=  2.0228
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   17.118, dist=  2.0228
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   18.096, dist=  2.0140
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   18.096, dist=  2.0140
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   15.361, dist=  2.0401
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   15.361, dist=  2.0401
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   17.120, dist=  2.0228
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   17.120, dist=  2.0228
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   18.096, dist=  2.0140
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   18.096, dist=  2.0140
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   15.361, dist=  2.0401
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   15.361, dist=  2.0401
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   17.120, dist=  2.0228
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   17.120, dist=  2.0228
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   18.096, dist=  2.0140
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   18.096, dist=  2.0140
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   15.360, dist=  2.0401
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   15.360, dist=  2.0401
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   17.119, dist=  2.0228
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   17.119, dist=  2.0228
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   18.097, dist=  2.0140
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   18.097, dist=  2.0140
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   15.360, dist=  2.0402
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   15.360, dist=  2.0402
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   17.119, dist=  2.0228
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   17.119, dist=  2.0228
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   18.096, dist=  2.0140
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   18.096, dist=  2.0140
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   15.360, dist=  2.0402
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   15.360, dist=  2.0402
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   17.118, dist=  2.0228
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   17.118, dist=  2.0228
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.905, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.905, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.905, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.905, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.905, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.905, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.903, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.903, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.905, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.905, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.903, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.903, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.902, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.902, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.906, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.906, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.905, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.905, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.902, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.902, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.905, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.905, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.905, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.905, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw "1HG  ARG A0283" and " NH1 ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " NH1 ARG A0283" and "1HG  ARG A0283":   30.904, dist=  1.9302
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  209.639, dist=  1.6525
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  209.639, dist=  1.6525
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  419.708, dist=  1.5608
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  419.708, dist=  1.5608
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.191, dist=  1.7802
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283": 2228.419, dist=  1.3595
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.191, dist=  1.7802
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283": 2228.419, dist=  1.3595
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  209.639, dist=  1.6525
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  209.639, dist=  1.6525
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  419.712, dist=  1.5608
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  419.712, dist=  1.5608
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.165, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283": 2228.349, dist=  1.3595
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.165, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283": 2228.349, dist=  1.3595
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  209.631, dist=  1.6525
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  209.631, dist=  1.6525
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  419.704, dist=  1.5608
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  419.704, dist=  1.5608
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.169, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283": 2228.433, dist=  1.3595
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.169, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283": 2228.433, dist=  1.3595
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  209.636, dist=  1.6525
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  209.636, dist=  1.6525
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  419.718, dist=  1.5608
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  419.718, dist=  1.5608
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.158, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283": 2228.319, dist=  1.3595
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.158, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283": 2228.319, dist=  1.3595
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  209.634, dist=  1.6525
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  209.634, dist=  1.6525
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  419.698, dist=  1.5608
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  419.698, dist=  1.5608
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.173, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283": 2228.462, dist=  1.3595
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.173, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283": 2228.462, dist=  1.3595
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  209.632, dist=  1.6525
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  209.632, dist=  1.6525
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  419.713, dist=  1.5608
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  419.713, dist=  1.5608
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.138, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283": 2228.388, dist=  1.3595
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.138, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283": 2228.388, dist=  1.3595
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   91.363, dist=  1.7685
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   91.363, dist=  1.7685
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.159, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.159, dist=  1.7803
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.179, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  245.315, dist=  1.6313
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.179, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  245.315, dist=  1.6313
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   20.068, dist=  1.9976
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   20.068, dist=  1.9976
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4593
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4593
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  265.311, dist=  1.6208
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  265.311, dist=  1.6208
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.142, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":  174.966, dist=  1.6723
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7856
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":  174.966, dist=  1.6723
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.142, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  999.000, dist=  0.7856
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  164.835, dist=  1.6853
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  164.835, dist=  1.6853
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  551.013, dist=  1.5261
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  551.013, dist=  1.5261
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.147, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  343.879, dist=  1.5866
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283": 3355.632, dist=  1.3141
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.147, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  343.879, dist=  1.5866
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283": 3355.632, dist=  1.3141
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   21.454, dist=  1.9871
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   21.454, dist=  1.9871
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  119.240, dist=  1.7305
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  119.240, dist=  1.7305
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  354.537, dist=  1.5826
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  354.537, dist=  1.5826
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.201, dist=  1.7802
+Large vdw btw "1HB  ARG A0283" and " CZ  ARG A0283":  196.322, dist=  1.6565
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7712
+Large vdw btw " CZ  ARG A0283" and "1HB  ARG A0283":  196.322, dist=  1.6565
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.201, dist=  1.7802
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  999.000, dist=  0.7712
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.519, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.519, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   91.366, dist=  1.7685
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   91.366, dist=  1.7685
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.209, dist=  1.7802
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.209, dist=  1.7802
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.307, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.307, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.141, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  245.315, dist=  1.6313
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.141, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  245.315, dist=  1.6313
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   20.067, dist=  1.9976
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   20.067, dist=  1.9976
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  265.322, dist=  1.6208
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  265.322, dist=  1.6208
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.151, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":  174.960, dist=  1.6723
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7856
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":  174.960, dist=  1.6723
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.151, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  999.000, dist=  0.7856
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  164.838, dist=  1.6853
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  164.838, dist=  1.6853
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.306, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  550.960, dist=  1.5261
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.306, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  550.960, dist=  1.5261
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.091, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  343.864, dist=  1.5866
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283": 3355.373, dist=  1.3141
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.091, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  343.864, dist=  1.5866
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283": 3355.373, dist=  1.3141
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   21.453, dist=  1.9871
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   21.453, dist=  1.9871
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  119.246, dist=  1.7305
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  119.246, dist=  1.7305
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  354.525, dist=  1.5826
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  354.525, dist=  1.5826
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.218, dist=  1.7802
+Large vdw btw "1HB  ARG A0283" and " CZ  ARG A0283":  196.329, dist=  1.6565
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7712
+Large vdw btw " CZ  ARG A0283" and "1HB  ARG A0283":  196.329, dist=  1.6565
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.218, dist=  1.7802
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  999.000, dist=  0.7712
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   91.362, dist=  1.7685
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   91.362, dist=  1.7685
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.154, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.154, dist=  1.7803
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.114, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  245.303, dist=  1.6313
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.114, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  245.303, dist=  1.6313
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   20.068, dist=  1.9976
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   20.068, dist=  1.9976
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4593
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4593
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  265.311, dist=  1.6208
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  265.311, dist=  1.6208
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.181, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":  174.970, dist=  1.6723
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7856
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":  174.970, dist=  1.6723
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.181, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  999.000, dist=  0.7856
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  164.835, dist=  1.6853
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  164.835, dist=  1.6853
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.307, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  551.016, dist=  1.5261
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.307, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  551.016, dist=  1.5261
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.144, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  343.878, dist=  1.5866
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283": 3355.621, dist=  1.3141
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.144, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  343.878, dist=  1.5866
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283": 3355.621, dist=  1.3141
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   21.454, dist=  1.9871
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   21.454, dist=  1.9871
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  119.241, dist=  1.7305
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  119.241, dist=  1.7305
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.307, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  354.507, dist=  1.5826
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.307, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  354.507, dist=  1.5826
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.160, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " CZ  ARG A0283":  196.320, dist=  1.6565
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7712
+Large vdw btw " CZ  ARG A0283" and "1HB  ARG A0283":  196.320, dist=  1.6565
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.160, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  999.000, dist=  0.7712
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   91.363, dist=  1.7685
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   91.363, dist=  1.7685
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.173, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.173, dist=  1.7803
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.116, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  245.305, dist=  1.6313
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.116, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  245.305, dist=  1.6313
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   20.066, dist=  1.9976
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   20.066, dist=  1.9976
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  265.327, dist=  1.6208
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  265.327, dist=  1.6208
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.150, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":  174.970, dist=  1.6723
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7856
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":  174.970, dist=  1.6723
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.150, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  999.000, dist=  0.7856
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  164.839, dist=  1.6853
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  164.839, dist=  1.6853
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.309, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  551.062, dist=  1.5261
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.309, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  551.062, dist=  1.5261
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.200, dist=  1.7802
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  343.896, dist=  1.5866
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283": 3355.831, dist=  1.3141
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.200, dist=  1.7802
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  343.896, dist=  1.5866
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283": 3355.831, dist=  1.3141
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   21.456, dist=  1.9871
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   21.456, dist=  1.9871
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  119.246, dist=  1.7305
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  119.246, dist=  1.7305
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.309, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  354.553, dist=  1.5826
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.309, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  354.553, dist=  1.5826
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.172, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " CZ  ARG A0283":  196.327, dist=  1.6565
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7712
+Large vdw btw " CZ  ARG A0283" and "1HB  ARG A0283":  196.327, dist=  1.6565
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.172, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  999.000, dist=  0.7712
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   91.359, dist=  1.7685
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   91.359, dist=  1.7685
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.119, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.119, dist=  1.7803
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9224
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9224
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.098, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  245.289, dist=  1.6313
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.098, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  245.289, dist=  1.6313
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   20.067, dist=  1.9976
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   20.067, dist=  1.9976
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.307, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  265.296, dist=  1.6208
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.307, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  265.296, dist=  1.6208
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.128, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":  174.955, dist=  1.6723
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7856
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":  174.955, dist=  1.6723
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.128, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  999.000, dist=  0.7856
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  164.832, dist=  1.6853
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  164.832, dist=  1.6853
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.307, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  550.997, dist=  1.5261
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.307, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  550.997, dist=  1.5261
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.091, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  343.853, dist=  1.5866
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283": 3355.505, dist=  1.3141
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.091, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  343.853, dist=  1.5866
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283": 3355.505, dist=  1.3141
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   21.453, dist=  1.9871
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   21.453, dist=  1.9871
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  119.240, dist=  1.7305
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  119.240, dist=  1.7305
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.307, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  354.498, dist=  1.5826
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.307, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  354.498, dist=  1.5826
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.087, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " CZ  ARG A0283":  196.301, dist=  1.6566
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7712
+Large vdw btw " CZ  ARG A0283" and "1HB  ARG A0283":  196.301, dist=  1.6566
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.087, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  999.000, dist=  0.7712
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9224
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9224
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   91.363, dist=  1.7685
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   91.363, dist=  1.7685
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.220, dist=  1.7802
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.220, dist=  1.7802
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.518, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.012, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.309, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.309, dist=  2.4263
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.175, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  245.312, dist=  1.6313
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.175, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  245.312, dist=  1.6313
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":   20.068, dist=  1.9976
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":   20.068, dist=  1.9976
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.517, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4592
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.308, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  265.313, dist=  1.6208
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.308, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  265.313, dist=  1.6208
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.121, dist=  1.7803
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":  174.949, dist=  1.6723
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7856
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":  174.949, dist=  1.6723
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.121, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  999.000, dist=  0.7856
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4593
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  164.829, dist=  1.6853
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4593
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  164.829, dist=  1.6853
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.307, dist=  2.4263
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  551.002, dist=  1.5261
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.307, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  551.002, dist=  1.5261
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.133, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  343.872, dist=  1.5866
+Large vdw btw "2HB  ARG A0283" and " CZ  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283": 3355.598, dist=  1.3141
+Large vdw btw " CZ  ARG A0283" and "2HB  ARG A0283":   11.088, dist=  2.0895
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.133, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  343.872, dist=  1.5866
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283": 3355.598, dist=  1.3141
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":   21.454, dist=  1.9871
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":   21.454, dist=  1.9871
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.515, dist=  1.9223
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   17.011, dist=  2.4593
+Large vdw btw "2HB  ARG A0283" and " NH1 ARG A0283":  119.233, dist=  1.7306
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   17.011, dist=  2.4593
+Large vdw btw " NH1 ARG A0283" and "2HB  ARG A0283":  119.233, dist=  1.7306
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":   20.307, dist=  2.4263
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  354.495, dist=  1.5826
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":   20.307, dist=  2.4263
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  354.495, dist=  1.5826
+Large vdw btw " CB  ARG A0283" and " NH1 ARG A0283":  959.095, dist=  1.7803
+Large vdw btw "1HB  ARG A0283" and " CZ  ARG A0283":  196.300, dist=  1.6566
+Large vdw btw "1HB  ARG A0283" and " NH1 ARG A0283":  999.000, dist=  0.7712
+Large vdw btw " CZ  ARG A0283" and "1HB  ARG A0283":  196.300, dist=  1.6566
+Large vdw btw " NH1 ARG A0283" and " CB  ARG A0283":  959.095, dist=  1.7803
+Large vdw btw " NH1 ARG A0283" and "1HB  ARG A0283":  999.000, dist=  0.7712
+Large vdw btw "2HG  ARG A0283" and " NH1 ARG A0283":   32.516, dist=  1.9223
+Large vdw btw " NH1 ARG A0283" and "2HG  ARG A0283":   32.516, dist=  1.9223
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   63.937, dist=  1.7655
+Large vdw btw "2HD  ARG A0283" and " H   ARG A0283":   27.142, dist=  1.0633
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   75.472, dist=  1.7419
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  148.453, dist=  1.6451
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   70.781, dist=  1.7478
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  101.936, dist=  1.6276
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283": 1210.679, dist=  1.3835
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283": 22715.902, dist=  1.0411
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  163.825, dist=  1.9721
+Large vdw btw "2HD  ARG A0283" and " HA  ARG A0283":   32.751, dist=  1.4619
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   12.303, dist=  2.5200
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  272.229, dist=  1.5685
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  123.496, dist=  2.0841
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":   48.932, dist=  1.3708
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 1598.460, dist=  1.6990
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.7716
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   12.303, dist=  2.5200
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 2275.435, dist=  1.6502
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   12.303, dist=  2.5200
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   16.539, dist=  2.4421
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   11.084, dist=  2.4291
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  461.250, dist=  1.8614
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   40.450, dist=  2.1971
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   12.303, dist=  2.5200
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 1974.279, dist=  1.6607
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   40.769, dist=  2.2769
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 9527.117, dist=  1.4126
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   22.459, dist=  2.3050
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   15.212, dist=  2.4483
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 9360.717, dist=  1.4084
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   12.303, dist=  2.5200
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 26193.736, dist=  1.3401
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.5800
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":   11.740, dist=  1.5366
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.9059
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   57.472, dist=  2.1436
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   12.303, dist=  2.5200
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   36.008, dist=  1.8491
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   26.393, dist=  2.2769
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2025.868, dist=  1.6661
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.8046
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.907, dist=  2.3961
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  322.701, dist=  1.9276
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":   11.391, dist=  1.5403
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   43.734, dist=  2.2752
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   78.148, dist=  1.7337
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.515, dist=  2.5495
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  203.766, dist=  1.6063
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   40.500, dist=  2.2871
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   85.715, dist=  2.1558
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.901, dist=  1.4288
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 29745.799, dist=  1.3260
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.9529
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.4570
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  477.363, dist=  1.1306
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1052.622, dist=  1.7667
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":   33.859, dist=  1.4028
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   16.062, dist=  2.4548
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   56.288, dist=  1.7838
+Large vdw btw "1HD  ARG A0283" and " H   ARG A0283":   20.954, dist=  1.0858
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2142.105, dist=  1.6585
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  293.514, dist=  1.1768
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  242.928, dist=  1.9728
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283": 2244.195, dist=  1.0005
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   32.455, dist=  2.3268
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":  118.213, dist=  2.1012
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 59214.125, dist=  1.2522
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   39.219, dist=  2.2950
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.4649
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  682.491, dist=  1.0977
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  832.219, dist=  1.8012
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":   31.064, dist=  1.4125
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   24.054, dist=  2.3809
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   58.913, dist=  1.7772
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   67.904, dist=  1.7569
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   83.671, dist=  2.1600
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 4240.369, dist=  1.5674
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  999.000, dist=  0.9078
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.6638
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   43.737, dist=  2.2752
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 1437.334, dist=  1.7140
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.7771
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.515, dist=  2.5495
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283": 3941.864, dist=  1.5769
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   58.499, dist=  2.2127
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   16.489, dist=  2.4331
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 31027.061, dist=  1.3288
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1052.715, dist=  1.7667
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 1607.995, dist=  1.6891
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   84.198, dist=  1.7265
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   18.244, dist=  2.4314
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   72.212, dist=  2.1759
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   96.097, dist=  2.1266
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   12.083, dist=  2.5008
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   39.222, dist=  2.2950
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 18655.820, dist=  1.3701
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   13.557, dist=  2.3900
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 27345.947, dist=  1.3428
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  832.291, dist=  1.8012
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 1300.253, dist=  1.7190
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":  414.799, dist=  1.8884
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   31.424, dist=  2.2467
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 2688.113, dist=  1.6189
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  832.421, dist=  1.7277
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 2165.370, dist=  1.6481
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  614.932, dist=  1.7711
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   24.301, dist=  1.9055
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 2596.403, dist=  1.6235
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  652.815, dist=  1.8194
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   43.736, dist=  2.2752
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   89.657, dist=  2.1275
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 1681.650, dist=  1.6919
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.515, dist=  2.5495
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   52.439, dist=  2.2413
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  344.821, dist=  1.9172
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   16.534, dist=  2.3587
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 83241.711, dist=  1.2098
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 5366.598, dist=  1.4749
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   54.956, dist=  2.2331
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1052.688, dist=  1.7667
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.7773
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 3357.359, dist=  1.5401
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   22.231, dist=  2.3873
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  132.586, dist=  2.0059
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  123.272, dist=  1.6703
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  175.425, dist=  1.9613
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   31.579, dist=  1.8658
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 18602.031, dist=  1.3788
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  890.653, dist=  1.7181
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  276.290, dist=  1.9413
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   16.182, dist=  2.4461
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 1147.206, dist=  1.7369
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 22987.379, dist=  1.3130
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   39.221, dist=  2.2950
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 438724.344, dist=  1.0534
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.2129
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   45.383, dist=  2.2669
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  832.267, dist=  1.8012
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.7739
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 3543.924, dist=  1.5332
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   35.375, dist=  2.3025
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 56923.094, dist=  1.2176
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  595.942, dist=  1.4671
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.915, dist=  1.9085
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   24.683, dist=  2.2833
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  565.465, dist=  1.7833
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   95.441, dist=  1.7057
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  122.501, dist=  1.6034
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  737.817, dist=  1.4414
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.397, dist=  1.8672
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  443.425, dist=  1.8118
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   17.709, dist=  2.4294
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  133.157, dist=  2.0052
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   35.723, dist=  2.2246
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  589.108, dist=  1.7774
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  152.174, dist=  1.5753
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  633.042, dist=  1.8240
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  250.887, dist=  1.9054
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 67894.828, dist=  1.2380
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.6615
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   43.735, dist=  2.2752
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  999.000, dist=  0.8061
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 11294.234, dist=  1.3866
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.515, dist=  2.5495
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 1867.413, dist=  1.6684
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283": 1004.588, dist=  1.7560
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  185.446, dist=  1.9525
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   38.969, dist=  1.8345
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.346, dist=  1.9147
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   21.975, dist=  2.3894
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 6492.688, dist=  1.4582
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  111.227, dist=  2.0907
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 137940.750, dist=  1.1260
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1052.657, dist=  1.7667
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  121.725, dist=  1.6755
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 12098.604, dist=  1.4290
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 13428.512, dist=  1.3729
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   20.400, dist=  2.3218
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283": 1421.695, dist=  1.3652
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283": 19096.023, dist=  1.0562
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  216.269, dist=  1.5306
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   53.054, dist=  1.7892
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.092, dist=  1.8697
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   65.979, dist=  2.1916
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 16706.223, dist=  1.3483
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  261.837, dist=  1.9499
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.7686
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   25.037, dist=  2.3654
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  950.598, dist=  1.7090
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 2732.358, dist=  1.5665
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   39.219, dist=  2.2950
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  196.579, dist=  1.6076
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   13.021, dist=  2.4777
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   77.473, dist=  2.0868
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  832.225, dist=  1.8012
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   95.603, dist=  1.7088
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 11567.901, dist=  1.4343
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 18125.361, dist=  1.3392
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  223.205, dist=  1.5267
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   30.745, dist=  1.8727
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  196.488, dist=  1.5427
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   25.145, dist=  1.9029
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  150.067, dist=  1.9861
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   16.118, dist=  2.3590
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   16.117, dist=  2.3632
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.906, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   61.330, dist=  1.7715
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   44.614, dist=  2.1865
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   43.731, dist=  2.2753
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 1321.030, dist=  1.7067
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.9334
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.514, dist=  2.5495
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 17897.389, dist=  1.3832
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.5879
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  252.772, dist=  1.1210
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   30.638, dist=  2.3285
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  838.815, dist=  1.7266
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  130.934, dist=  1.6621
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   47.970, dist=  2.2570
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1052.610, dist=  1.7667
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 42087.008, dist=  1.0327
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   21.492, dist=  2.3935
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  115.817, dist=  1.6823
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   29.408, dist=  1.8793
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   10.149, dist=  2.5335
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   39.218, dist=  2.2950
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283": 1749.716, dist=  1.3419
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   37.203, dist=  2.3023
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  832.193, dist=  1.8012
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 35263.477, dist=  1.0480
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   18.309, dist=  2.4232
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   10.371, dist=  2.0401
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  731.965, dist=  1.4457
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   43.733, dist=  2.2753
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283": 3975.307, dist=  1.2535
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.515, dist=  2.5495
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   32.498, dist=  1.8644
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   20.141, dist=  2.3241
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   48.154, dist=  2.2472
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 21739.242, dist=  1.3686
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   12.343, dist=  1.5194
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1052.691, dist=  1.7667
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  994.575, dist=  1.4095
+Large vdw btw "1HD  ARG A0283" and " HA  ARG A0283":   36.496, dist=  1.4490
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   12.503, dist=  2.5008
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   53.611, dist=  2.2374
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.017, dist=  1.4326
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 43516.434, dist=  1.2847
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.4405
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   39.220, dist=  2.2950
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 16307.867, dist=  1.4017
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   11.985, dist=  1.5229
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  832.244, dist=  1.8012
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  876.758, dist=  1.4243
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":  576.163, dist=  1.8477
+Large vdw btw " NH2 ARG A0283" and " H   ARG A0283":  111.106, dist=  1.2743
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  308.045, dist=  1.9446
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  261.864, dist=  1.9705
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   63.937, dist=  1.7655
+Large vdw btw "2HD  ARG A0283" and " H   ARG A0283":   27.142, dist=  1.0633
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   63.937, dist=  1.7655
+Large vdw btw "2HD  ARG A0283" and " H   ARG A0283":   27.142, dist=  1.0633
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   63.937, dist=  1.7655
+Large vdw btw "2HD  ARG A0283" and " H   ARG A0283":   27.142, dist=  1.0633
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   63.937, dist=  1.7655
+Large vdw btw "2HD  ARG A0283" and " H   ARG A0283":   27.142, dist=  1.0633
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   63.937, dist=  1.7655
+Large vdw btw "2HD  ARG A0283" and " H   ARG A0283":   27.142, dist=  1.0633
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  316.533, dist=  1.9403
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  218.336, dist=  1.2057
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  311.965, dist=  1.9426
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   14.759, dist=  1.4983
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 1086.118, dist=  1.7540
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   75.472, dist=  1.7419
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   75.472, dist=  1.7419
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   75.472, dist=  1.7419
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   75.472, dist=  1.7419
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   75.472, dist=  1.7419
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   11.350, dist=  2.5125
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 27590.225, dist=  1.3418
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   62.170, dist=  1.3358
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  351.626, dist=  1.9141
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  148.453, dist=  1.6451
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  148.453, dist=  1.6451
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  148.453, dist=  1.6451
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  148.453, dist=  1.6451
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  148.453, dist=  1.6451
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   70.781, dist=  1.7478
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  101.936, dist=  1.6276
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   70.781, dist=  1.7478
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  101.936, dist=  1.6276
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   11.354, dist=  2.5038
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   16.195, dist=  2.4532
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  146.240, dist=  2.0558
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   70.781, dist=  1.7478
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  101.936, dist=  1.6276
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   16.183, dist=  2.4366
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  340.395, dist=  1.9192
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  129.272, dist=  2.0100
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   70.781, dist=  1.7478
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  101.936, dist=  1.6276
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   70.781, dist=  1.7478
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  101.936, dist=  1.6276
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   20.217, dist=  2.4048
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  125.524, dist=  2.0076
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 9010.468, dist=  1.4644
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.6803
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.9755
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283": 1210.679, dist=  1.3835
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283": 22715.902, dist=  1.0411
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283": 1210.679, dist=  1.3835
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283": 22715.902, dist=  1.0411
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283": 1210.679, dist=  1.3835
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283": 22715.902, dist=  1.0411
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283": 1210.679, dist=  1.3835
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283": 22715.902, dist=  1.0411
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283": 1210.679, dist=  1.3835
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283": 22715.902, dist=  1.0411
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  163.825, dist=  1.9721
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   32.220, dist=  2.2366
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  163.825, dist=  1.9721
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   53.170, dist=  2.2187
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 23371.646, dist=  1.3053
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 251463.562, dist=  1.1102
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.9404
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   10.876, dist=  2.4324
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  163.825, dist=  1.9721
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 4002.831, dist=  1.5112
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 3802.600, dist=  1.5243
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  163.825, dist=  1.9721
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  163.825, dist=  1.9721
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  693.839, dist=  1.7537
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   31.347, dist=  2.2471
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  350.363, dist=  1.8544
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   28.265, dist=  2.3432
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 2177.204, dist=  1.5962
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   66.570, dist=  1.7597
+Large vdw btw "2HD  ARG A0283" and " HA  ARG A0283":   32.751, dist=  1.4619
+Large vdw btw "2HD  ARG A0283" and " HA  ARG A0283":   32.751, dist=  1.4619
+Large vdw btw "2HD  ARG A0283" and " HA  ARG A0283":   32.751, dist=  1.4619
+Large vdw btw "2HD  ARG A0283" and " HA  ARG A0283":   32.751, dist=  1.4619
+Large vdw btw "2HD  ARG A0283" and " HA  ARG A0283":   32.751, dist=  1.4619
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  382.333, dist=  1.5253
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  371.699, dist=  1.9151
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.9620
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   45.963, dist=  1.8101
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 2302.806, dist=  1.6561
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 42018.340, dist=  1.0329
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   14.315, dist=  1.9875
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  527.734, dist=  1.8611
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   17.505, dist=  1.4783
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   79.330, dist=  2.1805
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  131.378, dist=  1.6650
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   20.687, dist=  2.4005
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 429777.344, dist=  1.0677
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.3921
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  265.878, dist=  1.9776
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  576.549, dist=  1.1131
+Large vdw btw "1HH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.9344
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   31.732, dist=  2.3222
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  150.807, dist=  2.0604
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 2302.754, dist=  1.6561
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 1261.681, dist=  1.3821
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  334.211, dist=  1.9221
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283": 1156.689, dist=  1.0570
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.8518
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.6626
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   79.328, dist=  2.1805
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  359.801, dist=  1.1572
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  514.905, dist=  1.8552
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 471894.969, dist=  1.0594
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  265.868, dist=  1.9776
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   11.102, dist=  2.5167
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":   53.296, dist=  1.3525
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   28.724, dist=  2.3488
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  120.757, dist=  2.0878
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 14429.680, dist=  1.4160
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   38.897, dist=  1.3873
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 2302.720, dist=  1.6561
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":   58.645, dist=  1.3421
+Large vdw btw "1HH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.6850
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   66.843, dist=  2.1894
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  843.163, dist=  1.7909
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   79.335, dist=  2.1805
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  154.457, dist=  2.0467
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   15.768, dist=  2.4415
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   39.801, dist=  2.2902
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  265.871, dist=  1.9776
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 189231.734, dist=  1.1368
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   31.289, dist=  2.2474
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":   53.585, dist=  1.3608
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   55.581, dist=  2.2109
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  434.580, dist=  1.8908
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 2302.781, dist=  1.6561
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  141.305, dist=  2.0615
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":   27.971, dist=  1.4244
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  912.674, dist=  1.7596
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   79.332, dist=  2.1805
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.7073
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 17987.551, dist=  1.3400
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":   70.797, dist=  1.3303
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   16.539, dist=  2.4421
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   11.084, dist=  2.4291
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 3891.107, dist=  1.5606
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 24987.016, dist=  1.2980
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  265.871, dist=  1.9776
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.8270
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.4258
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":   37.060, dist=  1.4020
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.9591
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   11.713, dist=  2.5066
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   64.907, dist=  2.1232
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   16.539, dist=  2.4421
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   11.084, dist=  2.4291
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   11.095, dist=  2.5082
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  349.614, dist=  1.8474
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  106.008, dist=  2.0422
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   13.833, dist=  2.3900
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   16.539, dist=  2.4421
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   11.084, dist=  2.4291
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   16.539, dist=  2.4421
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   11.084, dist=  2.4291
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   16.539, dist=  2.4421
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   11.084, dist=  2.4291
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  175.635, dist=  2.0255
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   10.241, dist=  2.4430
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   31.567, dist=  2.2459
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   22.459, dist=  2.3050
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 1255.654, dist=  1.7139
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 3146.320, dist=  1.5416
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 2302.650, dist=  1.6561
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 185022.828, dist=  1.1389
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  193.283, dist=  1.9460
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  149.691, dist=  1.2513
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   38.625, dist=  2.2866
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  375.302, dist=  1.8440
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   22.459, dist=  2.3050
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  424.197, dist=  1.8742
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 548043.625, dist=  1.0038
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   79.329, dist=  2.1805
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   10.250, dist=  2.0419
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 1879.390, dist=  1.6675
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.9592
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":   85.597, dist=  1.2247
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   27.082, dist=  2.3510
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 4586.354, dist=  1.5008
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   22.459, dist=  2.3050
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  205.044, dist=  1.9294
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   94.151, dist=  2.0616
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   22.459, dist=  2.3050
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   22.459, dist=  2.3050
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  262.655, dist=  1.8910
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  265.866, dist=  1.9776
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 2319.710, dist=  1.3140
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   44.306, dist=  2.2620
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  129.814, dist=  2.0093
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   14.230, dist=  2.3851
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   18.780, dist=  2.3317
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   56.650, dist=  2.1461
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   13.201, dist=  2.3947
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 2302.600, dist=  1.6561
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   42.418, dist=  1.8249
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 2415.924, dist=  1.6332
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 1765.966, dist=  1.6240
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  728.414, dist=  1.0983
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.7484
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   14.624, dist=  1.9841
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   79.331, dist=  2.1805
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 11796.920, dist=  1.1480
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   23.868, dist=  1.9082
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   38.123, dist=  2.2979
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  265.863, dist=  1.9776
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 37562.285, dist=  1.0425
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   11.549, dist=  2.5092
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   17.287, dist=  2.4469
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  104.833, dist=  1.6926
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  522.497, dist=  1.8626
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 21298.752, dist=  1.3771
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.5043
+Large vdw btw "1HH1 ARG A0283" and " HA  ARG A0283":   13.682, dist=  1.1239
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   11.156, dist=  2.5157
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  320.739, dist=  1.9383
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   53.139, dist=  1.3529
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2025.868, dist=  1.6661
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.8046
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.907, dist=  2.3961
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  999.000, dist=  0.9037
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283": 1709.957, dist=  1.0233
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283": 7980.438, dist=  1.4851
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  789.106, dist=  1.4334
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 9799.121, dist=  1.4623
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  999.000, dist=  0.3268
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.8202
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 3666.043, dist=  1.5778
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   18.568, dist=  2.3383
+Large vdw btw "1HH1 ARG A0283" and " CA  ARG A0283":  326.690, dist=  1.1852
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  591.497, dist=  1.1174
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283": 1316.984, dist=  1.7264
+Large vdw btw " NH2 ARG A0283" and " CA  ARG A0283":   11.912, dist=  2.5260
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2025.868, dist=  1.6661
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.8046
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.907, dist=  2.3961
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  999.000, dist=  0.6659
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.5597
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  143.072, dist=  2.0685
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 107310.188, dist=  1.1984
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   69.321, dist=  2.2040
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283": 2909.880, dist=  1.6170
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2025.868, dist=  1.6661
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.8046
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.907, dist=  2.3961
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 1263.532, dist=  1.7231
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.9512
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":  104.996, dist=  2.1212
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2025.868, dist=  1.6661
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.8046
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.907, dist=  2.3961
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   18.386, dist=  2.4224
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":   16.854, dist=  1.4933
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2025.868, dist=  1.6661
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.8046
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.907, dist=  2.3961
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   12.245, dist=  2.4983
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   85.715, dist=  2.1558
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.901, dist=  1.4288
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  448.576, dist=  1.8763
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  148.022, dist=  2.0635
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.007, dist=  2.5589
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   85.715, dist=  2.1558
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.901, dist=  1.4288
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   85.715, dist=  2.1558
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.901, dist=  1.4288
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   85.715, dist=  2.1558
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.901, dist=  1.4288
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   85.715, dist=  2.1558
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.901, dist=  1.4288
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   95.051, dist=  2.1285
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":   95.861, dist=  1.2978
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   13.536, dist=  2.4862
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   56.288, dist=  1.7838
+Large vdw btw "1HD  ARG A0283" and " H   ARG A0283":   20.954, dist=  1.0858
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   56.288, dist=  1.7838
+Large vdw btw "1HD  ARG A0283" and " H   ARG A0283":   20.954, dist=  1.0858
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   56.288, dist=  1.7838
+Large vdw btw "1HD  ARG A0283" and " H   ARG A0283":   20.954, dist=  1.0858
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   56.288, dist=  1.7838
+Large vdw btw "1HD  ARG A0283" and " H   ARG A0283":   20.954, dist=  1.0858
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   56.288, dist=  1.7838
+Large vdw btw "1HD  ARG A0283" and " H   ARG A0283":   20.954, dist=  1.0858
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2142.105, dist=  1.6585
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  293.514, dist=  1.1768
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  999.000, dist=  0.9635
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.1986
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  100.161, dist=  2.1291
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 5426.361, dist=  1.5357
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   32.055, dist=  1.4090
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 3233.139, dist=  1.6103
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 7975.095, dist=  1.1860
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283": 1001.111, dist=  1.7658
+Large vdw btw " NH2 ARG A0283" and " H   ARG A0283":   16.160, dist=  1.4877
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2142.105, dist=  1.6585
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  293.514, dist=  1.1768
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  999.000, dist=  0.6197
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283": 1242.458, dist=  1.0508
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  213.915, dist=  2.0019
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 215772.953, dist=  1.1307
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 48686.930, dist=  1.2856
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 6458.524, dist=  1.5054
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  138.407, dist=  1.2594
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283": 2860.428, dist=  1.6193
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2142.105, dist=  1.6585
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  293.514, dist=  1.1768
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 1788.689, dist=  1.6743
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":  117.015, dist=  2.1029
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2142.105, dist=  1.6585
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  293.514, dist=  1.1768
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   20.587, dist=  2.4015
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 2142.105, dist=  1.6585
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":  293.514, dist=  1.1768
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   11.368, dist=  2.5122
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":  118.213, dist=  2.1012
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  761.665, dist=  1.7965
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  111.483, dist=  2.1107
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   40.815, dist=  2.2660
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  206.614, dist=  2.0087
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 44566.863, dist=  1.2951
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 106211.672, dist=  1.1928
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   19.135, dist=  2.3330
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.5997
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":  118.213, dist=  2.1012
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":  118.213, dist=  2.1012
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":  118.213, dist=  2.1012
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":  118.213, dist=  2.1012
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  129.179, dist=  2.0765
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   14.294, dist=  2.4762
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   58.913, dist=  1.7772
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   58.913, dist=  1.7772
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   58.913, dist=  1.7772
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   58.913, dist=  1.7772
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   58.913, dist=  1.7772
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   67.904, dist=  1.7569
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   67.904, dist=  1.7569
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   67.904, dist=  1.7569
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   67.904, dist=  1.7569
+Large vdw btw "2HD  ARG A0283" and " N   ARG A0283":   67.904, dist=  1.7569
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   20.413, dist=  2.4030
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 278363.375, dist=  1.1070
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1453.474, dist=  1.7203
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   42.501, dist=  2.2695
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  279.158, dist=  1.1817
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   51.786, dist=  2.2343
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   20.382, dist=  2.4256
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   61.534, dist=  2.2038
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   83.671, dist=  2.1600
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   32.656, dist=  2.3169
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":   12.732, dist=  1.5269
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   83.671, dist=  2.1600
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 16970.125, dist=  1.3894
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.5463
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   17.287, dist=  2.4469
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.7790
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.8950
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 21298.605, dist=  1.3771
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  563.888, dist=  1.4772
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   14.718, dist=  2.4708
+Large vdw btw " NH2 ARG A0283" and " H   ARG A0283":   13.247, dist=  1.5110
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   83.671, dist=  2.1600
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 1696.325, dist=  1.6817
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  130.946, dist=  1.2651
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 2097.385, dist=  1.6614
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   83.671, dist=  2.1600
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   83.671, dist=  2.1600
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 4240.369, dist=  1.5674
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  999.000, dist=  0.3948
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":   70.864, dist=  1.3302
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283": 7981.123, dist=  1.4851
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   53.034, dist=  2.2192
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 63671.000, dist=  1.2516
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  999.000, dist=  0.3268
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.9346
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 1639.227, dist=  1.6864
+Large vdw btw "1HH1 ARG A0283" and " CA  ARG A0283":  326.696, dist=  1.1852
+Large vdw btw "1HH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.6761
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283": 19483.111, dist=  1.3811
+Large vdw btw " NH2 ARG A0283" and " CA  ARG A0283":   11.913, dist=  2.5260
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 4240.369, dist=  1.5674
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 9766.456, dist=  1.4546
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  143.079, dist=  2.0685
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  119.532, dist=  2.0785
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   17.235, dist=  2.4418
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   69.322, dist=  2.2040
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 30190.250, dist=  1.3244
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   14.648, dist=  2.3800
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":   22.219, dist=  1.4608
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":  636.230, dist=  1.8328
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 4240.369, dist=  1.5674
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   71.290, dist=  2.1781
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   33.408, dist=  2.3216
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 4240.369, dist=  1.5674
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   30.987, dist=  2.3265
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   17.116, dist=  2.4431
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283": 4240.369, dist=  1.5674
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  505.345, dist=  1.8581
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":  102.447, dist=  2.1254
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   20.608, dist=  2.3913
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.007, dist=  2.5589
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 2404.882, dist=  1.6338
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   10.331, dist=  2.4415
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   45.432, dist=  2.2667
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   84.198, dist=  1.7265
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   84.198, dist=  1.7265
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   84.198, dist=  1.7265
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   84.198, dist=  1.7265
+Large vdw btw "1HD  ARG A0283" and " N   ARG A0283":   84.198, dist=  1.7265
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   18.244, dist=  2.4314
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 53366.891, dist=  1.2631
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  100.162, dist=  2.1291
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   15.492, dist=  2.4449
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.5094
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.7695
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 3233.230, dist=  1.6103
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.9540
+Large vdw btw "1HH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.5220
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":  178.037, dist=  2.0330
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   18.244, dist=  2.4314
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  725.686, dist=  1.8036
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  213.908, dist=  2.0019
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 2400.006, dist=  1.6244
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  189.303, dist=  2.0230
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 48684.898, dist=  1.2856
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   10.768, dist=  2.0342
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.4129
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 2951.667, dist=  1.5566
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  970.059, dist=  1.0725
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":   30.510, dist=  1.3307
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   37.904, dist=  2.2989
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   18.244, dist=  2.4314
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   72.421, dist=  2.1644
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   59.977, dist=  2.2083
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   18.244, dist=  2.4314
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   18.244, dist=  2.4314
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   96.097, dist=  2.1266
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  111.482, dist=  2.1107
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  999.000, dist=  0.9156
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  878.696, dist=  1.7128
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 44563.820, dist=  1.2951
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   29.823, dist=  1.8772
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.9024
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 10970.974, dist=  1.3962
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":   50.965, dist=  1.3663
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.9470
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283": 2391.281, dist=  1.6346
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 1205.232, dist=  1.6759
+Large vdw btw "1HH2 ARG A0283" and " O   ARG A0283":   33.740, dist=  1.3201
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   96.097, dist=  2.1266
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  320.134, dist=  1.9180
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   20.455, dist=  2.3165
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   68.613, dist=  2.1848
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   60.967, dist=  2.1337
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   96.097, dist=  2.1266
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   96.097, dist=  2.1266
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   96.097, dist=  2.1266
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   19.752, dist=  2.3993
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  600.823, dist=  1.8213
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   49.225, dist=  2.2525
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1453.624, dist=  1.7203
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.9158
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   90.089, dist=  2.0688
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.9881
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   12.037, dist=  2.5015
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   81.813, dist=  2.1432
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   18.099, dist=  2.3383
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  248.335, dist=  1.9692
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  527.139, dist=  1.7936
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":   12.381, dist=  1.4287
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   20.381, dist=  2.4256
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   18.072, dist=  2.4256
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   12.776, dist=  2.4040
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   20.866, dist=  2.3990
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   17.994, dist=  2.4339
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   24.301, dist=  1.9055
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   10.804, dist=  2.5218
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   24.301, dist=  1.9055
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  530.942, dist=  1.8506
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   17.286, dist=  2.4469
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.5960
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   17.337, dist=  1.4794
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 21296.754, dist=  1.3771
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  118.917, dist=  2.0904
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.5441
+Large vdw btw "1HH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.9238
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   24.301, dist=  1.9055
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   85.018, dist=  2.1476
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   24.301, dist=  1.9055
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   24.301, dist=  1.9055
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 2596.403, dist=  1.6235
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 3447.968, dist=  1.5858
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283": 7980.860, dist=  1.4851
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 141334.844, dist=  1.1576
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   18.901, dist=  2.3306
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 184362.250, dist=  1.1456
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  999.000, dist=  0.3268
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 10116.196, dist=  1.1628
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 3257.448, dist=  1.5933
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  211.364, dist=  1.2090
+Large vdw btw "1HH1 ARG A0283" and " CA  ARG A0283":  326.675, dist=  1.1852
+Large vdw btw "1HH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.9456
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":  143.359, dist=  2.0689
+Large vdw btw " NH2 ARG A0283" and " CA  ARG A0283":   11.912, dist=  2.5260
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":  126.710, dist=  2.0798
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 2596.403, dist=  1.6235
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  143.079, dist=  2.0685
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  999.000, dist=  0.7482
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 2374.816, dist=  1.5779
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   69.324, dist=  2.2040
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.9709
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.2633
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.8035
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":  362.430, dist=  1.9094
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 2596.403, dist=  1.6235
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 1185.668, dist=  1.7220
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   29.881, dist=  2.2497
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   11.073, dist=  2.5172
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   10.721, dist=  2.4349
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   30.414, dist=  2.3299
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 2596.403, dist=  1.6235
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   12.854, dist=  2.4802
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3960
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 2596.403, dist=  1.6235
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  344.821, dist=  1.9172
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   16.534, dist=  2.3587
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 3443.841, dist=  1.5765
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 47756.445, dist=  1.2300
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.007, dist=  2.5589
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 1163.274, dist=  1.7349
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 370564.844, dist=  1.0418
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":   20.767, dist=  1.3720
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   10.566, dist=  2.5260
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  374.552, dist=  1.8443
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  344.821, dist=  1.9172
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   16.534, dist=  2.3587
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   28.895, dist=  2.2556
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  344.821, dist=  1.9172
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   16.534, dist=  2.3587
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  344.821, dist=  1.9172
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   16.534, dist=  2.3587
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  344.821, dist=  1.9172
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   16.534, dist=  2.3587
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  112.496, dist=  2.0888
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  123.272, dist=  1.6703
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  123.272, dist=  1.6703
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  123.272, dist=  1.6703
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  123.272, dist=  1.6703
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  123.272, dist=  1.6703
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   31.579, dist=  1.8658
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   31.579, dist=  1.8658
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   31.579, dist=  1.8658
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   31.579, dist=  1.8658
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   15.028, dist=  2.4734
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   31.579, dist=  1.8658
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 18602.031, dist=  1.3788
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  890.653, dist=  1.7181
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   12.714, dist=  2.4912
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  100.164, dist=  2.1291
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 521475.031, dist=  1.0384
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  110.194, dist=  2.0287
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 11620.833, dist=  1.4417
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 3233.229, dist=  1.6103
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 1479.278, dist=  1.7008
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  375.457, dist=  1.1532
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":  236.914, dist=  1.9768
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 18602.031, dist=  1.3788
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  890.653, dist=  1.7181
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  213.917, dist=  2.0019
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  999.000, dist=  0.5473
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 551392.375, dist=  1.0033
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   24.075, dist=  2.3808
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 48688.359, dist=  1.2856
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 1626.252, dist=  1.3533
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 201948.125, dist=  1.1306
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 21707.430, dist=  1.3192
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":  738.297, dist=  1.8011
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  185.872, dist=  1.9522
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 18602.031, dist=  1.3788
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  890.653, dist=  1.7181
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 6965.616, dist=  1.4870
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.8778
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   25.728, dist=  2.3604
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 98602.156, dist=  1.1632
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   80.174, dist=  2.1578
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  292.108, dist=  1.8820
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 18602.031, dist=  1.3788
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  890.653, dist=  1.7181
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   54.612, dist=  2.2140
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  234.097, dist=  1.9088
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   14.182, dist=  2.3857
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 18602.031, dist=  1.3788
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  890.653, dist=  1.7181
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   21.511, dist=  2.3833
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 1147.206, dist=  1.7369
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 22987.379, dist=  1.3130
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  111.483, dist=  2.1107
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 4040.314, dist=  1.5558
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.9248
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 44564.137, dist=  1.2951
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.9981
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  376.734, dist=  1.9033
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  100.897, dist=  2.0502
+Large vdw btw "1HH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.8625
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   12.573, dist=  2.4933
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 7899.564, dist=  1.4347
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 1147.206, dist=  1.7369
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 22987.379, dist=  1.3130
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   14.179, dist=  2.4616
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 1291.390, dist=  1.6594
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  310.404, dist=  1.8727
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 1147.206, dist=  1.7369
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 22987.379, dist=  1.3130
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  168.832, dist=  1.9601
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   77.883, dist=  2.0929
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 1147.206, dist=  1.7369
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 22987.379, dist=  1.3130
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  719.402, dist=  1.7413
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  187.899, dist=  1.9504
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 1147.206, dist=  1.7369
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 22987.379, dist=  1.3130
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  483.583, dist=  1.8542
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 270108.469, dist=  1.0648
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   24.263, dist=  2.3712
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   50.428, dist=  2.1657
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 3500.712, dist=  1.5348
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  595.942, dist=  1.4671
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.915, dist=  1.9085
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  595.942, dist=  1.4671
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.915, dist=  1.9085
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  595.942, dist=  1.4671
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.915, dist=  1.9085
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  595.942, dist=  1.4671
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.915, dist=  1.9085
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":  595.942, dist=  1.4671
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.915, dist=  1.9085
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   28.955, dist=  2.2553
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 1546.702, dist=  1.6419
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   95.441, dist=  1.7057
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  122.501, dist=  1.6034
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   95.441, dist=  1.7057
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  122.501, dist=  1.6034
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   95.441, dist=  1.7057
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  122.501, dist=  1.6034
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   95.441, dist=  1.7057
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  122.501, dist=  1.6034
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   95.441, dist=  1.7057
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  122.501, dist=  1.6034
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  737.817, dist=  1.4414
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.397, dist=  1.8672
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  737.817, dist=  1.4414
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.397, dist=  1.8672
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  737.817, dist=  1.4414
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.397, dist=  1.8672
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  737.817, dist=  1.4414
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.397, dist=  1.8672
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.747, dist=  2.3279
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":  737.817, dist=  1.4414
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.397, dist=  1.8672
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  115.099, dist=  2.0849
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 32925.902, dist=  1.2686
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1453.555, dist=  1.7203
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.8467
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.7128
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  203.977, dist=  1.2199
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.9336
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  287.243, dist=  1.8846
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   46.024, dist=  2.1749
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   11.829, dist=  2.4176
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   20.382, dist=  2.4256
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  152.174, dist=  1.5753
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  633.042, dist=  1.8240
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  250.887, dist=  1.9054
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   94.817, dist=  2.1179
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  152.174, dist=  1.5753
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  633.042, dist=  1.8240
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  250.887, dist=  1.9054
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   17.287, dist=  2.4469
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 56115.523, dist=  1.2502
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  111.602, dist=  2.0267
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 1356.165, dist=  1.7222
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 21297.906, dist=  1.3771
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.9585
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   49.351, dist=  2.1694
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":   23.564, dist=  1.4440
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   15.276, dist=  2.4569
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  152.174, dist=  1.5753
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  633.042, dist=  1.8240
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  250.887, dist=  1.9054
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 5436.644, dist=  1.5179
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 2451.458, dist=  1.5738
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 2243.488, dist=  1.6433
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 160667.375, dist=  1.1169
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  152.174, dist=  1.5753
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  633.042, dist=  1.8240
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  250.887, dist=  1.9054
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   15.655, dist=  2.4429
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   46.161, dist=  2.1744
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  152.174, dist=  1.5753
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":  633.042, dist=  1.8240
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  250.887, dist=  1.9054
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 67894.828, dist=  1.2380
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.6615
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   26.854, dist=  2.3526
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283": 7980.579, dist=  1.4851
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   14.008, dist=  1.9909
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  999.000, dist=  0.4465
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 136216.109, dist=  1.1272
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 50144.402, dist=  1.2768
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  999.000, dist=  0.3268
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 3285.213, dist=  1.2766
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 19993.980, dist=  1.3705
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   18.606, dist=  2.3380
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.4162
+Large vdw btw "1HH1 ARG A0283" and " CA  ARG A0283":  326.694, dist=  1.1852
+Large vdw btw " NH2 ARG A0283" and " CA  ARG A0283":   11.912, dist=  2.5260
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283": 2345.026, dist=  1.6373
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  433.584, dist=  1.8224
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 67894.828, dist=  1.2380
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.6615
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  143.079, dist=  2.0685
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 14956.232, dist=  1.3955
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.8207
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   69.323, dist=  2.2040
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  355.234, dist=  1.5346
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   19.999, dist=  2.4068
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  106.882, dist=  2.0408
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":  211.864, dist=  1.9949
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 1094.086, dist=  1.6893
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 67894.828, dist=  1.2380
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.6615
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  153.964, dist=  2.0362
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.8534
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   85.742, dist=  2.0770
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   22.685, dist=  2.3835
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 1040.765, dist=  1.6963
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 67894.828, dist=  1.2380
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.6615
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   81.469, dist=  2.1440
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 82857.641, dist=  1.1748
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   13.017, dist=  2.4007
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   14.499, dist=  2.4666
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  397.741, dist=  1.8353
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283": 67894.828, dist=  1.2380
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.6615
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 1512.447, dist=  1.6877
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 9535.716, dist=  1.4062
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   67.543, dist=  2.1875
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  178.504, dist=  1.9585
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   38.969, dist=  1.8345
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.346, dist=  1.9147
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   21.975, dist=  2.3894
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 6492.688, dist=  1.4582
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  151.121, dist=  1.9777
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.007, dist=  2.5589
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   48.703, dist=  1.8048
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   38.969, dist=  1.8345
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.346, dist=  1.9147
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   21.975, dist=  2.3894
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 6492.688, dist=  1.4582
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   38.969, dist=  1.8345
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.346, dist=  1.9147
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   21.975, dist=  2.3894
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 6492.688, dist=  1.4582
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   38.969, dist=  1.8345
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.346, dist=  1.9147
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   21.975, dist=  2.3894
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 6492.688, dist=  1.4582
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  119.178, dist=  2.0160
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283":   38.969, dist=  1.8345
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":   13.346, dist=  1.9147
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   21.975, dist=  2.3894
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 6492.688, dist=  1.4582
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   22.056, dist=  2.3787
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 97066.547, dist=  1.1595
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   75.241, dist=  2.1687
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 11516.853, dist=  1.3905
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   17.247, dist=  2.3513
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283": 1421.695, dist=  1.3652
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283": 19096.023, dist=  1.0562
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283": 1421.695, dist=  1.3652
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283": 19096.023, dist=  1.0562
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283": 1421.695, dist=  1.3652
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283": 19096.023, dist=  1.0562
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283": 1421.695, dist=  1.3652
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283": 19096.023, dist=  1.0562
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " C   ARG A0283": 1421.695, dist=  1.3652
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283": 19096.023, dist=  1.0562
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   55.591, dist=  2.1493
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  216.269, dist=  1.5306
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   53.054, dist=  1.7892
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.092, dist=  1.8697
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  216.269, dist=  1.5306
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   53.054, dist=  1.7892
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.092, dist=  1.8697
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  216.269, dist=  1.5306
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   53.054, dist=  1.7892
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.092, dist=  1.8697
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  216.269, dist=  1.5306
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   53.054, dist=  1.7892
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.092, dist=  1.8697
+Large vdw btw " CD  ARG A0283" and " C   ARG A0283":   32.004, dist=  2.3321
+Large vdw btw " CD  ARG A0283" and " O   ARG A0283":   93.988, dist=  2.0747
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  216.269, dist=  1.5306
+Large vdw btw "2HD  ARG A0283" and " C   ARG A0283":   53.054, dist=  1.7892
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":   18.092, dist=  1.8697
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   65.979, dist=  2.1916
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 16706.223, dist=  1.3483
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  100.160, dist=  2.1291
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 231347.031, dist=  1.1111
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.3474
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   16.595, dist=  2.4488
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 3233.088, dist=  1.6103
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.2773
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 10237.272, dist=  1.4042
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  485.889, dist=  1.1357
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":  118.096, dist=  2.0916
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 8425.580, dist=  1.4271
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   65.979, dist=  2.1916
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 16706.223, dist=  1.3483
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  213.915, dist=  2.0019
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  108.463, dist=  1.6879
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":  805.860, dist=  1.7778
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 14388.562, dist=  1.3590
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  115.732, dist=  2.1047
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 48687.957, dist=  1.2856
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.4681
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  101.632, dist=  2.1171
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   11.927, dist=  2.4162
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   21.109, dist=  2.3968
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  436.012, dist=  1.8216
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   65.979, dist=  2.1916
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 16706.223, dist=  1.3483
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  123.122, dist=  2.0107
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   32.667, dist=  2.2400
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   65.979, dist=  2.1916
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 16706.223, dist=  1.3483
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   61.946, dist=  2.1244
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   19.323, dist=  2.3313
+Large vdw btw " NE  ARG A0283" and " C   ARG A0283":   65.979, dist=  2.1916
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283": 16706.223, dist=  1.3483
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 1200.571, dist=  1.6694
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  108.770, dist=  2.0380
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  111.482, dist=  2.1107
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283": 8837.508, dist=  1.1730
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  117.728, dist=  2.1019
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 44563.477, dist=  1.2951
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.6513
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   15.117, dist=  2.3705
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   76.746, dist=  2.0953
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  223.205, dist=  1.5267
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  223.205, dist=  1.5267
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  223.205, dist=  1.5267
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  223.205, dist=  1.5267
+Large vdw btw "1HD  ARG A0283" and " O   ARG A0283":  223.205, dist=  1.5267
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  196.488, dist=  1.5427
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  196.488, dist=  1.5427
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  196.488, dist=  1.5427
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  196.488, dist=  1.5427
+Large vdw btw "2HD  ARG A0283" and " O   ARG A0283":  196.488, dist=  1.5427
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   10.764, dist=  2.0327
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1453.556, dist=  1.7203
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 46371.512, dist=  1.0244
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   57.713, dist=  2.2151
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   62.357, dist=  2.1299
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   16.559, dist=  1.9669
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   20.381, dist=  2.4256
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   54.899, dist=  2.2239
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  150.067, dist=  1.9861
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   67.774, dist=  2.1760
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 5072.233, dist=  1.4818
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   61.159, dist=  2.2049
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   34.494, dist=  2.2306
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":  791.872, dist=  1.7348
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  150.067, dist=  1.9861
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   17.286, dist=  2.4469
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 2957.725, dist=  1.5965
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  999.000, dist=  0.6284
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   20.040, dist=  2.4142
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 21296.918, dist=  1.3771
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   35.476, dist=  1.8513
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.4905
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 316082.906, dist=  1.0557
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.7622
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   23.816, dist=  2.3746
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 42178.250, dist=  1.2484
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  150.067, dist=  1.9861
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   16.619, dist=  2.4316
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 9966.347, dist=  1.4011
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   50.589, dist=  2.1652
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283": 1594.131, dist=  1.6378
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  150.067, dist=  1.9861
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   21.330, dist=  2.3091
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   24.078, dist=  2.2929
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":  150.067, dist=  1.9861
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.906, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   61.330, dist=  1.7715
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   44.614, dist=  2.1865
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   12.860, dist=  2.4891
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283": 7979.622, dist=  1.4851
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283": 10694.776, dist=  1.1545
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283": 2375.842, dist=  1.6258
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283": 1408.413, dist=  1.6475
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 8213.415, dist=  1.4838
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  999.000, dist=  0.3268
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 7246.185, dist=  1.1955
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 70353.672, dist=  1.2344
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   60.605, dist=  2.1347
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283": 1952.005, dist=  1.0063
+Large vdw btw "1HH1 ARG A0283" and " CA  ARG A0283":  326.688, dist=  1.1852
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":   17.444, dist=  1.4893
+Large vdw btw " NH2 ARG A0283" and " CA  ARG A0283":   11.912, dist=  2.5260
+Large vdw btw " NH2 ARG A0283" and " C   ARG A0283":   46.347, dist=  2.2540
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   88.145, dist=  2.0724
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.906, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   61.330, dist=  1.7715
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   44.614, dist=  2.1865
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  143.070, dist=  2.0685
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283": 11307.119, dist=  1.1492
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   12.745, dist=  2.4973
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   69.323, dist=  2.2040
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283": 4514.248, dist=  1.2434
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.906, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   61.330, dist=  1.7715
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   44.614, dist=  2.1865
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.906, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   61.330, dist=  1.7715
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   44.614, dist=  2.1865
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.906, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   61.330, dist=  1.7715
+Large vdw btw " NE  ARG A0283" and " O   ARG A0283":   44.614, dist=  2.1865
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":  480.769, dist=  1.7998
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   19.384, dist=  2.3308
+Large vdw btw " NH2 ARG A0283" and " O   ARG A0283":   38.955, dist=  2.2097
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   22.759, dist=  1.9155
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.007, dist=  2.5589
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   50.307, dist=  1.8000
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  115.817, dist=  1.6823
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  100.156, dist=  2.1291
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283": 1910.398, dist=  1.3321
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   11.107, dist=  2.5080
+Large vdw btw " CZ  ARG A0283" and " O   ARG A0283":   23.934, dist=  2.2887
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 3232.919, dist=  1.6103
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  230.870, dist=  1.5899
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 32223.219, dist=  1.3172
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283": 181814.703, dist=  1.1055
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  770.154, dist=  1.0932
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  999.000, dist=  0.5718
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  115.817, dist=  1.6823
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   10.105, dist=  2.5344
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  213.916, dist=  2.0019
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.9907
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 52829.133, dist=  1.2712
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   17.743, dist=  1.4767
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 48688.422, dist=  1.2856
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.9555
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.9022
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  115.817, dist=  1.6823
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   26.351, dist=  1.8932
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  115.817, dist=  1.6823
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  115.817, dist=  1.6823
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   29.408, dist=  1.8793
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   83.746, dist=  2.1502
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  111.481, dist=  2.1107
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  386.082, dist=  1.5206
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 58099.633, dist=  1.2612
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  168.539, dist=  1.2316
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 44565.191, dist=  1.2951
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  333.131, dist=  1.5427
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.8243
+Large vdw btw "1HH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.6316
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   29.408, dist=  1.8793
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   29.408, dist=  1.8793
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   29.408, dist=  1.8793
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   29.408, dist=  1.8793
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  125.231, dist=  2.0915
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1453.559, dist=  1.7203
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.8851
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   20.541, dist=  2.4097
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   13.801, dist=  2.4827
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   20.381, dist=  2.4256
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   60.452, dist=  2.2070
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  970.719, dist=  1.7060
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":   34.253, dist=  1.3185
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   10.371, dist=  2.0401
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   10.371, dist=  2.0401
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":   17.287, dist=  2.4469
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  307.702, dist=  1.5494
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   15.128, dist=  2.4658
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 21297.938, dist=  1.3771
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.9364
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 1154.496, dist=  1.7360
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":  472.752, dist=  1.8096
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":   18.557, dist=  1.4819
+Large vdw btw "1HH1 ARG A0283" and " O   ARG A0283":  157.896, dist=  1.1651
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   10.371, dist=  2.0401
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   17.404, dist=  1.9569
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   10.022, dist=  2.0455
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   10.371, dist=  2.0401
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":   10.371, dist=  2.0401
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  731.965, dist=  1.4457
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  265.266, dist=  1.9587
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283": 7980.718, dist=  1.4851
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.6150
+Large vdw btw " CZ  ARG A0283" and " C   ARG A0283":   11.855, dist=  2.4955
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 4250.441, dist=  1.5671
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":  999.000, dist=  0.3268
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.9750
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283": 23455.674, dist=  1.3525
+Large vdw btw " NH1 ARG A0283" and " O   ARG A0283":   60.531, dist=  2.1349
+Large vdw btw "1HH1 ARG A0283" and " CA  ARG A0283":  326.698, dist=  1.1852
+Large vdw btw "1HH1 ARG A0283" and " C   ARG A0283":  999.000, dist=  0.7272
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   10.392, dist=  2.5349
+Large vdw btw " NH2 ARG A0283" and " CA  ARG A0283":   11.913, dist=  2.5260
+Large vdw btw " NH2 ARG A0283" and " HA  ARG A0283":   24.549, dist=  1.9066
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  731.965, dist=  1.4457
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  624.216, dist=  1.8261
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  143.088, dist=  2.0685
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":  612.838, dist=  1.4637
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 62072.625, dist=  1.2543
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.4257
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   69.325, dist=  2.2040
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":   42.552, dist=  1.3773
+Large vdw btw "1HH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.8201
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   18.604, dist=  2.4278
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  731.965, dist=  1.4457
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  731.965, dist=  1.4457
+Large vdw btw " NE  ARG A0283" and " CA  ARG A0283":   23.908, dist=  2.3961
+Large vdw btw " NE  ARG A0283" and " HA  ARG A0283":  731.965, dist=  1.4457
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   25.572, dist=  2.3615
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":   15.500, dist=  1.5033
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  724.160, dist=  1.8134
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283": 1332.731, dist=  1.0386
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   10.007, dist=  2.5589
+Large vdw btw "1HD  ARG A0283" and " HA  ARG A0283":   36.496, dist=  1.4490
+Large vdw btw "1HD  ARG A0283" and " HA  ARG A0283":   36.496, dist=  1.4490
+Large vdw btw "1HD  ARG A0283" and " HA  ARG A0283":   36.496, dist=  1.4490
+Large vdw btw "1HD  ARG A0283" and " HA  ARG A0283":   36.496, dist=  1.4490
+Large vdw btw "1HD  ARG A0283" and " HA  ARG A0283":   36.496, dist=  1.4490
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   12.503, dist=  2.5008
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   60.358, dist=  2.2072
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  100.159, dist=  2.1291
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283": 2655.969, dist=  1.2962
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   12.207, dist=  2.5053
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 3233.131, dist=  1.6103
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":  999.000, dist=  0.5953
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   12.674, dist=  2.4918
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   12.503, dist=  2.5008
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 15062.599, dist=  1.4032
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  813.811, dist=  1.0883
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  213.926, dist=  2.0019
+Large vdw btw " CZ  ARG A0283" and " HA  ARG A0283":   96.889, dist=  1.7036
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.2008
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283": 1548.085, dist=  1.0258
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 48690.359, dist=  1.2856
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   52.354, dist=  1.7943
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   28.961, dist=  2.3388
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.8673
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   43.188, dist=  2.2757
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   12.503, dist=  2.5008
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  147.484, dist=  2.0544
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  229.307, dist=  1.2082
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   42.827, dist=  2.2772
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":   56.616, dist=  1.3460
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   12.503, dist=  2.5008
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   12.503, dist=  2.5008
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   53.611, dist=  2.2374
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.017, dist=  1.4326
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283": 166837.094, dist=  1.1488
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  999.000, dist=  0.6796
+Large vdw btw " CZ  ARG A0283" and " CA  ARG A0283":  111.485, dist=  2.1107
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283": 125530.156, dist=  1.1829
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 44567.301, dist=  1.2951
+Large vdw btw " NH1 ARG A0283" and " C   ARG A0283":   62.939, dist=  2.1999
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283": 1138.725, dist=  1.7472
+Large vdw btw " NH2 ARG A0283" and " H   ARG A0283":   64.806, dist=  1.3313
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   53.611, dist=  2.2374
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.017, dist=  1.4326
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   64.144, dist=  2.1966
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   23.915, dist=  2.3820
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   53.611, dist=  2.2374
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.017, dist=  1.4326
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   53.611, dist=  2.2374
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.017, dist=  1.4326
+Large vdw btw " NE  ARG A0283" and " N   ARG A0283":   53.611, dist=  2.2374
+Large vdw btw " NE  ARG A0283" and " H   ARG A0283":   26.017, dist=  1.4326
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   28.401, dist=  2.3423
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":   36.974, dist=  1.4022
+Large vdw btw " NH2 ARG A0283" and " N   ARG A0283":   10.722, dist=  2.5292
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":  165.877, dist=  2.0349
+Large vdw btw " CZ  ARG A0283" and " H   ARG A0283":  132.460, dist=  1.2639
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.9358
+Large vdw btw " NH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.5225
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283": 1453.523, dist=  1.7203
+Large vdw btw " NH1 ARG A0283" and " HA  ARG A0283":   20.724, dist=  1.9323
+Large vdw btw "1HH1 ARG A0283" and " N   ARG A0283":  999.000, dist=  0.7265
+Large vdw btw "1HH1 ARG A0283" and " H   ARG A0283":  999.000, dist=  0.7815
+Large vdw btw " CZ  ARG A0283" and " N   ARG A0283":   13.966, dist=  2.4736
+Large vdw btw " NH1 ARG A0283" and " N   ARG A0283":   30.110, dist=  2.3403
+Large vdw btw " NH1 ARG A0283" and " CA  ARG A0283":   20.381, dist=  2.4256
+   Pruning rotamers...660 rotamers deleted.
+   Done. Time spent = 4
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 1
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...0 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 14 seconds.
+      Actual time is 3
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 3
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+   Done
+
+       40 conformers deleted in this cycle at    2.000    2.000    2.000
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+   Done. Time spent = 14
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 3377
+   Done. Time spent = 1
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      116 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 25 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      2 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 80 of 80 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 80 of 80 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+energies.opp not found
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 21 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+

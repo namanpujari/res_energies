@@ -1,0 +1,891 @@
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 13:37:23 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...7 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+Large vdw btw "2HB  GLU A0295" and " OE2 GLU A0295":   11.237, dist=  2.0041
+Large vdw btw " OE2 GLU A0295" and "2HB  GLU A0295":   11.237, dist=  2.0041
+Large vdw btw "1HB  GLU A0295" and " OE2 GLU A0295":   11.121, dist=  2.0057
+Large vdw btw " OE2 GLU A0295" and "1HB  GLU A0295":   11.121, dist=  2.0057
+Large vdw btw "2HB  GLU A0295" and " OE2 GLU A0295":   11.237, dist=  2.0041
+Large vdw btw " OE2 GLU A0295" and "2HB  GLU A0295":   11.237, dist=  2.0041
+Large vdw btw "1HB  GLU A0295" and " OE2 GLU A0295":   11.121, dist=  2.0057
+Large vdw btw " OE2 GLU A0295" and "1HB  GLU A0295":   11.121, dist=  2.0057
+Large vdw btw "2HB  GLU A0295" and " OE2 GLU A0295":   11.238, dist=  2.0041
+Large vdw btw " OE2 GLU A0295" and "2HB  GLU A0295":   11.238, dist=  2.0041
+Large vdw btw "1HB  GLU A0295" and " OE2 GLU A0295":   11.122, dist=  2.0057
+Large vdw btw " OE2 GLU A0295" and "1HB  GLU A0295":   11.122, dist=  2.0057
+Large vdw btw "2HB  GLU A0295" and " OE2 GLU A0295":   11.237, dist=  2.0041
+Large vdw btw " OE2 GLU A0295" and "2HB  GLU A0295":   11.237, dist=  2.0041
+Large vdw btw "1HB  GLU A0295" and " OE2 GLU A0295":   11.121, dist=  2.0057
+Large vdw btw " OE2 GLU A0295" and "1HB  GLU A0295":   11.121, dist=  2.0057
+Large vdw btw "2HB  GLU A0295" and " OE2 GLU A0295":   11.237, dist=  2.0041
+Large vdw btw " OE2 GLU A0295" and "2HB  GLU A0295":   11.237, dist=  2.0041
+Large vdw btw "1HB  GLU A0295" and " OE2 GLU A0295":   11.121, dist=  2.0057
+Large vdw btw " OE2 GLU A0295" and "1HB  GLU A0295":   11.121, dist=  2.0057
+Large vdw btw "2HB  GLU A0295" and " OE2 GLU A0295":   11.237, dist=  2.0041
+Large vdw btw " OE2 GLU A0295" and "2HB  GLU A0295":   11.237, dist=  2.0041
+Large vdw btw "1HB  GLU A0295" and " OE2 GLU A0295":   11.120, dist=  2.0058
+Large vdw btw " OE2 GLU A0295" and "1HB  GLU A0295":   11.120, dist=  2.0058
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  123.944, dist=  1.6545
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":   13.813, dist=  2.4268
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   17.569, dist=  2.4212
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 1009.098, dist=  1.6934
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":  279.970, dist=  1.9128
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.8865
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.976, dist=  2.2937
+Large vdw btw " OE1 GLU A0295" and " H   GLU A0295":   29.043, dist=  1.3714
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   11.203, dist=  2.5150
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":   15.062, dist=  2.4110
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":   14.184, dist=  2.3856
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295": 1138.698, dist=  1.7278
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295":  520.393, dist=  1.7882
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295": 7295.070, dist=  1.4620
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.9661
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":   12.334, dist=  2.4069
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   72.042, dist=  2.1653
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 9819.636, dist=  1.4028
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  106.701, dist=  1.9977
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295": 2159.788, dist=  1.5904
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295": 313153.094, dist=  1.0161
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " C   GLU A0295":   37.505, dist=  1.8960
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   22.295, dist=  1.8995
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   50.818, dist=  2.0804
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  124.379, dist=  1.6540
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " C   GLU A0295":   37.581, dist=  1.8957
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   22.411, dist=  1.8987
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":  107.571, dist=  2.0963
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 68372.711, dist=  1.1938
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  363.338, dist=  1.8099
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":  139.045, dist=  1.9911
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.9001
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   47.583, dist=  1.7879
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  177.529, dist=  1.8838
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  504.716, dist=  1.4744
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   47.859, dist=  1.7871
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  502.857, dist=  1.4749
+Large vdw btw " CD  GLU A0295" and " HA  GLU A0295":   37.517, dist=  1.8401
+Large vdw btw " OE1 GLU A0295" and " HA  GLU A0295":   36.781, dist=  1.8021
+Large vdw btw " OE2 GLU A0295" and " HA  GLU A0295":   13.455, dist=  1.9135
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   67.989, dist=  2.1519
+Large vdw btw " OE1 GLU A0295" and " H   GLU A0295":   49.521, dist=  1.3140
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.443, dist=  2.5282
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":   29.277, dist=  2.2589
+Large vdw btw " OE2 GLU A0295" and " H   GLU A0295":   15.188, dist=  1.4061
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":  470.054, dist=  1.8691
+Large vdw btw " CD  GLU A0295" and " H   GLU A0295":   32.925, dist=  1.4154
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":  833.054, dist=  1.7574
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":   23.013, dist=  2.3008
+Large vdw btw " OE2 GLU A0295" and " H   GLU A0295":   18.870, dist=  1.3824
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.794, dist=  2.5220
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":  273.025, dist=  1.8923
+Large vdw btw "1HG  GLU A0295" and " N   GLU A0295":   13.611, dist=  2.0596
+Large vdw btw "2HG  GLU A0295" and " N   GLU A0295":   13.621, dist=  2.0594
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":  961.238, dist=  1.7074
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":   15.276, dist=  2.3726
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":  172.729, dist=  1.9976
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  123.944, dist=  1.6545
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  123.944, dist=  1.6545
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":   13.589, dist=  2.3895
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  123.944, dist=  1.6545
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":   25.446, dist=  2.2779
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  123.944, dist=  1.6545
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  123.944, dist=  1.6545
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   17.569, dist=  2.4212
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 1009.098, dist=  1.6934
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  586.999, dist=  1.7405
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":   10.221, dist=  2.4408
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   17.516, dist=  2.2565
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   17.569, dist=  2.4212
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 1009.098, dist=  1.6934
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295": 7759.207, dist=  1.4305
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295": 88666.828, dist=  1.1286
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   17.569, dist=  2.4212
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 1009.098, dist=  1.6934
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":  164.416, dist=  1.9643
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.8020
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   17.569, dist=  2.4212
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 1009.098, dist=  1.6934
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":   15.199, dist=  2.3215
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  110.169, dist=  1.9572
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   17.569, dist=  2.4212
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 1009.098, dist=  1.6934
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":  855.294, dist=  1.7456
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295": 8074.378, dist=  1.4021
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  189.468, dist=  1.8740
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":   25.471, dist=  2.2778
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295": 1781.501, dist=  1.5606
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":   42.497, dist=  2.1477
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":   10.107, dist=  2.4839
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295": 1197.841, dist=  1.6416
+Large vdw btw " OE2 GLU A0295" and " HA  GLU A0295":   86.819, dist=  1.6490
+Large vdw btw " OE1 GLU A0295" and " HA  GLU A0295":   13.469, dist=  1.9510
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":   47.568, dist=  2.1756
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":   44.435, dist=  2.1872
+Large vdw btw " OE2 GLU A0295" and " H   GLU A0295":   59.265, dist=  1.2617
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   11.203, dist=  2.5150
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295": 16549.977, dist=  1.3493
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  145.888, dist=  2.0027
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   11.203, dist=  2.5150
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":  152.943, dist=  1.9831
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  268.194, dist=  1.9063
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":  478.473, dist=  1.8005
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   11.203, dist=  2.5150
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   11.203, dist=  2.5150
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295": 1945.856, dist=  1.6388
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   27.960, dist=  2.3210
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   11.203, dist=  2.5150
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":  369.685, dist=  1.8781
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":  147.443, dist=  2.0347
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":   95.597, dist=  2.0866
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":   41.484, dist=  2.2136
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295": 6623.841, dist=  1.4494
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   44.419, dist=  2.1023
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":  124.252, dist=  2.0092
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  138.600, dist=  1.9216
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   11.399, dist=  2.4839
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":  823.906, dist=  1.7509
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":  250.078, dist=  1.9305
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  108.281, dist=  1.9953
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295": 1138.698, dist=  1.7278
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295":  520.393, dist=  1.7882
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":   19.139, dist=  2.3675
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  200.694, dist=  1.8990
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  145.890, dist=  2.0027
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295": 19343.852, dist=  1.3260
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   23.592, dist=  2.2068
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295": 1138.698, dist=  1.7278
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295":  520.393, dist=  1.7882
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  268.193, dist=  1.9063
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":  999.000, dist=  0.5350
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295": 260929.453, dist=  1.0316
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295": 1138.698, dist=  1.7278
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295":  520.393, dist=  1.7882
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":   14.849, dist=  2.4136
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295": 1049.217, dist=  1.6880
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.9523
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295": 1138.698, dist=  1.7278
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295":  520.393, dist=  1.7882
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   27.960, dist=  2.3210
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295": 4038.723, dist=  1.5355
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":   17.896, dist=  2.2937
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   36.550, dist=  2.1343
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295": 1138.698, dist=  1.7278
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295":  520.393, dist=  1.7882
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":  147.442, dist=  2.0347
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":  999.000, dist=  0.7168
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295": 15696.906, dist=  1.3269
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   72.042, dist=  2.1653
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 9819.636, dist=  1.4028
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":   18.043, dist=  2.2923
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":   41.485, dist=  2.2136
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295": 23090.934, dist=  1.3066
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.2848
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   72.042, dist=  2.1653
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 9819.636, dist=  1.4028
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  119.439, dist=  1.9798
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":   12.698, dist=  2.4017
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295": 4090.221, dist=  1.4570
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   72.042, dist=  2.1653
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 9819.636, dist=  1.4028
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":  315.063, dist=  1.8945
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295": 88330.031, dist=  1.1494
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   16.964, dist=  2.2619
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   72.042, dist=  2.1653
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 9819.636, dist=  1.4028
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   11.399, dist=  2.4839
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295": 8899.378, dist=  1.4381
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.2395
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":   72.042, dist=  2.1653
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 9819.636, dist=  1.4028
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":   44.159, dist=  2.2187
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295": 64449.840, dist=  1.1799
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   80.598, dist=  2.0064
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " C   GLU A0295":   37.505, dist=  1.8960
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   22.295, dist=  1.8995
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " C   GLU A0295":   37.505, dist=  1.8960
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   22.295, dist=  1.8995
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " C   GLU A0295":   37.505, dist=  1.8960
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   22.295, dist=  1.8995
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":   11.434, dist=  2.3702
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " C   GLU A0295":   37.505, dist=  1.8960
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   22.295, dist=  1.8995
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " C   GLU A0295":   37.505, dist=  1.8960
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   22.295, dist=  1.8995
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  124.379, dist=  1.6540
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  124.379, dist=  1.6540
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  124.379, dist=  1.6540
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  124.379, dist=  1.6540
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  124.379, dist=  1.6540
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " C   GLU A0295":   37.581, dist=  1.8957
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   22.411, dist=  1.8987
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " C   GLU A0295":   37.581, dist=  1.8957
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   22.411, dist=  1.8987
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " C   GLU A0295":   37.581, dist=  1.8957
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   22.411, dist=  1.8987
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " C   GLU A0295":   37.581, dist=  1.8957
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   22.411, dist=  1.8987
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   10.299, dist=  2.4611
+Large vdw btw "2HG  GLU A0295" and " C   GLU A0295":   37.581, dist=  1.8957
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   22.411, dist=  1.8987
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":  107.571, dist=  2.0963
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 68372.711, dist=  1.1938
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":   72.689, dist=  2.0594
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  145.893, dist=  2.0027
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":  999.000, dist=  0.9161
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.3428
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":  107.571, dist=  2.0963
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 68372.711, dist=  1.1938
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  520.437, dist=  1.7577
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  268.203, dist=  1.9063
+Large vdw btw " OE2 GLU A0295" and " HA  GLU A0295":   87.540, dist=  1.6479
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295": 1488.518, dist=  1.6400
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295": 9478.266, dist=  1.3590
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":  107.571, dist=  2.0963
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 68372.711, dist=  1.1938
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295":   57.895, dist=  2.1718
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.9860
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   55.488, dist=  2.0662
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":  107.571, dist=  2.0963
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 68372.711, dist=  1.1938
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   27.960, dist=  2.3210
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295": 68667.008, dist=  1.2134
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":  999.000, dist=  0.0825
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   20.834, dist=  2.2275
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw " CD  GLU A0295" and " C   GLU A0295":  107.571, dist=  2.0963
+Large vdw btw " CD  GLU A0295" and " O   GLU A0295": 68372.711, dist=  1.1938
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":  147.443, dist=  2.0347
+Large vdw btw " OE1 GLU A0295" and " HA  GLU A0295":   18.191, dist=  1.9057
+Large vdw btw " OE1 GLU A0295" and " C   GLU A0295": 5221.426, dist=  1.5031
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295": 194372.156, dist=  1.0764
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":  316.399, dist=  1.7978
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   47.583, dist=  1.7879
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":   41.486, dist=  2.2136
+Large vdw btw " OE2 GLU A0295" and " HA  GLU A0295":  239.854, dist=  1.5177
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   47.583, dist=  1.7879
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   47.583, dist=  1.7879
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":   38.464, dist=  2.1643
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   47.583, dist=  1.7879
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   11.399, dist=  2.4839
+Large vdw btw " OE1 GLU A0295" and " HA  GLU A0295":   32.004, dist=  1.8222
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":   47.583, dist=  1.7879
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  504.716, dist=  1.4744
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  504.716, dist=  1.4744
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  504.716, dist=  1.4744
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  504.716, dist=  1.4744
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "1HG  GLU A0295" and " O   GLU A0295":  504.716, dist=  1.4744
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   47.859, dist=  1.7871
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   47.859, dist=  1.7871
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   47.859, dist=  1.7871
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   47.859, dist=  1.7871
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":   47.859, dist=  1.7871
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  502.857, dist=  1.4749
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  502.857, dist=  1.4749
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  502.857, dist=  1.4749
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  502.857, dist=  1.4749
+Large vdw btw " CG  GLU A0295" and " O   GLU A0295":   19.868, dist=  2.3431
+Large vdw btw "2HG  GLU A0295" and " O   GLU A0295":  502.857, dist=  1.4749
+Large vdw btw " CD  GLU A0295" and " HA  GLU A0295":   37.517, dist=  1.8401
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  145.892, dist=  2.0027
+Large vdw btw " OE2 GLU A0295" and " HA  GLU A0295": 1057.636, dist=  1.3430
+Large vdw btw " OE2 GLU A0295" and " C   GLU A0295":   24.134, dist=  2.2873
+Large vdw btw " OE2 GLU A0295" and " O   GLU A0295":   32.097, dist=  2.1557
+Large vdw btw " CD  GLU A0295" and " HA  GLU A0295":   37.517, dist=  1.8401
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  268.204, dist=  1.9063
+Large vdw btw " OE2 GLU A0295" and " HA  GLU A0295":  999.000, dist=  0.8774
+Large vdw btw " CD  GLU A0295" and " HA  GLU A0295":   37.517, dist=  1.8401
+Large vdw btw " CD  GLU A0295" and " HA  GLU A0295":   37.517, dist=  1.8401
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   27.960, dist=  2.3210
+Large vdw btw " OE1 GLU A0295" and " HA  GLU A0295":  143.369, dist=  1.6142
+Large vdw btw " OE1 GLU A0295" and " O   GLU A0295":   12.915, dist=  2.3494
+Large vdw btw " CD  GLU A0295" and " HA  GLU A0295":   37.517, dist=  1.8401
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":  147.441, dist=  2.0347
+Large vdw btw " OE1 GLU A0295" and " HA  GLU A0295": 36398.992, dist=  1.0208
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":   41.485, dist=  2.2136
+Large vdw btw " OE2 GLU A0295" and " HA  GLU A0295":  266.565, dist=  1.5046
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   11.399, dist=  2.4839
+Large vdw btw " OE1 GLU A0295" and " HA  GLU A0295":   78.288, dist=  1.6956
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":   19.249, dist=  2.3320
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  145.891, dist=  2.0027
+Large vdw btw " OE2 GLU A0295" and " HA  GLU A0295": 5746.358, dist=  1.1671
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295": 5970.348, dist=  1.4684
+Large vdw btw " OE2 GLU A0295" and " H   GLU A0295":  481.577, dist=  1.0631
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  268.201, dist=  1.9063
+Large vdw btw " OE2 GLU A0295" and " HA  GLU A0295":   94.922, dist=  1.6371
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":   26.802, dist=  2.2743
+Large vdw btw " OE2 GLU A0295" and " H   GLU A0295":   18.800, dist=  1.3828
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   27.960, dist=  2.3210
+Large vdw btw " OE1 GLU A0295" and " HA  GLU A0295":  376.327, dist=  1.4913
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":  974.884, dist=  1.7348
+Large vdw btw " OE1 GLU A0295" and " H   GLU A0295":   28.853, dist=  1.3721
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":  147.446, dist=  2.0347
+Large vdw btw " OE1 GLU A0295" and " HA  GLU A0295":  182.230, dist=  1.5828
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.443, dist=  2.5282
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295": 14810.635, dist=  1.3618
+Large vdw btw " OE2 GLU A0295" and " H   GLU A0295":  999.000, dist=  0.5889
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":   41.484, dist=  2.2136
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.443, dist=  2.5282
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":   48.398, dist=  2.1727
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.443, dist=  2.5282
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   10.022, dist=  2.4890
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.443, dist=  2.5282
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295": 2125.623, dist=  1.6269
+Large vdw btw " OE1 GLU A0295" and " H   GLU A0295":  999.000, dist=  0.7207
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   11.399, dist=  2.4839
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.443, dist=  2.5282
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":  132.646, dist=  2.0404
+Large vdw btw " OE1 GLU A0295" and " H   GLU A0295":   13.787, dist=  1.4544
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":  470.054, dist=  1.8691
+Large vdw btw " CD  GLU A0295" and " H   GLU A0295":   32.925, dist=  1.4154
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295": 149299.078, dist=  1.1237
+Large vdw btw " OE2 GLU A0295" and " H   GLU A0295":  999.000, dist=  0.3705
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  145.890, dist=  2.0027
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":  470.054, dist=  1.8691
+Large vdw btw " CD  GLU A0295" and " H   GLU A0295":   32.925, dist=  1.4154
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":  999.000, dist=  0.8078
+Large vdw btw " OE2 GLU A0295" and " H   GLU A0295":  464.023, dist=  1.0664
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":  268.202, dist=  1.9063
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":  470.054, dist=  1.8691
+Large vdw btw " CD  GLU A0295" and " H   GLU A0295":   32.925, dist=  1.4154
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   22.453, dist=  2.3448
+Large vdw btw " OE1 GLU A0295" and " H   GLU A0295":   18.792, dist=  1.4195
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":  122.908, dist=  2.0181
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":  470.054, dist=  1.8691
+Large vdw btw " CD  GLU A0295" and " H   GLU A0295":   32.925, dist=  1.4154
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295": 17110.168, dist=  1.3688
+Large vdw btw " OE1 GLU A0295" and " H   GLU A0295":  999.000, dist=  0.4280
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   27.960, dist=  2.3210
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":  470.054, dist=  1.8691
+Large vdw btw " CD  GLU A0295" and " H   GLU A0295":   32.925, dist=  1.4154
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":  999.000, dist=  0.8177
+Large vdw btw " OE1 GLU A0295" and " H   GLU A0295":  999.000, dist=  0.7698
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":  147.448, dist=  2.0347
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.794, dist=  2.5220
+Large vdw btw " OE2 GLU A0295" and " N   GLU A0295":  758.841, dist=  1.7409
+Large vdw btw " OE2 GLU A0295" and " CA  GLU A0295":   41.484, dist=  2.2136
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.794, dist=  2.5220
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.794, dist=  2.5220
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   47.765, dist=  2.2124
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.794, dist=  2.5220
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":  412.126, dist=  1.8616
+Large vdw btw " OE1 GLU A0295" and " CA  GLU A0295":   11.399, dist=  2.4839
+Large vdw btw " CD  GLU A0295" and " N   GLU A0295":   10.794, dist=  2.5220
+Large vdw btw "1HG  GLU A0295" and " N   GLU A0295":   13.611, dist=  2.0596
+Large vdw btw "1HG  GLU A0295" and " N   GLU A0295":   13.611, dist=  2.0596
+Large vdw btw "1HG  GLU A0295" and " N   GLU A0295":   13.611, dist=  2.0596
+Large vdw btw "1HG  GLU A0295" and " N   GLU A0295":   13.611, dist=  2.0596
+Large vdw btw "1HG  GLU A0295" and " N   GLU A0295":   13.611, dist=  2.0596
+Large vdw btw "2HG  GLU A0295" and " N   GLU A0295":   13.621, dist=  2.0594
+Large vdw btw "2HG  GLU A0295" and " N   GLU A0295":   13.621, dist=  2.0594
+Large vdw btw "2HG  GLU A0295" and " N   GLU A0295":   13.621, dist=  2.0594
+Large vdw btw "2HG  GLU A0295" and " N   GLU A0295":   13.621, dist=  2.0594
+Large vdw btw "2HG  GLU A0295" and " N   GLU A0295":   13.621, dist=  2.0594
+   Pruning rotamers...165 rotamers deleted.
+   Done. Time spent = 1
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 0
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+   Pruning rotamers by new self energy...0 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 0 seconds.
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+      Actual time is 0
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 0
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+   Done
+
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " N   GLU A0295" and " OE1 GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+   Done. Time spent = 2
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 710
+   Done. Time spent = 1
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+      41 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   29.795, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+Large vdw btw " OE1 GLU A0295" and " N   GLU A0295":   23.820, dist=  2.2948
+   Done
+
+   Total time for step2 (rotamer making) is 4 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      1 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 30 of 30 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 30 of 30 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+energies.opp not found
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 6 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+

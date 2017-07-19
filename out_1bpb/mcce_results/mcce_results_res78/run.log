@@ -1,0 +1,1761 @@
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 13:37:08 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...12 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   11.762, dist=  2.0832
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   11.762, dist=  2.0832
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   31.066, dist=  1.9294
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   31.066, dist=  1.9294
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   11.762, dist=  2.0832
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   11.762, dist=  2.0832
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   31.066, dist=  1.9294
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   31.066, dist=  1.9294
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   11.761, dist=  2.0832
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   11.761, dist=  2.0832
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   31.066, dist=  1.9294
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   31.066, dist=  1.9294
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   11.762, dist=  2.0832
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   11.762, dist=  2.0832
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   31.065, dist=  1.9294
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   31.065, dist=  1.9294
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   11.762, dist=  2.0832
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   11.762, dist=  2.0832
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   31.063, dist=  1.9294
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   31.063, dist=  1.9294
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   11.761, dist=  2.0832
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   11.761, dist=  2.0832
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   31.068, dist=  1.9294
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   31.068, dist=  1.9294
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   48.306, dist=  1.8622
+Large vdw btw "1HB  LYS A0168" and "1HZ  LYS A0168":   20.485, dist=  1.1426
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   48.306, dist=  1.8622
+Large vdw btw "1HZ  LYS A0168" and "1HB  LYS A0168":   20.485, dist=  1.1426
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   69.530, dist=  1.8082
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   69.530, dist=  1.8082
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   10.106, dist=  2.1078
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   10.106, dist=  2.1078
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   26.816, dist=  1.9522
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   26.816, dist=  1.9522
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   42.168, dist=  1.8827
+Large vdw btw "2HB  LYS A0168" and "1HZ  LYS A0168":   16.253, dist=  1.1642
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   42.168, dist=  1.8827
+Large vdw btw "1HZ  LYS A0168" and "2HB  LYS A0168":   16.253, dist=  1.1642
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   73.289, dist=  1.8005
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   73.289, dist=  1.8005
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   12.238, dist=  2.0767
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   12.238, dist=  2.0767
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   48.303, dist=  1.8622
+Large vdw btw "1HB  LYS A0168" and "1HZ  LYS A0168":   20.483, dist=  1.1426
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   48.303, dist=  1.8622
+Large vdw btw "1HZ  LYS A0168" and "1HB  LYS A0168":   20.483, dist=  1.1426
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   69.536, dist=  1.8081
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   69.536, dist=  1.8081
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   10.107, dist=  2.1078
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   10.107, dist=  2.1078
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   26.819, dist=  1.9521
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   26.819, dist=  1.9521
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   42.171, dist=  1.8827
+Large vdw btw "2HB  LYS A0168" and "1HZ  LYS A0168":   16.254, dist=  1.1642
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   42.171, dist=  1.8827
+Large vdw btw "1HZ  LYS A0168" and "2HB  LYS A0168":   16.254, dist=  1.1642
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   73.296, dist=  1.8004
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   73.296, dist=  1.8004
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   12.240, dist=  2.0767
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   12.240, dist=  2.0767
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   48.306, dist=  1.8622
+Large vdw btw "1HB  LYS A0168" and "1HZ  LYS A0168":   20.485, dist=  1.1426
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   48.306, dist=  1.8622
+Large vdw btw "1HZ  LYS A0168" and "1HB  LYS A0168":   20.485, dist=  1.1426
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   69.533, dist=  1.8082
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   69.533, dist=  1.8082
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   10.107, dist=  2.1078
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   10.107, dist=  2.1078
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   26.818, dist=  1.9521
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   26.818, dist=  1.9521
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   42.174, dist=  1.8827
+Large vdw btw "2HB  LYS A0168" and "1HZ  LYS A0168":   16.258, dist=  1.1642
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   42.174, dist=  1.8827
+Large vdw btw "1HZ  LYS A0168" and "2HB  LYS A0168":   16.258, dist=  1.1642
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   73.298, dist=  1.8004
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   73.298, dist=  1.8004
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   12.240, dist=  2.0767
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   12.240, dist=  2.0767
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   48.305, dist=  1.8622
+Large vdw btw "1HB  LYS A0168" and "1HZ  LYS A0168":   20.484, dist=  1.1426
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   48.305, dist=  1.8622
+Large vdw btw "1HZ  LYS A0168" and "1HB  LYS A0168":   20.484, dist=  1.1426
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   69.535, dist=  1.8081
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   69.535, dist=  1.8081
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   10.107, dist=  2.1078
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   10.107, dist=  2.1078
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   26.818, dist=  1.9521
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   26.818, dist=  1.9521
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   42.169, dist=  1.8827
+Large vdw btw "2HB  LYS A0168" and "1HZ  LYS A0168":   16.253, dist=  1.1642
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   42.169, dist=  1.8827
+Large vdw btw "1HZ  LYS A0168" and "2HB  LYS A0168":   16.253, dist=  1.1642
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   73.287, dist=  1.8005
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   73.287, dist=  1.8005
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   12.238, dist=  2.0767
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   12.238, dist=  2.0767
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   48.302, dist=  1.8622
+Large vdw btw "1HB  LYS A0168" and "1HZ  LYS A0168":   20.482, dist=  1.1426
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   48.302, dist=  1.8622
+Large vdw btw "1HZ  LYS A0168" and "1HB  LYS A0168":   20.482, dist=  1.1426
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   69.536, dist=  1.8081
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   69.536, dist=  1.8081
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   10.106, dist=  2.1078
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   10.106, dist=  2.1078
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   26.817, dist=  1.9522
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   26.817, dist=  1.9522
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   42.171, dist=  1.8827
+Large vdw btw "2HB  LYS A0168" and "1HZ  LYS A0168":   16.255, dist=  1.1642
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   42.171, dist=  1.8827
+Large vdw btw "1HZ  LYS A0168" and "2HB  LYS A0168":   16.255, dist=  1.1642
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   73.291, dist=  1.8005
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   73.291, dist=  1.8005
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   12.238, dist=  2.0767
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   12.238, dist=  2.0767
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   48.303, dist=  1.8622
+Large vdw btw "1HB  LYS A0168" and "1HZ  LYS A0168":   20.482, dist=  1.1426
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   48.303, dist=  1.8622
+Large vdw btw "1HZ  LYS A0168" and "1HB  LYS A0168":   20.482, dist=  1.1426
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   69.535, dist=  1.8081
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   69.535, dist=  1.8081
+Large vdw btw "1HB  LYS A0168" and " NZ  LYS A0168":   10.107, dist=  2.1078
+Large vdw btw " NZ  LYS A0168" and "1HB  LYS A0168":   10.107, dist=  2.1078
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   26.818, dist=  1.9521
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   26.818, dist=  1.9521
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   42.173, dist=  1.8827
+Large vdw btw "2HB  LYS A0168" and "1HZ  LYS A0168":   16.256, dist=  1.1642
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   42.173, dist=  1.8827
+Large vdw btw "1HZ  LYS A0168" and "2HB  LYS A0168":   16.256, dist=  1.1642
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   73.299, dist=  1.8004
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   73.299, dist=  1.8004
+Large vdw btw "2HB  LYS A0168" and " NZ  LYS A0168":   12.240, dist=  2.0767
+Large vdw btw " NZ  LYS A0168" and "2HB  LYS A0168":   12.240, dist=  2.0767
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   24.484, dist=  1.9663
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   30.289, dist=  1.1069
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   70.241, dist=  2.1902
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":   39.113, dist=  1.3867
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   29.632, dist=  1.9367
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   47.289, dist=  1.0673
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   52.665, dist=  1.8493
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   38.026, dist=  2.3112
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   38.919, dist=  1.4101
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  625.238, dist=  1.8354
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  357.509, dist=  1.1579
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   45.036, dist=  2.2682
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   40.565, dist=  2.2778
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":  184.005, dist=  1.6654
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1319.823, dist=  1.3619
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   19.001, dist=  2.4291
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  225.270, dist=  1.9849
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   17.080, dist=  2.4491
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  597.778, dist=  1.7855
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":   17.140, dist=  1.7008
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   13.334, dist=  2.4823
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 23471.498, dist=  1.3107
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  817.180, dist=  1.0177
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   30.764, dist=  1.9265
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  938.660, dist=  1.4008
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   12.258, dist=  2.5121
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 2889.417, dist=  1.5681
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  289.261, dist=  1.9449
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7822
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  201.391, dist=  1.1421
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":  422.929, dist=  1.0618
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  105.145, dist=  2.1318
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   10.258, dist=  2.0596
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   18.103, dist=  1.7980
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":  441.849, dist=  1.0579
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 1643.755, dist=  1.6951
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  286.721, dist=  1.1791
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":   36.903, dist=  1.3932
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  426.066, dist=  1.9029
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9309
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.9284
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.2283
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   30.073, dist=  1.9344
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   38.427, dist=  1.0856
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   10.662, dist=  2.0991
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   78.273, dist=  2.1828
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   23.706, dist=  1.4673
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168": 5594.199, dist=  1.1123
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.6486
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   15.382, dist=  2.4627
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  258.025, dist=  1.9824
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9930
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168": 4449.763, dist=  1.1336
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.5313
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   16.621, dist=  2.4485
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   28.081, dist=  1.9450
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   41.814, dist=  1.0781
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168": 118913.656, dist=  1.1935
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8385
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.7162
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.3954
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   18.104, dist=  1.7980
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 2426.422, dist=  1.6415
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  458.489, dist=  1.8915
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   83.795, dist=  1.5728
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   11.698, dist=  1.8405
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168": 3547.390, dist=  1.3080
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9282
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   76.862, dist=  1.7935
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168": 4143.162, dist=  1.2913
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9591
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   23.354, dist=  2.4004
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  355.728, dist=  1.9220
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  127.006, dist=  2.0996
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168": 9093.192, dist=  1.0683
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   67.136, dist=  2.2097
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   15.246, dist=  2.4706
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168": 3819.191, dist=  1.1481
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   18.105, dist=  1.7980
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  286.513, dist=  1.9464
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":   11.776, dist=  1.5363
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   86.077, dist=  2.1553
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168": 5066.970, dist=  1.1215
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   51.669, dist=  2.2453
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168": 2528.445, dist=  1.1881
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   64.617, dist=  2.2055
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  238.588, dist=  1.4444
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   10.686, dist=  2.5238
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 112527.008, dist=  1.1917
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 1973.008, dist=  1.6183
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   18.104, dist=  1.7980
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168": 17448.875, dist=  1.0119
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 20174.789, dist=  1.3695
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7284
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   23.460, dist=  1.3588
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":   23.124, dist=  1.4561
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  204.585, dist=  1.1406
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 2296.681, dist=  1.6467
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 630539.188, dist=  1.0022
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168": 1172.164, dist=  1.2664
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.6913
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   46.109, dist=  1.6520
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  838.119, dist=  1.2402
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  136.991, dist=  2.0007
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168": 2991.441, dist=  1.3224
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   53.612, dist=  1.7708
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   25.354, dist=  2.2998
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":  273.054, dist=  1.6122
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 1642.200, dist=  1.3374
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168": 3947.409, dist=  1.2923
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   78.172, dist=  1.7177
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  600.355, dist=  1.7849
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   40.091, dist=  1.6708
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168": 5923.046, dist=  1.0546
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   19.480, dist=  1.9198
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   25.721, dist=  1.8781
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   25.647, dist=  1.8785
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   19.540, dist=  1.9193
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   33.154, dist=  2.3257
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   33.501, dist=  2.2508
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  846.621, dist=  1.7809
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 4036.036, dist=  1.5168
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":   11.011, dist=  1.5444
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  569.052, dist=  1.8477
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 149499.688, dist=  1.1298
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.7898
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7153
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 3435.723, dist=  1.5372
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  146.783, dist=  2.0017
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   16.252, dist=  1.7080
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   35.339, dist=  1.9051
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":  866.437, dist=  1.4101
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   13.000, dist=  1.9816
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  439.391, dist=  1.8874
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 486948.375, dist=  1.0240
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   18.103, dist=  1.7980
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.8272
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.6278
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  569.024, dist=  1.2805
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   79.334, dist=  2.0898
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   84.873, dist=  1.7062
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   20.958, dist=  2.3336
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":  177.170, dist=  1.1410
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   27.565, dist=  1.9436
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 2091.921, dist=  1.3109
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  125.127, dist=  1.6532
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   25.351, dist=  1.9567
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1623.426, dist=  1.3387
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":   55.614, dist=  1.2551
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   14.007, dist=  2.4057
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  406.329, dist=  1.8321
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  417.939, dist=  1.0756
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":   31.691, dist=  1.3141
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":  759.499, dist=  1.4523
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   18.104, dist=  1.7980
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.9667
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   32.430, dist=  1.8647
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   23.486, dist=  1.9292
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":   10.875, dist=  1.4329
+Large vdw btw "1HD  LYS A0168" and " HA  LYS A0168":   77.438, dist=  1.4116
+Large vdw btw "2HD  LYS A0168" and " HA  LYS A0168":   94.288, dist=  1.3889
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   24.484, dist=  1.9663
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   30.289, dist=  1.1069
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   24.484, dist=  1.9663
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   30.289, dist=  1.1069
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   24.484, dist=  1.9663
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   30.289, dist=  1.1069
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   24.484, dist=  1.9663
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   30.289, dist=  1.1069
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   24.484, dist=  1.9663
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   30.289, dist=  1.1069
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   22.308, dist=  1.9211
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   30.205, dist=  1.7077
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.7445
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   33.278, dist=  1.6945
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.7226
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 4182.850, dist=  1.5692
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.7487
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.9302
+Large vdw btw "1HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.6917
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   29.632, dist=  1.9367
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   47.289, dist=  1.0673
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   29.632, dist=  1.9367
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   47.289, dist=  1.0673
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   29.632, dist=  1.9367
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   47.289, dist=  1.0673
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   29.632, dist=  1.9367
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   47.289, dist=  1.0673
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   29.632, dist=  1.9367
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":   47.289, dist=  1.0673
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   52.665, dist=  1.8493
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   38.026, dist=  2.3112
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   38.919, dist=  1.4101
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9331
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   52.665, dist=  1.8493
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   38.026, dist=  2.3112
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   38.919, dist=  1.4101
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   31.127, dist=  1.7036
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8972
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   52.665, dist=  1.8493
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   38.026, dist=  2.3112
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   38.919, dist=  1.4101
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8976
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   52.665, dist=  1.8493
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   38.026, dist=  2.3112
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   38.919, dist=  1.4101
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   26.569, dist=  1.7253
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9326
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   52.665, dist=  1.8493
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   38.026, dist=  2.3112
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   38.919, dist=  1.4101
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  161.432, dist=  2.0492
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  355.781, dist=  1.1583
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":   14.716, dist=  1.4986
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   23.334, dist=  1.7432
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   19.862, dist=  1.7656
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  213.449, dist=  2.0034
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  443.359, dist=  1.1375
+Large vdw btw "1HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8139
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 3056.088, dist=  1.6105
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  852.427, dist=  1.7893
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168": 1259.457, dist=  1.0435
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  607.223, dist=  1.8303
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168": 1318.402, dist=  1.0456
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":  184.005, dist=  1.6654
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1319.823, dist=  1.3619
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   19.001, dist=  2.4291
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":  184.005, dist=  1.6654
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1319.823, dist=  1.3619
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   19.001, dist=  2.4291
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   11.801, dist=  1.8423
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":  184.005, dist=  1.6654
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1319.823, dist=  1.3619
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   19.001, dist=  2.4291
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":  184.005, dist=  1.6654
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1319.823, dist=  1.3619
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   19.001, dist=  2.4291
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   10.701, dist=  1.8565
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":  184.005, dist=  1.6654
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1319.823, dist=  1.3619
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   19.001, dist=  2.4291
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   29.649, dist=  2.3345
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   17.080, dist=  2.4491
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  597.778, dist=  1.7855
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  183.644, dist=  1.4758
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7639
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   17.080, dist=  2.4491
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  597.778, dist=  1.7855
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  528.223, dist=  1.2883
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   23.970, dist=  1.6564
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   17.080, dist=  2.4491
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  597.778, dist=  1.7855
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  159.316, dist=  1.4931
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7446
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   17.080, dist=  2.4491
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  597.778, dist=  1.7855
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  345.612, dist=  1.3341
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  371.321, dist=  1.9056
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  605.740, dist=  1.7733
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  402.388, dist=  1.1535
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   17.080, dist=  2.4491
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  597.778, dist=  1.7855
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 32252.541, dist=  1.3171
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.4723
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":   30.760, dist=  1.4232
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.5364
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":   26.896, dist=  1.4386
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":   46.357, dist=  1.2869
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   30.764, dist=  1.9265
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  938.660, dist=  1.4008
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   30.764, dist=  1.9265
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  938.660, dist=  1.4008
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   30.764, dist=  1.9265
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  938.660, dist=  1.4008
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   30.764, dist=  1.9265
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  938.660, dist=  1.4008
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   30.764, dist=  1.9265
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  938.660, dist=  1.4008
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   12.258, dist=  2.5121
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 2889.417, dist=  1.5681
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   41.508, dist=  1.6661
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168": 8939.222, dist=  1.0191
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  169.911, dist=  1.9663
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   12.258, dist=  2.5121
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 2889.417, dist=  1.5681
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7193
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   12.258, dist=  2.5121
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 2889.417, dist=  1.5681
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":   14.235, dist=  1.7258
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   49.196, dist=  1.6434
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.9740
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   12.258, dist=  2.5121
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 2889.417, dist=  1.5681
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7561
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   32.016, dist=  2.2435
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   12.258, dist=  2.5121
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 2889.417, dist=  1.5681
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   10.499, dist=  1.7670
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 3656.749, dist=  1.5781
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 207759.250, dist=  1.0933
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.8147
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.8475
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  543.765, dist=  1.7890
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.8632
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   28.904, dist=  1.8819
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   55.758, dist=  2.1487
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  103.734, dist=  2.0457
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   82.372, dist=  1.7296
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   32.698, dist=  2.3386
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168": 1131.154, dist=  1.3946
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.9966
+Large vdw btw "2HE  LYS A0168" and " HA  LYS A0168":  377.276, dist=  1.0719
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   88.589, dist=  1.7194
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   47.680, dist=  2.2581
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  717.446, dist=  1.8233
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.8669
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  115.232, dist=  1.2705
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   95.578, dist=  1.3109
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":   48.844, dist=  1.0135
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   50.455, dist=  2.2481
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   13.051, dist=  2.0039
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  105.145, dist=  2.1318
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   10.258, dist=  2.0596
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168": 4475.686, dist=  1.1331
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   52.883, dist=  1.6498
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  105.145, dist=  2.1318
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   10.258, dist=  2.0596
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   46.793, dist=  1.6488
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   23.495, dist=  1.7611
+Large vdw btw "2HE  LYS A0168" and " HA  LYS A0168":  547.611, dist=  1.0393
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  105.145, dist=  2.1318
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   10.258, dist=  2.0596
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168": 5211.705, dist=  1.1188
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   42.298, dist=  1.6799
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  105.145, dist=  2.1318
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   10.258, dist=  2.0596
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   33.277, dist=  1.6945
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  112.322, dist=  2.1098
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 1324.490, dist=  1.7335
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.8324
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":  999.000, dist=  0.8602
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.3598
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  105.145, dist=  2.1318
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   10.258, dist=  2.0596
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.9434
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  142.792, dist=  1.2484
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 4111.527, dist=  1.5785
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":  352.104, dist=  1.5357
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.5063
+Large vdw btw "1HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9551
+Large vdw btw "2HZ  LYS A0168" and " CA  LYS A0168":   15.882, dist=  1.5148
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  426.066, dist=  1.9029
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9309
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168": 1368.873, dist=  1.2501
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.7803
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  426.066, dist=  1.9029
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9309
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.9574
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.2586
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   15.524, dist=  2.4610
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  426.066, dist=  1.9029
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9309
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 92938.125, dist=  1.2129
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168": 1122.565, dist=  1.0535
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   58.437, dist=  2.2342
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.7506
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   35.574, dist=  1.4203
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  426.066, dist=  1.9029
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9309
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.7235
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.5973
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  183.240, dist=  2.0383
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":   51.132, dist=  1.3571
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.7834
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  426.066, dist=  1.9029
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9309
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":  899.589, dist=  1.2943
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8183
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  170.706, dist=  2.0400
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":   52.191, dist=  1.3548
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   11.249, dist=  2.5203
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   30.073, dist=  1.9344
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   38.427, dist=  1.0856
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   30.073, dist=  1.9344
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   38.427, dist=  1.0856
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   30.073, dist=  1.9344
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   38.427, dist=  1.0856
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   30.073, dist=  1.9344
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   38.427, dist=  1.0856
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   30.073, dist=  1.9344
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   38.427, dist=  1.0856
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   10.662, dist=  2.0991
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   10.662, dist=  2.0991
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   10.662, dist=  2.0991
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   10.662, dist=  2.0991
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168":   10.662, dist=  2.0991
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   78.273, dist=  2.1828
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   23.706, dist=  1.4673
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   10.695, dist=  1.8533
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   17.973, dist=  1.7796
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8270
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   78.273, dist=  2.1828
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   23.706, dist=  1.4673
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168": 5403.026, dist=  1.1155
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.6906
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   78.273, dist=  2.1828
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   23.706, dist=  1.4673
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  819.571, dist=  1.7951
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9388
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":   60.350, dist=  1.3390
+Large vdw btw "1HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8338
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   78.273, dist=  2.1828
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   23.706, dist=  1.4673
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.7827
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.7248
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  163.665, dist=  2.0571
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.8402
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   39.609, dist=  1.4081
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":  634.857, dist=  1.1043
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   78.273, dist=  2.1828
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":   23.706, dist=  1.4673
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   12.973, dist=  1.8257
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8728
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  434.753, dist=  1.8908
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":   24.925, dist=  1.4375
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   12.945, dist=  2.4944
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   49.516, dist=  2.2514
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   32.700, dist=  2.3386
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   38.702, dist=  1.8384
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  258.025, dist=  1.9824
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9930
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168": 1804.559, dist=  1.2218
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.5039
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  258.025, dist=  1.9824
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9930
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168": 6506.285, dist=  1.0984
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.4883
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  258.025, dist=  1.9824
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9930
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168": 1209.898, dist=  1.2629
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.5469
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   41.003, dist=  2.2849
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  258.025, dist=  1.9824
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9930
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.9825
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.7919
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  717.498, dist=  1.8233
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   37.310, dist=  1.8439
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.2654
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   95.588, dist=  1.3109
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  258.025, dist=  1.9824
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9930
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 153959.562, dist=  1.1630
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8050
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.9555
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   11.182, dist=  1.8469
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  554.115, dist=  1.8536
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  177.404, dist=  1.2264
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  371.905, dist=  1.1541
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   94.839, dist=  2.1385
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   28.081, dist=  1.9450
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   41.814, dist=  1.0781
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   28.081, dist=  1.9450
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   41.814, dist=  1.0781
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   28.081, dist=  1.9450
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   41.814, dist=  1.0781
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   28.081, dist=  1.9450
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   41.814, dist=  1.0781
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   28.081, dist=  1.9450
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":   41.814, dist=  1.0781
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168": 118913.656, dist=  1.1935
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8385
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.4221
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   52.887, dist=  1.6498
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   73.551, dist=  1.5896
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.6513
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   32.294, dist=  2.3277
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168": 118913.656, dist=  1.1935
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8385
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":  346.821, dist=  1.4002
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.6709
+Large vdw btw "2HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.4279
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   23.496, dist=  1.7611
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   21.038, dist=  2.4053
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168": 118913.656, dist=  1.1935
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8385
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.4675
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   42.301, dist=  1.6799
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  560.129, dist=  1.8520
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168": 1987.872, dist=  1.0048
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168": 118913.656, dist=  1.1935
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8385
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":  253.864, dist=  1.4366
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.8405
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8046
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 1324.601, dist=  1.7335
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   46.251, dist=  1.8123
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  768.557, dist=  1.0870
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":  999.000, dist=  0.8602
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.9167
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168": 118913.656, dist=  1.1935
+Large vdw btw " CE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8385
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   57.441, dist=  1.6217
+Large vdw btw "1HE  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.6877
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.5820
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":   11.766, dist=  1.5251
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 4111.657, dist=  1.5785
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   42.183, dist=  2.2708
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":   12.852, dist=  1.5146
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":  938.665, dist=  1.0692
+Large vdw btw "2HZ  LYS A0168" and " CA  LYS A0168":   15.883, dist=  1.5148
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  458.489, dist=  1.8915
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168": 11377.406, dist=  1.0485
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  458.489, dist=  1.8915
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   59.990, dist=  1.6160
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  140.412, dist=  2.0723
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  458.489, dist=  1.8915
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 267739.094, dist=  1.1106
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   58.442, dist=  2.2342
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.9296
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   35.579, dist=  1.4203
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  458.489, dist=  1.8915
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 1053.356, dist=  1.7584
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  183.248, dist=  2.0383
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   80.868, dist=  2.1563
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  458.489, dist=  1.8915
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168": 9968.510, dist=  1.0601
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168": 3547.390, dist=  1.3080
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9282
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168": 3547.390, dist=  1.3080
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9282
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168": 3547.390, dist=  1.3080
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9282
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168": 3547.390, dist=  1.3080
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9282
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168": 3547.390, dist=  1.3080
+Large vdw btw "1HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9282
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   76.862, dist=  1.7935
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   76.862, dist=  1.7935
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   76.862, dist=  1.7935
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   76.862, dist=  1.7935
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "1HD  LYS A0168" and " N   LYS A0168":   76.862, dist=  1.7935
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168": 4143.162, dist=  1.2913
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9591
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168": 4143.162, dist=  1.2913
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9591
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168": 4143.162, dist=  1.2913
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9591
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168": 4143.162, dist=  1.2913
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9591
+Large vdw btw " CD  LYS A0168" and " N   LYS A0168":   46.919, dist=  2.2733
+Large vdw btw "2HD  LYS A0168" and " N   LYS A0168": 4143.162, dist=  1.2913
+Large vdw btw "2HD  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9591
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   56.299, dist=  2.2288
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":   46.870, dist=  1.3666
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  468.458, dist=  1.8793
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  163.685, dist=  2.0571
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  109.298, dist=  2.1047
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   39.614, dist=  1.4081
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  201.892, dist=  1.2209
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   28.273, dist=  2.3432
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   13.833, dist=  2.4822
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":   14.346, dist=  1.5016
+Large vdw btw "1HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.7978
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   11.017, dist=  2.5242
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   23.354, dist=  2.4004
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":  331.537, dist=  1.4054
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   23.354, dist=  2.4004
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   23.354, dist=  2.4004
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":  370.429, dist=  1.3926
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   23.354, dist=  2.4004
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   30.983, dist=  2.3351
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   23.354, dist=  2.4004
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 104914.195, dist=  1.2007
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.5789
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   32.698, dist=  2.3386
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.6232
+Large vdw btw "1HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9646
+Large vdw btw "2HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.7852
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  127.006, dist=  2.0996
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":  135.680, dist=  1.5122
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  127.006, dist=  2.0996
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168": 7312.755, dist=  1.0878
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  127.006, dist=  2.0996
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 9703.163, dist=  1.4635
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  468.410, dist=  1.1324
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.9415
+Large vdw btw "1HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.1502
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  127.006, dist=  2.0996
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.7696
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":   15.316, dist=  1.4939
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  717.433, dist=  1.8233
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  215.674, dist=  1.2070
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   95.576, dist=  1.3109
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.8084
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":  127.006, dist=  2.0996
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   95.076, dist=  1.5567
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  158.124, dist=  2.0526
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   67.136, dist=  2.2097
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   15.246, dist=  2.4706
+Large vdw btw "1HE  LYS A0168" and " N   LYS A0168":   22.246, dist=  1.7498
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   52.884, dist=  1.6498
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  189.608, dist=  1.4719
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   67.136, dist=  2.2097
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   15.246, dist=  2.4706
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168": 4102.907, dist=  1.1413
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   23.497, dist=  1.7611
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   67.136, dist=  2.2097
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   15.246, dist=  2.4706
+Large vdw btw "2HE  LYS A0168" and " N   LYS A0168":   16.093, dist=  1.7951
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   42.298, dist=  1.6799
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  212.328, dist=  1.4583
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  325.318, dist=  1.9360
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   67.136, dist=  2.2097
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   15.246, dist=  2.4706
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.7758
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 1324.680, dist=  1.7335
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   20.900, dist=  2.3987
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.6272
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":  999.000, dist=  0.8602
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":  247.570, dist=  1.1934
+Large vdw btw " CE  LYS A0168" and " N   LYS A0168":   67.136, dist=  2.2097
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   15.246, dist=  2.4706
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 1315.242, dist=  1.7266
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 4111.545, dist=  1.5785
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 60930.773, dist=  1.2492
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   11.059, dist=  2.4295
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.6158
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":  253.557, dist=  1.1910
+Large vdw btw "2HZ  LYS A0168" and " CA  LYS A0168":   15.884, dist=  1.5147
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   86.077, dist=  2.1553
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   91.226, dist=  1.5628
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   86.077, dist=  2.1553
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168": 4163.876, dist=  1.1399
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   86.077, dist=  2.1553
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   27.327, dist=  2.3578
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   58.445, dist=  2.2341
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 7061.631, dist=  1.4943
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   35.583, dist=  1.4203
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.9706
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   86.077, dist=  2.1553
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  183.251, dist=  2.0383
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.7941
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 2641.068, dist=  1.5709
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  216.899, dist=  1.2138
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   51.842, dist=  1.2753
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.7620
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   86.077, dist=  2.1553
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   64.902, dist=  1.6068
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  134.243, dist=  2.0701
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   17.884, dist=  2.3449
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   51.669, dist=  2.2453
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   19.879, dist=  1.7677
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   51.669, dist=  2.2453
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168": 2724.857, dist=  1.1808
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   51.669, dist=  2.2453
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   14.515, dist=  1.8124
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  268.616, dist=  1.9567
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   51.669, dist=  2.2453
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  163.684, dist=  2.0571
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.7942
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 6139.324, dist=  1.4650
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   39.616, dist=  1.4081
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.6436
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":  195.421, dist=  1.1449
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":  331.083, dist=  1.1722
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   51.669, dist=  2.2453
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 1258.365, dist=  1.7237
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 6378.144, dist=  1.4604
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":  460.196, dist=  1.1408
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.4718
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   26.631, dist=  2.3541
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  123.343, dist=  2.0176
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   50.947, dist=  1.2771
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  217.641, dist=  2.0003
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   32.700, dist=  2.3386
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   64.617, dist=  2.2055
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  586.708, dist=  1.3410
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   64.617, dist=  2.2055
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  330.426, dist=  1.4061
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   64.617, dist=  2.2055
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  430.719, dist=  1.3757
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   11.346, dist=  2.5187
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   64.617, dist=  2.2055
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  129.119, dist=  2.0863
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  717.513, dist=  1.8233
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 32442.527, dist=  1.3165
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   95.591, dist=  1.3109
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.4689
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   64.617, dist=  2.2055
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 80059.844, dist=  1.2212
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  529.116, dist=  1.7930
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168": 1411.823, dist=  1.0397
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  347.806, dist=  1.9158
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   21.596, dist=  2.3119
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  755.745, dist=  1.0949
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   11.318, dist=  1.4387
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  189.518, dist=  2.0130
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  711.396, dist=  1.7501
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 112527.008, dist=  1.1917
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 1973.008, dist=  1.6183
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   52.885, dist=  1.6498
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.1452
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168": 2674.671, dist=  1.1265
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   16.274, dist=  1.7960
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   61.813, dist=  2.2031
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  226.698, dist=  1.9211
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 112527.008, dist=  1.1917
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 1973.008, dist=  1.6183
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168": 3858.404, dist=  1.1472
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7075
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   23.495, dist=  1.7611
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.9686
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   14.350, dist=  2.4685
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 112527.008, dist=  1.1917
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 1973.008, dist=  1.6183
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":   17.514, dist=  1.6980
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   42.300, dist=  1.6799
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.1766
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168": 4406.261, dist=  1.0808
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  121.264, dist=  2.0871
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 112527.008, dist=  1.1917
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 1973.008, dist=  1.6183
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168": 2526.961, dist=  1.1882
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7392
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  151.545, dist=  2.0596
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 1324.607, dist=  1.7335
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 128479.273, dist=  1.1740
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   17.936, dist=  2.3444
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  174.988, dist=  1.2278
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":  999.000, dist=  0.8602
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":   70.398, dist=  1.3309
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 112527.008, dist=  1.1917
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 1973.008, dist=  1.6183
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   13.527, dist=  1.8225
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   12.748, dist=  1.7407
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   13.634, dist=  2.4849
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 4111.660, dist=  1.5785
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   17.281, dist=  1.9603
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.3715
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 69754.477, dist=  1.1972
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  219.866, dist=  1.2124
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.9101
+Large vdw btw "2HZ  LYS A0168" and " CA  LYS A0168":   15.884, dist=  1.5147
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":  255.549, dist=  1.1975
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 2296.681, dist=  1.6467
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 630539.188, dist=  1.0022
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  330.356, dist=  1.3391
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.7536
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.5961
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  178.180, dist=  1.9588
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 2296.681, dist=  1.6467
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 630539.188, dist=  1.0022
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":   13.176, dist=  1.7362
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  770.211, dist=  1.3112
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7186
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  412.866, dist=  1.8891
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 6802.101, dist=  1.4526
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 2296.681, dist=  1.6467
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 630539.188, dist=  1.0022
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":   16.145, dist=  1.7088
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  264.425, dist=  1.3638
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   58.444, dist=  2.2342
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.8285
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7410
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   35.583, dist=  1.4203
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.7801
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   15.637, dist=  1.4029
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 2296.681, dist=  1.6467
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 630539.188, dist=  1.0022
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   33.424, dist=  1.6955
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  647.887, dist=  1.2668
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   12.406, dist=  1.7443
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  183.258, dist=  2.0383
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   27.388, dist=  1.8900
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 10602.178, dist=  1.4447
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.8454
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":   17.467, dist=  1.4891
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  111.605, dist=  1.1985
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168": 2296.681, dist=  1.6467
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 630539.188, dist=  1.0022
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.7733
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.6194
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   17.568, dist=  1.6976
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   10.679, dist=  2.5240
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 2817.665, dist=  1.5626
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168": 2991.441, dist=  1.3224
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   53.612, dist=  1.7708
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   25.354, dist=  2.2998
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   24.154, dist=  1.6554
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168": 2991.441, dist=  1.3224
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   53.612, dist=  1.7708
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   25.354, dist=  2.2998
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  168.573, dist=  1.9676
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   20.677, dist=  1.3724
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168": 2991.441, dist=  1.3224
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   53.612, dist=  1.7708
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   25.354, dist=  2.2998
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  807.569, dist=  1.7320
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168": 2991.441, dist=  1.3224
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   53.612, dist=  1.7708
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   25.354, dist=  2.2998
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168": 2991.441, dist=  1.3224
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   53.612, dist=  1.7708
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   25.354, dist=  2.2998
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":   28.753, dist=  1.6327
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":  273.054, dist=  1.6122
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 1642.200, dist=  1.3374
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":  273.054, dist=  1.6122
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 1642.200, dist=  1.3374
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":  273.054, dist=  1.6122
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 1642.200, dist=  1.3374
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":  273.054, dist=  1.6122
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 1642.200, dist=  1.3374
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":  273.054, dist=  1.6122
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 1642.200, dist=  1.3374
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168": 3947.409, dist=  1.2923
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   78.172, dist=  1.7177
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168": 3947.409, dist=  1.2923
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   78.172, dist=  1.7177
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168": 3947.409, dist=  1.2923
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   78.172, dist=  1.7177
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168": 3947.409, dist=  1.2923
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   78.172, dist=  1.7177
+Large vdw btw " CD  LYS A0168" and " C   LYS A0168":   52.367, dist=  2.2429
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   17.664, dist=  2.3641
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168": 3947.409, dist=  1.2923
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   78.172, dist=  1.7177
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  600.355, dist=  1.7849
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.8853
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  600.355, dist=  1.7849
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   33.489, dist=  1.6953
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168": 3667.198, dist=  1.0974
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  102.590, dist=  2.0475
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  600.355, dist=  1.7849
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  366.034, dist=  1.9078
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7381
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168": 1096.313, dist=  1.0617
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.4323
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  600.355, dist=  1.7849
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  163.679, dist=  2.0571
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   36.374, dist=  1.8476
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 3775.144, dist=  1.5740
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.9944
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   39.614, dist=  1.4081
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.9139
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7865
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  600.355, dist=  1.7849
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.9214
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   30.133, dist=  2.2539
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   19.480, dist=  1.9198
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   19.480, dist=  1.9198
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   19.480, dist=  1.9198
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   19.480, dist=  1.9198
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   19.480, dist=  1.9198
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   25.721, dist=  1.8781
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   25.721, dist=  1.8781
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   25.721, dist=  1.8781
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   25.721, dist=  1.8781
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   25.721, dist=  1.8781
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   25.647, dist=  1.8785
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   25.647, dist=  1.8785
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   25.647, dist=  1.8785
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   25.647, dist=  1.8785
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   25.647, dist=  1.8785
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   19.540, dist=  1.9193
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   19.540, dist=  1.9193
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   19.540, dist=  1.9193
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   19.540, dist=  1.9193
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":   19.540, dist=  1.9193
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   12.039, dist=  2.5014
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   58.394, dist=  2.1410
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   33.154, dist=  2.3257
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   33.501, dist=  2.2508
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  298.262, dist=  1.4180
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   33.154, dist=  2.3257
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   33.501, dist=  2.2508
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   22.700, dist=  1.7490
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  103.652, dist=  1.4724
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   33.154, dist=  2.3257
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   33.501, dist=  2.2508
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  358.028, dist=  1.3969
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   33.154, dist=  2.3257
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   33.501, dist=  2.2508
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   16.779, dist=  1.7917
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   88.522, dist=  1.4914
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   14.143, dist=  2.4713
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":   33.154, dist=  2.3257
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   33.501, dist=  2.2508
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   32.700, dist=  2.3386
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 40070.820, dist=  1.2936
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  214.755, dist=  1.9295
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.5804
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   34.684, dist=  1.3172
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  569.052, dist=  1.8477
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 149499.688, dist=  1.1298
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   52.741, dist=  1.6341
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.6196
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  348.293, dist=  1.4000
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  177.163, dist=  1.4093
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   80.502, dist=  2.0874
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  569.052, dist=  1.8477
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 149499.688, dist=  1.1298
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  312.631, dist=  1.3452
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.8017
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.6847
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   68.307, dist=  2.1147
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  569.052, dist=  1.8477
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 149499.688, dist=  1.1298
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   37.778, dist=  1.6789
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.6479
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 13707.998, dist=  1.4142
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 1960.549, dist=  1.6101
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  474.956, dist=  1.1378
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  569.052, dist=  1.8477
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 149499.688, dist=  1.1298
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  241.228, dist=  1.3741
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  717.440, dist=  1.8233
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.4390
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7734
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   95.571, dist=  1.3109
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.9964
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   35.714, dist=  1.3141
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.8474
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  569.052, dist=  1.8477
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 149499.688, dist=  1.1298
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  236.442, dist=  1.4454
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  139.675, dist=  1.4370
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 1354.981, dist=  1.7132
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.6952
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":   45.796, dist=  1.3782
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  562.054, dist=  1.0497
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  146.783, dist=  2.0017
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168": 4323.418, dist=  1.0825
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  146.783, dist=  2.0017
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  324.534, dist=  1.8660
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   13.386, dist=  1.4200
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  146.783, dist=  2.0017
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   48.219, dist=  2.2469
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 329809.062, dist=  1.0520
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":  389.957, dist=  1.0818
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  146.783, dist=  2.0017
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":   11.641, dist=  1.7530
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  132.987, dist=  2.0054
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":  146.783, dist=  2.0017
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168": 4575.434, dist=  1.0774
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   35.339, dist=  1.9051
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":  866.437, dist=  1.4101
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   35.339, dist=  1.9051
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":  866.437, dist=  1.4101
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   35.339, dist=  1.9051
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":  866.437, dist=  1.4101
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   35.339, dist=  1.9051
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":  866.437, dist=  1.4101
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   35.339, dist=  1.9051
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":  866.437, dist=  1.4101
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   13.000, dist=  1.9816
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   13.000, dist=  1.9816
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   13.000, dist=  1.9816
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   13.000, dist=  1.9816
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   10.707, dist=  2.4541
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   13.000, dist=  1.9816
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  439.391, dist=  1.8874
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 486948.375, dist=  1.0240
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   52.884, dist=  1.6498
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":   51.460, dist=  1.2631
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":  152.547, dist=  1.4984
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  253.983, dist=  1.3684
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":   69.804, dist=  1.5973
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.5313
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   99.018, dist=  2.0533
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  439.391, dist=  1.8874
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 486948.375, dist=  1.0240
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   23.494, dist=  1.7611
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.8222
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.6608
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 4327.352, dist=  1.5081
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  439.391, dist=  1.8874
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 486948.375, dist=  1.0240
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   42.299, dist=  1.6799
+Large vdw btw "2HE  LYS A0168" and " HA  LYS A0168":   51.429, dist=  1.2632
+Large vdw btw "2HE  LYS A0168" and " C   LYS A0168":  106.108, dist=  1.5437
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  199.364, dist=  1.3958
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 2173.783, dist=  1.6476
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.6956
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":   28.081, dist=  1.4336
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   40.177, dist=  1.3017
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  439.391, dist=  1.8874
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 486948.375, dist=  1.0240
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  432.511, dist=  1.3097
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 1324.502, dist=  1.7335
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.4349
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.7969
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":  999.000, dist=  0.8602
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  999.000, dist=  0.7194
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168": 1386.738, dist=  1.0413
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  167.885, dist=  1.1592
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.769, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " C   LYS A0168":  439.391, dist=  1.8874
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168": 486948.375, dist=  1.0240
+Large vdw btw "1HE  LYS A0168" and " C   LYS A0168":   49.589, dist=  1.6423
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.5618
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 4111.577, dist=  1.5785
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168": 14651.655, dist=  1.1275
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 5733.978, dist=  1.5204
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 2033.804, dist=  1.6052
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.9400
+Large vdw btw "2HZ  LYS A0168" and " CA  LYS A0168":   15.883, dist=  1.5148
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":  551.822, dist=  1.1238
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   84.873, dist=  1.7062
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   20.958, dist=  2.3336
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   15.512, dist=  1.7142
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   84.873, dist=  1.7062
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   20.958, dist=  2.3336
+Large vdw btw "2HE  LYS A0168" and " HA  LYS A0168":  139.787, dist=  1.1635
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   91.349, dist=  2.0665
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   84.873, dist=  1.7062
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   20.958, dist=  2.3336
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   58.441, dist=  2.2342
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":  306.231, dist=  1.5534
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  107.825, dist=  2.1070
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  475.949, dist=  1.8086
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   35.579, dist=  1.4203
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.9166
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   84.873, dist=  1.7062
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   20.958, dist=  2.3336
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  183.247, dist=  2.0383
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168": 60264.129, dist=  1.0023
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168":   84.873, dist=  1.7062
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   20.958, dist=  2.3336
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":   18.107, dist=  1.6935
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   27.565, dist=  1.9436
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 2091.921, dist=  1.3109
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   27.565, dist=  1.9436
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 2091.921, dist=  1.3109
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   27.565, dist=  1.9436
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 2091.921, dist=  1.3109
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   27.565, dist=  1.9436
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 2091.921, dist=  1.3109
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "1HD  LYS A0168" and " C   LYS A0168":   27.565, dist=  1.9436
+Large vdw btw "1HD  LYS A0168" and " O   LYS A0168": 2091.921, dist=  1.3109
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  125.127, dist=  1.6532
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  125.127, dist=  1.6532
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  125.127, dist=  1.6532
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  125.127, dist=  1.6532
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168":  125.127, dist=  1.6532
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   25.351, dist=  1.9567
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1623.426, dist=  1.3387
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   25.351, dist=  1.9567
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1623.426, dist=  1.3387
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   25.351, dist=  1.9567
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1623.426, dist=  1.3387
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   25.351, dist=  1.9567
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1623.426, dist=  1.3387
+Large vdw btw " CD  LYS A0168" and " O   LYS A0168":   22.390, dist=  2.3219
+Large vdw btw "2HD  LYS A0168" and " C   LYS A0168":   25.351, dist=  1.9567
+Large vdw btw "2HD  LYS A0168" and " O   LYS A0168": 1623.426, dist=  1.3387
+Large vdw btw "2HE  LYS A0168" and " HA  LYS A0168":   60.517, dist=  1.2465
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  163.674, dist=  2.0571
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168": 50749.605, dist=  1.0167
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   39.613, dist=  1.4081
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.6217
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":   31.952, dist=  1.8669
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   73.892, dist=  2.1016
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":   77.165, dist=  1.2350
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   28.397, dist=  2.2642
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   14.007, dist=  2.4057
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":  195.943, dist=  1.3978
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   14.007, dist=  2.4057
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   14.007, dist=  2.4057
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":  201.414, dist=  1.3946
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   14.007, dist=  2.4057
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   15.529, dist=  2.4538
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  192.481, dist=  1.9467
+Large vdw btw " CE  LYS A0168" and " O   LYS A0168":   14.007, dist=  2.4057
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   32.700, dist=  2.3386
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168": 1543.247, dist=  1.6949
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.9357
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":   14.879, dist=  1.5082
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":  907.639, dist=  1.0089
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.9607
+Large vdw btw "2HE  LYS A0168" and " O   LYS A0168":   36.967, dist=  1.6002
+Large vdw btw "2HE  LYS A0168" and " HA  LYS A0168":   41.249, dist=  1.2862
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   65.257, dist=  2.1935
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 36687.977, dist=  1.2629
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  136.490, dist=  1.2608
+Large vdw btw "1HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.5533
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  717.583, dist=  1.8233
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168": 6149.354, dist=  1.2119
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  548.396, dist=  1.8456
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168": 1365.991, dist=  1.6588
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   95.605, dist=  1.3109
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.4517
+Large vdw btw "2HZ  LYS A0168" and " C   LYS A0168":   22.118, dist=  1.4613
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":  999.000, dist=  0.8910
+Large vdw btw "1HE  LYS A0168" and " O   LYS A0168":   30.893, dist=  1.6233
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":  338.670, dist=  1.5406
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":  759.499, dist=  1.4523
+Large vdw btw "1HE  LYS A0168" and " CA  LYS A0168":   52.888, dist=  1.6498
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.6084
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":  759.499, dist=  1.4523
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   23.495, dist=  1.7611
+Large vdw btw "2HE  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.9211
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":  759.499, dist=  1.4523
+Large vdw btw "2HE  LYS A0168" and " CA  LYS A0168":   42.302, dist=  1.6798
+Large vdw btw "2HE  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.6457
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":   13.934, dist=  2.3888
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":  759.499, dist=  1.4523
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 1324.672, dist=  1.7335
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168": 23438.033, dist=  1.0843
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":  580.056, dist=  1.8372
+Large vdw btw " NZ  LYS A0168" and " O   LYS A0168":  733.531, dist=  1.7457
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":  999.000, dist=  0.8602
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.9489
+Large vdw btw "1HZ  LYS A0168" and " C   LYS A0168":  530.276, dist=  1.1275
+Large vdw btw "2HZ  LYS A0168" and " O   LYS A0168":   16.184, dist=  1.3991
+Large vdw btw " CE  LYS A0168" and " CA  LYS A0168":   15.770, dist=  2.4871
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":  759.499, dist=  1.4523
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  191.871, dist=  2.0208
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168": 4112.189, dist=  1.5785
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.7273
+Large vdw btw " NZ  LYS A0168" and " C   LYS A0168":   17.599, dist=  2.4305
+Large vdw btw "2HZ  LYS A0168" and " CA  LYS A0168":   15.886, dist=  1.5147
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   23.486, dist=  1.9292
+Large vdw btw "2HE  LYS A0168" and " HA  LYS A0168":   85.821, dist=  1.2112
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   23.486, dist=  1.9292
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   23.486, dist=  1.9292
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":   15.911, dist=  2.4565
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":   58.447, dist=  2.2341
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168": 2169.151, dist=  1.3214
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   35.585, dist=  1.4203
+Large vdw btw "1HZ  LYS A0168" and " HA  LYS A0168":  999.000, dist=  0.9122
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   23.486, dist=  1.9292
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  709.299, dist=  1.8165
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  183.276, dist=  2.0383
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":  224.899, dist=  1.5933
+Large vdw btw " CE  LYS A0168" and " HA  LYS A0168":   23.486, dist=  1.9292
+Large vdw btw "1HE  LYS A0168" and " HA  LYS A0168":   66.403, dist=  1.2370
+Large vdw btw "1HD  LYS A0168" and " HA  LYS A0168":   77.438, dist=  1.4116
+Large vdw btw "1HD  LYS A0168" and " HA  LYS A0168":   77.438, dist=  1.4116
+Large vdw btw "1HD  LYS A0168" and " HA  LYS A0168":   77.438, dist=  1.4116
+Large vdw btw "1HD  LYS A0168" and " HA  LYS A0168":   77.438, dist=  1.4116
+Large vdw btw "1HD  LYS A0168" and " HA  LYS A0168":   77.438, dist=  1.4116
+Large vdw btw "2HD  LYS A0168" and " HA  LYS A0168":   94.288, dist=  1.3889
+Large vdw btw "2HD  LYS A0168" and " HA  LYS A0168":   94.288, dist=  1.3889
+Large vdw btw "2HD  LYS A0168" and " HA  LYS A0168":   94.288, dist=  1.3889
+Large vdw btw "2HD  LYS A0168" and " HA  LYS A0168":   94.288, dist=  1.3889
+Large vdw btw "2HD  LYS A0168" and " HA  LYS A0168":   94.288, dist=  1.3889
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168": 1007.429, dist=  1.7649
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":   27.210, dist=  1.4275
+Large vdw btw " NZ  LYS A0168" and " CA  LYS A0168":  163.676, dist=  2.0571
+Large vdw btw " NZ  LYS A0168" and " HA  LYS A0168":  111.307, dist=  1.6877
+Large vdw btw "1HZ  LYS A0168" and " N   LYS A0168":  999.000, dist=  0.9114
+Large vdw btw "1HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.8533
+Large vdw btw "1HZ  LYS A0168" and " CA  LYS A0168":   39.613, dist=  1.4081
+Large vdw btw " NZ  LYS A0168" and " N   LYS A0168":  134.234, dist=  2.0798
+Large vdw btw " NZ  LYS A0168" and " H   LYS A0168":  175.718, dist=  1.2274
+Large vdw btw "2HZ  LYS A0168" and " N   LYS A0168":   61.052, dist=  1.3378
+Large vdw btw "2HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.4494
+Large vdw btw "1HZ  LYS A0168" and " H   LYS A0168":  999.000, dist=  0.9770
+   Pruning rotamers...632 rotamers deleted.
+   Done. Time spent = 7
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 1
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...0 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 15 seconds.
+      Actual time is 2
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 2
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+   Done
+
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+   Done. Time spent = 4
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 1215
+   Done. Time spent = 0
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      38 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 17 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      2 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 40 of 40 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 40 of 40 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+energies.opp not found
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 16 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+

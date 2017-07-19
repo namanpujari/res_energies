@@ -1,0 +1,343 @@
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 13:37:08 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...11 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw " CD2 LEU A0169" and " N   LEU A0169":   20.818, dist=  2.4217
+Large vdw btw "1HD2 LEU A0169" and " N   LEU A0169":  176.269, dist=  1.6761
+Large vdw btw "1HD2 LEU A0169" and " H   LEU A0169":  999.000, dist=  0.7807
+Large vdw btw " CD2 LEU A0169" and " N   LEU A0169":   34.134, dist=  2.3308
+Large vdw btw "1HD2 LEU A0169" and " N   LEU A0169":  340.155, dist=  1.5880
+Large vdw btw " CD2 LEU A0169" and " C   LEU A0169":   12.488, dist=  2.5086
+Large vdw btw "1HD2 LEU A0169" and " C   LEU A0169":  100.402, dist=  1.7502
+Large vdw btw " CD2 LEU A0169" and " C   LEU A0169":   31.103, dist=  2.3374
+Large vdw btw " CD2 LEU A0169" and " O   LEU A0169":   29.892, dist=  2.2708
+Large vdw btw "1HD2 LEU A0169" and " C   LEU A0169":  455.535, dist=  1.5455
+Large vdw btw "1HD2 LEU A0169" and " O   LEU A0169": 6030.284, dist=  1.2006
+Large vdw btw " CD2 LEU A0169" and " N   LEU A0169":   17.580, dist=  2.4531
+Large vdw btw "1HD2 LEU A0169" and " N   LEU A0169":  122.890, dist=  1.7263
+Large vdw btw "1HD2 LEU A0169" and " H   LEU A0169":  999.000, dist=  0.8862
+Large vdw btw " CD2 LEU A0169" and " N   LEU A0169":   16.266, dist=  2.4676
+Large vdw btw "2HD2 LEU A0169" and " N   LEU A0169":  111.663, dist=  1.7398
+Large vdw btw "2HD2 LEU A0169" and " H   LEU A0169":  999.000, dist=  0.8477
+Large vdw btw " CD1 LEU A0169" and " N   LEU A0169":   16.096, dist=  2.4696
+Large vdw btw "1HD1 LEU A0169" and " N   LEU A0169":   65.802, dist=  1.8163
+Large vdw btw "1HD1 LEU A0169" and " H   LEU A0169":  999.000, dist=  0.9278
+Large vdw btw "2HD1 LEU A0169" and " N   LEU A0169":   43.984, dist=  1.8763
+Large vdw btw "2HD1 LEU A0169" and " H   LEU A0169":  999.000, dist=  0.9911
+Large vdw btw " CD2 LEU A0169" and " N   LEU A0169": 3412.384, dist=  1.6031
+Large vdw btw " CD2 LEU A0169" and " H   LEU A0169":  149.147, dist=  1.2641
+Large vdw btw "1HD2 LEU A0169" and " N   LEU A0169": 2062.932, dist=  1.3682
+Large vdw btw "2HD2 LEU A0169" and " N   LEU A0169": 2015.300, dist=  1.3709
+Large vdw btw "2HD2 LEU A0169" and " H   LEU A0169":  999.000, dist=  0.4511
+Large vdw btw " CD1 LEU A0169" and " N   LEU A0169":   28.649, dist=  2.3628
+Large vdw btw "1HD1 LEU A0169" and " N   LEU A0169":  315.912, dist=  1.5977
+Large vdw btw "1HD1 LEU A0169" and " H   LEU A0169":  999.000, dist=  0.6719
+Large vdw btw " CD2 LEU A0169" and " N   LEU A0169":   20.923, dist=  2.4207
+Large vdw btw "2HD2 LEU A0169" and " N   LEU A0169":  163.876, dist=  1.6861
+Large vdw btw " CD1 LEU A0169" and " N   LEU A0169": 1843.150, dist=  1.6869
+Large vdw btw " CD1 LEU A0169" and " H   LEU A0169":   44.268, dist=  1.3955
+Large vdw btw "1HD1 LEU A0169" and " N   LEU A0169":  385.246, dist=  1.5718
+Large vdw btw "2HD1 LEU A0169" and " N   LEU A0169": 2805.117, dist=  1.3338
+Large vdw btw "2HD1 LEU A0169" and " H   LEU A0169":  999.000, dist=  0.4680
+Large vdw btw "2HD1 LEU A0169" and " N   LEU A0169":   39.758, dist=  1.8916
+Large vdw btw " HG  LEU A0169" and " N   LEU A0169":   73.910, dist=  1.7992
+Large vdw btw " CD2 LEU A0169" and " N   LEU A0169":   28.876, dist=  2.3613
+Large vdw btw "1HD2 LEU A0169" and " C   LEU A0169":   66.068, dist=  1.8109
+Large vdw btw "2HD2 LEU A0169" and " N   LEU A0169":  291.054, dist=  1.6085
+Large vdw btw " CD1 LEU A0169" and " N   LEU A0169":   31.587, dist=  2.3449
+Large vdw btw "1HD1 LEU A0169" and " N   LEU A0169":  171.546, dist=  1.6798
+Large vdw btw "2HD2 LEU A0169" and " C   LEU A0169":   65.467, dist=  1.8123
+Large vdw btw " CD1 LEU A0169" and " N   LEU A0169":   13.997, dist=  2.4957
+Large vdw btw "1HD1 LEU A0169" and " C   LEU A0169":   37.744, dist=  1.8950
+Large vdw btw "2HD1 LEU A0169" and " N   LEU A0169":  104.067, dist=  1.7499
+Large vdw btw "2HD1 LEU A0169" and " C   LEU A0169":   27.515, dist=  1.9439
+Large vdw btw " CD2 LEU A0169" and " C   LEU A0169": 2563.826, dist=  1.6317
+Large vdw btw " CD2 LEU A0169" and " O   LEU A0169":   86.997, dist=  2.0876
+Large vdw btw "1HD2 LEU A0169" and " C   LEU A0169": 2900.751, dist=  1.3258
+Large vdw btw "1HD2 LEU A0169" and " O   LEU A0169": 10212.307, dist=  1.1492
+Large vdw btw "2HD2 LEU A0169" and " C   LEU A0169": 1200.368, dist=  1.4265
+Large vdw btw " CD1 LEU A0169" and " C   LEU A0169":   17.527, dist=  2.4443
+Large vdw btw "1HD1 LEU A0169" and " C   LEU A0169":  191.288, dist=  1.6601
+Large vdw btw " CD2 LEU A0169" and " C   LEU A0169":   19.031, dist=  2.4288
+Large vdw btw " CD2 LEU A0169" and " O   LEU A0169":   18.745, dist=  2.3535
+Large vdw btw "2HD2 LEU A0169" and " C   LEU A0169":  211.456, dist=  1.6465
+Large vdw btw "2HD2 LEU A0169" and " O   LEU A0169": 2582.910, dist=  1.2882
+Large vdw btw " CD1 LEU A0169" and " C   LEU A0169": 1469.386, dist=  1.7087
+Large vdw btw " CD1 LEU A0169" and " O   LEU A0169":   92.859, dist=  2.0767
+Large vdw btw "1HD1 LEU A0169" and " C   LEU A0169":  514.144, dist=  1.5302
+Large vdw btw "1HD1 LEU A0169" and " O   LEU A0169": 3856.166, dist=  1.2460
+Large vdw btw "2HD1 LEU A0169" and " C   LEU A0169": 1883.573, dist=  1.3742
+Large vdw btw "2HD1 LEU A0169" and " C   LEU A0169":   49.215, dist=  1.8548
+Large vdw btw "2HD1 LEU A0169" and " O   LEU A0169":  597.451, dist=  1.4541
+Large vdw btw " HG  LEU A0169" and " C   LEU A0169":   51.779, dist=  1.8471
+Large vdw btw " CD2 LEU A0169" and " C   LEU A0169":   29.968, dist=  2.3442
+Large vdw btw " CD2 LEU A0169" and " O   LEU A0169":  176.620, dist=  1.9720
+Large vdw btw "2HD2 LEU A0169" and " C   LEU A0169":  421.655, dist=  1.5554
+Large vdw btw "2HD2 LEU A0169" and " O   LEU A0169": 35805.812, dist=  1.0353
+Large vdw btw " CD1 LEU A0169" and " C   LEU A0169":   29.742, dist=  2.3456
+Large vdw btw " CD1 LEU A0169" and " O   LEU A0169":   42.212, dist=  2.2106
+Large vdw btw "1HD1 LEU A0169" and " C   LEU A0169":  237.672, dist=  1.6307
+Large vdw btw "1HD1 LEU A0169" and " O   LEU A0169": 9905.585, dist=  1.1521
+Large vdw btw " CD1 LEU A0169" and " C   LEU A0169":   14.539, dist=  2.4796
+Large vdw btw " CD1 LEU A0169" and " O   LEU A0169":   82.095, dist=  2.0973
+Large vdw btw "2HD1 LEU A0169" and " C   LEU A0169":  148.685, dist=  1.6948
+Large vdw btw "2HD1 LEU A0169" and " O   LEU A0169": 19683.914, dist=  1.0881
+Large vdw btw " CD2 LEU A0169" and " HA  LEU A0169":   24.744, dist=  1.9211
+Large vdw btw "2HD2 LEU A0169" and " HA  LEU A0169":   10.108, dist=  1.6656
+Large vdw btw " CD1 LEU A0169" and " HA  LEU A0169":   14.372, dist=  2.0059
+Large vdw btw "2HD1 LEU A0169" and " HA  LEU A0169":   10.264, dist=  1.6636
+   Pruning rotamers...27 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 0
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...0 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 0 seconds.
+      Actual time is 0
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 0
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Done
+
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+   Done. Time spent = 2
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 214
+   Done. Time spent = 0
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      9 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 2 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      1 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 7 of 7 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 7 of 7 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+energies.opp not found
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 4 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+

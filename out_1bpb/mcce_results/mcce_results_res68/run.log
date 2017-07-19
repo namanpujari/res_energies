@@ -1,0 +1,650 @@
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 13:37:08 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...9 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+Large vdw btw "1HB  MET A0158" and "1HE  MET A0158":   22.186, dist=  1.5633
+Large vdw btw "1HE  MET A0158" and "1HB  MET A0158":   22.186, dist=  1.5633
+Large vdw btw "1HB  MET A0158" and "2HE  MET A0158":   19.086, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and "1HB  MET A0158":   19.086, dist=  1.5825
+Large vdw btw "1HB  MET A0158" and "1HE  MET A0158":   22.187, dist=  1.5633
+Large vdw btw "1HE  MET A0158" and "1HB  MET A0158":   22.187, dist=  1.5633
+Large vdw btw "1HB  MET A0158" and "2HE  MET A0158":   19.087, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and "1HB  MET A0158":   19.087, dist=  1.5825
+Large vdw btw "1HB  MET A0158" and "1HE  MET A0158":   22.186, dist=  1.5633
+Large vdw btw "1HE  MET A0158" and "1HB  MET A0158":   22.186, dist=  1.5633
+Large vdw btw "1HB  MET A0158" and "2HE  MET A0158":   19.085, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and "1HB  MET A0158":   19.085, dist=  1.5825
+Large vdw btw "1HB  MET A0158" and "1HE  MET A0158":   22.186, dist=  1.5633
+Large vdw btw "1HE  MET A0158" and "1HB  MET A0158":   22.186, dist=  1.5633
+Large vdw btw "1HB  MET A0158" and "2HE  MET A0158":   19.086, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and "1HB  MET A0158":   19.086, dist=  1.5825
+Large vdw btw "1HB  MET A0158" and "1HE  MET A0158":   22.187, dist=  1.5633
+Large vdw btw "1HE  MET A0158" and "1HB  MET A0158":   22.187, dist=  1.5633
+Large vdw btw "1HB  MET A0158" and "2HE  MET A0158":   19.087, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and "1HB  MET A0158":   19.087, dist=  1.5825
+Large vdw btw "1HB  MET A0158" and "1HE  MET A0158":   22.187, dist=  1.5633
+Large vdw btw "1HE  MET A0158" and "1HB  MET A0158":   22.187, dist=  1.5633
+Large vdw btw "1HB  MET A0158" and "2HE  MET A0158":   19.087, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and "1HB  MET A0158":   19.087, dist=  1.5825
+Large vdw btw "1HB  MET A0158" and " CE  MET A0158":   22.741, dist=  1.9928
+Large vdw btw " CE  MET A0158" and "1HB  MET A0158":   22.741, dist=  1.9928
+Large vdw btw "2HB  MET A0158" and "1HE  MET A0158":   19.413, dist=  1.5803
+Large vdw btw "1HE  MET A0158" and "2HB  MET A0158":   19.413, dist=  1.5803
+Large vdw btw "2HB  MET A0158" and "2HE  MET A0158":   18.167, dist=  1.5888
+Large vdw btw "2HE  MET A0158" and "2HB  MET A0158":   18.167, dist=  1.5888
+Large vdw btw "2HB  MET A0158" and " CE  MET A0158":   24.590, dist=  1.9804
+Large vdw btw " CE  MET A0158" and "2HB  MET A0158":   24.590, dist=  1.9804
+Large vdw btw "1HB  MET A0158" and " CE  MET A0158":   22.741, dist=  1.9928
+Large vdw btw " CE  MET A0158" and "1HB  MET A0158":   22.741, dist=  1.9928
+Large vdw btw "2HB  MET A0158" and "1HE  MET A0158":   19.413, dist=  1.5803
+Large vdw btw "1HE  MET A0158" and "2HB  MET A0158":   19.413, dist=  1.5803
+Large vdw btw "2HB  MET A0158" and "2HE  MET A0158":   18.168, dist=  1.5888
+Large vdw btw "2HE  MET A0158" and "2HB  MET A0158":   18.168, dist=  1.5888
+Large vdw btw "2HB  MET A0158" and " CE  MET A0158":   24.590, dist=  1.9804
+Large vdw btw " CE  MET A0158" and "2HB  MET A0158":   24.590, dist=  1.9804
+Large vdw btw "1HB  MET A0158" and " CE  MET A0158":   22.740, dist=  1.9928
+Large vdw btw " CE  MET A0158" and "1HB  MET A0158":   22.740, dist=  1.9928
+Large vdw btw "2HB  MET A0158" and "1HE  MET A0158":   19.412, dist=  1.5803
+Large vdw btw "1HE  MET A0158" and "2HB  MET A0158":   19.412, dist=  1.5803
+Large vdw btw "2HB  MET A0158" and "2HE  MET A0158":   18.165, dist=  1.5888
+Large vdw btw "2HE  MET A0158" and "2HB  MET A0158":   18.165, dist=  1.5888
+Large vdw btw "2HB  MET A0158" and " CE  MET A0158":   24.588, dist=  1.9804
+Large vdw btw " CE  MET A0158" and "2HB  MET A0158":   24.588, dist=  1.9804
+Large vdw btw "1HB  MET A0158" and " CE  MET A0158":   22.741, dist=  1.9928
+Large vdw btw " CE  MET A0158" and "1HB  MET A0158":   22.741, dist=  1.9928
+Large vdw btw "2HB  MET A0158" and "1HE  MET A0158":   19.415, dist=  1.5803
+Large vdw btw "1HE  MET A0158" and "2HB  MET A0158":   19.415, dist=  1.5803
+Large vdw btw "2HB  MET A0158" and "2HE  MET A0158":   18.169, dist=  1.5888
+Large vdw btw "2HE  MET A0158" and "2HB  MET A0158":   18.169, dist=  1.5888
+Large vdw btw "2HB  MET A0158" and " CE  MET A0158":   24.590, dist=  1.9804
+Large vdw btw " CE  MET A0158" and "2HB  MET A0158":   24.590, dist=  1.9804
+Large vdw btw "1HB  MET A0158" and " CE  MET A0158":   22.741, dist=  1.9928
+Large vdw btw " CE  MET A0158" and "1HB  MET A0158":   22.741, dist=  1.9928
+Large vdw btw "2HB  MET A0158" and "1HE  MET A0158":   19.413, dist=  1.5803
+Large vdw btw "1HE  MET A0158" and "2HB  MET A0158":   19.413, dist=  1.5803
+Large vdw btw "2HB  MET A0158" and "2HE  MET A0158":   18.167, dist=  1.5888
+Large vdw btw "2HE  MET A0158" and "2HB  MET A0158":   18.167, dist=  1.5888
+Large vdw btw "2HB  MET A0158" and " CE  MET A0158":   24.590, dist=  1.9804
+Large vdw btw " CE  MET A0158" and "2HB  MET A0158":   24.590, dist=  1.9804
+Large vdw btw "1HB  MET A0158" and " CE  MET A0158":   22.742, dist=  1.9928
+Large vdw btw " CE  MET A0158" and "1HB  MET A0158":   22.742, dist=  1.9928
+Large vdw btw "2HB  MET A0158" and "1HE  MET A0158":   19.415, dist=  1.5803
+Large vdw btw "1HE  MET A0158" and "2HB  MET A0158":   19.415, dist=  1.5803
+Large vdw btw "2HB  MET A0158" and "2HE  MET A0158":   18.169, dist=  1.5888
+Large vdw btw "2HE  MET A0158" and "2HB  MET A0158":   18.169, dist=  1.5888
+Large vdw btw "2HB  MET A0158" and " CE  MET A0158":   24.592, dist=  1.9804
+Large vdw btw " CE  MET A0158" and "2HB  MET A0158":   24.592, dist=  1.9804
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  113.575, dist=  2.2439
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   10.932, dist=  2.6847
+Large vdw btw " CE  MET A0158" and " N   MET A0158": 1135.710, dist=  1.7556
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":  999.000, dist=  0.7406
+Large vdw btw "1HE  MET A0158" and " H   MET A0158":   45.150, dist=  1.0200
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":   11.604, dist=  2.0399
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   55.679, dist=  2.3620
+Large vdw btw " CE  MET A0158" and " C   MET A0158":   28.010, dist=  2.3567
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":   21.648, dist=  1.9257
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":   11.604, dist=  2.0399
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":   38.677, dist=  1.8356
+Large vdw btw " CE  MET A0158" and " C   MET A0158":   34.094, dist=  2.3205
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":  611.763, dist=  1.4639
+Large vdw btw "1HE  MET A0158" and " O   MET A0158":  489.111, dist=  1.4313
+Large vdw btw " SD  MET A0158" and " C   MET A0158":  171.415, dist=  2.1587
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   19.524, dist=  2.4827
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   48.430, dist=  2.3882
+Large vdw btw " SD  MET A0158" and " O   MET A0158":  270.957, dist=  2.0205
+Large vdw btw " CE  MET A0158" and " C   MET A0158": 5758.728, dist=  1.5259
+Large vdw btw " CE  MET A0158" and " O   MET A0158": 9169.862, dist=  1.4249
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":   11.603, dist=  2.0399
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":  999.000, dist=  0.6070
+Large vdw btw "1HE  MET A0158" and " O   MET A0158": 1674.761, dist=  1.2928
+Large vdw btw "3HE  MET A0158" and " O   MET A0158":  194.000, dist=  1.5443
+Large vdw btw " CE  MET A0158" and " O   MET A0158":   37.257, dist=  2.2322
+Large vdw btw "1HE  MET A0158" and " O   MET A0158":   19.886, dist=  1.8558
+Large vdw btw "2HE  MET A0158" and " O   MET A0158":   23.558, dist=  1.8311
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   72.099, dist=  2.2459
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   20.347, dist=  2.0725
+Large vdw btw " CE  MET A0158" and " O   MET A0158":  906.494, dist=  1.7255
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":   11.604, dist=  2.0399
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":  277.206, dist=  1.5627
+Large vdw btw "1HE  MET A0158" and " O   MET A0158":  999.000, dist=  0.9133
+Large vdw btw "2HE  MET A0158" and " O   MET A0158":   11.707, dist=  1.9343
+Large vdw btw "1HE  MET A0158" and " HA  MET A0158":   13.677, dist=  1.5691
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   40.148, dist=  1.9636
+Large vdw btw " CE  MET A0158" and " HA  MET A0158":   70.127, dist=  1.7663
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":   11.604, dist=  2.0399
+Large vdw btw "1HE  MET A0158" and " HA  MET A0158": 2233.583, dist=  1.0315
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":   30.752, dist=  1.8726
+Large vdw btw "1HE  MET A0158" and " H   MET A0158":   44.400, dist=  1.0214
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   12.067, dist=  2.6656
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  106.145, dist=  2.2561
+Large vdw btw " SD  MET A0158" and " H   MET A0158":   41.748, dist=  1.5027
+Large vdw btw " CE  MET A0158" and " N   MET A0158":  211.009, dist=  2.0151
+Large vdw btw " CE  MET A0158" and " H   MET A0158":  335.862, dist=  1.1825
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":  815.345, dist=  1.4329
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":   11.605, dist=  2.0399
+Large vdw btw " CE  MET A0158" and " N   MET A0158":   20.176, dist=  2.4275
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":   97.550, dist=  1.7060
+Large vdw btw " CE  MET A0158" and " N   MET A0158":   29.358, dist=  2.3583
+Large vdw btw " CE  MET A0158" and " H   MET A0158":   23.400, dist=  1.4688
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":  113.423, dist=  1.6851
+Large vdw btw "1HE  MET A0158" and " H   MET A0158":  999.000, dist=  0.7233
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":   14.808, dist=  1.9842
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  113.575, dist=  2.2439
+Large vdw btw " CE  MET A0158" and " N   MET A0158": 53877.297, dist=  1.2748
+Large vdw btw " CE  MET A0158" and " H   MET A0158":  999.000, dist=  0.3448
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":   76.073, dist=  2.1979
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":  999.000, dist=  0.4872
+Large vdw btw "1HE  MET A0158" and " H   MET A0158":  999.000, dist=  0.8793
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158": 1578.105, dist=  1.3670
+Large vdw btw "3HE  MET A0158" and " N   MET A0158":   34.404, dist=  1.8559
+Large vdw btw "3HE  MET A0158" and " H   MET A0158":   40.624, dist=  1.0289
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  113.575, dist=  2.2439
+Large vdw btw " CE  MET A0158" and " N   MET A0158": 343934.781, dist=  1.0925
+Large vdw btw " CE  MET A0158" and " H   MET A0158":   18.399, dist=  1.4972
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  114.307, dist=  2.1271
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":   24.616, dist=  1.9061
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":  999.000, dist=  0.2734
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158": 2195.692, dist=  1.3300
+Large vdw btw "3HE  MET A0158" and " N   MET A0158":   88.066, dist=  1.7202
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  113.575, dist=  2.2439
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  113.575, dist=  2.2439
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  113.575, dist=  2.2439
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   10.932, dist=  2.6847
+Large vdw btw " CE  MET A0158" and " N   MET A0158": 3214.266, dist=  1.6110
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  509.717, dist=  1.8830
+Large vdw btw " CE  MET A0158" and " C   MET A0158":  186.249, dist=  2.0246
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":  208.246, dist=  1.6159
+Large vdw btw "1HE  MET A0158" and " C   MET A0158": 12618.004, dist=  1.1387
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":  999.000, dist=  0.6048
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158":  268.484, dist=  1.5825
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   10.932, dist=  2.6847
+Large vdw btw " CE  MET A0158" and " C   MET A0158":   10.297, dist=  2.5454
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":  488.890, dist=  1.4913
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   10.932, dist=  2.6847
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   10.932, dist=  2.6847
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   10.932, dist=  2.6847
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":   23.928, dist=  1.9078
+Large vdw btw " CE  MET A0158" and " N   MET A0158":   25.426, dist=  2.3847
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":   50.182, dist=  1.8004
+Large vdw btw " CE  MET A0158" and " N   MET A0158": 3900.223, dist=  1.5854
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":   76.073, dist=  2.1979
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":  999.000, dist=  0.8187
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158": 1578.177, dist=  1.3670
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":   15.851, dist=  1.9715
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":   46.178, dist=  1.8125
+Large vdw btw " CE  MET A0158" and " N   MET A0158":   33.921, dist=  2.3319
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  114.310, dist=  2.1271
+Large vdw btw " CE  MET A0158" and " C   MET A0158": 3192.948, dist=  1.6023
+Large vdw btw "1HE  MET A0158" and " C   MET A0158": 3163.035, dist=  1.2775
+Large vdw btw "2HE  MET A0158" and " N   MET A0158": 1729.255, dist=  1.3464
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158": 2195.798, dist=  1.3300
+Large vdw btw "2HE  MET A0158" and " C   MET A0158": 1453.121, dist=  1.3627
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":   28.998, dist=  1.8787
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   55.679, dist=  2.3620
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  509.730, dist=  1.8830
+Large vdw btw " CE  MET A0158" and " C   MET A0158":  999.000, dist=  0.7086
+Large vdw btw " CE  MET A0158" and " O   MET A0158": 1124.549, dist=  1.6951
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":  208.261, dist=  1.6159
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":  999.000, dist=  0.6154
+Large vdw btw "1HE  MET A0158" and " O   MET A0158":  999.000, dist=  0.9227
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":   59.026, dist=  1.7770
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158":  268.489, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and " C   MET A0158": 7754.458, dist=  1.1858
+Large vdw btw "3HE  MET A0158" and " C   MET A0158":  750.077, dist=  1.4394
+Large vdw btw "3HE  MET A0158" and " O   MET A0158":   19.909, dist=  1.8556
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   55.679, dist=  2.3620
+Large vdw btw " CE  MET A0158" and " C   MET A0158":  325.478, dist=  1.9344
+Large vdw btw " CE  MET A0158" and " O   MET A0158":  340.397, dist=  1.8697
+Large vdw btw "2HE  MET A0158" and " C   MET A0158": 2939.293, dist=  1.2853
+Large vdw btw "2HE  MET A0158" and " O   MET A0158": 23153.002, dist=  1.0394
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   55.679, dist=  2.3620
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   55.679, dist=  2.3620
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   55.679, dist=  2.3620
+Large vdw btw " CE  MET A0158" and " O   MET A0158":   18.310, dist=  2.3577
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":  155.689, dist=  1.6387
+Large vdw btw "2HE  MET A0158" and " O   MET A0158": 1125.256, dist=  1.3361
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":   32.370, dist=  1.8621
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":   10.991, dist=  2.0293
+Large vdw btw " SD  MET A0158" and " C   MET A0158":  171.415, dist=  2.1587
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   19.524, dist=  2.4827
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":   76.069, dist=  2.1979
+Large vdw btw " CE  MET A0158" and " C   MET A0158": 5315.353, dist=  1.5360
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":   28.943, dist=  1.8817
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158": 1577.976, dist=  1.3670
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":  999.000, dist=  0.8824
+Large vdw btw " SD  MET A0158" and " C   MET A0158":  171.415, dist=  2.1587
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   19.524, dist=  2.4827
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  114.303, dist=  2.1271
+Large vdw btw " CE  MET A0158" and " C   MET A0158":  999.000, dist=  0.7678
+Large vdw btw " CE  MET A0158" and " O   MET A0158":  999.000, dist=  0.8529
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":  443.414, dist=  1.5034
+Large vdw btw "1HE  MET A0158" and " O   MET A0158":  999.000, dist=  0.5004
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158": 2195.496, dist=  1.3301
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":  999.000, dist=  0.3088
+Large vdw btw "2HE  MET A0158" and " O   MET A0158":  379.764, dist=  1.4614
+Large vdw btw "3HE  MET A0158" and " C   MET A0158":  338.168, dist=  1.5374
+Large vdw btw "3HE  MET A0158" and " O   MET A0158":  696.699, dist=  1.3901
+Large vdw btw " SD  MET A0158" and " C   MET A0158":  171.415, dist=  2.1587
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   19.524, dist=  2.4827
+Large vdw btw " CE  MET A0158" and " C   MET A0158":   14.681, dist=  2.4778
+Large vdw btw " CE  MET A0158" and " O   MET A0158":  449.002, dist=  1.8278
+Large vdw btw "2HE  MET A0158" and " O   MET A0158": 8616.515, dist=  1.1285
+Large vdw btw " SD  MET A0158" and " C   MET A0158":  171.415, dist=  2.1587
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   19.524, dist=  2.4827
+Large vdw btw " SD  MET A0158" and " C   MET A0158":  171.415, dist=  2.1587
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   19.524, dist=  2.4827
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   48.430, dist=  2.3882
+Large vdw btw " SD  MET A0158" and " O   MET A0158":  270.957, dist=  2.0205
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  509.677, dist=  1.8830
+Large vdw btw " CE  MET A0158" and " HA  MET A0158":   51.288, dist=  1.8117
+Large vdw btw " CE  MET A0158" and " C   MET A0158": 77724.930, dist=  1.2290
+Large vdw btw " CE  MET A0158" and " O   MET A0158":  999.000, dist=  0.6918
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":  208.234, dist=  1.6159
+Large vdw btw "1HE  MET A0158" and " HA  MET A0158":  999.000, dist=  0.9598
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":   31.267, dist=  1.8673
+Large vdw btw "1HE  MET A0158" and " O   MET A0158":   55.384, dist=  1.7101
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158":  268.464, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":  999.000, dist=  0.2383
+Large vdw btw "2HE  MET A0158" and " O   MET A0158": 24821.797, dist=  1.0334
+Large vdw btw "3HE  MET A0158" and " C   MET A0158":   16.427, dist=  1.9659
+Large vdw btw "3HE  MET A0158" and " O   MET A0158":  999.000, dist=  0.8198
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   48.430, dist=  2.3882
+Large vdw btw " SD  MET A0158" and " O   MET A0158":  270.957, dist=  2.0205
+Large vdw btw " CE  MET A0158" and " O   MET A0158":   26.135, dist=  2.2945
+Large vdw btw "2HE  MET A0158" and " HA  MET A0158":  163.805, dist=  1.2809
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   48.430, dist=  2.3882
+Large vdw btw " SD  MET A0158" and " O   MET A0158":  270.957, dist=  2.0205
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   48.430, dist=  2.3882
+Large vdw btw " SD  MET A0158" and " O   MET A0158":  270.957, dist=  2.0205
+Large vdw btw " SD  MET A0158" and " C   MET A0158":   48.430, dist=  2.3882
+Large vdw btw " SD  MET A0158" and " O   MET A0158":  270.957, dist=  2.0205
+Large vdw btw " CE  MET A0158" and " C   MET A0158":   93.032, dist=  2.1418
+Large vdw btw " CE  MET A0158" and " O   MET A0158":  180.506, dist=  1.9686
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":   53.003, dist=  1.7893
+Large vdw btw "1HE  MET A0158" and " O   MET A0158": 16461.162, dist=  1.0694
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":   78.289, dist=  1.7335
+Large vdw btw " CE  MET A0158" and " O   MET A0158":   10.419, dist=  2.4590
+Large vdw btw "2HE  MET A0158" and " O   MET A0158":  578.432, dist=  1.4116
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   72.099, dist=  2.2459
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":   76.074, dist=  2.1979
+Large vdw btw " CE  MET A0158" and " C   MET A0158": 74592.797, dist=  1.2332
+Large vdw btw " CE  MET A0158" and " O   MET A0158":  999.000, dist=  0.9032
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158": 1578.176, dist=  1.3670
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":  999.000, dist=  0.4772
+Large vdw btw "1HE  MET A0158" and " O   MET A0158": 29813.582, dist=  1.0178
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":  139.262, dist=  1.6537
+Large vdw btw "2HE  MET A0158" and " O   MET A0158":   18.129, dist=  1.8694
+Large vdw btw "3HE  MET A0158" and " C   MET A0158":   38.779, dist=  1.8352
+Large vdw btw "3HE  MET A0158" and " O   MET A0158":  999.000, dist=  0.8793
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   72.099, dist=  2.2459
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  114.315, dist=  2.1271
+Large vdw btw " CE  MET A0158" and " HA  MET A0158":  364.863, dist=  1.5430
+Large vdw btw " CE  MET A0158" and " C   MET A0158":  212.979, dist=  2.0026
+Large vdw btw " CE  MET A0158" and " O   MET A0158": 7284.807, dist=  1.4524
+Large vdw btw "1HE  MET A0158" and " HA  MET A0158":   41.338, dist=  1.4344
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158": 2195.902, dist=  1.3300
+Large vdw btw "2HE  MET A0158" and " HA  MET A0158":  207.303, dist=  1.2563
+Large vdw btw "2HE  MET A0158" and " C   MET A0158": 19919.189, dist=  1.0963
+Large vdw btw "2HE  MET A0158" and " O   MET A0158": 2746.030, dist=  1.2409
+Large vdw btw "3HE  MET A0158" and " O   MET A0158":  332.403, dist=  1.4775
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   72.099, dist=  2.2459
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   72.099, dist=  2.2459
+Large vdw btw " SD  MET A0158" and " O   MET A0158":   72.099, dist=  2.2459
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   20.347, dist=  2.0725
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  509.741, dist=  1.8830
+Large vdw btw " CE  MET A0158" and " HA  MET A0158":  999.000, dist=  0.8776
+Large vdw btw " CE  MET A0158" and " C   MET A0158":   15.057, dist=  2.4730
+Large vdw btw " CE  MET A0158" and " O   MET A0158":   14.589, dist=  2.3984
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":   17.511, dist=  1.9582
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":  208.262, dist=  1.6159
+Large vdw btw "1HE  MET A0158" and " HA  MET A0158":  999.000, dist=  0.7903
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158":  268.498, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and " HA  MET A0158":  446.635, dist=  1.1790
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":  407.159, dist=  1.5140
+Large vdw btw "2HE  MET A0158" and " O   MET A0158":  728.296, dist=  1.3850
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   20.347, dist=  2.0725
+Large vdw btw " CE  MET A0158" and " HA  MET A0158":   26.666, dist=  1.9097
+Large vdw btw "2HE  MET A0158" and " HA  MET A0158":  103.891, dist=  1.3299
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   20.347, dist=  2.0725
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   20.347, dist=  2.0725
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   20.347, dist=  2.0725
+Large vdw btw "2HE  MET A0158" and " O   MET A0158":   22.390, dist=  1.8385
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   40.148, dist=  1.9636
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":   76.073, dist=  2.1979
+Large vdw btw " CE  MET A0158" and " HA  MET A0158": 1264.179, dist=  1.3923
+Large vdw btw " CE  MET A0158" and " C   MET A0158":   15.007, dist=  2.4736
+Large vdw btw " CE  MET A0158" and " O   MET A0158":   86.067, dist=  2.0894
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158": 1578.108, dist=  1.3670
+Large vdw btw "1HE  MET A0158" and " HA  MET A0158":  999.000, dist=  0.7968
+Large vdw btw "1HE  MET A0158" and " C   MET A0158":  124.588, dist=  1.6689
+Large vdw btw "1HE  MET A0158" and " O   MET A0158":   54.532, dist=  1.7122
+Large vdw btw "2HE  MET A0158" and " O   MET A0158":   12.990, dist=  1.9188
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   40.148, dist=  1.9636
+Large vdw btw " CE  MET A0158" and " N   MET A0158":   16.372, dist=  2.4664
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  114.313, dist=  2.1271
+Large vdw btw " CE  MET A0158" and " HA  MET A0158": 11380.209, dist=  1.1601
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":   23.849, dist=  1.9109
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158": 2195.781, dist=  1.3300
+Large vdw btw "2HE  MET A0158" and " HA  MET A0158":  999.000, dist=  0.6496
+Large vdw btw "2HE  MET A0158" and " C   MET A0158":   11.848, dist=  2.0174
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   40.148, dist=  1.9636
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   40.148, dist=  1.9636
+Large vdw btw " SD  MET A0158" and " HA  MET A0158":   40.148, dist=  1.9636
+Large vdw btw " CE  MET A0158" and " N   MET A0158": 2850.468, dist=  1.6271
+Large vdw btw " CE  MET A0158" and " H   MET A0158":   16.752, dist=  1.5084
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  509.727, dist=  1.8830
+Large vdw btw " CE  MET A0158" and " HA  MET A0158":  863.332, dist=  1.4370
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":  999.000, dist=  0.7815
+Large vdw btw "1HE  MET A0158" and " H   MET A0158":  999.000, dist=  0.5735
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":  208.257, dist=  1.6159
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":   23.439, dist=  1.9136
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158":  268.486, dist=  1.5825
+Large vdw btw "2HE  MET A0158" and " HA  MET A0158":  999.000, dist=  0.8198
+Large vdw btw " CE  MET A0158" and " N   MET A0158":   48.732, dist=  2.2665
+Large vdw btw " CE  MET A0158" and " H   MET A0158":   45.494, dist=  1.3924
+Large vdw btw "2HE  MET A0158" and " N   MET A0158": 3918.026, dist=  1.2581
+Large vdw btw "2HE  MET A0158" and " H   MET A0158":  999.000, dist=  0.4414
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":  111.109, dist=  1.6880
+Large vdw btw "2HE  MET A0158" and " H   MET A0158":  999.000, dist=  0.7945
+Large vdw btw "2HE  MET A0158" and " HA  MET A0158":   16.176, dist=  1.5480
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   12.067, dist=  2.6656
+Large vdw btw " CE  MET A0158" and " N   MET A0158":   21.202, dist=  2.4183
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":   76.079, dist=  2.1979
+Large vdw btw " CE  MET A0158" and " HA  MET A0158": 1520.570, dist=  1.3712
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":  163.465, dist=  1.6356
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158": 1578.430, dist=  1.3670
+Large vdw btw "1HE  MET A0158" and " HA  MET A0158":  999.000, dist=  0.7352
+Large vdw btw "2HE  MET A0158" and " HA  MET A0158":   12.470, dist=  1.5808
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   12.067, dist=  2.6656
+Large vdw btw " CE  MET A0158" and " N   MET A0158": 81740.078, dist=  1.2313
+Large vdw btw " CE  MET A0158" and " H   MET A0158":  999.000, dist=  0.6847
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  114.323, dist=  2.1270
+Large vdw btw "1HE  MET A0158" and " N   MET A0158": 12268.084, dist=  1.1443
+Large vdw btw "1HE  MET A0158" and " H   MET A0158":  999.000, dist=  0.4876
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":  999.000, dist=  0.9971
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158": 2196.191, dist=  1.3300
+Large vdw btw "2HE  MET A0158" and " HA  MET A0158":  206.846, dist=  1.2565
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   12.067, dist=  2.6656
+Large vdw btw " CE  MET A0158" and " N   MET A0158":   11.843, dist=  2.5271
+Large vdw btw " CE  MET A0158" and " H   MET A0158":   13.194, dist=  1.5371
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":   51.534, dist=  1.7965
+Large vdw btw "2HE  MET A0158" and " H   MET A0158":  999.000, dist=  0.9959
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   12.067, dist=  2.6656
+Large vdw btw " SD  MET A0158" and " N   MET A0158":   12.067, dist=  2.6656
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  106.145, dist=  2.2561
+Large vdw btw " SD  MET A0158" and " H   MET A0158":   41.748, dist=  1.5027
+Large vdw btw " CE  MET A0158" and " N   MET A0158":  999.000, dist=  0.6023
+Large vdw btw " CE  MET A0158" and " H   MET A0158":  999.000, dist=  0.5983
+Large vdw btw " CE  MET A0158" and " CA  MET A0158":  509.773, dist=  1.8830
+Large vdw btw "1HE  MET A0158" and " N   MET A0158":  999.000, dist=  0.9779
+Large vdw btw "1HE  MET A0158" and " CA  MET A0158":  208.281, dist=  1.6159
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":  999.000, dist=  0.7861
+Large vdw btw "2HE  MET A0158" and " H   MET A0158":   47.075, dist=  1.0166
+Large vdw btw "2HE  MET A0158" and " CA  MET A0158":  268.505, dist=  1.5825
+Large vdw btw "3HE  MET A0158" and " N   MET A0158":  769.213, dist=  1.4398
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  106.145, dist=  2.2561
+Large vdw btw " SD  MET A0158" and " H   MET A0158":   41.748, dist=  1.5027
+Large vdw btw " CE  MET A0158" and " N   MET A0158":   92.277, dist=  2.1543
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":  176.782, dist=  1.6251
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  106.145, dist=  2.2561
+Large vdw btw " SD  MET A0158" and " H   MET A0158":   41.748, dist=  1.5027
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  106.145, dist=  2.2561
+Large vdw btw " SD  MET A0158" and " H   MET A0158":   41.748, dist=  1.5027
+Large vdw btw " SD  MET A0158" and " N   MET A0158":  106.145, dist=  2.2561
+Large vdw btw " SD  MET A0158" and " H   MET A0158":   41.748, dist=  1.5027
+Large vdw btw "2HE  MET A0158" and " N   MET A0158":   18.322, dist=  1.9513
+   Pruning rotamers...118 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 0
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...0 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 0 seconds.
+      Actual time is 1
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 1
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Done
+
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+   Done. Time spent = 5
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 314
+   Done. Time spent = 0
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      8 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 7 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      2 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 20 of 20 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 20 of 20 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+energies.opp not found
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 10 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+

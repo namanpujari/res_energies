@@ -2,7 +2,7 @@
 Python programs that process pdb files to generate individual residue energies of an entire protein structure. Can be used in theory to calculate the energy of an unfolded protein.
 
 ### PLEASE NOTE
-Run the program once similiar to how it was run in the example (except with your pdb file and desired output locations), then wait 5 minutes (or less, depending on how big/small your pdb file is and how many residues it has). Run the entire thing again. In the first attempt nothing will be outputted. In the second, everything will magically appear. I know this technique sounds very unprofessional and stupid. I am coming up with a solution.  
+Added an elementary way of efficiently running the code. When first running, set the `mcce_result_present` status to `False`. A bunch of statements indicating that the residues have been sent to the cluster will appear. Check qstat multiple times and wait till all jobs are complete. Then change `mcce_result_present` to `True` and run the the thing again with the same command in terminal. Check the output folder. It should have everything.
 
 #### Usage
 ---
@@ -46,6 +46,12 @@ Please note that `SUBMIT_JOB` is not implemented as of yet.
 ---
 An example, and how the `out_gfp46` folder was created in this repository. 
 
+1. Set `mcce_results_present` (in main.py) to `False`, then...
+```
+python main.py -pdb /home/naman/res_energies/gfp46.pdb -e /home/mcce/mcce3.5/ -out /home/naman/res_energies/out_gfp46
+```
+2. Wait till `qstat` returns nothing
+3. Set `mcce_results_present` (in main.py) to `True`, then the same command as in step 1...
 ```
 python main.py -pdb /home/naman/res_energies/gfp46.pdb -e /home/mcce/mcce3.5/ -out /home/naman/res_energies/out_gfp46
 ```

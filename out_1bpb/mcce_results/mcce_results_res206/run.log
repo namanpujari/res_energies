@@ -1,0 +1,2612 @@
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 13:37:23 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N   ARG A 299".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " CA  ARG A 299".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C   ARG A 299".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O   ARG A 299".
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Missing heavy atom  NH1 of conf ARG01 in "ARG A 299".
+   Missing heavy atom  NH2 of conf ARG01 in "ARG A 299".
+   Missing heavy atom  NH1 of conf ARG01 in "ARG A 299".
+   Missing heavy atom  NH2 of conf ARG01 in "ARG A 299".
+   Missing heavy atoms detected.
+   Ignore warning messages if they are in the terminal residues
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...22 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 1 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.804, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   30.523, dist=  1.9321
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 2495.849, dist=  1.3468
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.804, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   30.523, dist=  1.9321
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 2495.849, dist=  1.3468
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.804, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   30.523, dist=  1.9321
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 2495.849, dist=  1.3468
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.804, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   30.523, dist=  1.9321
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 2495.849, dist=  1.3468
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.808, dist=  2.0033
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   30.524, dist=  1.9321
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 2495.908, dist=  1.3468
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.808, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   30.524, dist=  1.9321
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 2495.908, dist=  1.3468
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.804, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   30.523, dist=  1.9321
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 2495.858, dist=  1.3468
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.804, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   30.523, dist=  1.9321
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 2495.858, dist=  1.3468
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   23.900, dist=  1.9701
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.802, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   30.523, dist=  1.9321
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 2495.809, dist=  1.3468
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.802, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   30.523, dist=  1.9321
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 2495.809, dist=  1.3468
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   23.899, dist=  1.9701
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   23.899, dist=  1.9701
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.803, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   30.522, dist=  1.9321
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 2495.874, dist=  1.3468
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.803, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   30.522, dist=  1.9321
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 2495.874, dist=  1.3468
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   33.430, dist=  1.9181
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   33.430, dist=  1.9181
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.805, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   26.792, dist=  1.9480
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 57468.699, dist=  1.0376
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   26.792, dist=  1.9480
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.805, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 57468.699, dist=  1.0376
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   27.123, dist=  1.9504
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   27.123, dist=  1.9504
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.807, dist=  2.0033
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 2012.322, dist=  1.3710
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.807, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 2012.322, dist=  1.3710
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   29.648, dist=  1.9366
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   29.648, dist=  1.9366
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.816, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.816, dist=  2.0033
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.818, dist=  2.0033
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   26.019, dist=  1.9569
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.818, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   26.019, dist=  1.9569
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.814, dist=  2.0033
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   25.083, dist=  1.9583
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 48625.902, dist=  1.0521
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   25.083, dist=  1.9583
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.814, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 48625.902, dist=  1.0521
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   33.431, dist=  1.9181
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   33.431, dist=  1.9181
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.808, dist=  2.0033
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   26.793, dist=  1.9480
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 57470.289, dist=  1.0376
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   26.793, dist=  1.9480
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.808, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 57470.289, dist=  1.0376
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   27.124, dist=  1.9504
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   27.124, dist=  1.9504
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.809, dist=  2.0033
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 2012.344, dist=  1.3710
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.809, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 2012.344, dist=  1.3710
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   29.647, dist=  1.9366
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   29.647, dist=  1.9366
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.815, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.815, dist=  2.0033
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.818, dist=  2.0033
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   26.019, dist=  1.9569
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.818, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   26.019, dist=  1.9569
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.828, dist=  2.0033
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   25.085, dist=  1.9583
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 48631.652, dist=  1.0521
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   25.085, dist=  1.9583
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.828, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 48631.652, dist=  1.0521
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   33.430, dist=  1.9181
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   33.430, dist=  1.9181
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.807, dist=  2.0033
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   26.792, dist=  1.9480
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 57468.383, dist=  1.0376
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   26.792, dist=  1.9480
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.807, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 57468.383, dist=  1.0376
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   27.123, dist=  1.9504
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   27.123, dist=  1.9504
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.808, dist=  2.0033
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 2012.334, dist=  1.3710
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.808, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 2012.334, dist=  1.3710
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   29.646, dist=  1.9366
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   29.646, dist=  1.9366
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.804, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.804, dist=  2.0034
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.797, dist=  2.0034
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   26.016, dist=  1.9569
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.797, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   26.016, dist=  1.9569
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.802, dist=  2.0034
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   25.081, dist=  1.9584
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 48621.113, dist=  1.0522
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   25.081, dist=  1.9584
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.802, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 48621.113, dist=  1.0522
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   33.429, dist=  1.9181
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   33.429, dist=  1.9181
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.808, dist=  2.0033
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   26.793, dist=  1.9480
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 57469.863, dist=  1.0376
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   26.793, dist=  1.9480
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.808, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 57469.863, dist=  1.0376
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   27.123, dist=  1.9504
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   27.123, dist=  1.9504
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.799, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 2012.244, dist=  1.3710
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.799, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 2012.244, dist=  1.3710
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   29.647, dist=  1.9366
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   29.647, dist=  1.9366
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.806, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.806, dist=  2.0033
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.801, dist=  2.0034
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   26.016, dist=  1.9569
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.801, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   26.016, dist=  1.9569
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.800, dist=  2.0034
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   25.082, dist=  1.9583
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 48620.488, dist=  1.0522
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   25.082, dist=  1.9583
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.800, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 48620.488, dist=  1.0522
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   33.430, dist=  1.9181
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   33.430, dist=  1.9181
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.802, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   26.792, dist=  1.9480
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 57467.148, dist=  1.0376
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   26.792, dist=  1.9480
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.802, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 57467.148, dist=  1.0376
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   27.123, dist=  1.9504
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   27.123, dist=  1.9504
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.806, dist=  2.0033
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 2012.280, dist=  1.3710
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.806, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 2012.280, dist=  1.3710
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   29.647, dist=  1.9366
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   29.647, dist=  1.9366
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.807, dist=  2.0033
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.807, dist=  2.0033
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.802, dist=  2.0034
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   26.017, dist=  1.9569
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.802, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   26.017, dist=  1.9569
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.797, dist=  2.0034
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   25.080, dist=  1.9584
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 48619.535, dist=  1.0522
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   25.080, dist=  1.9584
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.797, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 48619.535, dist=  1.0522
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   33.430, dist=  1.9181
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   33.430, dist=  1.9181
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.804, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   26.792, dist=  1.9480
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 57467.082, dist=  1.0376
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   26.792, dist=  1.9480
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.804, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 57467.082, dist=  1.0376
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   27.122, dist=  1.9504
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   27.122, dist=  1.9504
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.797, dist=  2.0034
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 2012.275, dist=  1.3710
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.797, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 2012.275, dist=  1.3710
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":   29.645, dist=  1.9366
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":   29.645, dist=  1.9366
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.801, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.801, dist=  2.0034
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.794, dist=  2.0034
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":   26.015, dist=  1.9569
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.794, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":   26.015, dist=  1.9569
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":  226.795, dist=  2.0034
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   25.080, dist=  1.9584
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 48617.719, dist=  1.0522
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   25.080, dist=  1.9584
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":  226.795, dist=  2.0034
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 48617.719, dist=  1.0522
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.380, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 6510.142, dist=  1.2437
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.380, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 6510.142, dist=  1.2437
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.379, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 6510.072, dist=  1.2437
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 6510.072, dist=  1.2437
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.379, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 6510.042, dist=  1.2437
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 6510.042, dist=  1.2437
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.378, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 6509.939, dist=  1.2437
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.378, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 6509.939, dist=  1.2437
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.378, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 6509.918, dist=  1.2437
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.378, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 6509.918, dist=  1.2437
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.379, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " CZ  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299": 6510.126, dist=  1.2437
+Large vdw btw " CZ  ARG A0299" and "2HB  ARG A0299":   13.486, dist=  2.0575
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299": 6510.126, dist=  1.2437
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.380, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":  884.306, dist=  1.4676
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.380, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":  884.306, dist=  1.4676
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.379, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 5575.690, dist=  1.2598
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 5575.690, dist=  1.2598
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.380, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.380, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.382, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.382, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.380, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":  729.471, dist=  1.4912
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.380, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":  729.471, dist=  1.4912
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.381, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":  884.342, dist=  1.4676
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.381, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":  884.342, dist=  1.4676
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.380, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   12.784, dist=  2.0662
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 5575.748, dist=  1.2598
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   12.784, dist=  2.0662
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.380, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 5575.748, dist=  1.2598
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.383, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.383, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.382, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.382, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.385, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":  729.560, dist=  1.4912
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.385, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":  729.560, dist=  1.4912
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.380, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":  884.290, dist=  1.4676
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.380, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":  884.290, dist=  1.4676
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.379, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 5575.688, dist=  1.2598
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 5575.688, dist=  1.2598
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.378, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":  729.441, dist=  1.4912
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.378, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":  729.441, dist=  1.4912
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.378, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":  884.259, dist=  1.4676
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.378, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":  884.259, dist=  1.4676
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.378, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 5575.532, dist=  1.2598
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.378, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 5575.532, dist=  1.2598
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.376, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":  729.410, dist=  1.4912
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.376, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":  729.410, dist=  1.4912
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.379, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":  884.281, dist=  1.4676
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":  884.281, dist=  1.4676
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.378, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 5575.481, dist=  1.2598
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.378, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 5575.481, dist=  1.2598
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.377, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":  729.435, dist=  1.4912
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":  729.435, dist=  1.4912
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.379, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299":  884.273, dist=  1.4676
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299":  884.273, dist=  1.4676
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.379, dist=  2.1989
+Large vdw btw "1HB  ARG A0299" and " CZ  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw "1HB  ARG A0299" and " NH2 ARG A0299": 5575.710, dist=  1.2598
+Large vdw btw " CZ  ARG A0299" and "1HB  ARG A0299":   12.785, dist=  2.0662
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.379, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "1HB  ARG A0299": 5575.710, dist=  1.2598
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.378, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.378, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " CB  ARG A0299" and " NH2 ARG A0299":   71.377, dist=  2.1989
+Large vdw btw "2HB  ARG A0299" and " NH2 ARG A0299":  729.414, dist=  1.4912
+Large vdw btw " NH2 ARG A0299" and " CB  ARG A0299":   71.377, dist=  2.1989
+Large vdw btw " NH2 ARG A0299" and "2HB  ARG A0299":  729.414, dist=  1.4912
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   45.889, dist=  1.8134
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  337.868, dist=  1.5409
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   19.651, dist=  2.4178
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   28.097, dist=  1.4239
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 14624.810, dist=  1.1277
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   12.626, dist=  1.9230
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   48.496, dist=  2.2551
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   27.478, dist=  1.8868
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  779.046, dist=  1.3774
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  331.275, dist=  1.5400
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   23.263, dist=  1.8329
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   16.262, dist=  2.4452
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 4257.938, dist=  1.5101
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   11.676, dist=  2.4168
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   63.743, dist=  2.1195
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 1111.384, dist=  1.6872
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 18391.432, dist=  1.1036
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   66.479, dist=  1.6851
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   64.413, dist=  2.1958
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   68.494, dist=  1.3763
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   18.948, dist=  2.4168
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   10.889, dist=  2.4322
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   22.476, dist=  2.3933
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  170.780, dist=  2.0500
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  189.386, dist=  1.6160
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  413.167, dist=  1.8987
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   98.460, dist=  2.1431
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   99.702, dist=  1.7029
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":  360.601, dist=  1.9199
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  107.064, dist=  1.2781
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 3457.450, dist=  1.5855
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299": 1622.011, dist=  1.6948
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299": 3288.426, dist=  1.2734
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  564.454, dist=  1.8508
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.6957
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.5108
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 2810.958, dist=  1.6129
+Large vdw btw "1HH2 ARG A0299" and " CA  ARG A0299":   22.699, dist=  1.4724
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":  183.737, dist=  1.2304
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   58.102, dist=  2.2233
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  179.989, dist=  1.2250
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 1137.423, dist=  1.7381
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  855.969, dist=  1.0837
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 113582.328, dist=  1.1928
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":   18.648, dist=  1.4710
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   19.184, dist=  2.4369
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   37.842, dist=  1.8418
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   14.013, dist=  1.1217
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 71398.172, dist=  1.2398
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.3395
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.807, dist=  2.4507
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 30218.766, dist=  1.3243
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  323.220, dist=  1.1745
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  139.372, dist=  2.0729
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":   15.761, dist=  1.9724
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   32.767, dist=  2.3250
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   83.964, dist=  2.1594
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  726.950, dist=  1.8213
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 32513.742, dist=  1.0551
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 4940.884, dist=  1.5477
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   40.135, dist=  1.3838
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 29614.514, dist=  1.3265
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   54.291, dist=  2.2364
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   17.726, dist=  2.3420
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 4040.533, dist=  1.5737
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 78069.922, dist=  1.2360
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 61584.293, dist=  1.2481
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 7412.920, dist=  1.4423
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.8149
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.5269
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 3012.496, dist=  1.2859
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4454
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  531.393, dist=  1.4845
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 4349.017, dist=  1.2473
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4418
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  392.532, dist=  1.8969
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.5571
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":   54.729, dist=  1.3497
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 1014.321, dist=  1.7721
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   13.933, dist=  2.4741
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  107.281, dist=  1.2779
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   13.110, dist=  2.5080
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   27.497, dist=  2.3482
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   23.889, dist=  2.2943
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  170.781, dist=  2.0500
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  104.568, dist=  1.6963
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  170.470, dist=  2.0304
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  107.969, dist=  1.2852
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.7135
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.7925
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   98.457, dist=  2.1431
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":   42.599, dist=  1.3772
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   11.841, dist=  2.0192
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1015.964, dist=  1.7637
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.9400
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   21.250, dist=  2.3956
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":   18.789, dist=  1.4805
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 398060.031, dist=  1.0745
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  556.222, dist=  1.1164
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  999.000, dist=  0.5697
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  272.286, dist=  1.1912
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299": 1622.018, dist=  1.6948
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":  182.446, dist=  2.0290
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 16838.338, dist=  1.3980
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.6957
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.6560
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  231.837, dist=  1.9803
+Large vdw btw "1HH2 ARG A0299" and " CA  ARG A0299":   22.699, dist=  1.4724
+Large vdw btw "1HH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.6066
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   96.674, dist=  1.7072
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   17.586, dist=  1.1014
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   98.888, dist=  2.1314
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   21.966, dist=  2.3895
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   34.065, dist=  2.2269
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   12.949, dist=  2.4944
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   19.184, dist=  2.4369
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  888.702, dist=  1.7738
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.9130
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.7235
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 17774.012, dist=  1.1095
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   17.658, dist=  1.9570
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  151.786, dist=  1.6455
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":   30.385, dist=  1.0536
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1583.590, dist=  1.7004
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   43.776, dist=  2.1898
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  999.000, dist=  0.8992
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  139.371, dist=  2.0729
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   53.264, dist=  2.2386
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.8162
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.5493
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  726.957, dist=  1.8213
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   27.260, dist=  2.3498
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 1707.190, dist=  1.6286
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   54.289, dist=  2.2364
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 99221.664, dist=  1.1922
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.4455
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":  112.233, dist=  2.1002
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299": 100503.047, dist=  1.1614
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   21.001, dist=  2.4057
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 78068.422, dist=  1.2360
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   33.644, dist=  1.8592
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.5459
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 1516.767, dist=  1.6445
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299": 1315.814, dist=  1.0458
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  181.810, dist=  1.6214
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   14.564, dist=  1.9017
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  161.709, dist=  1.6370
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   16.069, dist=  2.3637
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  362.341, dist=  1.8986
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 267462.594, dist=  1.0656
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  868.514, dist=  1.7217
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  381.145, dist=  1.9112
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 1014.350, dist=  1.7721
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 83043.234, dist=  1.2175
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.8895
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":   44.698, dist=  1.3809
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":  180.841, dist=  1.1522
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   13.111, dist=  2.5080
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   58.958, dist=  2.2114
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   12.823, dist=  2.4962
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  296.163, dist=  1.9411
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 5153.130, dist=  1.5423
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299": 1142.345, dist=  1.0519
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  170.781, dist=  2.0500
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 1428.736, dist=  1.7148
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   98.462, dist=  2.1431
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  259.785, dist=  1.9620
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 6102.209, dist=  1.4658
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   19.481, dist=  2.3299
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  356.591, dist=  1.4690
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   54.942, dist=  2.2331
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  215.858, dist=  1.9918
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   14.142, dist=  2.4782
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   46.954, dist=  2.2608
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  231.047, dist=  1.9808
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 43890.277, dist=  1.2443
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 21771.686, dist=  1.3609
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299": 1621.955, dist=  1.6948
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 2081.283, dist=  1.6437
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 2535.174, dist=  1.5694
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   21.887, dist=  2.3981
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   20.953, dist=  2.3172
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.8561
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.6957
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 5370.013, dist=  1.2256
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  319.097, dist=  1.9294
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":   19.416, dist=  1.4663
+Large vdw btw "1HH2 ARG A0299" and " CA  ARG A0299":   22.697, dist=  1.4724
+Large vdw btw "1HH2 ARG A0299" and " HA  ARG A0299":   15.683, dist=  1.1116
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   48.310, dist=  2.2466
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 24849.672, dist=  1.3045
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 1433.547, dist=  1.6952
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 492459.938, dist=  1.0128
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   55.960, dist=  2.1481
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   19.184, dist=  2.4369
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 224827.516, dist=  1.1206
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  765.586, dist=  1.7396
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.536, dist=  1.9170
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  518.401, dist=  1.4245
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  543.894, dist=  1.4188
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 67504.641, dist=  1.2386
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.5991
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  104.669, dist=  2.1120
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  139.364, dist=  2.0729
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 22244.395, dist=  1.3502
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.8388
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   37.098, dist=  2.2939
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  309.955, dist=  1.8730
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.9578
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  726.909, dist=  1.8213
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   49.728, dist=  2.2415
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   57.201, dist=  2.1444
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  627.035, dist=  1.1054
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  106.197, dist=  1.6222
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 6123.913, dist=  1.5121
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  568.496, dist=  1.7826
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   54.289, dist=  2.2364
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 50612.934, dist=  1.2610
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   29.243, dist=  2.2535
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   12.634, dist=  2.4924
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 78065.492, dist=  1.2360
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 52463.488, dist=  1.0139
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 3286.639, dist=  1.5921
+Large vdw btw "1HH2 ARG A0299" and " HA  ARG A0299":   51.888, dist=  1.0085
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 2153.305, dist=  1.3190
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.9960
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  517.851, dist=  1.4842
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   35.189, dist=  1.7735
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  167.583, dist=  1.5629
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 3128.924, dist=  1.2787
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299": 33210.062, dist=  1.0087
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  533.203, dist=  1.8393
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 1014.277, dist=  1.7721
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.4698
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 3323.501, dist=  1.5414
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":  249.777, dist=  1.1997
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   13.110, dist=  2.5080
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   11.727, dist=  2.4191
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   49.922, dist=  2.1610
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 1911.535, dist=  1.6742
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  170.776, dist=  2.0500
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":   25.935, dist=  1.4330
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   13.344, dist=  2.3964
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  191.545, dist=  2.0003
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 10695.536, dist=  1.3929
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   20.719, dist=  2.3191
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   98.456, dist=  2.1431
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.6478
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.8313
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":   94.022, dist=  1.2999
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":   38.413, dist=  1.3064
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   15.075, dist=  1.9794
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  904.660, dist=  1.7712
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 18667.191, dist=  1.3359
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   15.420, dist=  2.4457
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 1313.843, dist=  1.6570
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   55.728, dist=  2.1488
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 748083.812, dist=  1.0138
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 10397.045, dist=  1.4024
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   25.816, dist=  2.3598
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299": 1621.998, dist=  1.6948
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  999.000, dist=  0.5341
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 133106.078, dist=  1.1294
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":  245.506, dist=  1.9711
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  165.605, dist=  1.9704
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.9914
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.6957
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  313.001, dist=  1.5506
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 7659.778, dist=  1.4843
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   95.427, dist=  2.0593
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.5934
+Large vdw btw "1HH2 ARG A0299" and " CA  ARG A0299":   22.698, dist=  1.4724
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   80.743, dist=  1.7291
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.545, dist=  1.6390
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  135.113, dist=  2.0690
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   30.663, dist=  2.3179
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   19.183, dist=  2.4369
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   36.171, dist=  1.8484
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   14.226, dist=  2.4702
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 21626.723, dist=  1.0888
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.613, dist=  1.6389
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.582, dist=  1.9167
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  126.551, dist=  1.6667
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  129.265, dist=  1.5964
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 2294.487, dist=  1.6402
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  139.364, dist=  2.0729
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  999.000, dist=  0.8003
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 1672.116, dist=  1.6244
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   81.175, dist=  2.1556
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   43.906, dist=  2.2727
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  726.913, dist=  1.8213
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.8547
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.5960
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.9607
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   54.290, dist=  2.2364
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299": 1037.154, dist=  1.4013
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   87.242, dist=  2.1528
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 78068.195, dist=  1.2360
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.4592
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   15.352, dist=  2.4559
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  230.458, dist=  1.5867
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   10.846, dist=  2.0314
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  202.204, dist=  1.6039
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 1014.286, dist=  1.7721
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 7531.633, dist=  1.1916
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  392.756, dist=  1.8969
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   13.110, dist=  2.5080
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   13.042, dist=  2.4864
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  294.568, dist=  1.9311
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   74.337, dist=  2.0937
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   20.481, dist=  2.3211
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  170.782, dist=  2.0500
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 2896.099, dist=  1.6089
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 1788.943, dist=  1.6223
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":   47.281, dist=  1.2848
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   98.458, dist=  2.1431
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   32.922, dist=  1.8624
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 1933.163, dist=  1.6636
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   65.847, dist=  2.1920
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  261.039, dist=  1.9503
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   13.845, dist=  2.3862
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   12.298, dist=  2.4974
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   15.772, dist=  1.9744
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   53.580, dist=  2.2282
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299": 1621.993, dist=  1.6948
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  581.086, dist=  1.4701
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 28561.771, dist=  1.3224
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   29.935, dist=  2.3328
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 4269.700, dist=  1.5665
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.6957
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  487.688, dist=  1.4950
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.9396
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  680.012, dist=  1.7566
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  136.247, dist=  1.2532
+Large vdw btw "1HH2 ARG A0299" and " CA  ARG A0299":   22.698, dist=  1.4724
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":   12.716, dist=  1.5270
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   19.183, dist=  2.4369
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  505.046, dist=  1.4907
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  349.377, dist=  1.5367
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  139.371, dist=  2.0729
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  992.443, dist=  1.4064
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  116.299, dist=  2.0831
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  726.941, dist=  1.8213
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   15.281, dist=  1.9793
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.8955
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  116.306, dist=  2.0271
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299": 2221.956, dist=  1.0013
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   38.246, dist=  1.8402
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   10.302, dist=  2.5307
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   54.291, dist=  2.2364
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  522.978, dist=  1.4830
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 175097.125, dist=  1.1506
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  264.810, dist=  1.1868
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 78063.188, dist=  1.2361
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 1676.952, dist=  1.3499
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.7883
+Large vdw btw "1HH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4298
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   23.363, dist=  1.5026
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   30.845, dist=  1.4690
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   22.749, dist=  2.3911
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 1014.284, dist=  1.7721
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.7913
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   43.015, dist=  2.2764
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   13.110, dist=  2.5080
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  170.769, dist=  2.0500
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 1699.833, dist=  1.6814
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":   39.124, dist=  1.3959
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   98.457, dist=  2.1431
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 24949.238, dist=  1.0786
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   10.992, dist=  2.0309
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.135, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  973.209, dist=  1.4121
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   12.389, dist=  2.4961
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299": 1621.894, dist=  1.6948
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.7302
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   22.801, dist=  2.3725
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  366.911, dist=  1.9171
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.6957
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 24974.105, dist=  1.0786
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 549487.875, dist=  1.0402
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   59.767, dist=  2.1371
+Large vdw btw "1HH2 ARG A0299" and " CA  ARG A0299":   22.698, dist=  1.4724
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.5907
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":   36.244, dist=  1.3125
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 1320.535, dist=  1.7260
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.9568
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   19.184, dist=  2.4368
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   78.599, dist=  1.3608
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   45.243, dist=  1.8155
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   10.898, dist=  2.5202
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  139.361, dist=  2.0729
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299": 16086.146, dist=  1.1159
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  726.910, dist=  1.8213
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.9852
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   41.639, dist=  2.2731
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   41.024, dist=  2.2848
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   12.557, dist=  1.5173
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 135332.125, dist=  1.1690
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.2662
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   54.288, dist=  2.2364
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   88.745, dist=  2.1499
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.4947
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  128.447, dist=  1.2593
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 78064.844, dist=  1.2360
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   47.863, dist=  2.2482
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  625.430, dist=  1.1057
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  455.044, dist=  1.8741
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.8786
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 160828.703, dist=  1.1587
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.9453
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 1014.206, dist=  1.7721
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   73.827, dist=  1.7450
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":   39.491, dist=  1.3856
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   70.301, dist=  2.1901
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   13.110, dist=  2.5080
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   45.889, dist=  1.8134
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   45.889, dist=  1.8134
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   45.889, dist=  1.8134
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   45.889, dist=  1.8134
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   45.889, dist=  1.8134
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  337.868, dist=  1.5409
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   19.651, dist=  2.4178
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   28.097, dist=  1.4239
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   16.767, dist=  2.4619
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   64.131, dist=  1.7651
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  337.868, dist=  1.5409
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   19.651, dist=  2.4178
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   28.097, dist=  1.4239
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   25.697, dist=  2.3606
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 1898.072, dist=  1.6751
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  337.868, dist=  1.5409
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   19.651, dist=  2.4178
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   28.097, dist=  1.4239
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  337.868, dist=  1.5409
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   19.651, dist=  2.4178
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   28.097, dist=  1.4239
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  337.868, dist=  1.5409
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   19.651, dist=  2.4178
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   28.097, dist=  1.4239
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   77.766, dist=  2.1630
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.8706
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299": 1797.321, dist=  1.0132
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   38.975, dist=  2.3067
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":   14.195, dist=  1.5029
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 14624.810, dist=  1.1277
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 14624.810, dist=  1.1277
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 14624.810, dist=  1.1277
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 14624.810, dist=  1.1277
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 14624.810, dist=  1.1277
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   12.626, dist=  1.9230
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   48.496, dist=  2.2551
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  473.052, dist=  1.8682
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 85011.008, dist=  1.2219
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4166
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   16.768, dist=  2.4619
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   12.626, dist=  1.9230
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   48.496, dist=  2.2551
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  159.765, dist=  2.0411
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 1002.778, dist=  1.7656
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   12.626, dist=  1.9230
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   48.496, dist=  2.2551
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   12.626, dist=  1.9230
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   48.496, dist=  2.2551
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   12.626, dist=  1.9230
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   48.496, dist=  2.2551
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   70.164, dist=  2.1034
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  226.054, dist=  1.9941
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   38.976, dist=  2.3067
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  310.865, dist=  1.9335
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 36611.734, dist=  1.2632
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   38.315, dist=  2.2065
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   11.608, dist=  2.5083
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 1670.450, dist=  1.6315
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   27.478, dist=  1.8868
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  779.046, dist=  1.3774
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   27.478, dist=  1.8868
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  779.046, dist=  1.3774
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   52.084, dist=  2.2425
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   27.478, dist=  1.8868
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  779.046, dist=  1.3774
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   27.478, dist=  1.8868
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  779.046, dist=  1.3774
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   27.478, dist=  1.8868
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  779.046, dist=  1.3774
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  331.275, dist=  1.5400
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   23.263, dist=  1.8329
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   16.262, dist=  2.4452
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 4257.938, dist=  1.5101
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 1086.759, dist=  1.6831
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 2629.059, dist=  1.6306
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   16.766, dist=  2.4620
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   43.649, dist=  2.1903
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  331.275, dist=  1.5400
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   23.263, dist=  1.8329
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   16.262, dist=  2.4452
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 4257.938, dist=  1.5101
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   23.773, dist=  2.3648
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 111088.773, dist=  1.1465
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 2250.808, dist=  1.6428
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 268997.625, dist=  1.0700
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  331.275, dist=  1.5400
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   23.263, dist=  1.8329
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   16.262, dist=  2.4452
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 4257.938, dist=  1.5101
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 1156.254, dist=  1.6746
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   48.043, dist=  2.1740
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  331.275, dist=  1.5400
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   23.263, dist=  1.8329
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   16.262, dist=  2.4452
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 4257.938, dist=  1.5101
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   12.070, dist=  2.4108
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  331.275, dist=  1.5400
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   23.263, dist=  1.8329
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   16.262, dist=  2.4452
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 4257.938, dist=  1.5101
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   99.817, dist=  2.1091
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  185.264, dist=  1.9454
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   38.974, dist=  2.3067
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.7863
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 273233.844, dist=  1.0686
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":   33.293, dist=  1.4141
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":   10.273, dist=  1.4495
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 18391.432, dist=  1.1036
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   66.479, dist=  1.6851
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 18391.432, dist=  1.1036
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   66.479, dist=  1.6851
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   14.764, dist=  2.3747
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 4308.668, dist=  1.5086
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 18391.432, dist=  1.1036
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   66.479, dist=  1.6851
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   11.826, dist=  2.4176
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 18391.432, dist=  1.1036
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   66.479, dist=  1.6851
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 18391.432, dist=  1.1036
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":   66.479, dist=  1.6851
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   64.413, dist=  2.1958
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  720.104, dist=  1.7944
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  788.491, dist=  1.7282
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   16.766, dist=  2.4620
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 86348.258, dist=  1.2135
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.3622
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.8062
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   64.413, dist=  2.1958
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  274.435, dist=  1.9424
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   23.789, dist=  2.2898
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 1798.057, dist=  1.6736
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   16.681, dist=  2.3571
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   64.413, dist=  2.1958
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   64.413, dist=  2.1958
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   64.413, dist=  2.1958
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   38.973, dist=  2.3067
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   25.714, dist=  1.8995
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  286.760, dist=  1.9463
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   76.433, dist=  2.1660
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   16.767, dist=  2.4620
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 4213.879, dist=  1.5597
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   32.818, dist=  1.8629
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   38.974, dist=  2.3067
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 4743.121, dist=  1.2383
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   68.494, dist=  1.3763
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   68.494, dist=  1.3763
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   68.494, dist=  1.3763
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   68.494, dist=  1.3763
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   68.494, dist=  1.3763
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   16.766, dist=  2.4620
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  390.682, dist=  1.5226
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   23.912, dist=  1.9105
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  469.472, dist=  1.8789
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":   19.351, dist=  1.4667
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   38.973, dist=  2.3067
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   17.208, dist=  1.9609
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   11.725, dist=  2.5127
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   48.434, dist=  2.2553
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  210.533, dist=  2.0155
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 4073.163, dist=  1.2541
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   21.992, dist=  2.4017
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  515.350, dist=  1.4848
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   19.084, dist=  2.4232
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 41940.172, dist=  1.3016
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.3930
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   73.311, dist=  2.1733
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":   14.281, dist=  1.9879
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  118.687, dist=  2.1005
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   11.339, dist=  2.5353
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":  360.601, dist=  1.9199
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  107.064, dist=  1.2781
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 200979.359, dist=  1.1311
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  951.567, dist=  1.0743
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  141.421, dist=  2.0705
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   20.452, dist=  2.4105
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.6752
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":   64.322, dist=  1.3321
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  277.394, dist=  1.9708
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":  360.601, dist=  1.9199
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  107.064, dist=  1.2781
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  295.626, dist=  1.9414
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":   57.739, dist=  1.3525
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   10.213, dist=  2.5382
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":  360.601, dist=  1.9199
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  107.064, dist=  1.2781
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":  360.601, dist=  1.9199
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  107.064, dist=  1.2781
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":  360.601, dist=  1.9199
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  107.064, dist=  1.2781
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   12.290, dist=  2.4976
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   14.736, dist=  2.4771
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":   78.496, dist=  1.7331
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   26.738, dist=  1.8936
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   58.102, dist=  2.2233
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  179.989, dist=  1.2250
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   58.102, dist=  2.2233
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  179.989, dist=  1.2250
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   58.102, dist=  2.2233
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  179.989, dist=  1.2250
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   58.102, dist=  2.2233
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  179.989, dist=  1.2250
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   58.102, dist=  2.2233
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  179.989, dist=  1.2250
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  567.550, dist=  1.8405
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  270.864, dist=  1.1918
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 6227.903, dist=  1.5183
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   57.517, dist=  2.2370
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   37.842, dist=  1.8418
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   37.842, dist=  1.8418
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   37.842, dist=  1.8418
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   37.842, dist=  1.8418
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   37.842, dist=  1.8418
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   14.013, dist=  1.1217
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   14.013, dist=  1.1217
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   14.013, dist=  1.1217
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   14.013, dist=  1.1217
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   14.013, dist=  1.1217
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 71398.172, dist=  1.2398
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.3395
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.807, dist=  2.4507
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  999.000, dist=  0.6547
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  286.840, dist=  1.1861
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  745.830, dist=  1.8070
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":  104.742, dist=  2.1216
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 91181.328, dist=  1.2148
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.9135
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   75.858, dist=  1.7412
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 63845.328, dist=  1.2444
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  774.377, dist=  1.7380
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.8152
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":   48.733, dist=  1.2817
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 71398.172, dist=  1.2398
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.3395
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.807, dist=  2.4507
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 75774.453, dist=  1.2268
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":   32.586, dist=  1.4166
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   40.247, dist=  2.2882
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  197.907, dist=  2.0157
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 71398.172, dist=  1.2398
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.3395
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.807, dist=  2.4507
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  237.442, dist=  1.9764
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 71398.172, dist=  1.2398
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.3395
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.807, dist=  2.4507
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   38.496, dist=  2.2872
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 71398.172, dist=  1.2398
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.3395
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.807, dist=  2.4507
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  162.401, dist=  2.0384
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":   38.694, dist=  1.3971
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 4940.884, dist=  1.5477
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   40.135, dist=  1.3838
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   84.646, dist=  2.1484
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 4940.884, dist=  1.5477
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   40.135, dist=  1.3838
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 4940.884, dist=  1.5477
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   40.135, dist=  1.3838
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 4940.884, dist=  1.5477
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   40.135, dist=  1.3838
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  276.015, dist=  1.9523
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 4940.884, dist=  1.5477
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   40.135, dist=  1.3838
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 140685.703, dist=  1.1652
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   12.847, dist=  2.5032
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   10.671, dist=  2.5301
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 79105.031, dist=  1.2292
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  101.532, dist=  2.1378
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 3012.496, dist=  1.2859
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4454
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 3012.496, dist=  1.2859
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4454
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 3012.496, dist=  1.2859
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4454
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 3012.496, dist=  1.2859
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4454
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 3012.496, dist=  1.2859
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4454
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   43.792, dist=  2.2732
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  531.393, dist=  1.4845
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  531.393, dist=  1.4845
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  531.393, dist=  1.4845
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  531.393, dist=  1.4845
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  531.393, dist=  1.4845
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 4349.017, dist=  1.2473
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4418
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 4349.017, dist=  1.2473
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4418
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 4349.017, dist=  1.2473
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4418
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 4349.017, dist=  1.2473
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4418
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   91.808, dist=  2.1551
+Large vdw btw " CD  ARG A0299" and " H   ARG A0299":   16.096, dist=  1.5132
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299": 4349.017, dist=  1.2473
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.4418
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   12.085, dist=  2.5007
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   42.674, dist=  2.2903
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  126.058, dist=  2.0806
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  472.108, dist=  1.8098
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":   87.606, dist=  1.2224
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   12.489, dist=  2.4946
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw "2HG  ARG A0299" and " N   ARG A0299":   11.335, dist=  2.0892
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   71.258, dist=  2.1782
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  167.606, dist=  1.2397
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.9013
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.5094
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  210.525, dist=  2.0155
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":   12.106, dist=  1.5217
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   11.841, dist=  2.0192
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1015.964, dist=  1.7637
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.9400
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 2688.333, dist=  1.6188
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.8159
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   21.992, dist=  2.4017
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 4150.916, dist=  1.5702
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 41941.266, dist=  1.3016
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.9508
+Large vdw btw "1HH2 ARG A0299" and " HA  ARG A0299":   43.885, dist=  1.0224
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   11.841, dist=  2.0192
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1015.964, dist=  1.7637
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.9400
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 4798.657, dist=  1.5430
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.8703
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 20777.953, dist=  1.3738
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   11.339, dist=  2.5353
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   11.841, dist=  2.0192
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1015.964, dist=  1.7637
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.9400
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   37.225, dist=  2.2933
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":   11.304, dist=  1.5412
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   11.841, dist=  2.0192
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1015.964, dist=  1.7637
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.9400
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":   11.841, dist=  2.0192
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1015.964, dist=  1.7637
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.9400
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 398060.031, dist=  1.0745
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  556.222, dist=  1.1164
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 321071.156, dist=  1.0878
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  141.422, dist=  2.0705
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   19.997, dist=  2.3970
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   24.594, dist=  2.2839
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   79.547, dist=  2.1687
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  211.777, dist=  2.0047
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  277.403, dist=  1.9708
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 18199.895, dist=  1.3813
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.8506
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":   30.301, dist=  1.4249
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.6271
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 398060.031, dist=  1.0745
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  556.222, dist=  1.1164
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  794.554, dist=  1.7902
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   15.075, dist=  2.4664
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 398060.031, dist=  1.0745
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  556.222, dist=  1.1164
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  119.275, dist=  2.0899
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 398060.031, dist=  1.0745
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  556.222, dist=  1.1164
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  457.674, dist=  1.8732
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":   21.935, dist=  1.4623
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   12.018, dist=  2.5081
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 398060.031, dist=  1.0745
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":  556.222, dist=  1.1164
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 81320.305, dist=  1.2196
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  999.000, dist=  0.8301
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   14.736, dist=  2.4771
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   60.564, dist=  2.2160
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   74.604, dist=  2.1798
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":   43.815, dist=  1.3741
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   96.674, dist=  1.7072
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   17.586, dist=  1.1014
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   98.888, dist=  2.1314
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   96.674, dist=  1.7072
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   17.586, dist=  1.1014
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   98.888, dist=  2.1314
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   96.674, dist=  1.7072
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   17.586, dist=  1.1014
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   98.888, dist=  2.1314
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   96.674, dist=  1.7072
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   17.586, dist=  1.1014
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   98.888, dist=  2.1314
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   16.801, dist=  2.4391
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   96.674, dist=  1.7072
+Large vdw btw "1HD  ARG A0299" and " H   ARG A0299":   17.586, dist=  1.1014
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   98.888, dist=  2.1314
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  259.062, dist=  1.9625
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 32245.820, dist=  1.3245
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   57.516, dist=  2.2370
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   10.475, dist=  2.5276
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 17774.012, dist=  1.1095
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 17774.012, dist=  1.1095
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 17774.012, dist=  1.1095
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 17774.012, dist=  1.1095
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299": 17774.012, dist=  1.1095
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   17.658, dist=  1.9570
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  151.786, dist=  1.6455
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":   30.385, dist=  1.0536
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   17.658, dist=  1.9570
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  151.786, dist=  1.6455
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":   30.385, dist=  1.0536
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   17.658, dist=  1.9570
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  151.786, dist=  1.6455
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":   30.385, dist=  1.0536
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   17.658, dist=  1.9570
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  151.786, dist=  1.6455
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":   30.385, dist=  1.0536
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":  123.586, dist=  2.1043
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":   17.658, dist=  1.9570
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  151.786, dist=  1.6455
+Large vdw btw "2HD  ARG A0299" and " H   ARG A0299":   30.385, dist=  1.0536
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1583.590, dist=  1.7004
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   43.776, dist=  2.1898
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 14605.545, dist=  1.4068
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  745.786, dist=  1.8070
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 1093.490, dist=  1.7336
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 2108.866, dist=  1.5935
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   20.461, dist=  2.4104
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  512.745, dist=  1.8654
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.9135
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  446.589, dist=  1.5059
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.7013
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 1116.491, dist=  1.6865
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":  277.096, dist=  1.1895
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1583.590, dist=  1.7004
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   43.776, dist=  2.1898
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   37.183, dist=  2.2935
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  120.352, dist=  2.0774
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 37667.691, dist=  1.2545
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   19.024, dist=  2.3341
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  365.645, dist=  1.9080
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.7218
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":   15.746, dist=  1.4021
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1583.590, dist=  1.7004
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   43.776, dist=  2.1898
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   50.384, dist=  2.1594
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1583.590, dist=  1.7004
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   43.776, dist=  2.1898
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   12.799, dist=  2.4900
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299": 1583.590, dist=  1.7004
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   43.776, dist=  2.1898
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 1400.775, dist=  1.7085
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   10.108, dist=  2.5400
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   22.109, dist=  2.3963
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   27.260, dist=  2.3498
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 1707.190, dist=  1.6286
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  182.235, dist=  2.0084
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 27319.955, dist=  1.2884
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   12.879, dist=  2.4888
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299": 3582.569, dist=  1.5318
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   27.260, dist=  2.3498
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 1707.190, dist=  1.6286
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  237.033, dist=  1.9068
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  224.888, dist=  1.9223
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   27.260, dist=  2.3498
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 1707.190, dist=  1.6286
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  104.632, dist=  2.0372
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  128.025, dist=  2.0116
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   27.260, dist=  2.3498
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 1707.190, dist=  1.6286
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 1492.178, dist=  1.6397
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  731.888, dist=  1.7460
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   27.260, dist=  2.3498
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 1707.190, dist=  1.6286
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   19.812, dist=  2.4085
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   12.846, dist=  2.5032
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  858.747, dist=  1.7685
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.8442
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   25.609, dist=  2.3613
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299": 25013.529, dist=  1.3038
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 4347.356, dist=  1.5642
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  101.529, dist=  2.1378
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  113.598, dist=  2.0982
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  150.712, dist=  1.9854
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  181.810, dist=  1.6214
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  181.810, dist=  1.6214
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  181.810, dist=  1.6214
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  181.810, dist=  1.6214
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   17.887, dist=  2.3449
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " N   ARG A0299":  181.810, dist=  1.6214
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   37.758, dist=  2.2090
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  391.639, dist=  1.8973
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 313474.500, dist=  1.0565
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   14.564, dist=  1.9017
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   14.564, dist=  1.9017
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   14.564, dist=  1.9017
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   14.564, dist=  1.9017
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   14.564, dist=  1.9017
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  161.709, dist=  1.6370
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  161.709, dist=  1.6370
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  161.709, dist=  1.6370
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  161.709, dist=  1.6370
+Large vdw btw " CD  ARG A0299" and " N   ARG A0299":   15.172, dist=  2.4806
+Large vdw btw "2HD  ARG A0299" and " N   ARG A0299":  161.709, dist=  1.6370
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   16.069, dist=  2.3637
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  172.098, dist=  2.0178
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  931.534, dist=  1.7046
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  105.664, dist=  2.0427
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   42.676, dist=  2.2903
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 2802.517, dist=  1.6133
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   31.457, dist=  2.2465
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   16.069, dist=  2.3637
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   16.069, dist=  2.3637
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   16.069, dist=  2.3637
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   16.069, dist=  2.3637
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  382.874, dist=  1.8337
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   67.111, dist=  2.1176
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  172.925, dist=  2.0281
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 4744.607, dist=  1.4966
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw "1HG  ARG A0299" and " N   ARG A0299":   10.761, dist=  2.0976
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   48.838, dist=  2.2539
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   11.893, dist=  2.5101
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  644.533, dist=  1.8213
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 202095.781, dist=  1.1369
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  210.537, dist=  2.0155
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   29.907, dist=  2.3329
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   63.625, dist=  2.1266
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":   24.062, dist=  1.4416
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  194.534, dist=  1.9450
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  328.166, dist=  1.9347
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  356.591, dist=  1.4690
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   54.942, dist=  2.2331
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 89007.469, dist=  1.2104
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   21.991, dist=  2.4017
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   37.073, dist=  2.3029
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.3502
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.8779
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 41937.039, dist=  1.3016
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   37.961, dist=  1.8413
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   11.483, dist=  2.5103
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  349.029, dist=  1.1601
+Large vdw btw "1HH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.8889
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  356.591, dist=  1.4690
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   54.942, dist=  2.2331
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  731.919, dist=  1.8024
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   11.378, dist=  2.4215
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  119.059, dist=  2.1000
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   11.338, dist=  2.5353
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   98.809, dist=  2.1219
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 1423.924, dist=  1.6531
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  356.591, dist=  1.4690
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   54.942, dist=  2.2331
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  356.591, dist=  1.4690
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   54.942, dist=  2.2331
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  356.591, dist=  1.4690
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   54.942, dist=  2.2331
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   46.954, dist=  2.2608
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  231.047, dist=  1.9808
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 43890.277, dist=  1.2443
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   37.719, dist=  2.2909
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  141.418, dist=  2.0705
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 175979.203, dist=  1.1367
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.7115
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   21.807, dist=  2.3908
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  130.624, dist=  2.0083
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  277.399, dist=  1.9708
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.5754
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 5723.793, dist=  1.4736
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":   17.746, dist=  1.4872
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   46.954, dist=  2.2608
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  231.047, dist=  1.9808
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 43890.277, dist=  1.2443
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  290.784, dist=  1.9332
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.7791
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  117.536, dist=  2.0254
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   12.663, dist=  2.4920
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 3026.528, dist=  1.5534
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   46.954, dist=  2.2608
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  231.047, dist=  1.9808
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 43890.277, dist=  1.2443
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 1574.997, dist=  1.6324
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   17.706, dist=  2.3466
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   46.954, dist=  2.2608
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  231.047, dist=  1.9808
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 43890.277, dist=  1.2443
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   53.321, dist=  2.1498
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   46.954, dist=  2.2608
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  231.047, dist=  1.9808
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 43890.277, dist=  1.2443
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 3130.387, dist=  1.5986
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   14.736, dist=  2.4771
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   61.275, dist=  2.1262
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   12.818, dist=  2.4963
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 4573.696, dist=  1.5576
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   48.310, dist=  2.2466
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 24849.672, dist=  1.3045
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  349.111, dist=  1.8476
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   48.310, dist=  2.2466
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 24849.672, dist=  1.3045
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   25.127, dist=  2.2802
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   48.310, dist=  2.2466
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 24849.672, dist=  1.3045
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   55.137, dist=  2.1441
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   48.310, dist=  2.2466
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 24849.672, dist=  1.3045
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 4886.709, dist=  1.4864
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   19.623, dist=  2.3286
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   11.431, dist=  2.4236
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   48.310, dist=  2.2466
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 24849.672, dist=  1.3045
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  613.696, dist=  1.8182
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.6510
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  100.877, dist=  2.0503
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   50.881, dist=  2.2466
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   57.515, dist=  2.2370
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 5968.701, dist=  1.5153
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 38929.898, dist=  1.2567
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.536, dist=  1.9170
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  518.401, dist=  1.4245
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.536, dist=  1.9170
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  518.401, dist=  1.4245
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.536, dist=  1.9170
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  518.401, dist=  1.4245
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.536, dist=  1.9170
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  518.401, dist=  1.4245
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   15.181, dist=  2.3737
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.536, dist=  1.9170
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  518.401, dist=  1.4245
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  240.925, dist=  1.9116
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  543.894, dist=  1.4188
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  543.894, dist=  1.4188
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  543.894, dist=  1.4188
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  543.894, dist=  1.4188
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":   31.737, dist=  2.2603
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  543.894, dist=  1.4188
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 67504.641, dist=  1.2386
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.5991
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   17.390, dist=  2.4327
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  745.770, dist=  1.8070
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  999.000, dist=  0.6115
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 250160.219, dist=  1.0716
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":  136.696, dist=  2.0670
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  185.676, dist=  1.9523
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  117.361, dist=  2.1024
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.9135
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.8947
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 66371.234, dist=  1.2404
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   14.583, dist=  2.3808
+Large vdw btw "1HH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.8422
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 67504.641, dist=  1.2386
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.5991
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 188477.938, dist=  1.1302
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 26364.859, dist=  1.2923
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   59.016, dist=  2.2112
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  106.451, dist=  2.0415
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  325.537, dist=  1.9262
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 67504.641, dist=  1.2386
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.5991
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  347.283, dist=  1.9053
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 20110.994, dist=  1.3217
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   98.417, dist=  2.0543
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 67504.641, dist=  1.2386
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.5991
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   43.705, dist=  2.2537
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 117602.508, dist=  1.1411
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  156.863, dist=  1.9790
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 67504.641, dist=  1.2386
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.5991
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  147.382, dist=  2.0435
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.8834
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  282.880, dist=  1.8869
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   44.450, dist=  2.1872
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  106.197, dist=  1.6222
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 6123.913, dist=  1.5121
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  568.496, dist=  1.7826
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  106.677, dist=  2.0978
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  106.197, dist=  1.6222
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 6123.913, dist=  1.5121
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  568.496, dist=  1.7826
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  106.197, dist=  1.6222
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 6123.913, dist=  1.5121
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  568.496, dist=  1.7826
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   11.129, dist=  2.5076
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  106.197, dist=  1.6222
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 6123.913, dist=  1.5121
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  568.496, dist=  1.7826
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  451.057, dist=  1.8648
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  543.507, dist=  1.7818
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  433.812, dist=  1.8224
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  106.197, dist=  1.6222
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 6123.913, dist=  1.5121
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":  568.496, dist=  1.7826
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   12.846, dist=  2.5032
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 396749.969, dist=  1.0623
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 2405.040, dist=  1.5763
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   17.803, dist=  2.4284
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   14.480, dist=  2.4738
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  101.525, dist=  2.1378
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 104721.898, dist=  1.1942
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 28854.506, dist=  1.2884
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 2153.305, dist=  1.3190
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.9960
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 2153.305, dist=  1.3190
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.9960
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 2153.305, dist=  1.3190
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.9960
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 2153.305, dist=  1.3190
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.9960
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 2153.305, dist=  1.3190
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.9960
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   60.846, dist=  2.2058
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  517.851, dist=  1.4842
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   35.189, dist=  1.7735
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  167.583, dist=  1.5629
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  517.851, dist=  1.4842
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   35.189, dist=  1.7735
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  167.583, dist=  1.5629
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  517.851, dist=  1.4842
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   35.189, dist=  1.7735
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  167.583, dist=  1.5629
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  517.851, dist=  1.4842
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   35.189, dist=  1.7735
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  167.583, dist=  1.5629
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  517.851, dist=  1.4842
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   35.189, dist=  1.7735
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  167.583, dist=  1.5629
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 3128.924, dist=  1.2787
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299": 33210.062, dist=  1.0087
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 3128.924, dist=  1.2787
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299": 33210.062, dist=  1.0087
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   11.091, dist=  2.4290
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 3128.924, dist=  1.2787
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299": 33210.062, dist=  1.0087
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 3128.924, dist=  1.2787
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299": 33210.062, dist=  1.0087
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   69.633, dist=  2.1923
+Large vdw btw " CD  ARG A0299" and " O   ARG A0299":  115.633, dist=  2.0405
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299": 3128.924, dist=  1.2787
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299": 33210.062, dist=  1.0087
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   13.569, dist=  2.4699
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   42.673, dist=  2.2903
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   11.254, dist=  2.0272
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   16.578, dist=  2.4321
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   11.366, dist=  2.5122
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   60.391, dist=  2.1353
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   13.705, dist=  2.3917
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   41.073, dist=  2.2846
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   16.410, dist=  2.3600
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   11.727, dist=  2.4191
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   52.273, dist=  2.2217
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 14980.796, dist=  1.3544
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   18.565, dist=  2.3383
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   15.687, dist=  2.4591
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  210.525, dist=  2.0155
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.9170
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.3966
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":   14.867, dist=  1.5083
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":  929.570, dist=  1.0069
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   11.727, dist=  2.4191
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  256.610, dist=  1.8945
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   78.385, dist=  2.0918
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   11.727, dist=  2.4191
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   11.727, dist=  2.4191
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   11.727, dist=  2.4191
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   13.344, dist=  2.3964
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   19.760, dist=  2.3227
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   13.344, dist=  2.3964
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   13.344, dist=  2.3964
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   13.344, dist=  2.3964
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299":   13.344, dist=  2.3964
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 1183.518, dist=  1.6713
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   10.329, dist=  2.4415
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 1386.333, dist=  1.6567
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   34.573, dist=  2.2302
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   15.075, dist=  1.9794
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  904.660, dist=  1.7712
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 18667.191, dist=  1.3359
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   21.992, dist=  2.4017
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 1811.439, dist=  1.6627
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.7923
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  574.778, dist=  1.7809
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 338677.406, dist=  1.0891
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 41937.824, dist=  1.3016
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 1959.541, dist=  1.6618
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  598.007, dist=  1.7752
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.8087
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   15.075, dist=  1.9794
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  904.660, dist=  1.7712
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 18667.191, dist=  1.3359
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 5278.454, dist=  1.5217
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.3786
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299": 1124.477, dist=  1.6855
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   11.339, dist=  2.5353
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 39123.652, dist=  1.2961
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 9819.948, dist=  1.4091
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   15.075, dist=  1.9794
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  904.660, dist=  1.7712
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 18667.191, dist=  1.3359
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   43.484, dist=  2.2546
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 18159.725, dist=  1.3329
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  147.378, dist=  1.9890
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   10.924, dist=  2.4316
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   15.075, dist=  1.9794
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  904.660, dist=  1.7712
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 18667.191, dist=  1.3359
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  155.190, dist=  1.9735
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   20.130, dist=  2.3242
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   15.075, dist=  1.9794
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  904.660, dist=  1.7712
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 18667.191, dist=  1.3359
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   74.836, dist=  2.0926
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   13.506, dist=  2.3943
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 748083.812, dist=  1.0138
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 10397.045, dist=  1.4024
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  141.420, dist=  2.0705
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 819064.250, dist=  1.0000
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  204.605, dist=  1.9298
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":  118.393, dist=  2.0912
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   16.725, dist=  2.3567
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  277.402, dist=  1.9708
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 1196.422, dist=  1.3882
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  231.968, dist=  1.9802
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 748083.812, dist=  1.0138
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 10397.045, dist=  1.4024
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 1516.842, dist=  1.6873
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   32.182, dist=  2.2368
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   23.950, dist=  2.3736
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 748083.812, dist=  1.0138
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 10397.045, dist=  1.4024
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  198.137, dist=  1.9948
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  170.959, dist=  1.9581
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   10.280, dist=  2.5311
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   15.277, dist=  2.3726
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 748083.812, dist=  1.0138
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 10397.045, dist=  1.4024
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  662.372, dist=  1.8068
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299": 80944.336, dist=  1.1771
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   17.379, dist=  2.4328
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  146.977, dist=  1.9894
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   64.975, dist=  2.1230
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 748083.812, dist=  1.0138
+Large vdw btw " NE  ARG A0299" and " O   ARG A0299": 10397.045, dist=  1.4024
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   14.736, dist=  2.4771
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 100910.070, dist=  1.1906
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  999.000, dist=  0.3261
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   79.945, dist=  2.1582
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":  681.626, dist=  1.7563
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   56.299, dist=  2.2195
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 70685.359, dist=  1.1959
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   80.743, dist=  1.7291
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.545, dist=  1.6390
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  135.113, dist=  2.0690
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   80.743, dist=  1.7291
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.545, dist=  1.6390
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  135.113, dist=  2.0690
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   80.743, dist=  1.7291
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.545, dist=  1.6390
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  135.113, dist=  2.0690
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   80.743, dist=  1.7291
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.545, dist=  1.6390
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  135.113, dist=  2.0690
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   26.939, dist=  2.3417
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   10.677, dist=  2.5240
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   89.952, dist=  2.0691
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   80.743, dist=  1.7291
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.545, dist=  1.6390
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":  135.113, dist=  2.0690
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  448.568, dist=  1.8656
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   57.515, dist=  2.2370
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 62801.285, dist=  1.2461
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  238.849, dist=  1.9130
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 21626.723, dist=  1.0888
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.613, dist=  1.6389
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 21626.723, dist=  1.0888
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.613, dist=  1.6389
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 21626.723, dist=  1.0888
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.613, dist=  1.6389
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 21626.723, dist=  1.0888
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.613, dist=  1.6389
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299": 21626.723, dist=  1.0888
+Large vdw btw "1HD  ARG A0299" and " O   ARG A0299":   93.613, dist=  1.6389
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.582, dist=  1.9167
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  126.551, dist=  1.6667
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  129.265, dist=  1.5964
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.582, dist=  1.9167
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  126.551, dist=  1.6667
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  129.265, dist=  1.5964
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.582, dist=  1.9167
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  126.551, dist=  1.6667
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  129.265, dist=  1.5964
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.582, dist=  1.9167
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  126.551, dist=  1.6667
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  129.265, dist=  1.5964
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":  113.307, dist=  2.1080
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":   22.582, dist=  1.9167
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  126.551, dist=  1.6667
+Large vdw btw "2HD  ARG A0299" and " O   ARG A0299":  129.265, dist=  1.5964
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 2294.487, dist=  1.6402
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  745.759, dist=  1.8070
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  250.695, dist=  1.5757
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 20258.244, dist=  1.3608
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   28.843, dist=  2.3395
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  639.794, dist=  1.8319
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.9135
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.3118
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  364.705, dist=  1.9084
+Large vdw btw "1HH2 ARG A0299" and " HA  ARG A0299":   11.944, dist=  1.1362
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 2294.487, dist=  1.6402
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   48.150, dist=  2.2364
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 2294.487, dist=  1.6402
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 2294.487, dist=  1.6402
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   20.376, dist=  2.3935
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299": 2294.487, dist=  1.6402
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 2755.744, dist=  1.6059
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   98.281, dist=  2.0475
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   16.426, dist=  2.4433
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   31.709, dist=  2.3223
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  119.158, dist=  2.0232
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   12.846, dist=  2.5032
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":   32.568, dist=  1.8612
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   23.446, dist=  2.3674
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  101.526, dist=  2.1378
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   17.929, dist=  1.9546
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 6610.560, dist=  1.5025
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   13.944, dist=  2.3886
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  230.458, dist=  1.5867
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  230.458, dist=  1.5867
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  230.458, dist=  1.5867
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  230.458, dist=  1.5867
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "1HD  ARG A0299" and " C   ARG A0299":  230.458, dist=  1.5867
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   10.846, dist=  2.0314
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   10.846, dist=  2.0314
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   10.846, dist=  2.0314
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   10.846, dist=  2.0314
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":   10.846, dist=  2.0314
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  202.204, dist=  1.6039
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  202.204, dist=  1.6039
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  202.204, dist=  1.6039
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  202.204, dist=  1.6039
+Large vdw btw " CD  ARG A0299" and " C   ARG A0299":   15.093, dist=  2.4725
+Large vdw btw "2HD  ARG A0299" and " C   ARG A0299":  202.204, dist=  1.6039
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   42.673, dist=  2.2903
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   78.823, dist=  1.7358
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   32.826, dist=  2.3160
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   39.104, dist=  2.2091
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   14.321, dist=  2.4689
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":  862.331, dist=  1.7679
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":   25.256, dist=  2.2793
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   10.566, dist=  2.4375
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  210.521, dist=  2.0155
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 413784.188, dist=  1.0651
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   58.644, dist=  2.1402
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":   58.725, dist=  1.3507
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  451.333, dist=  1.8754
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  102.393, dist=  2.0478
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   65.847, dist=  2.1920
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   21.992, dist=  2.4017
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 173918.141, dist=  1.1378
+Large vdw btw " CZ  ARG A0299" and " O   ARG A0299":  344.828, dist=  1.8494
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   58.560, dist=  2.2125
+Large vdw btw " NH1 ARG A0299" and " O   ARG A0299":   48.979, dist=  2.1707
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   92.403, dist=  2.1430
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 41937.898, dist=  1.3016
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.4494
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299": 75954.797, dist=  1.1888
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":  255.854, dist=  1.1974
+Large vdw btw "1HH2 ARG A0299" and " O   ARG A0299":  999.000, dist=  0.6743
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   65.847, dist=  2.1920
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 1259.085, dist=  1.7135
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   15.621, dist=  2.4527
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   11.338, dist=  2.5353
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  164.190, dist=  2.0366
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   65.847, dist=  2.1920
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   65.847, dist=  2.1920
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   65.847, dist=  2.1920
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   15.772, dist=  1.9744
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   53.580, dist=  2.2282
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  141.419, dist=  2.0705
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299": 3363.414, dist=  1.2710
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   39.506, dist=  2.2719
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  277.396, dist=  1.9708
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.9597
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   15.772, dist=  1.9744
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   53.580, dist=  2.2282
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   15.772, dist=  1.9744
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   53.580, dist=  2.2282
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   15.772, dist=  1.9744
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   53.580, dist=  2.2282
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   11.633, dist=  2.4991
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.136, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   15.772, dist=  1.9744
+Large vdw btw " NE  ARG A0299" and " C   ARG A0299":   53.580, dist=  2.2282
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   14.736, dist=  2.4771
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299": 5626.718, dist=  1.5136
+Large vdw btw " NH1 ARG A0299" and " C   ARG A0299":   19.573, dist=  2.4108
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 7977.758, dist=  1.4793
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":  564.985, dist=  1.7835
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   57.518, dist=  2.2370
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  245.634, dist=  1.5818
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   58.074, dist=  2.2140
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  349.377, dist=  1.5367
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  745.786, dist=  1.8070
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.8411
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   15.772, dist=  2.4415
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 154437.562, dist=  1.1627
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.9135
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  999.000, dist=  0.9280
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   75.718, dist=  2.1677
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.8206
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  349.377, dist=  1.5367
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  271.296, dist=  1.5655
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  349.377, dist=  1.5367
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  349.377, dist=  1.5367
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  349.377, dist=  1.5367
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   38.246, dist=  1.8402
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   38.246, dist=  1.8402
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   38.246, dist=  1.8402
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   38.246, dist=  1.8402
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   38.246, dist=  1.8402
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   12.846, dist=  2.5032
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  540.859, dist=  1.4789
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  101.531, dist=  2.1378
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 1840.691, dist=  1.3395
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   14.799, dist=  2.4628
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   23.363, dist=  1.5026
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   23.363, dist=  1.5026
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   23.363, dist=  1.5026
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   23.363, dist=  1.5026
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   23.363, dist=  1.5026
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   30.845, dist=  1.4690
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   30.845, dist=  1.4690
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   30.845, dist=  1.4690
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   30.845, dist=  1.4690
+Large vdw btw "2HD  ARG A0299" and " HA  ARG A0299":   30.845, dist=  1.4690
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  214.347, dist=  2.0028
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":   37.728, dist=  1.3907
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   42.672, dist=  2.2903
+Large vdw btw "1HH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.8974
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   36.826, dist=  2.2952
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  210.537, dist=  2.0155
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 15010.499, dist=  1.1252
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":   15.390, dist=  2.4555
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   10.992, dist=  2.0309
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   21.992, dist=  2.4017
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":   63.930, dist=  1.7623
+Large vdw btw " CZ  ARG A0299" and " C   ARG A0299":   10.413, dist=  2.5203
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299": 41937.027, dist=  1.3016
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299": 1339.777, dist=  1.3752
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299": 321944.844, dist=  1.0876
+Large vdw btw " NH2 ARG A0299" and " O   ARG A0299":   20.605, dist=  2.3201
+Large vdw btw "1HH2 ARG A0299" and " C   ARG A0299":  999.000, dist=  0.7151
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   10.992, dist=  2.0309
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":   38.033, dist=  1.8381
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   11.339, dist=  2.5353
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  221.193, dist=  1.5955
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   10.992, dist=  2.0309
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   10.992, dist=  2.0309
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   10.992, dist=  2.0309
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.135, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  973.209, dist=  1.4121
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":   29.986, dist=  2.3324
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  141.416, dist=  2.0705
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299": 5166.908, dist=  1.2265
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 30241.584, dist=  1.3316
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299": 1747.033, dist=  1.0156
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  277.402, dist=  1.9708
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":   31.261, dist=  1.8702
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":   22.467, dist=  1.4494
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.135, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  973.209, dist=  1.4121
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.135, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  973.209, dist=  1.4121
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.135, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  973.209, dist=  1.4121
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   23.135, dist=  2.4021
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":  973.209, dist=  1.4121
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   14.735, dist=  2.4771
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":  426.514, dist=  1.5082
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":   14.021, dist=  2.4797
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   57.515, dist=  2.2370
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  790.888, dist=  1.4365
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   78.599, dist=  1.3608
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   78.599, dist=  1.3608
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   78.599, dist=  1.3608
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   78.599, dist=  1.3608
+Large vdw btw "1HD  ARG A0299" and " HA  ARG A0299":   78.599, dist=  1.3608
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   45.243, dist=  1.8155
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 1735.441, dist=  1.6785
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":  745.744, dist=  1.8070
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299": 1692.448, dist=  1.3456
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  999.000, dist=  0.6416
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":   13.408, dist=  1.5096
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  999.000, dist=  0.9135
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  380.424, dist=  1.5259
+Large vdw btw " NH2 ARG A0299" and " C   ARG A0299":  358.643, dist=  1.9110
+Large vdw btw "1HH2 ARG A0299" and " N   ARG A0299":  178.175, dist=  1.2260
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   45.243, dist=  1.8155
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  157.078, dist=  2.0439
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  363.690, dist=  1.9185
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  841.259, dist=  1.0789
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   45.243, dist=  1.8155
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   45.243, dist=  1.8155
+Large vdw btw " NE  ARG A0299" and " CA  ARG A0299":   17.806, dist=  2.4507
+Large vdw btw " NE  ARG A0299" and " HA  ARG A0299":   45.243, dist=  1.8155
+Large vdw btw " CZ  ARG A0299" and " HA  ARG A0299":   12.751, dist=  2.0057
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   41.024, dist=  2.2848
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   12.557, dist=  1.5173
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  219.604, dist=  1.9891
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299": 1707.732, dist=  1.0234
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   10.802, dist=  2.5278
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   41.024, dist=  2.2848
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   12.557, dist=  1.5173
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   41.024, dist=  2.2848
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   12.557, dist=  1.5173
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   41.024, dist=  2.2848
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   12.557, dist=  1.5173
+Large vdw btw " NE  ARG A0299" and " N   ARG A0299":   41.024, dist=  2.2848
+Large vdw btw " NE  ARG A0299" and " H   ARG A0299":   12.557, dist=  1.5173
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299": 1115.438, dist=  1.7409
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  167.457, dist=  1.2398
+Large vdw btw " CZ  ARG A0299" and " CA  ARG A0299":   12.845, dist=  2.5032
+Large vdw btw " NH1 ARG A0299" and " N   ARG A0299":   21.710, dist=  2.3996
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  150.138, dist=  2.0612
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":  101.519, dist=  2.1378
+Large vdw btw " NH2 ARG A0299" and " HA  ARG A0299":  281.328, dist=  1.5643
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  390.476, dist=  1.9074
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  999.000, dist=  0.9957
+Large vdw btw " CZ  ARG A0299" and " N   ARG A0299":  196.943, dist=  2.0067
+Large vdw btw " CZ  ARG A0299" and " H   ARG A0299":  129.150, dist=  1.2665
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299": 3167.272, dist=  1.6057
+Large vdw btw " NH2 ARG A0299" and " CA  ARG A0299":   42.673, dist=  2.2903
+Large vdw btw " NH2 ARG A0299" and " N   ARG A0299":  169.199, dist=  2.0414
+Large vdw btw " NH2 ARG A0299" and " H   ARG A0299":  144.014, dist=  1.2476
+   Pruning rotamers...796 rotamers deleted.
+   Done. Time spent = 5
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 0
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...0 rotamers deleted.
+   Done. Time spent = 1
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 8 seconds.
+      Actual time is 1
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 2
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+   Done
+
+       36 conformers deleted in this cycle at    2.000    2.000    2.000
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+   Done. Time spent = 22
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 3753
+   Done. Time spent = 0
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      133 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 32 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      2 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 85 of 85 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 85 of 85 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+energies.opp not found
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 25 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+

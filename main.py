@@ -35,11 +35,15 @@ def gather_args():
 
 if __name__ == '__main__':
 	argument = gather_args()
-	R = res_energies(argument.pdb_location, argument.output_directory)
-	#R.generate_res_files(R.out_folder + '/generated_res/')
-	#automated_run(argument.output_directory + '/generated_res/', 
-	#		argument.output_directory + '/mcce_results/',
-	#		argument.mcce_directory)
-	R.analyze_fort36(R.out_folder + '/mcce_results/')
+	mcce_results_present = True
+	if(mcce_results_present == False):
+		R = res_energies(argument.pdb_location, argument.output_directory)
+		R.generate_res_files(R.out_folder + '/generated_res/')
+		automated_run(argument.output_directory + '/generated_res/', 
+				argument.output_directory + '/mcce_results/',
+				argument.mcce_directory)
+	else:
+		R = res_energies(argument.pdb_location, argument.output_directory)
+		R.analyze_fort36(R.out_folder + '/mcce_results/')
 
 	
