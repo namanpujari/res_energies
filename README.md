@@ -52,7 +52,7 @@ Please note that `SUBMIT_JOB` is not implemented as of yet.
 ---
 An example, and how the `generated_residue`, `mcce_results`, and `analysis` folders were created in this repository. 
 
-`python main.py -pdb /home/naman/res_energies/gfp46.pdb -i /home/naman/res_energies/generated_residues -d /home/naman/res_energies/mcce_results -e /home/mcce/mcce3.5/ -out /home/naman/res_energies/analysis`
+```python main.py -pdb /home/naman/res_energies/gfp46.pdb -i /home/naman/res_energies/generated_residues -d /home/naman/res_energies/mcce_results -e /home/mcce/mcce3.5/ -out /home/naman/res_energies/analysis```
 
 	
 
