@@ -1,0 +1,212 @@
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 12:33:23 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        1 free cofactors were stripped off in this round
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 1.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   There are errors in pdb file, quiting ...
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 12:34:38 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        1 free cofactors were stripped off in this round
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 1.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   Total time for step1 (premcce) is 2 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   There are errors in pdb file, quiting ...

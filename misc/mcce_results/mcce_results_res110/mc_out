@@ -1,0 +1,961 @@
+random number seed = 1500482084
+Monte Carlo set up time: 0 seconds.
+Starting number of residue = 1, number of conformer = 40
+
+pH =   0.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   176
+
+Reduce =   2, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   104
+Reduce =   2, rmsd = 0.00079
+
+Reduce =   3, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   112
+Reduce =   3, rmsd = 0.00019
+
+Reduce =   4, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   136
+Reduce =   4, rmsd = 0.00027
+
+Reduce =   5, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   120
+Reduce =   5, rmsd = 0.00031
+
+Reduce =   6, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    78
+Reduce =   6, rmsd = 0.00007
+Monte Carlo running time: 0 seconds.
+
+pH =   1.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   140
+
+Reduce =   2, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    96
+Reduce =   2, rmsd = 0.00125
+
+Reduce =   3, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   100
+Reduce =   3, rmsd = 0.00026
+
+Reduce =   4, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   118
+Reduce =   4, rmsd = 0.00036
+
+Reduce =   5, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    90
+Reduce =   5, rmsd = 0.00031
+
+Reduce =   6, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   164
+Reduce =   6, rmsd = 0.00009
+Monte Carlo running time: 1 seconds.
+
+pH =   2.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   196
+
+Reduce =   2, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   136
+Reduce =   2, rmsd = 0.00048
+
+Reduce =   3, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   124
+Reduce =   3, rmsd = 0.00059
+
+Reduce =   4, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   112
+Reduce =   4, rmsd = 0.00025
+
+Reduce =   5, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   116
+Reduce =   5, rmsd = 0.00009
+Monte Carlo running time: 0 seconds.
+
+pH =   3.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   152
+
+Reduce =   2, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    94
+Reduce =   2, rmsd = 0.00065
+
+Reduce =   3, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   110
+Reduce =   3, rmsd = 0.00035
+
+Reduce =   4, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   120
+Reduce =   4, rmsd = 0.00021
+
+Reduce =   5, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    70
+Reduce =   5, rmsd = 0.00020
+
+Reduce =   6, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   100
+Reduce =   6, rmsd = 0.00022
+
+Reduce =   7, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   120
+Reduce =   7, rmsd = 0.00023
+
+Reduce =   8, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    96
+Reduce =   8, rmsd = 0.00010
+
+Reduce =   9, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    70
+Reduce =   9, rmsd = 0.00012
+
+Reduce =  10, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    74
+Reduce =  10, rmsd = 0.00008
+Monte Carlo running time: 0 seconds.
+
+pH =   4.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   260
+
+Reduce =   2, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   122
+Reduce =   2, rmsd = 0.00069
+
+Reduce =   3, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   118
+Reduce =   3, rmsd = 0.00023
+
+Reduce =   4, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   128
+Reduce =   4, rmsd = 0.00025
+
+Reduce =   5, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   134
+Reduce =   5, rmsd = 0.00014
+
+Reduce =   6, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    76
+Reduce =   6, rmsd = 0.00020
+
+Reduce =   7, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   136
+Reduce =   7, rmsd = 0.00007
+Monte Carlo running time: 0 seconds.
+
+pH =   5.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   160
+
+Reduce =   2, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   102
+Reduce =   2, rmsd = 0.00059
+
+Reduce =   3, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   134
+Reduce =   3, rmsd = 0.00054
+
+Reduce =   4, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   118
+Reduce =   4, rmsd = 0.00033
+
+Reduce =   5, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   116
+Reduce =   5, rmsd = 0.00015
+
+Reduce =   6, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   134
+Reduce =   6, rmsd = 0.00013
+
+Reduce =   7, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    98
+Reduce =   7, rmsd = 0.00019
+
+Reduce =   8, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   104
+Reduce =   8, rmsd = 0.00010
+
+Reduce =   9, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   134
+Reduce =   9, rmsd = 0.00011
+
+Reduce =  10, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   130
+Reduce =  10, rmsd = 0.00004
+Monte Carlo running time: 0 seconds.
+
+pH =   6.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   168
+
+Reduce =   2, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   148
+Reduce =   2, rmsd = 0.00093
+
+Reduce =   3, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    76
+Reduce =   3, rmsd = 0.00041
+
+Reduce =   4, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    92
+Reduce =   4, rmsd = 0.00056
+
+Reduce =   5, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   112
+Reduce =   5, rmsd = 0.00031
+
+Reduce =   6, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   102
+Reduce =   6, rmsd = 0.00018
+
+Reduce =   7, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   110
+Reduce =   7, rmsd = 0.00012
+
+Reduce =   8, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    86
+Reduce =   8, rmsd = 0.00008
+Monte Carlo running time: 1 seconds.
+
+pH =   7.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   128
+
+Reduce =   2, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   104
+Reduce =   2, rmsd = 0.00199
+
+Reduce =   3, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   120
+Reduce =   3, rmsd = 0.00021
+
+Reduce =   4, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    84
+Reduce =   4, rmsd = 0.00026
+
+Reduce =   5, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    94
+Reduce =   5, rmsd = 0.00035
+
+Reduce =   6, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   134
+Reduce =   6, rmsd = 0.00018
+
+Reduce =   7, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   108
+Reduce =   7, rmsd = 0.00006
+Monte Carlo running time: 0 seconds.
+
+pH =   8.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   112
+
+Reduce =   2, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   122
+Reduce =   2, rmsd = 0.00100
+
+Reduce =   3, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   136
+Reduce =   3, rmsd = 0.00041
+
+Reduce =   4, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   114
+Reduce =   4, rmsd = 0.00070
+
+Reduce =   5, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    96
+Reduce =   5, rmsd = 0.00024
+
+Reduce =   6, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    86
+Reduce =   6, rmsd = 0.00027
+
+Reduce =   7, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    66
+Reduce =   7, rmsd = 0.00022
+
+Reduce =   8, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   118
+Reduce =   8, rmsd = 0.00010
+
+Reduce =   9, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    98
+Reduce =   9, rmsd = 0.00008
+Monte Carlo running time: 0 seconds.
+
+pH =   9.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   188
+
+Reduce =   2, number of active residue:    1, active conformer    18
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   160
+Reduce =   2, rmsd = 0.00040
+
+Reduce =   3, number of active residue:    1, active conformer    18
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   122
+Reduce =   3, rmsd = 0.00060
+
+Reduce =   4, number of active residue:    1, active conformer    18
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   128
+Reduce =   4, rmsd = 0.00030
+
+Reduce =   5, number of active residue:    1, active conformer    18
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    82
+Reduce =   5, rmsd = 0.00019
+
+Reduce =   6, number of active residue:    1, active conformer    18
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   122
+Reduce =   6, rmsd = 0.00029
+
+Reduce =   7, number of active residue:    1, active conformer    18
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   104
+Reduce =   7, rmsd = 0.00015
+
+Reduce =   8, number of active residue:    1, active conformer    18
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   100
+Reduce =   8, rmsd = 0.00015
+
+Reduce =   9, number of active residue:    1, active conformer    18
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   122
+Reduce =   9, rmsd = 0.00007
+Monte Carlo running time: 0 seconds.
+
+pH =  10.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   220
+
+Reduce =   2, number of active residue:    1, active conformer    24
+Equilibrating:       8 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   162
+Reduce =   2, rmsd = 0.00162
+
+Reduce =   3, number of active residue:    1, active conformer    24
+Equilibrating:       8 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   126
+Reduce =   3, rmsd = 0.00073
+
+Reduce =   4, number of active residue:    1, active conformer    24
+Equilibrating:       8 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   177
+Reduce =   4, rmsd = 0.00025
+
+Reduce =   5, number of active residue:    1, active conformer    24
+Equilibrating:       8 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   168
+Reduce =   5, rmsd = 0.00015
+
+Reduce =   6, number of active residue:    1, active conformer    24
+Equilibrating:       8 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   162
+Reduce =   6, rmsd = 0.00021
+
+Reduce =   7, number of active residue:    1, active conformer    24
+Equilibrating:       8 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   168
+Reduce =   7, rmsd = 0.00008
+Monte Carlo running time: 0 seconds.
+
+pH =  11.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   184
+
+Reduce =   2, number of active residue:    1, active conformer    23
+Equilibrating:       7 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   189
+Reduce =   2, rmsd = 0.00109
+
+Reduce =   3, number of active residue:    1, active conformer    23
+Equilibrating:       7 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   132
+Reduce =   3, rmsd = 0.00028
+
+Reduce =   4, number of active residue:    1, active conformer    23
+Equilibrating:       7 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   165
+Reduce =   4, rmsd = 0.00021
+
+Reduce =   5, number of active residue:    1, active conformer    22
+Equilibrating:       7 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   141
+Reduce =   5, rmsd = 0.00043
+
+Reduce =   6, number of active residue:    1, active conformer    22
+Equilibrating:       7 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   144
+Reduce =   6, rmsd = 0.00012
+
+Reduce =   7, number of active residue:    1, active conformer    22
+Equilibrating:       7 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   168
+Reduce =   7, rmsd = 0.00013
+
+Reduce =   8, number of active residue:    1, active conformer    22
+Equilibrating:       7 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   147
+Reduce =   8, rmsd = 0.00020
+
+Reduce =   9, number of active residue:    1, active conformer    22
+Equilibrating:       7 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    96
+Reduce =   9, rmsd = 0.00009
+Monte Carlo running time: 1 seconds.
+
+pH =  12.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   220
+
+Reduce =   2, number of active residue:    1, active conformer    17
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   120
+Reduce =   2, rmsd = 0.00079
+
+Reduce =   3, number of active residue:    1, active conformer    17
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   124
+Reduce =   3, rmsd = 0.00070
+
+Reduce =   4, number of active residue:    1, active conformer    17
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   100
+Reduce =   4, rmsd = 0.00032
+
+Reduce =   5, number of active residue:    1, active conformer    17
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   104
+Reduce =   5, rmsd = 0.00025
+
+Reduce =   6, number of active residue:    1, active conformer    17
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   112
+Reduce =   6, rmsd = 0.00028
+
+Reduce =   7, number of active residue:    1, active conformer    17
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   102
+Reduce =   7, rmsd = 0.00017
+
+Reduce =   8, number of active residue:    1, active conformer    17
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   102
+Reduce =   8, rmsd = 0.00017
+
+Reduce =   9, number of active residue:    1, active conformer    17
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    84
+Reduce =   9, rmsd = 0.00012
+
+Reduce =  10, number of active residue:    1, active conformer    17
+Equilibrating:       6 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   126
+Reduce =  10, rmsd = 0.00008
+Monte Carlo running time: 0 seconds.
+
+pH =  13.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   216
+
+Reduce =   2, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:    92
+Reduce =   2, rmsd = 0.00146
+
+Reduce =   3, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   112
+Reduce =   3, rmsd = 0.00021
+
+Reduce =   4, number of active residue:    1, active conformer    14
+Equilibrating:       5 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   148
+Reduce =   4, rmsd = 0.00028
+
+Reduce =   5, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   170
+Reduce =   5, rmsd = 0.00014
+
+Reduce =   6, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   136
+Reduce =   6, rmsd = 0.00019
+
+Reduce =   7, number of active residue:    1, active conformer    13
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   114
+Reduce =   7, rmsd = 0.00010
+Monte Carlo running time: 0 seconds.
+
+pH =  14.00  Eh =   0.00
+
+Reduce =   1, number of active residue:    1, active conformer    40
+Equilibrating:      12 cycle(s) at temperature =       0.00K
+Annealling:          2 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   196
+
+Reduce =   2, number of active residue:    1, active conformer    12
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   152
+Reduce =   2, rmsd = 0.00095
+
+Reduce =   3, number of active residue:    1, active conformer    12
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   116
+Reduce =   3, rmsd = 0.00021
+
+Reduce =   4, number of active residue:    1, active conformer    12
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   114
+Reduce =   4, rmsd = 0.00016
+
+Reduce =   5, number of active residue:    1, active conformer    12
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   126
+Reduce =   5, rmsd = 0.00019
+
+Reduce =   6, number of active residue:    1, active conformer    12
+Equilibrating:       4 cycle(s) at temperature =       0.00K
+Annealling:          1 cycle(s) at temperature =     298.15K
+Collecting data:                at temperature =     298.15K
+   Minimum/maximum number of cycles:     1/   -1
+   Actual  number of cycles to converge:   120
+Reduce =   6, rmsd = 0.00006
+Monte Carlo running time: 0 seconds.

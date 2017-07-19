@@ -1,0 +1,948 @@
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 12:33:23 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...8 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":   52.392, dist=  2.0755
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":   12.876, dist=  2.4954
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":   13.070, dist=  2.4860
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  325.521, dist=  1.8655
+Large vdw btw "2HE2 GLN A0204" and " O   GLN A0204":   37.935, dist=  1.3078
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":   47.033, dist=  2.1712
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":  251.898, dist=  1.8314
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  300.764, dist=  1.9387
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204": 2577.896, dist=  1.5741
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":   14.275, dist=  2.4695
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":   14.263, dist=  2.4697
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":   27.341, dist=  2.2708
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  173.385, dist=  2.0374
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":  175.664, dist=  1.2274
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":   10.603, dist=  2.5312
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  129.252, dist=  2.0862
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204": 3215.856, dist=  1.6037
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.635, dist=  2.4423
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.8204
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":   10.279, dist=  2.4424
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":   99.434, dist=  2.0526
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  552.928, dist=  1.7866
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  376.938, dist=  1.9129
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.477, dist=  2.1695
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  302.427, dist=  1.9378
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204": 17019.131, dist=  1.3462
+Large vdw btw "1HE2 GLN A0204" and " O   GLN A0204":   27.182, dist=  1.3430
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.9581
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.180, dist=  1.4064
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.753, dist=  2.4052
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204": 4555.769, dist=  1.5496
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  999.000, dist=  0.9311
+Large vdw btw "1HE2 GLN A0204" and " O   GLN A0204":  999.000, dist=  0.8951
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.8713
+Large vdw btw "2HE2 GLN A0204" and " O   GLN A0204":   83.267, dist=  1.2274
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":   15.377, dist=  2.2784
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  106.942, dist=  2.0407
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":   82.244, dist=  2.0838
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.164, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  226.424, dist=  1.9139
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 26076.803, dist=  1.2495
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  748.054, dist=  1.7357
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 192429.828, dist=  1.0581
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  217.669, dist=  1.9905
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  146.043, dist=  1.9904
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204": 1058.129, dist=  1.0649
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":  142.121, dist=  1.9178
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":   48.803, dist=  2.1649
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":   29.318, dist=  2.1707
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  103.455, dist=  2.0461
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.634, dist=  2.4423
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204": 2828.577, dist=  1.6120
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  999.000, dist=  0.9970
+Large vdw btw "1HE2 GLN A0204" and " O   GLN A0204":  121.013, dist=  1.1906
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.8162
+Large vdw btw "2HE2 GLN A0204" and " O   GLN A0204":  999.000, dist=  0.8436
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  190.493, dist=  2.0122
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  908.987, dist=  1.7153
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":  149.489, dist=  1.9100
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  904.984, dist=  1.7087
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 130008.734, dist=  1.0932
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.475, dist=  2.1695
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.8417
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204": 38341.008, dist=  1.2583
+Large vdw btw "1HE2 GLN A0204" and " C   GLN A0204":   20.725, dist=  1.4689
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.179, dist=  1.4065
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.4675
+Large vdw btw "2HE2 GLN A0204" and " O   GLN A0204":  630.622, dist=  1.0397
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.752, dist=  2.4052
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204": 6145.723, dist=  1.5116
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":   11.126, dist=  2.4284
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  452.619, dist=  1.8087
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 2224.032, dist=  1.5323
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.164, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.9478
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 4982.243, dist=  1.4334
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204": 1473.776, dist=  1.6414
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  210.117, dist=  1.9962
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":   13.882, dist=  2.3894
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.636, dist=  2.4422
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204": 4380.704, dist=  1.5547
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.8238
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  162.368, dist=  1.9663
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  728.987, dist=  1.7394
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.482, dist=  2.1695
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   24.708, dist=  1.9056
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  309.538, dist=  1.9342
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.184, dist=  1.4064
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.9957
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.754, dist=  2.4052
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":  141.083, dist=  1.6554
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.9755
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":   10.316, dist=  2.4391
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.163, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   14.027, dist=  1.9073
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":   68.557, dist=  2.1073
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   22.908, dist=  1.8352
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   11.144, dist=  2.0287
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":   17.254, dist=  1.1031
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.635, dist=  2.4423
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   97.173, dist=  1.7065
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.8722
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   25.689, dist=  1.8186
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.473, dist=  2.1695
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204": 16942.869, dist=  1.1139
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.177, dist=  1.4065
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.5409
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.752, dist=  2.4052
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":  247.844, dist=  1.5807
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.163, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204": 3984.932, dist=  1.2032
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   50.752, dist=  1.7222
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   11.714, dist=  2.0209
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.631, dist=  2.4423
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":  185.725, dist=  1.6185
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.8180
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   30.399, dist=  1.7944
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  274.174, dist=  1.9632
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":   12.615, dist=  1.5168
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.460, dist=  2.1696
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   38.752, dist=  1.8383
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.169, dist=  1.4065
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.8851
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204": 2666.715, dist=  1.6287
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.7544
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.748, dist=  2.4052
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.9703
+Large vdw btw "2HE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.6714
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  191.009, dist=  1.9479
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":   14.322, dist=  1.4126
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.155, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  454.880, dist=  1.8153
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.9245
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  126.553, dist=  2.0897
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":   12.066, dist=  1.5221
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  354.329, dist=  1.1587
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":   28.504, dist=  2.2636
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204": 1684.878, dist=  1.6917
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.8229
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.633, dist=  2.4423
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.8584
+Large vdw btw "2HE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.6564
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  111.137, dist=  2.1116
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":   54.643, dist=  1.3498
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  527.723, dist=  1.7934
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.8933
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.9372
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.7389
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.471, dist=  2.1695
+Large vdw btw "1HE2 GLN A0204" and " N   GLN A0204":   11.771, dist=  1.5250
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.4998
+Large vdw btw "2HE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.7696
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.179, dist=  1.4065
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204": 4572.685, dist=  1.5577
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.750, dist=  2.4052
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  247.056, dist=  1.9077
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":  189.088, dist=  1.1480
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204": 386184.812, dist=  1.0383
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.9218
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.160, dist=  2.2526
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204": 1056.667, dist=  1.6942
+   Pruning rotamers...119 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 0
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...0 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 0 seconds.
+      Actual time is 0
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 1
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Done
+
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+   Done. Time spent = 2
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 435
+   Done. Time spent = 0
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      19 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 5 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      2 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 20 of 20 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 20 of 20 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+energies.opp not found
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 29 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+
+ _________________________MCCE 3.5____________________________
+|	   						      |
+|    MCCE (Multi-Conformation Continuum Electrostatics)       |
+|	is a program developed at Marilyn Gunner's lab.	      |
+|	MCCE is a biophysics simulation program combining     |
+|	continuum electrostatics and molecular mechanics.     |
+|	In this program, the protein side chain motions are   |
+|	simulated explicitly while the dielectric effect of   |
+|	solvent and bulk protein material is modeled by	      |
+|	continuum electrostatics.			      |
+|	MCCE can calculate residue pka, cofactor Em and       |
+|	protein PI in protein-solvent systems, and more:      |
+|							      |
+|	 - Protein structural responses to changes in charge  |
+|	 - Changes in charge state of ionizable residues due  |
+|	   to structural changes in the protein		      |
+|	 - The structural and ionization changes caused by    |
+|	   changes in solution pH or Eh			      |
+|	 - Find the location and stoichiometry of proton      |
+|	   transfers coupled to electron transfer	      |
+|	 - Make side chain rotomer packing predictions as     |
+|	   a function of pH				      |
+|							      |
+|	For questions and help, visit                         |
+|		https://sites.google.com/site/mccewiki/home   |
+|		  October 2015, by MCCE Development Team      |
+|							      |
+|_________________________        ____________________________|
+                          MCCE 3.5                          
+
+Latest Updates:                                              
+July 2016, Yifan's monte carlo no longer needs step3_out.pdb directory (fixed)
+July 2016, Removed PASCAL COMTE GENETIC ALGORITHM from this version
+Sept 2016, Added charged ligands to sum_crg.out.
+Oct  2016, Changed Yifan MC pK.out output format to match mfe format.
+Oct  2016, Added step 5 that creates pK.out and sum_crg.out.
+Jan  2017, Added DelPhi potential map.
+
+Mar  2017, Added DelPhi dielectric map.
+
+Wed Jul 19 12:34:23 2017
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "/home/mcce/mcce3.5//param04" ... 
+
+   In file /home/mcce/mcce3.5//param04/hmc.tpl, parameter "CONNECT  HMC01  CAB sp2       0     C3B 0     CBB LIG   SG" is already loaded somewhere else.
+   Try delete this entry and run MCCE again
+   Done
+
+   Load linear free energy correction parameters from "/home/mcce/mcce3.5/extra.tpl".../home/mcce/mcce3.5/extra.tpl
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "prot.pdb"...
+   Done
+
+   Read name rule file "/home/mcce/mcce3.5/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >   5%...
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...8 H atoms were deleted.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Place rotamers...
+   Done
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":   52.392, dist=  2.0755
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":   12.876, dist=  2.4954
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":   13.070, dist=  2.4860
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  325.521, dist=  1.8655
+Large vdw btw "2HE2 GLN A0204" and " O   GLN A0204":   37.935, dist=  1.3078
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":   47.033, dist=  2.1712
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":  251.898, dist=  1.8314
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  300.764, dist=  1.9387
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204": 2577.896, dist=  1.5741
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":   14.275, dist=  2.4695
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":   14.263, dist=  2.4697
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":   27.341, dist=  2.2708
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  173.385, dist=  2.0374
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":  175.664, dist=  1.2274
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":   10.603, dist=  2.5312
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  129.252, dist=  2.0862
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204": 3215.856, dist=  1.6037
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.635, dist=  2.4423
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.8204
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":   10.279, dist=  2.4424
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":   99.434, dist=  2.0526
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  552.928, dist=  1.7866
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  376.938, dist=  1.9129
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.477, dist=  2.1695
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  302.427, dist=  1.9378
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204": 17019.131, dist=  1.3462
+Large vdw btw "1HE2 GLN A0204" and " O   GLN A0204":   27.182, dist=  1.3430
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.9581
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.180, dist=  1.4064
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.753, dist=  2.4052
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204": 4555.769, dist=  1.5496
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  999.000, dist=  0.9311
+Large vdw btw "1HE2 GLN A0204" and " O   GLN A0204":  999.000, dist=  0.8951
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.8713
+Large vdw btw "2HE2 GLN A0204" and " O   GLN A0204":   83.267, dist=  1.2274
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":   15.377, dist=  2.2784
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  106.942, dist=  2.0407
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":   82.244, dist=  2.0838
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.164, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  226.424, dist=  1.9139
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 26076.803, dist=  1.2495
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   57.049, dist=  2.1383
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  748.054, dist=  1.7357
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 192429.828, dist=  1.0581
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  217.669, dist=  1.9905
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  146.043, dist=  1.9904
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204": 1058.129, dist=  1.0649
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":  142.121, dist=  1.9178
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":   48.803, dist=  2.1649
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":   29.318, dist=  2.1707
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw "2HG  GLN A0204" and " C   GLN A0204":   14.356, dist=  2.0474
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  103.455, dist=  2.0461
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.634, dist=  2.4423
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204": 2828.577, dist=  1.6120
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  999.000, dist=  0.9970
+Large vdw btw "1HE2 GLN A0204" and " O   GLN A0204":  121.013, dist=  1.1906
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.8162
+Large vdw btw "2HE2 GLN A0204" and " O   GLN A0204":  999.000, dist=  0.8436
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  190.493, dist=  2.0122
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":  908.987, dist=  1.7153
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204":  149.489, dist=  1.9100
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":   15.299, dist=  2.4472
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   22.757, dist=  2.2977
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  904.984, dist=  1.7087
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 130008.734, dist=  1.0932
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.475, dist=  2.1695
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.8417
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204": 38341.008, dist=  1.2583
+Large vdw btw "1HE2 GLN A0204" and " C   GLN A0204":   20.725, dist=  1.4689
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.179, dist=  1.4065
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.4675
+Large vdw btw "2HE2 GLN A0204" and " O   GLN A0204":  630.622, dist=  1.0397
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.752, dist=  2.4052
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204": 6145.723, dist=  1.5116
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":   11.126, dist=  2.4284
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  452.619, dist=  1.8087
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 2224.032, dist=  1.5323
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.164, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.9478
+Large vdw btw " OE1 GLN A0204" and " O   GLN A0204": 4982.243, dist=  1.4334
+Large vdw btw " CD  GLN A0204" and " C   GLN A0204":  224.925, dist=  1.9742
+Large vdw btw " CD  GLN A0204" and " O   GLN A0204":   12.884, dist=  2.3991
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204": 1473.776, dist=  1.6414
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw "1HG  GLN A0204" and " C   GLN A0204":   14.901, dist=  2.0413
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  210.117, dist=  1.9962
+Large vdw btw " NE2 GLN A0204" and " O   GLN A0204":   13.882, dist=  2.3894
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.636, dist=  2.4422
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204": 4380.704, dist=  1.5547
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.8238
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  162.368, dist=  1.9663
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":  728.987, dist=  1.7394
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.482, dist=  2.1695
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   24.708, dist=  1.9056
+Large vdw btw " NE2 GLN A0204" and " C   GLN A0204":  309.538, dist=  1.9342
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.184, dist=  1.4064
+Large vdw btw "2HE2 GLN A0204" and " C   GLN A0204":  999.000, dist=  0.9957
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.754, dist=  2.4052
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":  141.083, dist=  1.6554
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.9755
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":   10.316, dist=  2.4391
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.163, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   14.027, dist=  1.9073
+Large vdw btw " OE1 GLN A0204" and " C   GLN A0204":   68.557, dist=  2.1073
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   22.908, dist=  1.8352
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   11.144, dist=  2.0287
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":   17.254, dist=  1.1031
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.635, dist=  2.4423
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   97.173, dist=  1.7065
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.8722
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   25.689, dist=  1.8186
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.473, dist=  2.1695
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204": 16942.869, dist=  1.1139
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.177, dist=  1.4065
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.5409
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.752, dist=  2.4052
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":  247.844, dist=  1.5807
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.163, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204": 3984.932, dist=  1.2032
+Large vdw btw " CD  GLN A0204" and " HA  GLN A0204":   19.748, dist=  1.9373
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   50.752, dist=  1.7222
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   11.714, dist=  2.0209
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.631, dist=  2.4423
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":  185.725, dist=  1.6185
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.8180
+Large vdw btw " OE1 GLN A0204" and " HA  GLN A0204":   30.399, dist=  1.7944
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  274.174, dist=  1.9632
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":   12.615, dist=  1.5168
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.460, dist=  2.1696
+Large vdw btw " NE2 GLN A0204" and " HA  GLN A0204":   38.752, dist=  1.8383
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.169, dist=  1.4065
+Large vdw btw "2HE2 GLN A0204" and " HA  GLN A0204":  999.000, dist=  0.8851
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204": 2666.715, dist=  1.6287
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.7544
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.748, dist=  2.4052
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.9703
+Large vdw btw "2HE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.6714
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  191.009, dist=  1.9479
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":   14.322, dist=  1.4126
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.155, dist=  2.2526
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  454.880, dist=  1.8153
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.9245
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  126.553, dist=  2.0897
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":   12.066, dist=  1.5221
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  354.329, dist=  1.1587
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":   28.504, dist=  2.2636
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204": 1684.878, dist=  1.6917
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.8229
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   18.633, dist=  2.4423
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.8584
+Large vdw btw "2HE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.6564
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  111.137, dist=  2.1116
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":   54.643, dist=  1.3498
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  527.723, dist=  1.7934
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.8933
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.9372
+Large vdw btw " NE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.7389
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   84.471, dist=  2.1695
+Large vdw btw "1HE2 GLN A0204" and " N   GLN A0204":   11.771, dist=  1.5250
+Large vdw btw "2HE2 GLN A0204" and " N   GLN A0204":  999.000, dist=  0.4998
+Large vdw btw "2HE2 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.7696
+Large vdw btw "2HE2 GLN A0204" and " CA  GLN A0204":   40.179, dist=  1.4065
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " NE2 GLN A0204" and " N   GLN A0204": 4572.685, dist=  1.5577
+Large vdw btw " NE2 GLN A0204" and " CA  GLN A0204":   22.750, dist=  2.4052
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204":  247.056, dist=  1.9077
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":  189.088, dist=  1.1480
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204": 386184.812, dist=  1.0383
+Large vdw btw " OE1 GLN A0204" and " H   GLN A0204":  999.000, dist=  0.9218
+Large vdw btw " OE1 GLN A0204" and " CA  GLN A0204":   33.160, dist=  2.2526
+Large vdw btw " CD  GLN A0204" and " N   GLN A0204":  140.090, dist=  2.0629
+Large vdw btw " OE1 GLN A0204" and " N   GLN A0204": 1056.667, dist=  1.6942
+   Pruning rotamers...119 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 0
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...0 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 0 seconds.
+      Actual time is 0
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 1
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   Done
+
+
+   Relaxation...
+   Start setting up for relaxation.
+   Setup for relaxation done.
+   Start relaxation.
+   Done. Time spent = 3
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 435
+   Done. Time spent = 0
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      19 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 0
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 4 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Step 3. Compute energy lookup table
+   Load step 2 output file step2_out.pdb...
+   Done
+
+   Reporting non integer conformer charge ...
+   Passed, no non-integer charges
+   Done
+
+   Creating connectivity table...
+   Done
+
+   Preparing PBE runs at epsilon 4.00 ...
+      2 focusing runs required for this protein.
+   Done
+
+Running delphi surface calculations ...
+
+   Computing pairwise from conformer 1 to 20 of 20 total conformers
+      see progress.log for progress...
+   Done
+
+   Computing RXN from conformer 1 to 20 of 20 total conformers
+      see progress.log for progress...
+   Done
+
+   Add dummy conformers ... 0 dummy conformers were added.
+   Done
+
+   Making pairwise energy matrices and conformer summary ... 
+   File /home/naman/res_energies/mcce_results/mcce_results_res201/energies.opp exists, energy calculation will update this file
+   Done
+
+   Skiping writing step 3 rotamer file step3_out.pdb.
+   Total time for step3 (energy calculation) is 27 seconds.
+
+   Output files (epsilon = 4.00):
+      energies.opp    : energy lookup table, use opp to decode the file
+      head3.lst       : conformer summary
+
+Step 3 Done.
+
+Step 4. Yifan Monte Carlo Sampling
+   Load pairwise interactions ...
+   WARNING: Big difference (> 20.0%) is reported
+   Done
+
+Step 4 Done.
+
+Not doing "Step 5. Post Monte Carlo"
+

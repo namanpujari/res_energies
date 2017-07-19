@@ -1,0 +1,3276 @@
+
+pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   0.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   0.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  0.00 TYR01A0240_001 occ=0.000 trial=    2575/   63000 t
+  0.00 TYR01A0240_002 occ=0.156 trial=    2681/   63000 t
+  0.00 TYR01A0240_003 occ=0.004 trial=    2693/   63000 t
+  0.00 TYR01A0240_004 occ=0.823 trial=    2707/   63000 t
+  0.00 TYR01A0240_005 occ=0.001 trial=    2690/   63000 t
+  0.00 TYR01A0240_006 occ=0.000 trial=    2585/   63000 t
+  0.00 TYR01A0240_007 occ=0.000 trial=    2591/   63000 t
+  0.00 TYR01A0240_008 occ=0.000 trial=    2713/   63000 t
+  0.00 TYR01A0240_009 occ=0.000 trial=    2661/   63000 t
+  0.00 TYR01A0240_010 occ=0.015 trial=    2627/   63000 t
+  0.00 TYR01A0240_011 occ=0.000 trial=    2629/   63000 t
+  0.00 TYR01A0240_012 occ=0.000 trial=    2609/   63000 t
+  0.00 TYR-1A0240_013 occ=0.000 trial=    2554/   63000 t
+  0.00 TYR-1A0240_014 occ=0.000 trial=    2571/   63000 t
+  0.00 TYR-1A0240_015 occ=0.000 trial=    2600/   63000 t
+  0.00 TYR-1A0240_016 occ=0.000 trial=    2571/   63000 t
+  0.00 TYR-1A0240_017 occ=0.000 trial=    2622/   63000 t
+  0.00 TYR-1A0240_018 occ=0.000 trial=    2622/   63000 t
+  0.00 TYR-1A0240_019 occ=0.000 trial=    2671/   63000 t
+  0.00 TYR-1A0240_020 occ=0.000 trial=    2641/   63000 t
+  0.00 TYR-1A0240_021 occ=0.000 trial=    2483/   63000 t
+  0.00 TYR-1A0240_022 occ=0.000 trial=    2648/   63000 t
+  0.00 TYR-1A0240_023 occ=0.000 trial=    2595/   63000 t
+  0.00 TYR-1A0240_024 occ=0.000 trial=    2661/   63000 t
+
+pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   0.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   0.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  0.00 TYR01A0240_001 occ=0.000 trial=       0/   45000 f
+  0.00 TYR01A0240_002 occ=0.163 trial=   11297/   45000 t
+  0.00 TYR01A0240_003 occ=0.002 trial=   11315/   45000 t
+  0.00 TYR01A0240_004 occ=0.821 trial=   11271/   45000 t
+  0.00 TYR01A0240_005 occ=0.000 trial=       0/   45000 f
+  0.00 TYR01A0240_006 occ=0.000 trial=       0/   45000 f
+  0.00 TYR01A0240_007 occ=0.000 trial=       0/   45000 f
+  0.00 TYR01A0240_008 occ=0.000 trial=       0/   45000 f
+  0.00 TYR01A0240_009 occ=0.000 trial=       0/   45000 f
+  0.00 TYR01A0240_010 occ=0.014 trial=   11117/   45000 t
+  0.00 TYR01A0240_011 occ=0.000 trial=       0/   45000 f
+  0.00 TYR01A0240_012 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_013 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_014 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_015 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_016 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_017 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_018 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_019 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_020 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_021 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_022 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_023 occ=0.000 trial=       0/   45000 f
+  0.00 TYR-1A0240_024 occ=0.000 trial=       0/   45000 f
+
+pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   0.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   0.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  0.00 TYR01A0240_001 occ=0.000 trial=       0/   44000 f
+  0.00 TYR01A0240_002 occ=0.163 trial=   10949/   44000 t
+  0.00 TYR01A0240_003 occ=0.002 trial=   10890/   44000 t
+  0.00 TYR01A0240_004 occ=0.823 trial=   11100/   44000 t
+  0.00 TYR01A0240_005 occ=0.000 trial=       0/   44000 f
+  0.00 TYR01A0240_006 occ=0.000 trial=       0/   44000 f
+  0.00 TYR01A0240_007 occ=0.000 trial=       0/   44000 f
+  0.00 TYR01A0240_008 occ=0.000 trial=       0/   44000 f
+  0.00 TYR01A0240_009 occ=0.000 trial=       0/   44000 f
+  0.00 TYR01A0240_010 occ=0.012 trial=   11061/   44000 t
+  0.00 TYR01A0240_011 occ=0.000 trial=       0/   44000 f
+  0.00 TYR01A0240_012 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_013 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_014 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_015 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_016 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_017 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_018 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_019 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_020 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_021 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_022 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_023 occ=0.000 trial=       0/   44000 f
+  0.00 TYR-1A0240_024 occ=0.000 trial=       0/   44000 f
+
+pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   0.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   0.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  0.00 TYR01A0240_001 occ=0.000 trial=       0/   59000 f
+  0.00 TYR01A0240_002 occ=0.173 trial=   14707/   59000 t
+  0.00 TYR01A0240_003 occ=0.003 trial=   14724/   59000 t
+  0.00 TYR01A0240_004 occ=0.810 trial=   14796/   59000 t
+  0.00 TYR01A0240_005 occ=0.000 trial=       0/   59000 f
+  0.00 TYR01A0240_006 occ=0.000 trial=       0/   59000 f
+  0.00 TYR01A0240_007 occ=0.000 trial=       0/   59000 f
+  0.00 TYR01A0240_008 occ=0.000 trial=       0/   59000 f
+  0.00 TYR01A0240_009 occ=0.000 trial=       0/   59000 f
+  0.00 TYR01A0240_010 occ=0.014 trial=   14773/   59000 t
+  0.00 TYR01A0240_011 occ=0.000 trial=       0/   59000 f
+  0.00 TYR01A0240_012 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_013 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_014 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_015 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_016 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_017 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_018 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_019 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_020 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_021 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_022 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_023 occ=0.000 trial=       0/   59000 f
+  0.00 TYR-1A0240_024 occ=0.000 trial=       0/   59000 f
+
+pH =   0.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   0.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   0.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  0.00 TYR01A0240_001 occ=0.000 trial=       0/   70000 f
+  0.00 TYR01A0240_002 occ=0.165 trial=   17627/   70000 t
+  0.00 TYR01A0240_003 occ=0.003 trial=   17391/   70000 t
+  0.00 TYR01A0240_004 occ=0.819 trial=   17423/   70000 t
+  0.00 TYR01A0240_005 occ=0.000 trial=       0/   70000 f
+  0.00 TYR01A0240_006 occ=0.000 trial=       0/   70000 f
+  0.00 TYR01A0240_007 occ=0.000 trial=       0/   70000 f
+  0.00 TYR01A0240_008 occ=0.000 trial=       0/   70000 f
+  0.00 TYR01A0240_009 occ=0.000 trial=       0/   70000 f
+  0.00 TYR01A0240_010 occ=0.013 trial=   17559/   70000 t
+  0.00 TYR01A0240_011 occ=0.000 trial=       0/   70000 f
+  0.00 TYR01A0240_012 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_013 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_014 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_015 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_016 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_017 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_018 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_019 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_020 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_021 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_022 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_023 occ=0.000 trial=       0/   70000 f
+  0.00 TYR-1A0240_024 occ=0.000 trial=       0/   70000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  1.00 TYR01A0240_001 occ=0.000 trial=    2312/   57000 t
+  1.00 TYR01A0240_002 occ=0.156 trial=    2396/   57000 t
+  1.00 TYR01A0240_003 occ=0.003 trial=    2427/   57000 t
+  1.00 TYR01A0240_004 occ=0.820 trial=    2359/   57000 t
+  1.00 TYR01A0240_005 occ=0.001 trial=    2378/   57000 t
+  1.00 TYR01A0240_006 occ=0.000 trial=    2350/   57000 t
+  1.00 TYR01A0240_007 occ=0.000 trial=    2329/   57000 t
+  1.00 TYR01A0240_008 occ=0.000 trial=    2448/   57000 t
+  1.00 TYR01A0240_009 occ=0.000 trial=    2358/   57000 t
+  1.00 TYR01A0240_010 occ=0.018 trial=    2464/   57000 t
+  1.00 TYR01A0240_011 occ=0.000 trial=    2405/   57000 t
+  1.00 TYR01A0240_012 occ=0.000 trial=    2348/   57000 t
+  1.00 TYR-1A0240_013 occ=0.000 trial=    2321/   57000 t
+  1.00 TYR-1A0240_014 occ=0.000 trial=    2326/   57000 t
+  1.00 TYR-1A0240_015 occ=0.000 trial=    2401/   57000 t
+  1.00 TYR-1A0240_016 occ=0.000 trial=    2377/   57000 t
+  1.00 TYR-1A0240_017 occ=0.000 trial=    2452/   57000 t
+  1.00 TYR-1A0240_018 occ=0.000 trial=    2398/   57000 t
+  1.00 TYR-1A0240_019 occ=0.000 trial=    2397/   57000 t
+  1.00 TYR-1A0240_020 occ=0.000 trial=    2328/   57000 t
+  1.00 TYR-1A0240_021 occ=0.000 trial=    2276/   57000 t
+  1.00 TYR-1A0240_022 occ=0.000 trial=    2352/   57000 t
+  1.00 TYR-1A0240_023 occ=0.000 trial=    2415/   57000 t
+  1.00 TYR-1A0240_024 occ=0.000 trial=    2383/   57000 t
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  1.00 TYR01A0240_001 occ=0.000 trial=       0/   29000 f
+  1.00 TYR01A0240_002 occ=0.163 trial=    5797/   29000 t
+  1.00 TYR01A0240_003 occ=0.003 trial=    5752/   29000 t
+  1.00 TYR01A0240_004 occ=0.820 trial=    5800/   29000 t
+  1.00 TYR01A0240_005 occ=0.001 trial=    5770/   29000 t
+  1.00 TYR01A0240_006 occ=0.000 trial=       0/   29000 f
+  1.00 TYR01A0240_007 occ=0.000 trial=       0/   29000 f
+  1.00 TYR01A0240_008 occ=0.000 trial=       0/   29000 f
+  1.00 TYR01A0240_009 occ=0.000 trial=       0/   29000 f
+  1.00 TYR01A0240_010 occ=0.013 trial=    5881/   29000 t
+  1.00 TYR01A0240_011 occ=0.000 trial=       0/   29000 f
+  1.00 TYR01A0240_012 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_013 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_014 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_015 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_016 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_017 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_018 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_019 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_020 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_021 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_022 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_023 occ=0.000 trial=       0/   29000 f
+  1.00 TYR-1A0240_024 occ=0.000 trial=       0/   29000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  1.00 TYR01A0240_001 occ=0.000 trial=       0/   31000 f
+  1.00 TYR01A0240_002 occ=0.164 trial=    7778/   31000 t
+  1.00 TYR01A0240_003 occ=0.002 trial=    7739/   31000 t
+  1.00 TYR01A0240_004 occ=0.818 trial=    7723/   31000 t
+  1.00 TYR01A0240_005 occ=0.000 trial=       0/   31000 f
+  1.00 TYR01A0240_006 occ=0.000 trial=       0/   31000 f
+  1.00 TYR01A0240_007 occ=0.000 trial=       0/   31000 f
+  1.00 TYR01A0240_008 occ=0.000 trial=       0/   31000 f
+  1.00 TYR01A0240_009 occ=0.000 trial=       0/   31000 f
+  1.00 TYR01A0240_010 occ=0.016 trial=    7760/   31000 t
+  1.00 TYR01A0240_011 occ=0.000 trial=       0/   31000 f
+  1.00 TYR01A0240_012 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_013 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_014 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_015 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_016 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_017 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_018 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_019 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_020 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_021 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_022 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_023 occ=0.000 trial=       0/   31000 f
+  1.00 TYR-1A0240_024 occ=0.000 trial=       0/   31000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  1.00 TYR01A0240_001 occ=0.000 trial=       0/   19000 f
+  1.00 TYR01A0240_002 occ=0.163 trial=    4773/   19000 t
+  1.00 TYR01A0240_003 occ=0.003 trial=    4775/   19000 t
+  1.00 TYR01A0240_004 occ=0.821 trial=    4607/   19000 t
+  1.00 TYR01A0240_005 occ=0.000 trial=       0/   19000 f
+  1.00 TYR01A0240_006 occ=0.000 trial=       0/   19000 f
+  1.00 TYR01A0240_007 occ=0.000 trial=       0/   19000 f
+  1.00 TYR01A0240_008 occ=0.000 trial=       0/   19000 f
+  1.00 TYR01A0240_009 occ=0.000 trial=       0/   19000 f
+  1.00 TYR01A0240_010 occ=0.013 trial=    4845/   19000 t
+  1.00 TYR01A0240_011 occ=0.000 trial=       0/   19000 f
+  1.00 TYR01A0240_012 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_013 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_014 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_015 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_016 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_017 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_018 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_019 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_020 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_021 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_022 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_023 occ=0.000 trial=       0/   19000 f
+  1.00 TYR-1A0240_024 occ=0.000 trial=       0/   19000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  1.00 TYR01A0240_001 occ=0.000 trial=       0/   35000 f
+  1.00 TYR01A0240_002 occ=0.169 trial=    8798/   35000 t
+  1.00 TYR01A0240_003 occ=0.003 trial=    8691/   35000 t
+  1.00 TYR01A0240_004 occ=0.814 trial=    8746/   35000 t
+  1.00 TYR01A0240_005 occ=0.000 trial=       0/   35000 f
+  1.00 TYR01A0240_006 occ=0.000 trial=       0/   35000 f
+  1.00 TYR01A0240_007 occ=0.000 trial=       0/   35000 f
+  1.00 TYR01A0240_008 occ=0.000 trial=       0/   35000 f
+  1.00 TYR01A0240_009 occ=0.000 trial=       0/   35000 f
+  1.00 TYR01A0240_010 occ=0.014 trial=    8765/   35000 t
+  1.00 TYR01A0240_011 occ=0.000 trial=       0/   35000 f
+  1.00 TYR01A0240_012 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_013 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_014 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_015 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_016 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_017 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_018 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_019 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_020 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_021 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_022 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_023 occ=0.000 trial=       0/   35000 f
+  1.00 TYR-1A0240_024 occ=0.000 trial=       0/   35000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  1.00 TYR01A0240_001 occ=0.000 trial=       0/   46000 f
+  1.00 TYR01A0240_002 occ=0.166 trial=   11421/   46000 t
+  1.00 TYR01A0240_003 occ=0.002 trial=   11476/   46000 t
+  1.00 TYR01A0240_004 occ=0.818 trial=   11483/   46000 t
+  1.00 TYR01A0240_005 occ=0.000 trial=       0/   46000 f
+  1.00 TYR01A0240_006 occ=0.000 trial=       0/   46000 f
+  1.00 TYR01A0240_007 occ=0.000 trial=       0/   46000 f
+  1.00 TYR01A0240_008 occ=0.000 trial=       0/   46000 f
+  1.00 TYR01A0240_009 occ=0.000 trial=       0/   46000 f
+  1.00 TYR01A0240_010 occ=0.014 trial=   11620/   46000 t
+  1.00 TYR01A0240_011 occ=0.000 trial=       0/   46000 f
+  1.00 TYR01A0240_012 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_013 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_014 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_015 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_016 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_017 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_018 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_019 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_020 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_021 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_022 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_023 occ=0.000 trial=       0/   46000 f
+  1.00 TYR-1A0240_024 occ=0.000 trial=       0/   46000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  1.00 TYR01A0240_001 occ=0.000 trial=       0/   49000 f
+  1.00 TYR01A0240_002 occ=0.161 trial=   11995/   49000 t
+  1.00 TYR01A0240_003 occ=0.002 trial=   12317/   49000 t
+  1.00 TYR01A0240_004 occ=0.824 trial=   12381/   49000 t
+  1.00 TYR01A0240_005 occ=0.000 trial=       0/   49000 f
+  1.00 TYR01A0240_006 occ=0.000 trial=       0/   49000 f
+  1.00 TYR01A0240_007 occ=0.000 trial=       0/   49000 f
+  1.00 TYR01A0240_008 occ=0.000 trial=       0/   49000 f
+  1.00 TYR01A0240_009 occ=0.000 trial=       0/   49000 f
+  1.00 TYR01A0240_010 occ=0.013 trial=   12307/   49000 t
+  1.00 TYR01A0240_011 occ=0.000 trial=       0/   49000 f
+  1.00 TYR01A0240_012 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_013 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_014 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_015 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_016 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_017 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_018 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_019 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_020 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_021 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_022 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_023 occ=0.000 trial=       0/   49000 f
+  1.00 TYR-1A0240_024 occ=0.000 trial=       0/   49000 f
+
+pH =   1.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   1.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   1.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  1.00 TYR01A0240_001 occ=0.000 trial=       0/   47000 f
+  1.00 TYR01A0240_002 occ=0.165 trial=   11829/   47000 t
+  1.00 TYR01A0240_003 occ=0.003 trial=   11738/   47000 t
+  1.00 TYR01A0240_004 occ=0.818 trial=   11610/   47000 t
+  1.00 TYR01A0240_005 occ=0.000 trial=       0/   47000 f
+  1.00 TYR01A0240_006 occ=0.000 trial=       0/   47000 f
+  1.00 TYR01A0240_007 occ=0.000 trial=       0/   47000 f
+  1.00 TYR01A0240_008 occ=0.000 trial=       0/   47000 f
+  1.00 TYR01A0240_009 occ=0.000 trial=       0/   47000 f
+  1.00 TYR01A0240_010 occ=0.013 trial=   11823/   47000 t
+  1.00 TYR01A0240_011 occ=0.000 trial=       0/   47000 f
+  1.00 TYR01A0240_012 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_013 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_014 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_015 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_016 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_017 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_018 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_019 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_020 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_021 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_022 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_023 occ=0.000 trial=       0/   47000 f
+  1.00 TYR-1A0240_024 occ=0.000 trial=       0/   47000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -9.71 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  2.00 TYR01A0240_001 occ=0.001 trial=    3028/   75000 t
+  2.00 TYR01A0240_002 occ=0.161 trial=    3125/   75000 t
+  2.00 TYR01A0240_003 occ=0.003 trial=    3167/   75000 t
+  2.00 TYR01A0240_004 occ=0.816 trial=    3073/   75000 t
+  2.00 TYR01A0240_005 occ=0.001 trial=    3159/   75000 t
+  2.00 TYR01A0240_006 occ=0.001 trial=    3109/   75000 t
+  2.00 TYR01A0240_007 occ=0.000 trial=    3104/   75000 t
+  2.00 TYR01A0240_008 occ=0.001 trial=    3211/   75000 t
+  2.00 TYR01A0240_009 occ=0.000 trial=    3108/   75000 t
+  2.00 TYR01A0240_010 occ=0.015 trial=    3224/   75000 t
+  2.00 TYR01A0240_011 occ=0.000 trial=    3019/   75000 t
+  2.00 TYR01A0240_012 occ=0.000 trial=    3194/   75000 t
+  2.00 TYR-1A0240_013 occ=0.000 trial=    3103/   75000 t
+  2.00 TYR-1A0240_014 occ=0.000 trial=    3217/   75000 t
+  2.00 TYR-1A0240_015 occ=0.000 trial=    3200/   75000 t
+  2.00 TYR-1A0240_016 occ=0.000 trial=    3022/   75000 t
+  2.00 TYR-1A0240_017 occ=0.000 trial=    3101/   75000 t
+  2.00 TYR-1A0240_018 occ=0.000 trial=    3256/   75000 t
+  2.00 TYR-1A0240_019 occ=0.000 trial=    3134/   75000 t
+  2.00 TYR-1A0240_020 occ=0.000 trial=    3136/   75000 t
+  2.00 TYR-1A0240_021 occ=0.000 trial=    3106/   75000 t
+  2.00 TYR-1A0240_022 occ=0.000 trial=    3051/   75000 t
+  2.00 TYR-1A0240_023 occ=0.000 trial=    3113/   75000 t
+  2.00 TYR-1A0240_024 occ=0.000 trial=    3040/   75000 t
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  2.00 TYR01A0240_001 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_002 occ=0.166 trial=    7970/   40000 t
+  2.00 TYR01A0240_003 occ=0.003 trial=    8122/   40000 t
+  2.00 TYR01A0240_004 occ=0.816 trial=    8000/   40000 t
+  2.00 TYR01A0240_005 occ=0.001 trial=    7935/   40000 t
+  2.00 TYR01A0240_006 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_007 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_008 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_009 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_010 occ=0.014 trial=    7973/   40000 t
+  2.00 TYR01A0240_011 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_012 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_013 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_014 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_015 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_016 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_017 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_018 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_019 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_020 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_021 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_022 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_023 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_024 occ=0.000 trial=       0/   40000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  2.00 TYR01A0240_001 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_002 occ=0.162 trial=    8089/   40000 t
+  2.00 TYR01A0240_003 occ=0.003 trial=    7999/   40000 t
+  2.00 TYR01A0240_004 occ=0.821 trial=    7938/   40000 t
+  2.00 TYR01A0240_005 occ=0.001 trial=    7983/   40000 t
+  2.00 TYR01A0240_006 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_007 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_008 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_009 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_010 occ=0.014 trial=    7991/   40000 t
+  2.00 TYR01A0240_011 occ=0.000 trial=       0/   40000 f
+  2.00 TYR01A0240_012 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_013 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_014 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_015 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_016 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_017 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_018 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_019 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_020 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_021 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_022 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_023 occ=0.000 trial=       0/   40000 f
+  2.00 TYR-1A0240_024 occ=0.000 trial=       0/   40000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  2.00 TYR01A0240_001 occ=0.000 trial=       0/   49000 f
+  2.00 TYR01A0240_002 occ=0.167 trial=   12250/   49000 t
+  2.00 TYR01A0240_003 occ=0.003 trial=   12284/   49000 t
+  2.00 TYR01A0240_004 occ=0.815 trial=   12379/   49000 t
+  2.00 TYR01A0240_005 occ=0.000 trial=       0/   49000 f
+  2.00 TYR01A0240_006 occ=0.000 trial=       0/   49000 f
+  2.00 TYR01A0240_007 occ=0.000 trial=       0/   49000 f
+  2.00 TYR01A0240_008 occ=0.000 trial=       0/   49000 f
+  2.00 TYR01A0240_009 occ=0.000 trial=       0/   49000 f
+  2.00 TYR01A0240_010 occ=0.015 trial=   12087/   49000 t
+  2.00 TYR01A0240_011 occ=0.000 trial=       0/   49000 f
+  2.00 TYR01A0240_012 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_013 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_014 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_015 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_016 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_017 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_018 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_019 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_020 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_021 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_022 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_023 occ=0.000 trial=       0/   49000 f
+  2.00 TYR-1A0240_024 occ=0.000 trial=       0/   49000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  2.00 TYR01A0240_001 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_002 occ=0.167 trial=   11155/   44000 t
+  2.00 TYR01A0240_003 occ=0.003 trial=   10782/   44000 t
+  2.00 TYR01A0240_004 occ=0.815 trial=   11116/   44000 t
+  2.00 TYR01A0240_005 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_006 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_007 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_008 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_009 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_010 occ=0.015 trial=   10947/   44000 t
+  2.00 TYR01A0240_011 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_012 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_013 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_014 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_015 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_016 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_017 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_018 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_019 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_020 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_021 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_022 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_023 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_024 occ=0.000 trial=       0/   44000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  2.00 TYR01A0240_001 occ=0.000 trial=       0/   37000 f
+  2.00 TYR01A0240_002 occ=0.168 trial=    9256/   37000 t
+  2.00 TYR01A0240_003 occ=0.003 trial=    9307/   37000 t
+  2.00 TYR01A0240_004 occ=0.815 trial=    9109/   37000 t
+  2.00 TYR01A0240_005 occ=0.000 trial=       0/   37000 f
+  2.00 TYR01A0240_006 occ=0.000 trial=       0/   37000 f
+  2.00 TYR01A0240_007 occ=0.000 trial=       0/   37000 f
+  2.00 TYR01A0240_008 occ=0.000 trial=       0/   37000 f
+  2.00 TYR01A0240_009 occ=0.000 trial=       0/   37000 f
+  2.00 TYR01A0240_010 occ=0.015 trial=    9328/   37000 t
+  2.00 TYR01A0240_011 occ=0.000 trial=       0/   37000 f
+  2.00 TYR01A0240_012 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_013 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_014 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_015 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_016 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_017 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_018 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_019 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_020 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_021 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_022 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_023 occ=0.000 trial=       0/   37000 f
+  2.00 TYR-1A0240_024 occ=0.000 trial=       0/   37000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  2.00 TYR01A0240_001 occ=0.000 trial=       0/   30000 f
+  2.00 TYR01A0240_002 occ=0.171 trial=    7407/   30000 t
+  2.00 TYR01A0240_003 occ=0.002 trial=    7605/   30000 t
+  2.00 TYR01A0240_004 occ=0.813 trial=    7529/   30000 t
+  2.00 TYR01A0240_005 occ=0.000 trial=       0/   30000 f
+  2.00 TYR01A0240_006 occ=0.000 trial=       0/   30000 f
+  2.00 TYR01A0240_007 occ=0.000 trial=       0/   30000 f
+  2.00 TYR01A0240_008 occ=0.000 trial=       0/   30000 f
+  2.00 TYR01A0240_009 occ=0.000 trial=       0/   30000 f
+  2.00 TYR01A0240_010 occ=0.014 trial=    7459/   30000 t
+  2.00 TYR01A0240_011 occ=0.000 trial=       0/   30000 f
+  2.00 TYR01A0240_012 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_013 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_014 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_015 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_016 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_017 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_018 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_019 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_020 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_021 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_022 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_023 occ=0.000 trial=       0/   30000 f
+  2.00 TYR-1A0240_024 occ=0.000 trial=       0/   30000 f
+
+pH =   2.00 Eh =   0.00, Unf. Energy =     0.00 Kcal/mol
+pH =   2.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   2.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  2.00 TYR01A0240_001 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_002 occ=0.166 trial=   11192/   44000 t
+  2.00 TYR01A0240_003 occ=0.003 trial=   10886/   44000 t
+  2.00 TYR01A0240_004 occ=0.816 trial=   10935/   44000 t
+  2.00 TYR01A0240_005 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_006 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_007 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_008 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_009 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_010 occ=0.015 trial=   10987/   44000 t
+  2.00 TYR01A0240_011 occ=0.000 trial=       0/   44000 f
+  2.00 TYR01A0240_012 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_013 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_014 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_015 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_016 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_017 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_018 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_019 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_020 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_021 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_022 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_023 occ=0.000 trial=       0/   44000 f
+  2.00 TYR-1A0240_024 occ=0.000 trial=       0/   44000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=    4185/   99000 t
+  3.00 TYR01A0240_002 occ=0.169 trial=    4150/   99000 t
+  3.00 TYR01A0240_003 occ=0.001 trial=    4136/   99000 t
+  3.00 TYR01A0240_004 occ=0.815 trial=    4133/   99000 t
+  3.00 TYR01A0240_005 occ=0.001 trial=    4058/   99000 t
+  3.00 TYR01A0240_006 occ=0.000 trial=    4119/   99000 t
+  3.00 TYR01A0240_007 occ=0.000 trial=    4134/   99000 t
+  3.00 TYR01A0240_008 occ=0.000 trial=    4102/   99000 t
+  3.00 TYR01A0240_009 occ=0.000 trial=    4027/   99000 t
+  3.00 TYR01A0240_010 occ=0.013 trial=    4063/   99000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=    4162/   99000 t
+  3.00 TYR01A0240_012 occ=0.000 trial=    4104/   99000 t
+  3.00 TYR-1A0240_013 occ=0.000 trial=    4199/   99000 t
+  3.00 TYR-1A0240_014 occ=0.000 trial=    4090/   99000 t
+  3.00 TYR-1A0240_015 occ=0.000 trial=    4089/   99000 t
+  3.00 TYR-1A0240_016 occ=0.000 trial=    4041/   99000 t
+  3.00 TYR-1A0240_017 occ=0.000 trial=    4133/   99000 t
+  3.00 TYR-1A0240_018 occ=0.000 trial=    4176/   99000 t
+  3.00 TYR-1A0240_019 occ=0.000 trial=    4179/   99000 t
+  3.00 TYR-1A0240_020 occ=0.000 trial=    4196/   99000 t
+  3.00 TYR-1A0240_021 occ=0.000 trial=    4218/   99000 t
+  3.00 TYR-1A0240_022 occ=0.000 trial=    4115/   99000 t
+  3.00 TYR-1A0240_023 occ=0.000 trial=    4140/   99000 t
+  3.00 TYR-1A0240_024 occ=0.000 trial=    4051/   99000 t
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=       0/   28000 f
+  3.00 TYR01A0240_002 occ=0.171 trial=    7068/   28000 t
+  3.00 TYR01A0240_003 occ=0.003 trial=    7131/   28000 t
+  3.00 TYR01A0240_004 occ=0.811 trial=    6976/   28000 t
+  3.00 TYR01A0240_005 occ=0.000 trial=       0/   28000 f
+  3.00 TYR01A0240_006 occ=0.000 trial=       0/   28000 f
+  3.00 TYR01A0240_007 occ=0.000 trial=       0/   28000 f
+  3.00 TYR01A0240_008 occ=0.000 trial=       0/   28000 f
+  3.00 TYR01A0240_009 occ=0.000 trial=       0/   28000 f
+  3.00 TYR01A0240_010 occ=0.015 trial=    6825/   28000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=       0/   28000 f
+  3.00 TYR01A0240_012 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_013 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_014 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_015 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_016 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_017 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_018 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_019 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_020 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_021 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_022 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_023 occ=0.000 trial=       0/   28000 f
+  3.00 TYR-1A0240_024 occ=0.000 trial=       0/   28000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=       0/   41000 f
+  3.00 TYR01A0240_002 occ=0.161 trial=   10329/   41000 t
+  3.00 TYR01A0240_003 occ=0.003 trial=   10197/   41000 t
+  3.00 TYR01A0240_004 occ=0.822 trial=   10286/   41000 t
+  3.00 TYR01A0240_005 occ=0.000 trial=       0/   41000 f
+  3.00 TYR01A0240_006 occ=0.000 trial=       0/   41000 f
+  3.00 TYR01A0240_007 occ=0.000 trial=       0/   41000 f
+  3.00 TYR01A0240_008 occ=0.000 trial=       0/   41000 f
+  3.00 TYR01A0240_009 occ=0.000 trial=       0/   41000 f
+  3.00 TYR01A0240_010 occ=0.014 trial=   10188/   41000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=       0/   41000 f
+  3.00 TYR01A0240_012 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_013 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_014 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_015 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_016 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_017 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_018 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_019 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_020 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_021 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_022 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_023 occ=0.000 trial=       0/   41000 f
+  3.00 TYR-1A0240_024 occ=0.000 trial=       0/   41000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=       0/   51000 f
+  3.00 TYR01A0240_002 occ=0.165 trial=   12782/   51000 t
+  3.00 TYR01A0240_003 occ=0.003 trial=   12844/   51000 t
+  3.00 TYR01A0240_004 occ=0.817 trial=   12690/   51000 t
+  3.00 TYR01A0240_005 occ=0.000 trial=       0/   51000 f
+  3.00 TYR01A0240_006 occ=0.000 trial=       0/   51000 f
+  3.00 TYR01A0240_007 occ=0.000 trial=       0/   51000 f
+  3.00 TYR01A0240_008 occ=0.000 trial=       0/   51000 f
+  3.00 TYR01A0240_009 occ=0.000 trial=       0/   51000 f
+  3.00 TYR01A0240_010 occ=0.015 trial=   12684/   51000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=       0/   51000 f
+  3.00 TYR01A0240_012 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_013 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_014 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_015 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_016 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_017 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_018 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_019 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_020 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_021 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_022 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_023 occ=0.000 trial=       0/   51000 f
+  3.00 TYR-1A0240_024 occ=0.000 trial=       0/   51000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=       0/   39000 f
+  3.00 TYR01A0240_002 occ=0.171 trial=    9759/   39000 t
+  3.00 TYR01A0240_003 occ=0.003 trial=    9687/   39000 t
+  3.00 TYR01A0240_004 occ=0.812 trial=    9788/   39000 t
+  3.00 TYR01A0240_005 occ=0.000 trial=       0/   39000 f
+  3.00 TYR01A0240_006 occ=0.000 trial=       0/   39000 f
+  3.00 TYR01A0240_007 occ=0.000 trial=       0/   39000 f
+  3.00 TYR01A0240_008 occ=0.000 trial=       0/   39000 f
+  3.00 TYR01A0240_009 occ=0.000 trial=       0/   39000 f
+  3.00 TYR01A0240_010 occ=0.014 trial=    9766/   39000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=       0/   39000 f
+  3.00 TYR01A0240_012 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_013 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_014 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_015 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_016 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_017 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_018 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_019 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_020 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_021 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_022 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_023 occ=0.000 trial=       0/   39000 f
+  3.00 TYR-1A0240_024 occ=0.000 trial=       0/   39000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=       0/   58000 f
+  3.00 TYR01A0240_002 occ=0.161 trial=   14622/   58000 t
+  3.00 TYR01A0240_003 occ=0.002 trial=   14491/   58000 t
+  3.00 TYR01A0240_004 occ=0.823 trial=   14447/   58000 t
+  3.00 TYR01A0240_005 occ=0.000 trial=       0/   58000 f
+  3.00 TYR01A0240_006 occ=0.000 trial=       0/   58000 f
+  3.00 TYR01A0240_007 occ=0.000 trial=       0/   58000 f
+  3.00 TYR01A0240_008 occ=0.000 trial=       0/   58000 f
+  3.00 TYR01A0240_009 occ=0.000 trial=       0/   58000 f
+  3.00 TYR01A0240_010 occ=0.014 trial=   14440/   58000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=       0/   58000 f
+  3.00 TYR01A0240_012 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_013 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_014 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_015 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_016 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_017 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_018 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_019 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_020 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_021 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_022 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_023 occ=0.000 trial=       0/   58000 f
+  3.00 TYR-1A0240_024 occ=0.000 trial=       0/   58000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=       0/   20000 f
+  3.00 TYR01A0240_002 occ=0.161 trial=    4998/   20000 t
+  3.00 TYR01A0240_003 occ=0.004 trial=    4896/   20000 t
+  3.00 TYR01A0240_004 occ=0.823 trial=    5097/   20000 t
+  3.00 TYR01A0240_005 occ=0.000 trial=       0/   20000 f
+  3.00 TYR01A0240_006 occ=0.000 trial=       0/   20000 f
+  3.00 TYR01A0240_007 occ=0.000 trial=       0/   20000 f
+  3.00 TYR01A0240_008 occ=0.000 trial=       0/   20000 f
+  3.00 TYR01A0240_009 occ=0.000 trial=       0/   20000 f
+  3.00 TYR01A0240_010 occ=0.012 trial=    5009/   20000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=       0/   20000 f
+  3.00 TYR01A0240_012 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_013 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_014 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_015 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_016 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_017 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_018 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_019 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_020 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_021 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_022 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_023 occ=0.000 trial=       0/   20000 f
+  3.00 TYR-1A0240_024 occ=0.000 trial=       0/   20000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=       0/   26000 f
+  3.00 TYR01A0240_002 occ=0.155 trial=    6420/   26000 t
+  3.00 TYR01A0240_003 occ=0.002 trial=    6417/   26000 t
+  3.00 TYR01A0240_004 occ=0.828 trial=    6592/   26000 t
+  3.00 TYR01A0240_005 occ=0.000 trial=       0/   26000 f
+  3.00 TYR01A0240_006 occ=0.000 trial=       0/   26000 f
+  3.00 TYR01A0240_007 occ=0.000 trial=       0/   26000 f
+  3.00 TYR01A0240_008 occ=0.000 trial=       0/   26000 f
+  3.00 TYR01A0240_009 occ=0.000 trial=       0/   26000 f
+  3.00 TYR01A0240_010 occ=0.014 trial=    6571/   26000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=       0/   26000 f
+  3.00 TYR01A0240_012 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_013 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_014 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_015 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_016 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_017 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_018 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_019 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_020 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_021 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_022 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_023 occ=0.000 trial=       0/   26000 f
+  3.00 TYR-1A0240_024 occ=0.000 trial=       0/   26000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=       0/   38000 f
+  3.00 TYR01A0240_002 occ=0.168 trial=    9597/   38000 t
+  3.00 TYR01A0240_003 occ=0.003 trial=    9370/   38000 t
+  3.00 TYR01A0240_004 occ=0.815 trial=    9457/   38000 t
+  3.00 TYR01A0240_005 occ=0.000 trial=       0/   38000 f
+  3.00 TYR01A0240_006 occ=0.000 trial=       0/   38000 f
+  3.00 TYR01A0240_007 occ=0.000 trial=       0/   38000 f
+  3.00 TYR01A0240_008 occ=0.000 trial=       0/   38000 f
+  3.00 TYR01A0240_009 occ=0.000 trial=       0/   38000 f
+  3.00 TYR01A0240_010 occ=0.014 trial=    9576/   38000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=       0/   38000 f
+  3.00 TYR01A0240_012 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_013 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_014 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_015 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_016 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_017 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_018 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_019 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_020 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_021 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_022 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_023 occ=0.000 trial=       0/   38000 f
+  3.00 TYR-1A0240_024 occ=0.000 trial=       0/   38000 f
+
+pH =   3.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   3.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   3.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  3.00 TYR01A0240_001 occ=0.000 trial=       0/   30000 f
+  3.00 TYR01A0240_002 occ=0.165 trial=    7559/   30000 t
+  3.00 TYR01A0240_003 occ=0.003 trial=    7482/   30000 t
+  3.00 TYR01A0240_004 occ=0.818 trial=    7494/   30000 t
+  3.00 TYR01A0240_005 occ=0.000 trial=       0/   30000 f
+  3.00 TYR01A0240_006 occ=0.000 trial=       0/   30000 f
+  3.00 TYR01A0240_007 occ=0.000 trial=       0/   30000 f
+  3.00 TYR01A0240_008 occ=0.000 trial=       0/   30000 f
+  3.00 TYR01A0240_009 occ=0.000 trial=       0/   30000 f
+  3.00 TYR01A0240_010 occ=0.014 trial=    7465/   30000 t
+  3.00 TYR01A0240_011 occ=0.000 trial=       0/   30000 f
+  3.00 TYR01A0240_012 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_013 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_014 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_015 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_016 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_017 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_018 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_019 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_020 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_021 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_022 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_023 occ=0.000 trial=       0/   30000 f
+  3.00 TYR-1A0240_024 occ=0.000 trial=       0/   30000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -9.70 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  4.00 TYR01A0240_001 occ=0.000 trial=    2186/   51000 t
+  4.00 TYR01A0240_002 occ=0.173 trial=    2137/   51000 t
+  4.00 TYR01A0240_003 occ=0.004 trial=    2155/   51000 t
+  4.00 TYR01A0240_004 occ=0.804 trial=    2111/   51000 t
+  4.00 TYR01A0240_005 occ=0.001 trial=    2144/   51000 t
+  4.00 TYR01A0240_006 occ=0.001 trial=    2065/   51000 t
+  4.00 TYR01A0240_007 occ=0.000 trial=    2140/   51000 t
+  4.00 TYR01A0240_008 occ=0.000 trial=    2170/   51000 t
+  4.00 TYR01A0240_009 occ=0.000 trial=    2070/   51000 t
+  4.00 TYR01A0240_010 occ=0.017 trial=    2131/   51000 t
+  4.00 TYR01A0240_011 occ=0.000 trial=    2192/   51000 t
+  4.00 TYR01A0240_012 occ=0.000 trial=    2074/   51000 t
+  4.00 TYR-1A0240_013 occ=0.000 trial=    2090/   51000 t
+  4.00 TYR-1A0240_014 occ=0.000 trial=    2134/   51000 t
+  4.00 TYR-1A0240_015 occ=0.000 trial=    2110/   51000 t
+  4.00 TYR-1A0240_016 occ=0.000 trial=    2086/   51000 t
+  4.00 TYR-1A0240_017 occ=0.000 trial=    2164/   51000 t
+  4.00 TYR-1A0240_018 occ=0.000 trial=    2151/   51000 t
+  4.00 TYR-1A0240_019 occ=0.000 trial=    2090/   51000 t
+  4.00 TYR-1A0240_020 occ=0.000 trial=    2142/   51000 t
+  4.00 TYR-1A0240_021 occ=0.000 trial=    2114/   51000 t
+  4.00 TYR-1A0240_022 occ=0.000 trial=    2125/   51000 t
+  4.00 TYR-1A0240_023 occ=0.000 trial=    2170/   51000 t
+  4.00 TYR-1A0240_024 occ=0.000 trial=    2049/   51000 t
+
+pH =   4.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  4.00 TYR01A0240_001 occ=0.000 trial=       0/   35000 f
+  4.00 TYR01A0240_002 occ=0.172 trial=    7038/   35000 t
+  4.00 TYR01A0240_003 occ=0.003 trial=    6949/   35000 t
+  4.00 TYR01A0240_004 occ=0.808 trial=    6943/   35000 t
+  4.00 TYR01A0240_005 occ=0.001 trial=    7046/   35000 t
+  4.00 TYR01A0240_006 occ=0.000 trial=       0/   35000 f
+  4.00 TYR01A0240_007 occ=0.000 trial=       0/   35000 f
+  4.00 TYR01A0240_008 occ=0.000 trial=       0/   35000 f
+  4.00 TYR01A0240_009 occ=0.000 trial=       0/   35000 f
+  4.00 TYR01A0240_010 occ=0.016 trial=    7024/   35000 t
+  4.00 TYR01A0240_011 occ=0.000 trial=       0/   35000 f
+  4.00 TYR01A0240_012 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_013 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_014 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_015 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_016 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_017 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_018 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_019 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_020 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_021 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_022 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_023 occ=0.000 trial=       0/   35000 f
+  4.00 TYR-1A0240_024 occ=0.000 trial=       0/   35000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  4.00 TYR01A0240_001 occ=0.000 trial=       0/   42000 f
+  4.00 TYR01A0240_002 occ=0.164 trial=   10435/   42000 t
+  4.00 TYR01A0240_003 occ=0.003 trial=   10682/   42000 t
+  4.00 TYR01A0240_004 occ=0.820 trial=   10518/   42000 t
+  4.00 TYR01A0240_005 occ=0.000 trial=       0/   42000 f
+  4.00 TYR01A0240_006 occ=0.000 trial=       0/   42000 f
+  4.00 TYR01A0240_007 occ=0.000 trial=       0/   42000 f
+  4.00 TYR01A0240_008 occ=0.000 trial=       0/   42000 f
+  4.00 TYR01A0240_009 occ=0.000 trial=       0/   42000 f
+  4.00 TYR01A0240_010 occ=0.013 trial=   10365/   42000 t
+  4.00 TYR01A0240_011 occ=0.000 trial=       0/   42000 f
+  4.00 TYR01A0240_012 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_013 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_014 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_015 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_016 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_017 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_018 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_019 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_020 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_021 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_022 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_023 occ=0.000 trial=       0/   42000 f
+  4.00 TYR-1A0240_024 occ=0.000 trial=       0/   42000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  4.00 TYR01A0240_001 occ=0.000 trial=       0/   31000 f
+  4.00 TYR01A0240_002 occ=0.171 trial=    7699/   31000 t
+  4.00 TYR01A0240_003 occ=0.003 trial=    7850/   31000 t
+  4.00 TYR01A0240_004 occ=0.810 trial=    7613/   31000 t
+  4.00 TYR01A0240_005 occ=0.000 trial=       0/   31000 f
+  4.00 TYR01A0240_006 occ=0.000 trial=       0/   31000 f
+  4.00 TYR01A0240_007 occ=0.000 trial=       0/   31000 f
+  4.00 TYR01A0240_008 occ=0.000 trial=       0/   31000 f
+  4.00 TYR01A0240_009 occ=0.000 trial=       0/   31000 f
+  4.00 TYR01A0240_010 occ=0.016 trial=    7838/   31000 t
+  4.00 TYR01A0240_011 occ=0.000 trial=       0/   31000 f
+  4.00 TYR01A0240_012 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_013 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_014 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_015 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_016 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_017 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_018 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_019 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_020 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_021 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_022 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_023 occ=0.000 trial=       0/   31000 f
+  4.00 TYR-1A0240_024 occ=0.000 trial=       0/   31000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  4.00 TYR01A0240_001 occ=0.000 trial=       0/   46000 f
+  4.00 TYR01A0240_002 occ=0.170 trial=   11570/   46000 t
+  4.00 TYR01A0240_003 occ=0.002 trial=   11499/   46000 t
+  4.00 TYR01A0240_004 occ=0.815 trial=   11463/   46000 t
+  4.00 TYR01A0240_005 occ=0.000 trial=       0/   46000 f
+  4.00 TYR01A0240_006 occ=0.000 trial=       0/   46000 f
+  4.00 TYR01A0240_007 occ=0.000 trial=       0/   46000 f
+  4.00 TYR01A0240_008 occ=0.000 trial=       0/   46000 f
+  4.00 TYR01A0240_009 occ=0.000 trial=       0/   46000 f
+  4.00 TYR01A0240_010 occ=0.012 trial=   11468/   46000 t
+  4.00 TYR01A0240_011 occ=0.000 trial=       0/   46000 f
+  4.00 TYR01A0240_012 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_013 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_014 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_015 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_016 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_017 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_018 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_019 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_020 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_021 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_022 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_023 occ=0.000 trial=       0/   46000 f
+  4.00 TYR-1A0240_024 occ=0.000 trial=       0/   46000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  4.00 TYR01A0240_001 occ=0.000 trial=       0/   49000 f
+  4.00 TYR01A0240_002 occ=0.162 trial=   12130/   49000 t
+  4.00 TYR01A0240_003 occ=0.003 trial=   12264/   49000 t
+  4.00 TYR01A0240_004 occ=0.821 trial=   12233/   49000 t
+  4.00 TYR01A0240_005 occ=0.000 trial=       0/   49000 f
+  4.00 TYR01A0240_006 occ=0.000 trial=       0/   49000 f
+  4.00 TYR01A0240_007 occ=0.000 trial=       0/   49000 f
+  4.00 TYR01A0240_008 occ=0.000 trial=       0/   49000 f
+  4.00 TYR01A0240_009 occ=0.000 trial=       0/   49000 f
+  4.00 TYR01A0240_010 occ=0.014 trial=   12373/   49000 t
+  4.00 TYR01A0240_011 occ=0.000 trial=       0/   49000 f
+  4.00 TYR01A0240_012 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_013 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_014 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_015 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_016 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_017 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_018 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_019 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_020 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_021 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_022 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_023 occ=0.000 trial=       0/   49000 f
+  4.00 TYR-1A0240_024 occ=0.000 trial=       0/   49000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  4.00 TYR01A0240_001 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_002 occ=0.163 trial=   12919/   52000 t
+  4.00 TYR01A0240_003 occ=0.003 trial=   13196/   52000 t
+  4.00 TYR01A0240_004 occ=0.819 trial=   12917/   52000 t
+  4.00 TYR01A0240_005 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_006 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_007 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_008 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_009 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_010 occ=0.015 trial=   12968/   52000 t
+  4.00 TYR01A0240_011 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_012 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_013 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_014 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_015 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_016 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_017 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_018 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_019 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_020 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_021 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_022 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_023 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_024 occ=0.000 trial=       0/   52000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  4.00 TYR01A0240_001 occ=0.000 trial=       0/   23000 f
+  4.00 TYR01A0240_002 occ=0.165 trial=    5712/   23000 t
+  4.00 TYR01A0240_003 occ=0.002 trial=    5769/   23000 t
+  4.00 TYR01A0240_004 occ=0.820 trial=    5850/   23000 t
+  4.00 TYR01A0240_005 occ=0.000 trial=       0/   23000 f
+  4.00 TYR01A0240_006 occ=0.000 trial=       0/   23000 f
+  4.00 TYR01A0240_007 occ=0.000 trial=       0/   23000 f
+  4.00 TYR01A0240_008 occ=0.000 trial=       0/   23000 f
+  4.00 TYR01A0240_009 occ=0.000 trial=       0/   23000 f
+  4.00 TYR01A0240_010 occ=0.013 trial=    5669/   23000 t
+  4.00 TYR01A0240_011 occ=0.000 trial=       0/   23000 f
+  4.00 TYR01A0240_012 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_013 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_014 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_015 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_016 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_017 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_018 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_019 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_020 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_021 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_022 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_023 occ=0.000 trial=       0/   23000 f
+  4.00 TYR-1A0240_024 occ=0.000 trial=       0/   23000 f
+
+pH =   4.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   4.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   4.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  4.00 TYR01A0240_001 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_002 occ=0.169 trial=   13065/   52000 t
+  4.00 TYR01A0240_003 occ=0.003 trial=   12958/   52000 t
+  4.00 TYR01A0240_004 occ=0.814 trial=   12940/   52000 t
+  4.00 TYR01A0240_005 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_006 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_007 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_008 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_009 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_010 occ=0.014 trial=   13037/   52000 t
+  4.00 TYR01A0240_011 occ=0.000 trial=       0/   52000 f
+  4.00 TYR01A0240_012 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_013 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_014 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_015 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_016 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_017 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_018 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_019 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_020 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_021 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_022 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_023 occ=0.000 trial=       0/   52000 f
+  4.00 TYR-1A0240_024 occ=0.000 trial=       0/   52000 f
+
+pH =   5.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   5.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  5.00 TYR01A0240_001 occ=0.000 trial=    4055/   96000 t
+  5.00 TYR01A0240_002 occ=0.157 trial=    4114/   96000 t
+  5.00 TYR01A0240_003 occ=0.003 trial=    4007/   96000 t
+  5.00 TYR01A0240_004 occ=0.826 trial=    4097/   96000 t
+  5.00 TYR01A0240_005 occ=0.001 trial=    3950/   96000 t
+  5.00 TYR01A0240_006 occ=0.000 trial=    3983/   96000 t
+  5.00 TYR01A0240_007 occ=0.000 trial=    3908/   96000 t
+  5.00 TYR01A0240_008 occ=0.000 trial=    4032/   96000 t
+  5.00 TYR01A0240_009 occ=0.000 trial=    4020/   96000 t
+  5.00 TYR01A0240_010 occ=0.013 trial=    3964/   96000 t
+  5.00 TYR01A0240_011 occ=0.000 trial=    4132/   96000 t
+  5.00 TYR01A0240_012 occ=0.000 trial=    3986/   96000 t
+  5.00 TYR-1A0240_013 occ=0.000 trial=    3951/   96000 t
+  5.00 TYR-1A0240_014 occ=0.000 trial=    4051/   96000 t
+  5.00 TYR-1A0240_015 occ=0.000 trial=    4061/   96000 t
+  5.00 TYR-1A0240_016 occ=0.000 trial=    3998/   96000 t
+  5.00 TYR-1A0240_017 occ=0.000 trial=    3938/   96000 t
+  5.00 TYR-1A0240_018 occ=0.000 trial=    3949/   96000 t
+  5.00 TYR-1A0240_019 occ=0.000 trial=    3876/   96000 t
+  5.00 TYR-1A0240_020 occ=0.000 trial=    3953/   96000 t
+  5.00 TYR-1A0240_021 occ=0.000 trial=    3974/   96000 t
+  5.00 TYR-1A0240_022 occ=0.000 trial=    4070/   96000 t
+  5.00 TYR-1A0240_023 occ=0.000 trial=    4000/   96000 t
+  5.00 TYR-1A0240_024 occ=0.000 trial=    3931/   96000 t
+
+pH =   5.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   5.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  5.00 TYR01A0240_001 occ=0.000 trial=       0/   38000 f
+  5.00 TYR01A0240_002 occ=0.155 trial=    9677/   38000 t
+  5.00 TYR01A0240_003 occ=0.003 trial=    9454/   38000 t
+  5.00 TYR01A0240_004 occ=0.829 trial=    9407/   38000 t
+  5.00 TYR01A0240_005 occ=0.000 trial=       0/   38000 f
+  5.00 TYR01A0240_006 occ=0.000 trial=       0/   38000 f
+  5.00 TYR01A0240_007 occ=0.000 trial=       0/   38000 f
+  5.00 TYR01A0240_008 occ=0.000 trial=       0/   38000 f
+  5.00 TYR01A0240_009 occ=0.000 trial=       0/   38000 f
+  5.00 TYR01A0240_010 occ=0.013 trial=    9462/   38000 t
+  5.00 TYR01A0240_011 occ=0.000 trial=       0/   38000 f
+  5.00 TYR01A0240_012 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_013 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_014 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_015 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_016 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_017 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_018 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_019 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_020 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_021 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_022 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_023 occ=0.000 trial=       0/   38000 f
+  5.00 TYR-1A0240_024 occ=0.000 trial=       0/   38000 f
+
+pH =   5.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   5.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  5.00 TYR01A0240_001 occ=0.000 trial=       0/   17000 f
+  5.00 TYR01A0240_002 occ=0.157 trial=    4202/   17000 t
+  5.00 TYR01A0240_003 occ=0.004 trial=    4269/   17000 t
+  5.00 TYR01A0240_004 occ=0.824 trial=    4295/   17000 t
+  5.00 TYR01A0240_005 occ=0.000 trial=       0/   17000 f
+  5.00 TYR01A0240_006 occ=0.000 trial=       0/   17000 f
+  5.00 TYR01A0240_007 occ=0.000 trial=       0/   17000 f
+  5.00 TYR01A0240_008 occ=0.000 trial=       0/   17000 f
+  5.00 TYR01A0240_009 occ=0.000 trial=       0/   17000 f
+  5.00 TYR01A0240_010 occ=0.014 trial=    4234/   17000 t
+  5.00 TYR01A0240_011 occ=0.000 trial=       0/   17000 f
+  5.00 TYR01A0240_012 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_013 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_014 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_015 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_016 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_017 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_018 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_019 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_020 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_021 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_022 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_023 occ=0.000 trial=       0/   17000 f
+  5.00 TYR-1A0240_024 occ=0.000 trial=       0/   17000 f
+
+pH =   5.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   5.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  5.00 TYR01A0240_001 occ=0.000 trial=       0/   11000 f
+  5.00 TYR01A0240_002 occ=0.150 trial=    2751/   11000 t
+  5.00 TYR01A0240_003 occ=0.005 trial=    2726/   11000 t
+  5.00 TYR01A0240_004 occ=0.829 trial=    2754/   11000 t
+  5.00 TYR01A0240_005 occ=0.000 trial=       0/   11000 f
+  5.00 TYR01A0240_006 occ=0.000 trial=       0/   11000 f
+  5.00 TYR01A0240_007 occ=0.000 trial=       0/   11000 f
+  5.00 TYR01A0240_008 occ=0.000 trial=       0/   11000 f
+  5.00 TYR01A0240_009 occ=0.000 trial=       0/   11000 f
+  5.00 TYR01A0240_010 occ=0.016 trial=    2769/   11000 t
+  5.00 TYR01A0240_011 occ=0.000 trial=       0/   11000 f
+  5.00 TYR01A0240_012 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_013 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_014 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_015 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_016 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_017 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_018 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_019 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_020 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_021 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_022 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_023 occ=0.000 trial=       0/   11000 f
+  5.00 TYR-1A0240_024 occ=0.000 trial=       0/   11000 f
+
+pH =   5.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   5.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  5.00 TYR01A0240_001 occ=0.000 trial=       0/   30000 f
+  5.00 TYR01A0240_002 occ=0.160 trial=    7487/   30000 t
+  5.00 TYR01A0240_003 occ=0.003 trial=    7587/   30000 t
+  5.00 TYR01A0240_004 occ=0.822 trial=    7498/   30000 t
+  5.00 TYR01A0240_005 occ=0.000 trial=       0/   30000 f
+  5.00 TYR01A0240_006 occ=0.000 trial=       0/   30000 f
+  5.00 TYR01A0240_007 occ=0.000 trial=       0/   30000 f
+  5.00 TYR01A0240_008 occ=0.000 trial=       0/   30000 f
+  5.00 TYR01A0240_009 occ=0.000 trial=       0/   30000 f
+  5.00 TYR01A0240_010 occ=0.015 trial=    7428/   30000 t
+  5.00 TYR01A0240_011 occ=0.000 trial=       0/   30000 f
+  5.00 TYR01A0240_012 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_013 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_014 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_015 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_016 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_017 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_018 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_019 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_020 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_021 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_022 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_023 occ=0.000 trial=       0/   30000 f
+  5.00 TYR-1A0240_024 occ=0.000 trial=       0/   30000 f
+
+pH =   5.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   5.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   5.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  5.00 TYR01A0240_001 occ=0.000 trial=       0/   18000 f
+  5.00 TYR01A0240_002 occ=0.156 trial=    4517/   18000 t
+  5.00 TYR01A0240_003 occ=0.002 trial=    4540/   18000 t
+  5.00 TYR01A0240_004 occ=0.826 trial=    4506/   18000 t
+  5.00 TYR01A0240_005 occ=0.000 trial=       0/   18000 f
+  5.00 TYR01A0240_006 occ=0.000 trial=       0/   18000 f
+  5.00 TYR01A0240_007 occ=0.000 trial=       0/   18000 f
+  5.00 TYR01A0240_008 occ=0.000 trial=       0/   18000 f
+  5.00 TYR01A0240_009 occ=0.000 trial=       0/   18000 f
+  5.00 TYR01A0240_010 occ=0.016 trial=    4437/   18000 t
+  5.00 TYR01A0240_011 occ=0.000 trial=       0/   18000 f
+  5.00 TYR01A0240_012 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_013 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_014 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_015 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_016 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_017 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_018 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_019 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_020 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_021 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_022 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_023 occ=0.000 trial=       0/   18000 f
+  5.00 TYR-1A0240_024 occ=0.000 trial=       0/   18000 f
+
+pH =   6.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  6.00 TYR01A0240_001 occ=0.001 trial=    3269/   78000 t
+  6.00 TYR01A0240_002 occ=0.168 trial=    3182/   78000 t
+  6.00 TYR01A0240_003 occ=0.002 trial=    3232/   78000 t
+  6.00 TYR01A0240_004 occ=0.814 trial=    3206/   78000 t
+  6.00 TYR01A0240_005 occ=0.001 trial=    3199/   78000 t
+  6.00 TYR01A0240_006 occ=0.000 trial=    3249/   78000 t
+  6.00 TYR01A0240_007 occ=0.000 trial=    3201/   78000 t
+  6.00 TYR01A0240_008 occ=0.001 trial=    3329/   78000 t
+  6.00 TYR01A0240_009 occ=0.000 trial=    3294/   78000 t
+  6.00 TYR01A0240_010 occ=0.011 trial=    3221/   78000 t
+  6.00 TYR01A0240_011 occ=0.000 trial=    3233/   78000 t
+  6.00 TYR01A0240_012 occ=0.000 trial=    3226/   78000 t
+  6.00 TYR-1A0240_013 occ=0.000 trial=    3180/   78000 t
+  6.00 TYR-1A0240_014 occ=0.000 trial=    3201/   78000 t
+  6.00 TYR-1A0240_015 occ=0.000 trial=    3344/   78000 t
+  6.00 TYR-1A0240_016 occ=0.000 trial=    3242/   78000 t
+  6.00 TYR-1A0240_017 occ=0.000 trial=    3370/   78000 t
+  6.00 TYR-1A0240_018 occ=0.000 trial=    3228/   78000 t
+  6.00 TYR-1A0240_019 occ=0.000 trial=    3258/   78000 t
+  6.00 TYR-1A0240_020 occ=0.000 trial=    3295/   78000 t
+  6.00 TYR-1A0240_021 occ=0.000 trial=    3282/   78000 t
+  6.00 TYR-1A0240_022 occ=0.000 trial=    3226/   78000 t
+  6.00 TYR-1A0240_023 occ=0.000 trial=    3286/   78000 t
+  6.00 TYR-1A0240_024 occ=0.000 trial=    3247/   78000 t
+
+pH =   6.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -9.72 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  6.00 TYR01A0240_001 occ=0.000 trial=       0/   43000 f
+  6.00 TYR01A0240_002 occ=0.168 trial=    8747/   43000 t
+  6.00 TYR01A0240_003 occ=0.003 trial=    8674/   43000 t
+  6.00 TYR01A0240_004 occ=0.813 trial=    8547/   43000 t
+  6.00 TYR01A0240_005 occ=0.001 trial=    8516/   43000 t
+  6.00 TYR01A0240_006 occ=0.000 trial=       0/   43000 f
+  6.00 TYR01A0240_007 occ=0.000 trial=       0/   43000 f
+  6.00 TYR01A0240_008 occ=0.000 trial=       0/   43000 f
+  6.00 TYR01A0240_009 occ=0.000 trial=       0/   43000 f
+  6.00 TYR01A0240_010 occ=0.015 trial=    8516/   43000 t
+  6.00 TYR01A0240_011 occ=0.000 trial=       0/   43000 f
+  6.00 TYR01A0240_012 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_013 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_014 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_015 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_016 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_017 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_018 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_019 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_020 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_021 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_022 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_023 occ=0.000 trial=       0/   43000 f
+  6.00 TYR-1A0240_024 occ=0.000 trial=       0/   43000 f
+
+pH =   6.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  6.00 TYR01A0240_001 occ=0.000 trial=       0/   40000 f
+  6.00 TYR01A0240_002 occ=0.169 trial=   10032/   40000 t
+  6.00 TYR01A0240_003 occ=0.003 trial=    9973/   40000 t
+  6.00 TYR01A0240_004 occ=0.814 trial=   10021/   40000 t
+  6.00 TYR01A0240_005 occ=0.000 trial=       0/   40000 f
+  6.00 TYR01A0240_006 occ=0.000 trial=       0/   40000 f
+  6.00 TYR01A0240_007 occ=0.000 trial=       0/   40000 f
+  6.00 TYR01A0240_008 occ=0.000 trial=       0/   40000 f
+  6.00 TYR01A0240_009 occ=0.000 trial=       0/   40000 f
+  6.00 TYR01A0240_010 occ=0.014 trial=    9974/   40000 t
+  6.00 TYR01A0240_011 occ=0.000 trial=       0/   40000 f
+  6.00 TYR01A0240_012 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_013 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_014 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_015 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_016 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_017 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_018 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_019 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_020 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_021 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_022 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_023 occ=0.000 trial=       0/   40000 f
+  6.00 TYR-1A0240_024 occ=0.000 trial=       0/   40000 f
+
+pH =   6.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  6.00 TYR01A0240_001 occ=0.000 trial=       0/   53000 f
+  6.00 TYR01A0240_002 occ=0.157 trial=   13178/   53000 t
+  6.00 TYR01A0240_003 occ=0.003 trial=   13352/   53000 t
+  6.00 TYR01A0240_004 occ=0.825 trial=   13259/   53000 t
+  6.00 TYR01A0240_005 occ=0.000 trial=       0/   53000 f
+  6.00 TYR01A0240_006 occ=0.000 trial=       0/   53000 f
+  6.00 TYR01A0240_007 occ=0.000 trial=       0/   53000 f
+  6.00 TYR01A0240_008 occ=0.000 trial=       0/   53000 f
+  6.00 TYR01A0240_009 occ=0.000 trial=       0/   53000 f
+  6.00 TYR01A0240_010 occ=0.015 trial=   13211/   53000 t
+  6.00 TYR01A0240_011 occ=0.000 trial=       0/   53000 f
+  6.00 TYR01A0240_012 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_013 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_014 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_015 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_016 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_017 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_018 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_019 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_020 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_021 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_022 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_023 occ=0.000 trial=       0/   53000 f
+  6.00 TYR-1A0240_024 occ=0.000 trial=       0/   53000 f
+
+pH =   6.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  6.00 TYR01A0240_001 occ=0.000 trial=       0/   47000 f
+  6.00 TYR01A0240_002 occ=0.164 trial=   11626/   47000 t
+  6.00 TYR01A0240_003 occ=0.003 trial=   11899/   47000 t
+  6.00 TYR01A0240_004 occ=0.819 trial=   11764/   47000 t
+  6.00 TYR01A0240_005 occ=0.000 trial=       0/   47000 f
+  6.00 TYR01A0240_006 occ=0.000 trial=       0/   47000 f
+  6.00 TYR01A0240_007 occ=0.000 trial=       0/   47000 f
+  6.00 TYR01A0240_008 occ=0.000 trial=       0/   47000 f
+  6.00 TYR01A0240_009 occ=0.000 trial=       0/   47000 f
+  6.00 TYR01A0240_010 occ=0.014 trial=   11711/   47000 t
+  6.00 TYR01A0240_011 occ=0.000 trial=       0/   47000 f
+  6.00 TYR01A0240_012 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_013 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_014 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_015 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_016 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_017 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_018 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_019 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_020 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_021 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_022 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_023 occ=0.000 trial=       0/   47000 f
+  6.00 TYR-1A0240_024 occ=0.000 trial=       0/   47000 f
+
+pH =   6.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  6.00 TYR01A0240_001 occ=0.000 trial=       0/   58000 f
+  6.00 TYR01A0240_002 occ=0.159 trial=   14341/   58000 t
+  6.00 TYR01A0240_003 occ=0.003 trial=   14475/   58000 t
+  6.00 TYR01A0240_004 occ=0.825 trial=   14538/   58000 t
+  6.00 TYR01A0240_005 occ=0.000 trial=       0/   58000 f
+  6.00 TYR01A0240_006 occ=0.000 trial=       0/   58000 f
+  6.00 TYR01A0240_007 occ=0.000 trial=       0/   58000 f
+  6.00 TYR01A0240_008 occ=0.000 trial=       0/   58000 f
+  6.00 TYR01A0240_009 occ=0.000 trial=       0/   58000 f
+  6.00 TYR01A0240_010 occ=0.013 trial=   14646/   58000 t
+  6.00 TYR01A0240_011 occ=0.000 trial=       0/   58000 f
+  6.00 TYR01A0240_012 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_013 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_014 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_015 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_016 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_017 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_018 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_019 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_020 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_021 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_022 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_023 occ=0.000 trial=       0/   58000 f
+  6.00 TYR-1A0240_024 occ=0.000 trial=       0/   58000 f
+
+pH =   6.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  6.00 TYR01A0240_001 occ=0.000 trial=       0/   33000 f
+  6.00 TYR01A0240_002 occ=0.159 trial=    8231/   33000 t
+  6.00 TYR01A0240_003 occ=0.002 trial=    8288/   33000 t
+  6.00 TYR01A0240_004 occ=0.825 trial=    8172/   33000 t
+  6.00 TYR01A0240_005 occ=0.000 trial=       0/   33000 f
+  6.00 TYR01A0240_006 occ=0.000 trial=       0/   33000 f
+  6.00 TYR01A0240_007 occ=0.000 trial=       0/   33000 f
+  6.00 TYR01A0240_008 occ=0.000 trial=       0/   33000 f
+  6.00 TYR01A0240_009 occ=0.000 trial=       0/   33000 f
+  6.00 TYR01A0240_010 occ=0.014 trial=    8309/   33000 t
+  6.00 TYR01A0240_011 occ=0.000 trial=       0/   33000 f
+  6.00 TYR01A0240_012 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_013 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_014 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_015 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_016 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_017 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_018 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_019 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_020 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_021 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_022 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_023 occ=0.000 trial=       0/   33000 f
+  6.00 TYR-1A0240_024 occ=0.000 trial=       0/   33000 f
+
+pH =   6.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   6.00 Eh =   0.00, Ave. Energy =    -9.73 Kcal/mol
+pH =   6.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  6.00 TYR01A0240_001 occ=0.000 trial=       0/   34000 f
+  6.00 TYR01A0240_002 occ=0.161 trial=    8472/   34000 t
+  6.00 TYR01A0240_003 occ=0.003 trial=    8590/   34000 t
+  6.00 TYR01A0240_004 occ=0.821 trial=    8386/   34000 t
+  6.00 TYR01A0240_005 occ=0.000 trial=       0/   34000 f
+  6.00 TYR01A0240_006 occ=0.000 trial=       0/   34000 f
+  6.00 TYR01A0240_007 occ=0.000 trial=       0/   34000 f
+  6.00 TYR01A0240_008 occ=0.000 trial=       0/   34000 f
+  6.00 TYR01A0240_009 occ=0.000 trial=       0/   34000 f
+  6.00 TYR01A0240_010 occ=0.016 trial=    8552/   34000 t
+  6.00 TYR01A0240_011 occ=0.000 trial=       0/   34000 f
+  6.00 TYR01A0240_012 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_013 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_014 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_015 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_016 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_017 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_018 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_019 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_020 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_021 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_022 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_023 occ=0.000 trial=       0/   34000 f
+  6.00 TYR-1A0240_024 occ=0.000 trial=       0/   34000 f
+
+pH =   7.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -9.66 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  7.00 TYR01A0240_001 occ=0.001 trial=    3033/   72000 t
+  7.00 TYR01A0240_002 occ=0.170 trial=    2922/   72000 t
+  7.00 TYR01A0240_003 occ=0.002 trial=    2949/   72000 t
+  7.00 TYR01A0240_004 occ=0.803 trial=    2978/   72000 t
+  7.00 TYR01A0240_005 occ=0.001 trial=    3048/   72000 t
+  7.00 TYR01A0240_006 occ=0.001 trial=    3060/   72000 t
+  7.00 TYR01A0240_007 occ=0.000 trial=    3002/   72000 t
+  7.00 TYR01A0240_008 occ=0.001 trial=    3079/   72000 t
+  7.00 TYR01A0240_009 occ=0.000 trial=    3012/   72000 t
+  7.00 TYR01A0240_010 occ=0.014 trial=    3013/   72000 t
+  7.00 TYR01A0240_011 occ=0.000 trial=    3051/   72000 t
+  7.00 TYR01A0240_012 occ=0.000 trial=    2923/   72000 t
+  7.00 TYR-1A0240_013 occ=0.000 trial=    2983/   72000 t
+  7.00 TYR-1A0240_014 occ=0.000 trial=    2942/   72000 t
+  7.00 TYR-1A0240_015 occ=0.000 trial=    2999/   72000 t
+  7.00 TYR-1A0240_016 occ=0.000 trial=    3029/   72000 t
+  7.00 TYR-1A0240_017 occ=0.000 trial=    3021/   72000 t
+  7.00 TYR-1A0240_018 occ=0.000 trial=    2907/   72000 t
+  7.00 TYR-1A0240_019 occ=0.000 trial=    2956/   72000 t
+  7.00 TYR-1A0240_020 occ=0.000 trial=    2979/   72000 t
+  7.00 TYR-1A0240_021 occ=0.000 trial=    3004/   72000 t
+  7.00 TYR-1A0240_022 occ=0.005 trial=    3050/   72000 t
+  7.00 TYR-1A0240_023 occ=0.001 trial=    3018/   72000 t
+  7.00 TYR-1A0240_024 occ=0.000 trial=    3042/   72000 t
+
+pH =   7.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -9.71 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  7.00 TYR01A0240_001 occ=0.000 trial=       0/   43000 f
+  7.00 TYR01A0240_002 occ=0.158 trial=    7092/   43000 t
+  7.00 TYR01A0240_003 occ=0.003 trial=    7034/   43000 t
+  7.00 TYR01A0240_004 occ=0.818 trial=    7192/   43000 t
+  7.00 TYR01A0240_005 occ=0.001 trial=    7185/   43000 t
+  7.00 TYR01A0240_006 occ=0.000 trial=       0/   43000 f
+  7.00 TYR01A0240_007 occ=0.000 trial=       0/   43000 f
+  7.00 TYR01A0240_008 occ=0.000 trial=       0/   43000 f
+  7.00 TYR01A0240_009 occ=0.000 trial=       0/   43000 f
+  7.00 TYR01A0240_010 occ=0.013 trial=    7163/   43000 t
+  7.00 TYR01A0240_011 occ=0.000 trial=       0/   43000 f
+  7.00 TYR01A0240_012 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_013 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_014 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_015 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_016 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_017 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_018 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_019 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_020 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_021 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_022 occ=0.007 trial=    7334/   43000 t
+  7.00 TYR-1A0240_023 occ=0.000 trial=       0/   43000 f
+  7.00 TYR-1A0240_024 occ=0.000 trial=       0/   43000 f
+
+pH =   7.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -9.71 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  7.00 TYR01A0240_001 occ=0.000 trial=       0/   81000 f
+  7.00 TYR01A0240_002 occ=0.161 trial=   16142/   81000 t
+  7.00 TYR01A0240_003 occ=0.003 trial=   16290/   81000 t
+  7.00 TYR01A0240_004 occ=0.815 trial=   16201/   81000 t
+  7.00 TYR01A0240_005 occ=0.000 trial=       0/   81000 f
+  7.00 TYR01A0240_006 occ=0.000 trial=       0/   81000 f
+  7.00 TYR01A0240_007 occ=0.000 trial=       0/   81000 f
+  7.00 TYR01A0240_008 occ=0.000 trial=       0/   81000 f
+  7.00 TYR01A0240_009 occ=0.000 trial=       0/   81000 f
+  7.00 TYR01A0240_010 occ=0.014 trial=   16291/   81000 t
+  7.00 TYR01A0240_011 occ=0.000 trial=       0/   81000 f
+  7.00 TYR01A0240_012 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_013 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_014 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_015 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_016 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_017 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_018 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_019 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_020 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_021 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_022 occ=0.006 trial=   16076/   81000 t
+  7.00 TYR-1A0240_023 occ=0.000 trial=       0/   81000 f
+  7.00 TYR-1A0240_024 occ=0.000 trial=       0/   81000 f
+
+pH =   7.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -9.71 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  7.00 TYR01A0240_001 occ=0.000 trial=       0/   36000 f
+  7.00 TYR01A0240_002 occ=0.167 trial=    7200/   36000 t
+  7.00 TYR01A0240_003 occ=0.003 trial=    7185/   36000 t
+  7.00 TYR01A0240_004 occ=0.810 trial=    7160/   36000 t
+  7.00 TYR01A0240_005 occ=0.000 trial=       0/   36000 f
+  7.00 TYR01A0240_006 occ=0.000 trial=       0/   36000 f
+  7.00 TYR01A0240_007 occ=0.000 trial=       0/   36000 f
+  7.00 TYR01A0240_008 occ=0.000 trial=       0/   36000 f
+  7.00 TYR01A0240_009 occ=0.000 trial=       0/   36000 f
+  7.00 TYR01A0240_010 occ=0.014 trial=    7286/   36000 t
+  7.00 TYR01A0240_011 occ=0.000 trial=       0/   36000 f
+  7.00 TYR01A0240_012 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_013 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_014 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_015 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_016 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_017 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_018 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_019 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_020 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_021 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_022 occ=0.007 trial=    7169/   36000 t
+  7.00 TYR-1A0240_023 occ=0.000 trial=       0/   36000 f
+  7.00 TYR-1A0240_024 occ=0.000 trial=       0/   36000 f
+
+pH =   7.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   7.00 Eh =   0.00, Ave. Energy =    -9.71 Kcal/mol
+pH =   7.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  7.00 TYR01A0240_001 occ=0.000 trial=       0/   53000 f
+  7.00 TYR01A0240_002 occ=0.164 trial=   10448/   53000 t
+  7.00 TYR01A0240_003 occ=0.003 trial=   10404/   53000 t
+  7.00 TYR01A0240_004 occ=0.812 trial=   10555/   53000 t
+  7.00 TYR01A0240_005 occ=0.000 trial=       0/   53000 f
+  7.00 TYR01A0240_006 occ=0.000 trial=       0/   53000 f
+  7.00 TYR01A0240_007 occ=0.000 trial=       0/   53000 f
+  7.00 TYR01A0240_008 occ=0.000 trial=       0/   53000 f
+  7.00 TYR01A0240_009 occ=0.000 trial=       0/   53000 f
+  7.00 TYR01A0240_010 occ=0.015 trial=   10787/   53000 t
+  7.00 TYR01A0240_011 occ=0.000 trial=       0/   53000 f
+  7.00 TYR01A0240_012 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_013 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_014 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_015 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_016 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_017 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_018 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_019 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_020 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_021 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_022 occ=0.007 trial=   10806/   53000 t
+  7.00 TYR-1A0240_023 occ=0.000 trial=       0/   53000 f
+  7.00 TYR-1A0240_024 occ=0.000 trial=       0/   53000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.65 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.95 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.001 trial=    5992/  144000 t
+  8.00 TYR01A0240_002 occ=0.168 trial=    5991/  144000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=    6027/  144000 t
+  8.00 TYR01A0240_004 occ=0.774 trial=    6055/  144000 t
+  8.00 TYR01A0240_005 occ=0.001 trial=    6053/  144000 t
+  8.00 TYR01A0240_006 occ=0.000 trial=    5850/  144000 t
+  8.00 TYR01A0240_007 occ=0.000 trial=    5916/  144000 t
+  8.00 TYR01A0240_008 occ=0.000 trial=    5959/  144000 t
+  8.00 TYR01A0240_009 occ=0.000 trial=    6089/  144000 t
+  8.00 TYR01A0240_010 occ=0.012 trial=    5922/  144000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=    6020/  144000 t
+  8.00 TYR01A0240_012 occ=0.000 trial=    6007/  144000 t
+  8.00 TYR-1A0240_013 occ=0.000 trial=    5969/  144000 t
+  8.00 TYR-1A0240_014 occ=0.000 trial=    6128/  144000 t
+  8.00 TYR-1A0240_015 occ=0.000 trial=    6048/  144000 t
+  8.00 TYR-1A0240_016 occ=0.000 trial=    5934/  144000 t
+  8.00 TYR-1A0240_017 occ=0.000 trial=    5982/  144000 t
+  8.00 TYR-1A0240_018 occ=0.000 trial=    6138/  144000 t
+  8.00 TYR-1A0240_019 occ=0.000 trial=    5949/  144000 t
+  8.00 TYR-1A0240_020 occ=0.000 trial=    5984/  144000 t
+  8.00 TYR-1A0240_021 occ=0.000 trial=    5958/  144000 t
+  8.00 TYR-1A0240_022 occ=0.033 trial=    5996/  144000 t
+  8.00 TYR-1A0240_023 occ=0.008 trial=    6047/  144000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=    5986/  144000 t
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.64 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   62000 f
+  8.00 TYR01A0240_002 occ=0.162 trial=   10598/   62000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=   10340/   62000 t
+  8.00 TYR01A0240_004 occ=0.773 trial=   10177/   62000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   62000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   62000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   62000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   62000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   62000 f
+  8.00 TYR01A0240_010 occ=0.014 trial=   10413/   62000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   62000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   62000 f
+  8.00 TYR-1A0240_022 occ=0.040 trial=   10233/   62000 t
+  8.00 TYR-1A0240_023 occ=0.007 trial=   10239/   62000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   62000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.66 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.95 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   44000 f
+  8.00 TYR01A0240_002 occ=0.155 trial=    7312/   44000 t
+  8.00 TYR01A0240_003 occ=0.002 trial=    7444/   44000 t
+  8.00 TYR01A0240_004 occ=0.782 trial=    7257/   44000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   44000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   44000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   44000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   44000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   44000 f
+  8.00 TYR01A0240_010 occ=0.014 trial=    7283/   44000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   44000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   44000 f
+  8.00 TYR-1A0240_022 occ=0.040 trial=    7439/   44000 t
+  8.00 TYR-1A0240_023 occ=0.007 trial=    7265/   44000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   44000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.57 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   61000 f
+  8.00 TYR01A0240_002 occ=0.159 trial=   10458/   61000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=   10141/   61000 t
+  8.00 TYR01A0240_004 occ=0.777 trial=   10066/   61000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   61000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   61000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   61000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   61000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   61000 f
+  8.00 TYR01A0240_010 occ=0.013 trial=   10081/   61000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   61000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   61000 f
+  8.00 TYR-1A0240_022 occ=0.041 trial=    9969/   61000 t
+  8.00 TYR-1A0240_023 occ=0.007 trial=   10285/   61000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   61000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.74 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =   -10.02 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_002 occ=0.157 trial=    6609/   39000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=    6383/   39000 t
+  8.00 TYR01A0240_004 occ=0.783 trial=    6503/   39000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_010 occ=0.012 trial=    6523/   39000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_022 occ=0.037 trial=    6456/   39000 t
+  8.00 TYR-1A0240_023 occ=0.008 trial=    6526/   39000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   39000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.66 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   64000 f
+  8.00 TYR01A0240_002 occ=0.144 trial=   10442/   64000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=   10543/   64000 t
+  8.00 TYR01A0240_004 occ=0.790 trial=   10802/   64000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   64000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   64000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   64000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   64000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   64000 f
+  8.00 TYR01A0240_010 occ=0.013 trial=   10856/   64000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   64000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   64000 f
+  8.00 TYR-1A0240_022 occ=0.043 trial=   10780/   64000 t
+  8.00 TYR-1A0240_023 occ=0.007 trial=   10577/   64000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   64000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.67 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_002 occ=0.157 trial=    6557/   39000 t
+  8.00 TYR01A0240_003 occ=0.002 trial=    6477/   39000 t
+  8.00 TYR01A0240_004 occ=0.787 trial=    6599/   39000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_010 occ=0.013 trial=    6532/   39000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   39000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   39000 f
+  8.00 TYR-1A0240_022 occ=0.035 trial=    6385/   39000 t
+  8.00 TYR-1A0240_023 occ=0.006 trial=    6450/   39000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   39000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.66 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.94 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   33000 f
+  8.00 TYR01A0240_002 occ=0.150 trial=    5462/   33000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=    5484/   33000 t
+  8.00 TYR01A0240_004 occ=0.786 trial=    5498/   33000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   33000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   33000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   33000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   33000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   33000 f
+  8.00 TYR01A0240_010 occ=0.014 trial=    5482/   33000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   33000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   33000 f
+  8.00 TYR-1A0240_022 occ=0.040 trial=    5481/   33000 t
+  8.00 TYR-1A0240_023 occ=0.008 trial=    5593/   33000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   33000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.64 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   55000 f
+  8.00 TYR01A0240_002 occ=0.156 trial=    9197/   55000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=    9258/   55000 t
+  8.00 TYR01A0240_004 occ=0.778 trial=    9110/   55000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   55000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   55000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   55000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   55000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   55000 f
+  8.00 TYR01A0240_010 occ=0.015 trial=    9229/   55000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   55000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   55000 f
+  8.00 TYR-1A0240_022 occ=0.040 trial=    9229/   55000 t
+  8.00 TYR-1A0240_023 occ=0.008 trial=    8977/   55000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   55000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.63 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   53000 f
+  8.00 TYR01A0240_002 occ=0.161 trial=    9002/   53000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=    8740/   53000 t
+  8.00 TYR01A0240_004 occ=0.774 trial=    8864/   53000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   53000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   53000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   53000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   53000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   53000 f
+  8.00 TYR01A0240_010 occ=0.013 trial=    8707/   53000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   53000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   53000 f
+  8.00 TYR-1A0240_022 occ=0.040 trial=    8829/   53000 t
+  8.00 TYR-1A0240_023 occ=0.008 trial=    8858/   53000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   53000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.64 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   47000 f
+  8.00 TYR01A0240_002 occ=0.154 trial=    7730/   47000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=    7779/   47000 t
+  8.00 TYR01A0240_004 occ=0.775 trial=    7881/   47000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   47000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   47000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   47000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   47000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   47000 f
+  8.00 TYR01A0240_010 occ=0.014 trial=    7844/   47000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   47000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   47000 f
+  8.00 TYR-1A0240_022 occ=0.047 trial=    8079/   47000 t
+  8.00 TYR-1A0240_023 occ=0.007 trial=    7687/   47000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   47000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.65 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.94 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   48000 f
+  8.00 TYR01A0240_002 occ=0.161 trial=    8102/   48000 t
+  8.00 TYR01A0240_003 occ=0.003 trial=    7902/   48000 t
+  8.00 TYR01A0240_004 occ=0.774 trial=    7864/   48000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   48000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   48000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   48000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   48000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   48000 f
+  8.00 TYR01A0240_010 occ=0.013 trial=    8066/   48000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   48000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   48000 f
+  8.00 TYR-1A0240_022 occ=0.041 trial=    7978/   48000 t
+  8.00 TYR-1A0240_023 occ=0.008 trial=    8088/   48000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   48000 f
+
+pH =   8.00 Eh =   0.00, Unf. Energy =    -0.00 Kcal/mol
+pH =   8.00 Eh =   0.00, Ave. Energy =    -9.65 Kcal/mol
+pH =   8.00 Eh =   0.00, Min. Energy =    -9.94 Kcal/mol
+  8.00 TYR01A0240_001 occ=0.000 trial=       0/   38000 f
+  8.00 TYR01A0240_002 occ=0.158 trial=    6340/   38000 t
+  8.00 TYR01A0240_003 occ=0.002 trial=    6388/   38000 t
+  8.00 TYR01A0240_004 occ=0.779 trial=    6259/   38000 t
+  8.00 TYR01A0240_005 occ=0.000 trial=       0/   38000 f
+  8.00 TYR01A0240_006 occ=0.000 trial=       0/   38000 f
+  8.00 TYR01A0240_007 occ=0.000 trial=       0/   38000 f
+  8.00 TYR01A0240_008 occ=0.000 trial=       0/   38000 f
+  8.00 TYR01A0240_009 occ=0.000 trial=       0/   38000 f
+  8.00 TYR01A0240_010 occ=0.013 trial=    6306/   38000 t
+  8.00 TYR01A0240_011 occ=0.000 trial=       0/   38000 f
+  8.00 TYR01A0240_012 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_013 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_014 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_015 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_016 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_017 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_018 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_019 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_020 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_021 occ=0.000 trial=       0/   38000 f
+  8.00 TYR-1A0240_022 occ=0.040 trial=    6366/   38000 t
+  8.00 TYR-1A0240_023 occ=0.008 trial=    6341/   38000 t
+  8.00 TYR-1A0240_024 occ=0.000 trial=       0/   38000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.66 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =   -10.02 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=    4504/  108000 t
+  9.00 TYR01A0240_002 occ=0.108 trial=    4579/  108000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=    4474/  108000 t
+  9.00 TYR01A0240_004 occ=0.561 trial=    4540/  108000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=    4494/  108000 t
+  9.00 TYR01A0240_006 occ=0.000 trial=    4386/  108000 t
+  9.00 TYR01A0240_007 occ=0.000 trial=    4660/  108000 t
+  9.00 TYR01A0240_008 occ=0.000 trial=    4440/  108000 t
+  9.00 TYR01A0240_009 occ=0.000 trial=    4434/  108000 t
+  9.00 TYR01A0240_010 occ=0.010 trial=    4543/  108000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=    4552/  108000 t
+  9.00 TYR01A0240_012 occ=0.000 trial=    4525/  108000 t
+  9.00 TYR-1A0240_013 occ=0.000 trial=    4511/  108000 t
+  9.00 TYR-1A0240_014 occ=0.000 trial=    4604/  108000 t
+  9.00 TYR-1A0240_015 occ=0.000 trial=    4564/  108000 t
+  9.00 TYR-1A0240_016 occ=0.000 trial=    4488/  108000 t
+  9.00 TYR-1A0240_017 occ=0.000 trial=    4434/  108000 t
+  9.00 TYR-1A0240_018 occ=0.000 trial=    4442/  108000 t
+  9.00 TYR-1A0240_019 occ=0.002 trial=    4379/  108000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=    4540/  108000 t
+  9.00 TYR-1A0240_021 occ=0.000 trial=    4502/  108000 t
+  9.00 TYR-1A0240_022 occ=0.269 trial=    4598/  108000 t
+  9.00 TYR-1A0240_023 occ=0.045 trial=    4386/  108000 t
+  9.00 TYR-1A0240_024 occ=0.001 trial=    4421/  108000 t
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.57 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=       0/   46000 f
+  9.00 TYR01A0240_002 occ=0.111 trial=    6604/   46000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=    6511/   46000 t
+  9.00 TYR01A0240_004 occ=0.551 trial=    6523/   46000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=       0/   46000 f
+  9.00 TYR01A0240_006 occ=0.000 trial=       0/   46000 f
+  9.00 TYR01A0240_007 occ=0.000 trial=       0/   46000 f
+  9.00 TYR01A0240_008 occ=0.000 trial=       0/   46000 f
+  9.00 TYR01A0240_009 occ=0.000 trial=       0/   46000 f
+  9.00 TYR01A0240_010 occ=0.010 trial=    6605/   46000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=       0/   46000 f
+  9.00 TYR01A0240_012 occ=0.000 trial=       0/   46000 f
+  9.00 TYR-1A0240_013 occ=0.000 trial=       0/   46000 f
+  9.00 TYR-1A0240_014 occ=0.000 trial=       0/   46000 f
+  9.00 TYR-1A0240_015 occ=0.000 trial=       0/   46000 f
+  9.00 TYR-1A0240_016 occ=0.000 trial=       0/   46000 f
+  9.00 TYR-1A0240_017 occ=0.000 trial=       0/   46000 f
+  9.00 TYR-1A0240_018 occ=0.000 trial=       0/   46000 f
+  9.00 TYR-1A0240_019 occ=0.003 trial=    6635/   46000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=       0/   46000 f
+  9.00 TYR-1A0240_021 occ=0.000 trial=       0/   46000 f
+  9.00 TYR-1A0240_022 occ=0.276 trial=    6607/   46000 t
+  9.00 TYR-1A0240_023 occ=0.047 trial=    6515/   46000 t
+  9.00 TYR-1A0240_024 occ=0.000 trial=       0/   46000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.66 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =   -10.07 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=       0/   49000 f
+  9.00 TYR01A0240_002 occ=0.111 trial=    6968/   49000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=    6884/   49000 t
+  9.00 TYR01A0240_004 occ=0.560 trial=    7012/   49000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=       0/   49000 f
+  9.00 TYR01A0240_006 occ=0.000 trial=       0/   49000 f
+  9.00 TYR01A0240_007 occ=0.000 trial=       0/   49000 f
+  9.00 TYR01A0240_008 occ=0.000 trial=       0/   49000 f
+  9.00 TYR01A0240_009 occ=0.000 trial=       0/   49000 f
+  9.00 TYR01A0240_010 occ=0.008 trial=    7173/   49000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=       0/   49000 f
+  9.00 TYR01A0240_012 occ=0.000 trial=       0/   49000 f
+  9.00 TYR-1A0240_013 occ=0.000 trial=       0/   49000 f
+  9.00 TYR-1A0240_014 occ=0.000 trial=       0/   49000 f
+  9.00 TYR-1A0240_015 occ=0.000 trial=       0/   49000 f
+  9.00 TYR-1A0240_016 occ=0.000 trial=       0/   49000 f
+  9.00 TYR-1A0240_017 occ=0.000 trial=       0/   49000 f
+  9.00 TYR-1A0240_018 occ=0.000 trial=       0/   49000 f
+  9.00 TYR-1A0240_019 occ=0.002 trial=    7062/   49000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=       0/   49000 f
+  9.00 TYR-1A0240_021 occ=0.000 trial=       0/   49000 f
+  9.00 TYR-1A0240_022 occ=0.267 trial=    6811/   49000 t
+  9.00 TYR-1A0240_023 occ=0.049 trial=    7090/   49000 t
+  9.00 TYR-1A0240_024 occ=0.000 trial=       0/   49000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.58 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=       0/   78000 f
+  9.00 TYR01A0240_002 occ=0.106 trial=   11092/   78000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=   11129/   78000 t
+  9.00 TYR01A0240_004 occ=0.556 trial=   11224/   78000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=       0/   78000 f
+  9.00 TYR01A0240_006 occ=0.000 trial=       0/   78000 f
+  9.00 TYR01A0240_007 occ=0.000 trial=       0/   78000 f
+  9.00 TYR01A0240_008 occ=0.000 trial=       0/   78000 f
+  9.00 TYR01A0240_009 occ=0.000 trial=       0/   78000 f
+  9.00 TYR01A0240_010 occ=0.009 trial=   11226/   78000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=       0/   78000 f
+  9.00 TYR01A0240_012 occ=0.000 trial=       0/   78000 f
+  9.00 TYR-1A0240_013 occ=0.000 trial=       0/   78000 f
+  9.00 TYR-1A0240_014 occ=0.000 trial=       0/   78000 f
+  9.00 TYR-1A0240_015 occ=0.000 trial=       0/   78000 f
+  9.00 TYR-1A0240_016 occ=0.000 trial=       0/   78000 f
+  9.00 TYR-1A0240_017 occ=0.000 trial=       0/   78000 f
+  9.00 TYR-1A0240_018 occ=0.000 trial=       0/   78000 f
+  9.00 TYR-1A0240_019 occ=0.002 trial=   11062/   78000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=       0/   78000 f
+  9.00 TYR-1A0240_021 occ=0.000 trial=       0/   78000 f
+  9.00 TYR-1A0240_022 occ=0.277 trial=   11082/   78000 t
+  9.00 TYR-1A0240_023 occ=0.048 trial=   11185/   78000 t
+  9.00 TYR-1A0240_024 occ=0.000 trial=       0/   78000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.56 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=       0/   58000 f
+  9.00 TYR01A0240_002 occ=0.115 trial=    8304/   58000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=    8215/   58000 t
+  9.00 TYR01A0240_004 occ=0.546 trial=    8201/   58000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=       0/   58000 f
+  9.00 TYR01A0240_006 occ=0.000 trial=       0/   58000 f
+  9.00 TYR01A0240_007 occ=0.000 trial=       0/   58000 f
+  9.00 TYR01A0240_008 occ=0.000 trial=       0/   58000 f
+  9.00 TYR01A0240_009 occ=0.000 trial=       0/   58000 f
+  9.00 TYR01A0240_010 occ=0.010 trial=    8367/   58000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=       0/   58000 f
+  9.00 TYR01A0240_012 occ=0.000 trial=       0/   58000 f
+  9.00 TYR-1A0240_013 occ=0.000 trial=       0/   58000 f
+  9.00 TYR-1A0240_014 occ=0.000 trial=       0/   58000 f
+  9.00 TYR-1A0240_015 occ=0.000 trial=       0/   58000 f
+  9.00 TYR-1A0240_016 occ=0.000 trial=       0/   58000 f
+  9.00 TYR-1A0240_017 occ=0.000 trial=       0/   58000 f
+  9.00 TYR-1A0240_018 occ=0.000 trial=       0/   58000 f
+  9.00 TYR-1A0240_019 occ=0.002 trial=    8411/   58000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=       0/   58000 f
+  9.00 TYR-1A0240_021 occ=0.000 trial=       0/   58000 f
+  9.00 TYR-1A0240_022 occ=0.273 trial=    8182/   58000 t
+  9.00 TYR-1A0240_023 occ=0.052 trial=    8320/   58000 t
+  9.00 TYR-1A0240_024 occ=0.000 trial=       0/   58000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.57 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=       0/   91000 f
+  9.00 TYR01A0240_002 occ=0.112 trial=   13016/   91000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=   13061/   91000 t
+  9.00 TYR01A0240_004 occ=0.546 trial=   13047/   91000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=       0/   91000 f
+  9.00 TYR01A0240_006 occ=0.000 trial=       0/   91000 f
+  9.00 TYR01A0240_007 occ=0.000 trial=       0/   91000 f
+  9.00 TYR01A0240_008 occ=0.000 trial=       0/   91000 f
+  9.00 TYR01A0240_009 occ=0.000 trial=       0/   91000 f
+  9.00 TYR01A0240_010 occ=0.010 trial=   13024/   91000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=       0/   91000 f
+  9.00 TYR01A0240_012 occ=0.000 trial=       0/   91000 f
+  9.00 TYR-1A0240_013 occ=0.000 trial=       0/   91000 f
+  9.00 TYR-1A0240_014 occ=0.000 trial=       0/   91000 f
+  9.00 TYR-1A0240_015 occ=0.000 trial=       0/   91000 f
+  9.00 TYR-1A0240_016 occ=0.000 trial=       0/   91000 f
+  9.00 TYR-1A0240_017 occ=0.000 trial=       0/   91000 f
+  9.00 TYR-1A0240_018 occ=0.000 trial=       0/   91000 f
+  9.00 TYR-1A0240_019 occ=0.003 trial=   13086/   91000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=       0/   91000 f
+  9.00 TYR-1A0240_021 occ=0.000 trial=       0/   91000 f
+  9.00 TYR-1A0240_022 occ=0.277 trial=   12913/   91000 t
+  9.00 TYR-1A0240_023 occ=0.051 trial=   12853/   91000 t
+  9.00 TYR-1A0240_024 occ=0.000 trial=       0/   91000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.57 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=       0/   70000 f
+  9.00 TYR01A0240_002 occ=0.108 trial=   10028/   70000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=    9995/   70000 t
+  9.00 TYR01A0240_004 occ=0.548 trial=   10029/   70000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=       0/   70000 f
+  9.00 TYR01A0240_006 occ=0.000 trial=       0/   70000 f
+  9.00 TYR01A0240_007 occ=0.000 trial=       0/   70000 f
+  9.00 TYR01A0240_008 occ=0.000 trial=       0/   70000 f
+  9.00 TYR01A0240_009 occ=0.000 trial=       0/   70000 f
+  9.00 TYR01A0240_010 occ=0.010 trial=    9892/   70000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=       0/   70000 f
+  9.00 TYR01A0240_012 occ=0.000 trial=       0/   70000 f
+  9.00 TYR-1A0240_013 occ=0.000 trial=       0/   70000 f
+  9.00 TYR-1A0240_014 occ=0.000 trial=       0/   70000 f
+  9.00 TYR-1A0240_015 occ=0.000 trial=       0/   70000 f
+  9.00 TYR-1A0240_016 occ=0.000 trial=       0/   70000 f
+  9.00 TYR-1A0240_017 occ=0.000 trial=       0/   70000 f
+  9.00 TYR-1A0240_018 occ=0.000 trial=       0/   70000 f
+  9.00 TYR-1A0240_019 occ=0.003 trial=   10046/   70000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=       0/   70000 f
+  9.00 TYR-1A0240_021 occ=0.000 trial=       0/   70000 f
+  9.00 TYR-1A0240_022 occ=0.280 trial=   10117/   70000 t
+  9.00 TYR-1A0240_023 occ=0.049 trial=    9893/   70000 t
+  9.00 TYR-1A0240_024 occ=0.000 trial=       0/   70000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.60 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -9.94 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=       0/   73000 f
+  9.00 TYR01A0240_002 occ=0.113 trial=   10573/   73000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=   10517/   73000 t
+  9.00 TYR01A0240_004 occ=0.539 trial=   10372/   73000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=       0/   73000 f
+  9.00 TYR01A0240_006 occ=0.000 trial=       0/   73000 f
+  9.00 TYR01A0240_007 occ=0.000 trial=       0/   73000 f
+  9.00 TYR01A0240_008 occ=0.000 trial=       0/   73000 f
+  9.00 TYR01A0240_009 occ=0.000 trial=       0/   73000 f
+  9.00 TYR01A0240_010 occ=0.011 trial=   10425/   73000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=       0/   73000 f
+  9.00 TYR01A0240_012 occ=0.000 trial=       0/   73000 f
+  9.00 TYR-1A0240_013 occ=0.000 trial=       0/   73000 f
+  9.00 TYR-1A0240_014 occ=0.000 trial=       0/   73000 f
+  9.00 TYR-1A0240_015 occ=0.000 trial=       0/   73000 f
+  9.00 TYR-1A0240_016 occ=0.000 trial=       0/   73000 f
+  9.00 TYR-1A0240_017 occ=0.000 trial=       0/   73000 f
+  9.00 TYR-1A0240_018 occ=0.000 trial=       0/   73000 f
+  9.00 TYR-1A0240_019 occ=0.002 trial=   10392/   73000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=       0/   73000 f
+  9.00 TYR-1A0240_021 occ=0.000 trial=       0/   73000 f
+  9.00 TYR-1A0240_022 occ=0.284 trial=   10318/   73000 t
+  9.00 TYR-1A0240_023 occ=0.050 trial=   10403/   73000 t
+  9.00 TYR-1A0240_024 occ=0.000 trial=       0/   73000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.62 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -9.95 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=       0/   55000 f
+  9.00 TYR01A0240_002 occ=0.109 trial=    7831/   55000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=    7863/   55000 t
+  9.00 TYR01A0240_004 occ=0.544 trial=    7852/   55000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=       0/   55000 f
+  9.00 TYR01A0240_006 occ=0.000 trial=       0/   55000 f
+  9.00 TYR01A0240_007 occ=0.000 trial=       0/   55000 f
+  9.00 TYR01A0240_008 occ=0.000 trial=       0/   55000 f
+  9.00 TYR01A0240_009 occ=0.000 trial=       0/   55000 f
+  9.00 TYR01A0240_010 occ=0.010 trial=    7906/   55000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=       0/   55000 f
+  9.00 TYR01A0240_012 occ=0.000 trial=       0/   55000 f
+  9.00 TYR-1A0240_013 occ=0.000 trial=       0/   55000 f
+  9.00 TYR-1A0240_014 occ=0.000 trial=       0/   55000 f
+  9.00 TYR-1A0240_015 occ=0.000 trial=       0/   55000 f
+  9.00 TYR-1A0240_016 occ=0.000 trial=       0/   55000 f
+  9.00 TYR-1A0240_017 occ=0.000 trial=       0/   55000 f
+  9.00 TYR-1A0240_018 occ=0.000 trial=       0/   55000 f
+  9.00 TYR-1A0240_019 occ=0.003 trial=    7942/   55000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=       0/   55000 f
+  9.00 TYR-1A0240_021 occ=0.000 trial=       0/   55000 f
+  9.00 TYR-1A0240_022 occ=0.280 trial=    7864/   55000 t
+  9.00 TYR-1A0240_023 occ=0.052 trial=    7742/   55000 t
+  9.00 TYR-1A0240_024 occ=0.000 trial=       0/   55000 f
+
+pH =   9.00 Eh =   0.00, Unf. Energy =    -0.04 Kcal/mol
+pH =   9.00 Eh =   0.00, Ave. Energy =    -9.57 Kcal/mol
+pH =   9.00 Eh =   0.00, Min. Energy =    -9.93 Kcal/mol
+  9.00 TYR01A0240_001 occ=0.000 trial=       0/   53000 f
+  9.00 TYR01A0240_002 occ=0.114 trial=    7587/   53000 t
+  9.00 TYR01A0240_003 occ=0.002 trial=    7468/   53000 t
+  9.00 TYR01A0240_004 occ=0.550 trial=    7568/   53000 t
+  9.00 TYR01A0240_005 occ=0.000 trial=       0/   53000 f
+  9.00 TYR01A0240_006 occ=0.000 trial=       0/   53000 f
+  9.00 TYR01A0240_007 occ=0.000 trial=       0/   53000 f
+  9.00 TYR01A0240_008 occ=0.000 trial=       0/   53000 f
+  9.00 TYR01A0240_009 occ=0.000 trial=       0/   53000 f
+  9.00 TYR01A0240_010 occ=0.009 trial=    7689/   53000 t
+  9.00 TYR01A0240_011 occ=0.000 trial=       0/   53000 f
+  9.00 TYR01A0240_012 occ=0.000 trial=       0/   53000 f
+  9.00 TYR-1A0240_013 occ=0.000 trial=       0/   53000 f
+  9.00 TYR-1A0240_014 occ=0.000 trial=       0/   53000 f
+  9.00 TYR-1A0240_015 occ=0.000 trial=       0/   53000 f
+  9.00 TYR-1A0240_016 occ=0.000 trial=       0/   53000 f
+  9.00 TYR-1A0240_017 occ=0.000 trial=       0/   53000 f
+  9.00 TYR-1A0240_018 occ=0.000 trial=       0/   53000 f
+  9.00 TYR-1A0240_019 occ=0.002 trial=    7558/   53000 t
+  9.00 TYR-1A0240_020 occ=0.000 trial=       0/   53000 f
+  9.00 TYR-1A0240_021 occ=0.000 trial=       0/   53000 f
+  9.00 TYR-1A0240_022 occ=0.274 trial=    7605/   53000 t
+  9.00 TYR-1A0240_023 occ=0.050 trial=    7525/   53000 t
+  9.00 TYR-1A0240_024 occ=0.000 trial=       0/   53000 f
+
+pH =  10.00 Eh =   0.00, Unf. Energy =    -0.29 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =   -10.49 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =   -10.88 Kcal/mol
+ 10.00 TYR01A0240_001 occ=0.000 trial=    4373/  108000 t
+ 10.00 TYR01A0240_002 occ=0.027 trial=    4481/  108000 t
+ 10.00 TYR01A0240_003 occ=0.000 trial=    4483/  108000 t
+ 10.00 TYR01A0240_004 occ=0.129 trial=    4486/  108000 t
+ 10.00 TYR01A0240_005 occ=0.000 trial=    4575/  108000 t
+ 10.00 TYR01A0240_006 occ=0.000 trial=    4609/  108000 t
+ 10.00 TYR01A0240_007 occ=0.000 trial=    4595/  108000 t
+ 10.00 TYR01A0240_008 occ=0.000 trial=    4555/  108000 t
+ 10.00 TYR01A0240_009 occ=0.000 trial=    4368/  108000 t
+ 10.00 TYR01A0240_010 occ=0.002 trial=    4504/  108000 t
+ 10.00 TYR01A0240_011 occ=0.000 trial=    4438/  108000 t
+ 10.00 TYR01A0240_012 occ=0.000 trial=    4451/  108000 t
+ 10.00 TYR-1A0240_013 occ=0.001 trial=    4531/  108000 t
+ 10.00 TYR-1A0240_014 occ=0.000 trial=    4565/  108000 t
+ 10.00 TYR-1A0240_015 occ=0.001 trial=    4618/  108000 t
+ 10.00 TYR-1A0240_016 occ=0.000 trial=    4475/  108000 t
+ 10.00 TYR-1A0240_017 occ=0.000 trial=    4618/  108000 t
+ 10.00 TYR-1A0240_018 occ=0.000 trial=    4492/  108000 t
+ 10.00 TYR-1A0240_019 occ=0.007 trial=    4505/  108000 t
+ 10.00 TYR-1A0240_020 occ=0.000 trial=    4409/  108000 t
+ 10.00 TYR-1A0240_021 occ=0.000 trial=    4305/  108000 t
+ 10.00 TYR-1A0240_022 occ=0.705 trial=    4570/  108000 t
+ 10.00 TYR-1A0240_023 occ=0.125 trial=    4474/  108000 t
+ 10.00 TYR-1A0240_024 occ=0.002 trial=    4520/  108000 t
+
+pH =  10.00 Eh =   0.00, Unf. Energy =    -0.29 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =   -10.59 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =   -10.94 Kcal/mol
+ 10.00 TYR01A0240_001 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_002 occ=0.029 trial=    7999/   57000 t
+ 10.00 TYR01A0240_003 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_004 occ=0.145 trial=    8213/   57000 t
+ 10.00 TYR01A0240_005 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_006 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_007 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_008 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_009 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_010 occ=0.002 trial=    8053/   57000 t
+ 10.00 TYR01A0240_011 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_012 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_013 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_014 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_015 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_016 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_017 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_018 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_019 occ=0.006 trial=    8135/   57000 t
+ 10.00 TYR-1A0240_020 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_021 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_022 occ=0.691 trial=    8148/   57000 t
+ 10.00 TYR-1A0240_023 occ=0.126 trial=    8256/   57000 t
+ 10.00 TYR-1A0240_024 occ=0.001 trial=    8196/   57000 t
+
+pH =  10.00 Eh =   0.00, Unf. Energy =    -0.29 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =   -10.49 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =   -10.84 Kcal/mol
+ 10.00 TYR01A0240_001 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_002 occ=0.030 trial=    8169/   57000 t
+ 10.00 TYR01A0240_003 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_004 occ=0.144 trial=    7967/   57000 t
+ 10.00 TYR01A0240_005 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_006 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_007 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_008 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_009 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_010 occ=0.002 trial=    8185/   57000 t
+ 10.00 TYR01A0240_011 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR01A0240_012 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_013 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_014 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_015 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_016 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_017 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_018 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_019 occ=0.006 trial=    8208/   57000 t
+ 10.00 TYR-1A0240_020 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_021 occ=0.000 trial=       0/   57000 f
+ 10.00 TYR-1A0240_022 occ=0.691 trial=    8073/   57000 t
+ 10.00 TYR-1A0240_023 occ=0.124 trial=    8115/   57000 t
+ 10.00 TYR-1A0240_024 occ=0.002 trial=    8283/   57000 t
+
+pH =  10.00 Eh =   0.00, Unf. Energy =    -0.29 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =   -10.48 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =   -10.84 Kcal/mol
+ 10.00 TYR01A0240_001 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR01A0240_002 occ=0.028 trial=    9994/   69000 t
+ 10.00 TYR01A0240_003 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR01A0240_004 occ=0.136 trial=    9865/   69000 t
+ 10.00 TYR01A0240_005 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR01A0240_006 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR01A0240_007 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR01A0240_008 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR01A0240_009 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR01A0240_010 occ=0.002 trial=    9801/   69000 t
+ 10.00 TYR01A0240_011 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR01A0240_012 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR-1A0240_013 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR-1A0240_014 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR-1A0240_015 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR-1A0240_016 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR-1A0240_017 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR-1A0240_018 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR-1A0240_019 occ=0.006 trial=    9803/   69000 t
+ 10.00 TYR-1A0240_020 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR-1A0240_021 occ=0.000 trial=       0/   69000 f
+ 10.00 TYR-1A0240_022 occ=0.698 trial=    9921/   69000 t
+ 10.00 TYR-1A0240_023 occ=0.128 trial=    9896/   69000 t
+ 10.00 TYR-1A0240_024 occ=0.002 trial=    9720/   69000 t
+
+pH =  10.00 Eh =   0.00, Unf. Energy =    -0.29 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =   -10.49 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =   -10.84 Kcal/mol
+ 10.00 TYR01A0240_001 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR01A0240_002 occ=0.028 trial=    5163/   36000 t
+ 10.00 TYR01A0240_003 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR01A0240_004 occ=0.160 trial=    5213/   36000 t
+ 10.00 TYR01A0240_005 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR01A0240_006 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR01A0240_007 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR01A0240_008 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR01A0240_009 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR01A0240_010 occ=0.002 trial=    5205/   36000 t
+ 10.00 TYR01A0240_011 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR01A0240_012 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR-1A0240_013 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR-1A0240_014 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR-1A0240_015 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR-1A0240_016 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR-1A0240_017 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR-1A0240_018 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR-1A0240_019 occ=0.006 trial=    5092/   36000 t
+ 10.00 TYR-1A0240_020 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR-1A0240_021 occ=0.000 trial=       0/   36000 f
+ 10.00 TYR-1A0240_022 occ=0.678 trial=    5059/   36000 t
+ 10.00 TYR-1A0240_023 occ=0.124 trial=    5138/   36000 t
+ 10.00 TYR-1A0240_024 occ=0.002 trial=    5130/   36000 t
+
+pH =  10.00 Eh =   0.00, Unf. Energy =    -0.29 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =   -10.53 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =   -10.88 Kcal/mol
+ 10.00 TYR01A0240_001 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR01A0240_002 occ=0.027 trial=    6736/   47000 t
+ 10.00 TYR01A0240_003 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR01A0240_004 occ=0.146 trial=    6711/   47000 t
+ 10.00 TYR01A0240_005 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR01A0240_006 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR01A0240_007 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR01A0240_008 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR01A0240_009 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR01A0240_010 occ=0.003 trial=    6768/   47000 t
+ 10.00 TYR01A0240_011 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR01A0240_012 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR-1A0240_013 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR-1A0240_014 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR-1A0240_015 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR-1A0240_016 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR-1A0240_017 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR-1A0240_018 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR-1A0240_019 occ=0.006 trial=    6714/   47000 t
+ 10.00 TYR-1A0240_020 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR-1A0240_021 occ=0.000 trial=       0/   47000 f
+ 10.00 TYR-1A0240_022 occ=0.696 trial=    6642/   47000 t
+ 10.00 TYR-1A0240_023 occ=0.121 trial=    6704/   47000 t
+ 10.00 TYR-1A0240_024 occ=0.002 trial=    6725/   47000 t
+
+pH =  10.00 Eh =   0.00, Unf. Energy =    -0.29 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =   -10.50 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =   -10.85 Kcal/mol
+ 10.00 TYR01A0240_001 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR01A0240_002 occ=0.028 trial=   11982/   83000 t
+ 10.00 TYR01A0240_003 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR01A0240_004 occ=0.138 trial=   11739/   83000 t
+ 10.00 TYR01A0240_005 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR01A0240_006 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR01A0240_007 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR01A0240_008 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR01A0240_009 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR01A0240_010 occ=0.002 trial=   11855/   83000 t
+ 10.00 TYR01A0240_011 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR01A0240_012 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR-1A0240_013 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR-1A0240_014 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR-1A0240_015 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR-1A0240_016 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR-1A0240_017 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR-1A0240_018 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR-1A0240_019 occ=0.006 trial=   11791/   83000 t
+ 10.00 TYR-1A0240_020 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR-1A0240_021 occ=0.000 trial=       0/   83000 f
+ 10.00 TYR-1A0240_022 occ=0.698 trial=   11947/   83000 t
+ 10.00 TYR-1A0240_023 occ=0.125 trial=   11850/   83000 t
+ 10.00 TYR-1A0240_024 occ=0.002 trial=   11836/   83000 t
+
+pH =  10.00 Eh =   0.00, Unf. Energy =    -0.29 Kcal/mol
+pH =  10.00 Eh =   0.00, Ave. Energy =   -10.55 Kcal/mol
+pH =  10.00 Eh =   0.00, Min. Energy =   -10.91 Kcal/mol
+ 10.00 TYR01A0240_001 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR01A0240_002 occ=0.029 trial=    8039/   55000 t
+ 10.00 TYR01A0240_003 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR01A0240_004 occ=0.146 trial=    7719/   55000 t
+ 10.00 TYR01A0240_005 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR01A0240_006 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR01A0240_007 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR01A0240_008 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR01A0240_009 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR01A0240_010 occ=0.002 trial=    7793/   55000 t
+ 10.00 TYR01A0240_011 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR01A0240_012 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR-1A0240_013 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR-1A0240_014 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR-1A0240_015 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR-1A0240_016 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR-1A0240_017 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR-1A0240_018 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR-1A0240_019 occ=0.005 trial=    7862/   55000 t
+ 10.00 TYR-1A0240_020 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR-1A0240_021 occ=0.000 trial=       0/   55000 f
+ 10.00 TYR-1A0240_022 occ=0.692 trial=    7884/   55000 t
+ 10.00 TYR-1A0240_023 occ=0.124 trial=    7808/   55000 t
+ 10.00 TYR-1A0240_024 occ=0.002 trial=    7895/   55000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.97 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=    3504/   84000 t
+ 11.00 TYR01A0240_002 occ=0.003 trial=    3571/   84000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=    3475/   84000 t
+ 11.00 TYR01A0240_004 occ=0.018 trial=    3554/   84000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=    3530/   84000 t
+ 11.00 TYR01A0240_006 occ=0.000 trial=    3525/   84000 t
+ 11.00 TYR01A0240_007 occ=0.000 trial=    3363/   84000 t
+ 11.00 TYR01A0240_008 occ=0.000 trial=    3479/   84000 t
+ 11.00 TYR01A0240_009 occ=0.000 trial=    3472/   84000 t
+ 11.00 TYR01A0240_010 occ=0.000 trial=    3467/   84000 t
+ 11.00 TYR01A0240_011 occ=0.000 trial=    3534/   84000 t
+ 11.00 TYR01A0240_012 occ=0.000 trial=    3588/   84000 t
+ 11.00 TYR-1A0240_013 occ=0.000 trial=    3519/   84000 t
+ 11.00 TYR-1A0240_014 occ=0.000 trial=    3477/   84000 t
+ 11.00 TYR-1A0240_015 occ=0.000 trial=    3443/   84000 t
+ 11.00 TYR-1A0240_016 occ=0.000 trial=    3587/   84000 t
+ 11.00 TYR-1A0240_017 occ=0.000 trial=    3449/   84000 t
+ 11.00 TYR-1A0240_018 occ=0.000 trial=    3497/   84000 t
+ 11.00 TYR-1A0240_019 occ=0.007 trial=    3446/   84000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=    3418/   84000 t
+ 11.00 TYR-1A0240_021 occ=0.000 trial=    3541/   84000 t
+ 11.00 TYR-1A0240_022 occ=0.814 trial=    3537/   84000 t
+ 11.00 TYR-1A0240_023 occ=0.154 trial=    3585/   84000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    3439/   84000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.97 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR01A0240_002 occ=0.004 trial=    4794/   28000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR01A0240_004 occ=0.021 trial=    4640/   28000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR01A0240_006 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR01A0240_007 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR01A0240_008 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR01A0240_009 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR01A0240_010 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR01A0240_011 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR01A0240_012 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR-1A0240_013 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR-1A0240_014 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR-1A0240_015 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR-1A0240_016 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR-1A0240_017 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR-1A0240_018 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR-1A0240_019 occ=0.009 trial=    4740/   28000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR-1A0240_021 occ=0.000 trial=       0/   28000 f
+ 11.00 TYR-1A0240_022 occ=0.823 trial=    4617/   28000 t
+ 11.00 TYR-1A0240_023 occ=0.142 trial=    4620/   28000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    4589/   28000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.99 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR01A0240_002 occ=0.004 trial=    5433/   33000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR01A0240_004 occ=0.017 trial=    5488/   33000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR01A0240_006 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR01A0240_007 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR01A0240_008 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR01A0240_009 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR01A0240_010 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR01A0240_011 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR01A0240_012 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR-1A0240_013 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR-1A0240_014 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR-1A0240_015 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR-1A0240_016 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR-1A0240_017 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR-1A0240_018 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR-1A0240_019 occ=0.007 trial=    5519/   33000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR-1A0240_021 occ=0.000 trial=       0/   33000 f
+ 11.00 TYR-1A0240_022 occ=0.829 trial=    5596/   33000 t
+ 11.00 TYR-1A0240_023 occ=0.141 trial=    5545/   33000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    5419/   33000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.97 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_002 occ=0.004 trial=    7218/   43000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_004 occ=0.019 trial=    7192/   43000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_006 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_007 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_008 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_009 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_010 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_011 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_012 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_013 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_014 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_015 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_016 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_017 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_018 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_019 occ=0.007 trial=    7051/   43000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_021 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_022 occ=0.815 trial=    7127/   43000 t
+ 11.00 TYR-1A0240_023 occ=0.152 trial=    7128/   43000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    7284/   43000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.97 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR01A0240_002 occ=0.004 trial=    9226/   55000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR01A0240_004 occ=0.017 trial=    9260/   55000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR01A0240_006 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR01A0240_007 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR01A0240_008 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR01A0240_009 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR01A0240_010 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR01A0240_011 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR01A0240_012 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR-1A0240_013 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR-1A0240_014 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR-1A0240_015 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR-1A0240_016 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR-1A0240_017 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR-1A0240_018 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR-1A0240_019 occ=0.007 trial=    9125/   55000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR-1A0240_021 occ=0.000 trial=       0/   55000 f
+ 11.00 TYR-1A0240_022 occ=0.818 trial=    9182/   55000 t
+ 11.00 TYR-1A0240_023 occ=0.152 trial=    9104/   55000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    9103/   55000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.97 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR01A0240_002 occ=0.004 trial=    8085/   49000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR01A0240_004 occ=0.018 trial=    8247/   49000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR01A0240_006 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR01A0240_007 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR01A0240_008 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR01A0240_009 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR01A0240_010 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR01A0240_011 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR01A0240_012 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR-1A0240_013 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR-1A0240_014 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR-1A0240_015 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR-1A0240_016 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR-1A0240_017 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR-1A0240_018 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR-1A0240_019 occ=0.007 trial=    8204/   49000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR-1A0240_021 occ=0.000 trial=       0/   49000 f
+ 11.00 TYR-1A0240_022 occ=0.815 trial=    7967/   49000 t
+ 11.00 TYR-1A0240_023 occ=0.155 trial=    8400/   49000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    8097/   49000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.97 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR01A0240_002 occ=0.004 trial=    7577/   46000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR01A0240_004 occ=0.020 trial=    7616/   46000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR01A0240_006 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR01A0240_007 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR01A0240_008 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR01A0240_009 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR01A0240_010 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR01A0240_011 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR01A0240_012 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR-1A0240_013 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR-1A0240_014 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR-1A0240_015 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR-1A0240_016 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR-1A0240_017 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR-1A0240_018 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR-1A0240_019 occ=0.007 trial=    7673/   46000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR-1A0240_021 occ=0.000 trial=       0/   46000 f
+ 11.00 TYR-1A0240_022 occ=0.814 trial=    7665/   46000 t
+ 11.00 TYR-1A0240_023 occ=0.153 trial=    7784/   46000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    7685/   46000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.97 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR01A0240_002 occ=0.003 trial=    9432/   57000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR01A0240_004 occ=0.018 trial=    9528/   57000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR01A0240_006 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR01A0240_007 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR01A0240_008 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR01A0240_009 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR01A0240_010 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR01A0240_011 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR01A0240_012 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR-1A0240_013 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR-1A0240_014 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR-1A0240_015 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR-1A0240_016 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR-1A0240_017 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR-1A0240_018 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR-1A0240_019 occ=0.008 trial=    9603/   57000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR-1A0240_021 occ=0.000 trial=       0/   57000 f
+ 11.00 TYR-1A0240_022 occ=0.822 trial=    9399/   57000 t
+ 11.00 TYR-1A0240_023 occ=0.147 trial=    9595/   57000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    9443/   57000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.98 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_002 occ=0.004 trial=    7139/   43000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_004 occ=0.018 trial=    7233/   43000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_006 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_007 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_008 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_009 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_010 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_011 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR01A0240_012 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_013 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_014 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_015 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_016 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_017 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_018 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_019 occ=0.008 trial=    7202/   43000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_021 occ=0.000 trial=       0/   43000 f
+ 11.00 TYR-1A0240_022 occ=0.826 trial=    7109/   43000 t
+ 11.00 TYR-1A0240_023 occ=0.143 trial=    7163/   43000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    7154/   43000 t
+
+pH =  11.00 Eh =   0.00, Unf. Energy =    -1.18 Kcal/mol
+pH =  11.00 Eh =   0.00, Ave. Energy =   -11.98 Kcal/mol
+pH =  11.00 Eh =   0.00, Min. Energy =   -12.21 Kcal/mol
+ 11.00 TYR01A0240_001 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR01A0240_002 occ=0.003 trial=    8281/   50000 t
+ 11.00 TYR01A0240_003 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR01A0240_004 occ=0.018 trial=    8295/   50000 t
+ 11.00 TYR01A0240_005 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR01A0240_006 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR01A0240_007 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR01A0240_008 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR01A0240_009 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR01A0240_010 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR01A0240_011 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR01A0240_012 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR-1A0240_013 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR-1A0240_014 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR-1A0240_015 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR-1A0240_016 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR-1A0240_017 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR-1A0240_018 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR-1A0240_019 occ=0.008 trial=    8401/   50000 t
+ 11.00 TYR-1A0240_020 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR-1A0240_021 occ=0.000 trial=       0/   50000 f
+ 11.00 TYR-1A0240_022 occ=0.819 trial=    8271/   50000 t
+ 11.00 TYR-1A0240_023 occ=0.151 trial=    8483/   50000 t
+ 11.00 TYR-1A0240_024 occ=0.002 trial=    8269/   50000 t
+
+pH =  12.00 Eh =   0.00, Unf. Energy =    -2.46 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =   -13.35 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =   -13.57 Kcal/mol
+ 12.00 TYR01A0240_001 occ=0.000 trial=    4864/  114000 t
+ 12.00 TYR01A0240_002 occ=0.001 trial=    4832/  114000 t
+ 12.00 TYR01A0240_003 occ=0.000 trial=    4790/  114000 t
+ 12.00 TYR01A0240_004 occ=0.002 trial=    4751/  114000 t
+ 12.00 TYR01A0240_005 occ=0.000 trial=    4665/  114000 t
+ 12.00 TYR01A0240_006 occ=0.000 trial=    4660/  114000 t
+ 12.00 TYR01A0240_007 occ=0.000 trial=    4711/  114000 t
+ 12.00 TYR01A0240_008 occ=0.000 trial=    4799/  114000 t
+ 12.00 TYR01A0240_009 occ=0.000 trial=    4745/  114000 t
+ 12.00 TYR01A0240_010 occ=0.000 trial=    4796/  114000 t
+ 12.00 TYR01A0240_011 occ=0.000 trial=    4770/  114000 t
+ 12.00 TYR01A0240_012 occ=0.000 trial=    4808/  114000 t
+ 12.00 TYR-1A0240_013 occ=0.001 trial=    4713/  114000 t
+ 12.00 TYR-1A0240_014 occ=0.000 trial=    4686/  114000 t
+ 12.00 TYR-1A0240_015 occ=0.001 trial=    4664/  114000 t
+ 12.00 TYR-1A0240_016 occ=0.000 trial=    4802/  114000 t
+ 12.00 TYR-1A0240_017 occ=0.000 trial=    4701/  114000 t
+ 12.00 TYR-1A0240_018 occ=0.000 trial=    4841/  114000 t
+ 12.00 TYR-1A0240_019 occ=0.007 trial=    4703/  114000 t
+ 12.00 TYR-1A0240_020 occ=0.001 trial=    4739/  114000 t
+ 12.00 TYR-1A0240_021 occ=0.000 trial=    4636/  114000 t
+ 12.00 TYR-1A0240_022 occ=0.822 trial=    4739/  114000 t
+ 12.00 TYR-1A0240_023 occ=0.162 trial=    4823/  114000 t
+ 12.00 TYR-1A0240_024 occ=0.003 trial=    4762/  114000 t
+
+pH =  12.00 Eh =   0.00, Unf. Energy =    -2.46 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =   -13.39 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =   -13.57 Kcal/mol
+ 12.00 TYR01A0240_001 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_002 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_003 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_004 occ=0.003 trial=    5720/   29000 t
+ 12.00 TYR01A0240_005 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_006 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_007 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_008 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_009 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_010 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_011 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR01A0240_012 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR-1A0240_013 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR-1A0240_014 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR-1A0240_015 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR-1A0240_016 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR-1A0240_017 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR-1A0240_018 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR-1A0240_019 occ=0.007 trial=    5837/   29000 t
+ 12.00 TYR-1A0240_020 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR-1A0240_021 occ=0.000 trial=       0/   29000 f
+ 12.00 TYR-1A0240_022 occ=0.846 trial=    5837/   29000 t
+ 12.00 TYR-1A0240_023 occ=0.142 trial=    5722/   29000 t
+ 12.00 TYR-1A0240_024 occ=0.002 trial=    5884/   29000 t
+
+pH =  12.00 Eh =   0.00, Unf. Energy =    -2.46 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =   -13.38 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =   -13.57 Kcal/mol
+ 12.00 TYR01A0240_001 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_002 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_003 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_004 occ=0.002 trial=    5218/   26000 t
+ 12.00 TYR01A0240_005 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_006 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_007 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_008 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_009 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_010 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_011 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR01A0240_012 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR-1A0240_013 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR-1A0240_014 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR-1A0240_015 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR-1A0240_016 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR-1A0240_017 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR-1A0240_018 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR-1A0240_019 occ=0.007 trial=    5130/   26000 t
+ 12.00 TYR-1A0240_020 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR-1A0240_021 occ=0.000 trial=       0/   26000 f
+ 12.00 TYR-1A0240_022 occ=0.835 trial=    5187/   26000 t
+ 12.00 TYR-1A0240_023 occ=0.155 trial=    5208/   26000 t
+ 12.00 TYR-1A0240_024 occ=0.001 trial=    5257/   26000 t
+
+pH =  12.00 Eh =   0.00, Unf. Energy =    -2.46 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =   -13.37 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =   -13.57 Kcal/mol
+ 12.00 TYR01A0240_001 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_002 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_003 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_004 occ=0.003 trial=    6002/   30000 t
+ 12.00 TYR01A0240_005 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_006 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_007 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_008 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_009 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_010 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_011 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR01A0240_012 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR-1A0240_013 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR-1A0240_014 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR-1A0240_015 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR-1A0240_016 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR-1A0240_017 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR-1A0240_018 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR-1A0240_019 occ=0.009 trial=    5937/   30000 t
+ 12.00 TYR-1A0240_020 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR-1A0240_021 occ=0.000 trial=       0/   30000 f
+ 12.00 TYR-1A0240_022 occ=0.831 trial=    6087/   30000 t
+ 12.00 TYR-1A0240_023 occ=0.154 trial=    5959/   30000 t
+ 12.00 TYR-1A0240_024 occ=0.002 trial=    6015/   30000 t
+
+pH =  12.00 Eh =   0.00, Unf. Energy =    -2.46 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =   -13.39 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =   -13.57 Kcal/mol
+ 12.00 TYR01A0240_001 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_002 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_003 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_004 occ=0.002 trial=    6613/   33000 t
+ 12.00 TYR01A0240_005 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_006 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_007 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_008 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_009 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_010 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_011 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR01A0240_012 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR-1A0240_013 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR-1A0240_014 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR-1A0240_015 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR-1A0240_016 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR-1A0240_017 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR-1A0240_018 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR-1A0240_019 occ=0.008 trial=    6616/   33000 t
+ 12.00 TYR-1A0240_020 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR-1A0240_021 occ=0.000 trial=       0/   33000 f
+ 12.00 TYR-1A0240_022 occ=0.842 trial=    6579/   33000 t
+ 12.00 TYR-1A0240_023 occ=0.146 trial=    6478/   33000 t
+ 12.00 TYR-1A0240_024 occ=0.002 trial=    6714/   33000 t
+
+pH =  12.00 Eh =   0.00, Unf. Energy =    -2.46 Kcal/mol
+pH =  12.00 Eh =   0.00, Ave. Energy =   -13.38 Kcal/mol
+pH =  12.00 Eh =   0.00, Min. Energy =   -13.57 Kcal/mol
+ 12.00 TYR01A0240_001 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_002 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_003 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_004 occ=0.003 trial=    8730/   44000 t
+ 12.00 TYR01A0240_005 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_006 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_007 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_008 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_009 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_010 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_011 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR01A0240_012 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR-1A0240_013 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR-1A0240_014 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR-1A0240_015 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR-1A0240_016 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR-1A0240_017 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR-1A0240_018 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR-1A0240_019 occ=0.007 trial=    8860/   44000 t
+ 12.00 TYR-1A0240_020 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR-1A0240_021 occ=0.000 trial=       0/   44000 f
+ 12.00 TYR-1A0240_022 occ=0.837 trial=    8852/   44000 t
+ 12.00 TYR-1A0240_023 occ=0.152 trial=    8777/   44000 t
+ 12.00 TYR-1A0240_024 occ=0.002 trial=    8781/   44000 t
+
+pH =  13.00 Eh =   0.00, Unf. Energy =    -3.82 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =   -14.74 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =   -14.94 Kcal/mol
+ 13.00 TYR01A0240_001 occ=0.000 trial=    4240/  102000 t
+ 13.00 TYR01A0240_002 occ=0.000 trial=    4402/  102000 t
+ 13.00 TYR01A0240_003 occ=0.000 trial=    4153/  102000 t
+ 13.00 TYR01A0240_004 occ=0.000 trial=    4320/  102000 t
+ 13.00 TYR01A0240_005 occ=0.000 trial=    4302/  102000 t
+ 13.00 TYR01A0240_006 occ=0.000 trial=    4248/  102000 t
+ 13.00 TYR01A0240_007 occ=0.000 trial=    4253/  102000 t
+ 13.00 TYR01A0240_008 occ=0.000 trial=    4166/  102000 t
+ 13.00 TYR01A0240_009 occ=0.000 trial=    4173/  102000 t
+ 13.00 TYR01A0240_010 occ=0.000 trial=    4195/  102000 t
+ 13.00 TYR01A0240_011 occ=0.000 trial=    4169/  102000 t
+ 13.00 TYR01A0240_012 occ=0.000 trial=    4258/  102000 t
+ 13.00 TYR-1A0240_013 occ=0.001 trial=    4317/  102000 t
+ 13.00 TYR-1A0240_014 occ=0.000 trial=    4300/  102000 t
+ 13.00 TYR-1A0240_015 occ=0.000 trial=    4323/  102000 t
+ 13.00 TYR-1A0240_016 occ=0.000 trial=    4269/  102000 t
+ 13.00 TYR-1A0240_017 occ=0.000 trial=    4289/  102000 t
+ 13.00 TYR-1A0240_018 occ=0.000 trial=    4203/  102000 t
+ 13.00 TYR-1A0240_019 occ=0.007 trial=    4158/  102000 t
+ 13.00 TYR-1A0240_020 occ=0.001 trial=    4253/  102000 t
+ 13.00 TYR-1A0240_021 occ=0.000 trial=    4273/  102000 t
+ 13.00 TYR-1A0240_022 occ=0.825 trial=    4269/  102000 t
+ 13.00 TYR-1A0240_023 occ=0.164 trial=    4240/  102000 t
+ 13.00 TYR-1A0240_024 occ=0.001 trial=    4227/  102000 t
+
+pH =  13.00 Eh =   0.00, Unf. Energy =    -3.82 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =   -14.76 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =   -14.94 Kcal/mol
+ 13.00 TYR01A0240_001 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_002 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_003 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_004 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_005 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_006 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_007 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_008 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_009 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_010 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_011 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR01A0240_012 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR-1A0240_013 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR-1A0240_014 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR-1A0240_015 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR-1A0240_016 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR-1A0240_017 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR-1A0240_018 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR-1A0240_019 occ=0.007 trial=   10758/   43000 t
+ 13.00 TYR-1A0240_020 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR-1A0240_021 occ=0.000 trial=       0/   43000 f
+ 13.00 TYR-1A0240_022 occ=0.839 trial=   10866/   43000 t
+ 13.00 TYR-1A0240_023 occ=0.152 trial=   10755/   43000 t
+ 13.00 TYR-1A0240_024 occ=0.002 trial=   10621/   43000 t
+
+pH =  13.00 Eh =   0.00, Unf. Energy =    -3.82 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =   -14.76 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =   -14.94 Kcal/mol
+ 13.00 TYR01A0240_001 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_002 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_003 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_004 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_005 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_006 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_007 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_008 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_009 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_010 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_011 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR01A0240_012 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR-1A0240_013 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR-1A0240_014 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR-1A0240_015 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR-1A0240_016 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR-1A0240_017 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR-1A0240_018 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR-1A0240_019 occ=0.006 trial=    8822/   35000 t
+ 13.00 TYR-1A0240_020 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR-1A0240_021 occ=0.000 trial=       0/   35000 f
+ 13.00 TYR-1A0240_022 occ=0.847 trial=    8761/   35000 t
+ 13.00 TYR-1A0240_023 occ=0.145 trial=    8742/   35000 t
+ 13.00 TYR-1A0240_024 occ=0.002 trial=    8675/   35000 t
+
+pH =  13.00 Eh =   0.00, Unf. Energy =    -3.82 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =   -14.75 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =   -14.94 Kcal/mol
+ 13.00 TYR01A0240_001 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_002 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_003 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_004 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_005 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_006 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_007 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_008 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_009 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_010 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_011 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_012 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_013 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_014 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_015 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_016 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_017 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_018 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_019 occ=0.006 trial=    7913/   32000 t
+ 13.00 TYR-1A0240_020 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_021 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_022 occ=0.829 trial=    8076/   32000 t
+ 13.00 TYR-1A0240_023 occ=0.164 trial=    8009/   32000 t
+ 13.00 TYR-1A0240_024 occ=0.002 trial=    8002/   32000 t
+
+pH =  13.00 Eh =   0.00, Unf. Energy =    -3.82 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =   -14.76 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =   -14.94 Kcal/mol
+ 13.00 TYR01A0240_001 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_002 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_003 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_004 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_005 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_006 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_007 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_008 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_009 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_010 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_011 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR01A0240_012 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_013 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_014 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_015 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_016 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_017 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_018 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_019 occ=0.007 trial=    7938/   32000 t
+ 13.00 TYR-1A0240_020 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_021 occ=0.000 trial=       0/   32000 f
+ 13.00 TYR-1A0240_022 occ=0.842 trial=    7922/   32000 t
+ 13.00 TYR-1A0240_023 occ=0.150 trial=    8081/   32000 t
+ 13.00 TYR-1A0240_024 occ=0.002 trial=    8059/   32000 t
+
+pH =  13.00 Eh =   0.00, Unf. Energy =    -3.82 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =   -14.76 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =   -14.94 Kcal/mol
+ 13.00 TYR01A0240_001 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_002 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_003 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_004 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_005 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_006 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_007 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_008 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_009 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_010 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_011 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR01A0240_012 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR-1A0240_013 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR-1A0240_014 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR-1A0240_015 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR-1A0240_016 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR-1A0240_017 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR-1A0240_018 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR-1A0240_019 occ=0.007 trial=    8314/   33000 t
+ 13.00 TYR-1A0240_020 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR-1A0240_021 occ=0.000 trial=       0/   33000 f
+ 13.00 TYR-1A0240_022 occ=0.839 trial=    8198/   33000 t
+ 13.00 TYR-1A0240_023 occ=0.152 trial=    8288/   33000 t
+ 13.00 TYR-1A0240_024 occ=0.002 trial=    8200/   33000 t
+
+pH =  13.00 Eh =   0.00, Unf. Energy =    -3.82 Kcal/mol
+pH =  13.00 Eh =   0.00, Ave. Energy =   -14.75 Kcal/mol
+pH =  13.00 Eh =   0.00, Min. Energy =   -14.94 Kcal/mol
+ 13.00 TYR01A0240_001 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_002 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_003 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_004 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_005 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_006 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_007 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_008 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_009 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_010 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_011 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR01A0240_012 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR-1A0240_013 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR-1A0240_014 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR-1A0240_015 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR-1A0240_016 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR-1A0240_017 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR-1A0240_018 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR-1A0240_019 occ=0.007 trial=   10614/   42000 t
+ 13.00 TYR-1A0240_020 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR-1A0240_021 occ=0.000 trial=       0/   42000 f
+ 13.00 TYR-1A0240_022 occ=0.837 trial=   10503/   42000 t
+ 13.00 TYR-1A0240_023 occ=0.154 trial=   10417/   42000 t
+ 13.00 TYR-1A0240_024 occ=0.002 trial=   10466/   42000 t
+
+pH =  14.00 Eh =   0.00, Unf. Energy =    -5.18 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =   -16.11 Kcal/mol
+pH =  14.00 Eh =   0.00, Min. Energy =   -16.30 Kcal/mol
+ 14.00 TYR01A0240_001 occ=0.000 trial=    3066/   75000 t
+ 14.00 TYR01A0240_002 occ=0.000 trial=    3229/   75000 t
+ 14.00 TYR01A0240_003 occ=0.000 trial=    3088/   75000 t
+ 14.00 TYR01A0240_004 occ=0.000 trial=    3090/   75000 t
+ 14.00 TYR01A0240_005 occ=0.000 trial=    3146/   75000 t
+ 14.00 TYR01A0240_006 occ=0.000 trial=    3176/   75000 t
+ 14.00 TYR01A0240_007 occ=0.000 trial=    3275/   75000 t
+ 14.00 TYR01A0240_008 occ=0.000 trial=    3133/   75000 t
+ 14.00 TYR01A0240_009 occ=0.000 trial=    3100/   75000 t
+ 14.00 TYR01A0240_010 occ=0.000 trial=    3106/   75000 t
+ 14.00 TYR01A0240_011 occ=0.000 trial=    3141/   75000 t
+ 14.00 TYR01A0240_012 occ=0.000 trial=    3154/   75000 t
+ 14.00 TYR-1A0240_013 occ=0.001 trial=    3142/   75000 t
+ 14.00 TYR-1A0240_014 occ=0.000 trial=    3204/   75000 t
+ 14.00 TYR-1A0240_015 occ=0.001 trial=    3098/   75000 t
+ 14.00 TYR-1A0240_016 occ=0.000 trial=    3057/   75000 t
+ 14.00 TYR-1A0240_017 occ=0.000 trial=    3102/   75000 t
+ 14.00 TYR-1A0240_018 occ=0.000 trial=    3080/   75000 t
+ 14.00 TYR-1A0240_019 occ=0.010 trial=    3176/   75000 t
+ 14.00 TYR-1A0240_020 occ=0.001 trial=    3092/   75000 t
+ 14.00 TYR-1A0240_021 occ=0.000 trial=    3055/   75000 t
+ 14.00 TYR-1A0240_022 occ=0.838 trial=    3173/   75000 t
+ 14.00 TYR-1A0240_023 occ=0.148 trial=    3077/   75000 t
+ 14.00 TYR-1A0240_024 occ=0.001 trial=    3040/   75000 t
+
+pH =  14.00 Eh =   0.00, Unf. Energy =    -5.18 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =   -16.11 Kcal/mol
+pH =  14.00 Eh =   0.00, Min. Energy =   -16.30 Kcal/mol
+ 14.00 TYR01A0240_001 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_002 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_003 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_004 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_005 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_006 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_007 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_008 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_009 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_010 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_011 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR01A0240_012 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR-1A0240_013 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR-1A0240_014 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR-1A0240_015 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR-1A0240_016 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR-1A0240_017 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR-1A0240_018 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR-1A0240_019 occ=0.008 trial=    3171/   13000 t
+ 14.00 TYR-1A0240_020 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR-1A0240_021 occ=0.000 trial=       0/   13000 f
+ 14.00 TYR-1A0240_022 occ=0.832 trial=    3296/   13000 t
+ 14.00 TYR-1A0240_023 occ=0.158 trial=    3271/   13000 t
+ 14.00 TYR-1A0240_024 occ=0.002 trial=    3262/   13000 t
+
+pH =  14.00 Eh =   0.00, Unf. Energy =    -5.18 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =   -16.13 Kcal/mol
+pH =  14.00 Eh =   0.00, Min. Energy =   -16.30 Kcal/mol
+ 14.00 TYR01A0240_001 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_002 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_003 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_004 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_005 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_006 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_007 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_008 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_009 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_010 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_011 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_012 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_013 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_014 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_015 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_016 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_017 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_018 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_019 occ=0.008 trial=    8397/   34000 t
+ 14.00 TYR-1A0240_020 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_021 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_022 occ=0.849 trial=    8437/   34000 t
+ 14.00 TYR-1A0240_023 occ=0.141 trial=    8513/   34000 t
+ 14.00 TYR-1A0240_024 occ=0.002 trial=    8653/   34000 t
+
+pH =  14.00 Eh =   0.00, Unf. Energy =    -5.18 Kcal/mol
+pH =  14.00 Eh =   0.00, Ave. Energy =   -16.12 Kcal/mol
+pH =  14.00 Eh =   0.00, Min. Energy =   -16.30 Kcal/mol
+ 14.00 TYR01A0240_001 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_002 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_003 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_004 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_005 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_006 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_007 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_008 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_009 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_010 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_011 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR01A0240_012 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_013 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_014 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_015 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_016 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_017 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_018 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_019 occ=0.007 trial=    8545/   34000 t
+ 14.00 TYR-1A0240_020 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_021 occ=0.000 trial=       0/   34000 f
+ 14.00 TYR-1A0240_022 occ=0.840 trial=    8589/   34000 t
+ 14.00 TYR-1A0240_023 occ=0.150 trial=    8447/   34000 t
+ 14.00 TYR-1A0240_024 occ=0.002 trial=    8419/   34000 t
