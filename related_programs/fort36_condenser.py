@@ -23,7 +23,7 @@ def fort36Ave_condensed(fort36_file, out_location):
 	file_name = 'fort.36_condensed.csv'
 	
 	to_write = os.path.join(file_location, file_name)
-	_res.to_csv(to_write)
+	_res.to_csv(to_write, sep = ' ')
 
 
 def fort36Conformers_std(fort36_file):#, out_location):
@@ -33,32 +33,31 @@ def fort36Conformers_std(fort36_file):#, out_location):
 	df = pd.read_csv(fort36_file,
 		sep = "\s+", header = None, usecols = [0, 1, 2],
 		names = ['pH', 'Conformer', 'Occ'])
+	#conformers = set([true_conformer if true_conformer != '='  true_conformer in df['Conformer'].values])	
+	conformers = set(df['Conformer'].values)
+	conformers.remove('=')
 	
-	conformers = set([true_conformer if true_conformer != '=' for true_conformer in df['Conformer'].values])
-	df['Occ'] = [float(string[4:len(string) + 1]) if string[0:3] == 'occ'
-		else float(string) for string in df['Occ'].values]
+	df['Occ'] = [float(string[4:len(string)]) if string[0:3] == 'occ'
+		else np.nan for string in df['Occ'].values]
+	df = df.dropna()
  
 	for conformer in sorted(conformers):
 		df_conformer = df[ df['Conformer'] == str(conformer) ]
 		to_write = df_conformer.groupby(['pH'], 
-			sort = False).agg('mean')
+			sort = False).agg('std')
 		to_write.columns = [str(conformer)]
-
-		print(to_write)
 		to_write[conformer] = ['%.3f' % round(val,3) for val in 
 			to_write[conformer]]
 	
 		master_df = master_df.join(pd.DataFrame(to_write), 
 			how = 'right')
 
-	master_df.index.name = 'ph'
+	master_df.index.name = 'pH'	
 	
-	master_df.transpose().to_csv('fort99', sep = ' ')
-	
-	# IMPROVEMENTS NEEDED: CONVERT ALL FLOATS TO 2 DECIMAL PLACES
-	# THIS WILL IMPROVE THE CLEANLINESS OF THE FILE
-
-	
+	transposed = master_df.transpose()
+	master_df.transpose().to_csv('fort99', sep = ' ', header = ['pH            0.00  1.00  \
+2.00  3.00  4.00  5.00  6.00  7.00  8.00  9.00 10.00 11.00 12.00 13.00 14.00','', '', '',
+		'', '', '', '', '', '', '','' , '', '', ''])
 
 def ask_arguments():
 	parser = ArgumentParser(description = '''Analyze values in fort36, 
@@ -84,7 +83,7 @@ def ask_arguments():
 
 if __name__ == '__main__':
 	args = ask_arguments()
-	#fort36Ave_condensed(args.fort36_location, args.output_location)
+	fort36Ave_condensed(args.fort36_location, args.output_location)
 	fort36Conformers_std(args.fort36_location)
 
 
