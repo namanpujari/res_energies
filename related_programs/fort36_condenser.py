@@ -1,4 +1,5 @@
 from argparse import ArgumentParser
+from decimal import *
 import pandas as pd
 import numpy as np
 import os
@@ -10,7 +11,6 @@ def fort36Ave_condensed(fort36_file, out_location):
 		names = ['pH', 'E_type', 'E'])
 	#print(df)
 	AverE_df = df[ df['E_type'] == 'Ave.' ]
-	#_res = AverE_df.groupby(['pH'], sort=False).agg( {"E": {"mean": np.mean, "stdev": np.std}} )
 
 	# the agg.function is used on groupby objects and allows for users
 	# to combine multiple statistics. For example, we can get values for 
@@ -27,24 +27,33 @@ def fort36Ave_condensed(fort36_file, out_location):
 
 
 def fort36Conformers_std(fort36_file):#, out_location):
+	#getcontext().prec = 2
 	master_df = pd.DataFrame()
 
 	df = pd.read_csv(fort36_file,
 		sep = "\s+", header = None, usecols = [0, 1, 2],
 		names = ['pH', 'Conformer', 'Occ'])
 	
-	conformers = set(df['Conformer'].values)
+	conformers = set([true_conformer if true_conformer != '=' for true_conformer in df['Conformer'].values])
 	df['Occ'] = [float(string[4:len(string) + 1]) if string[0:3] == 'occ'
-		else float(string) for string in df['Occ'].values] 
+		else float(string) for string in df['Occ'].values]
+ 
 	for conformer in sorted(conformers):
 		df_conformer = df[ df['Conformer'] == str(conformer) ]
 		to_write = df_conformer.groupby(['pH'], 
-			sort = False).agg('std')
+			sort = False).agg('mean')
 		to_write.columns = [str(conformer)]
+
+		print(to_write)
+		to_write[conformer] = ['%.3f' % round(val,3) for val in 
+			to_write[conformer]]
+	
 		master_df = master_df.join(pd.DataFrame(to_write), 
 			how = 'right')
 
-	master_df.transpose().to_csv('bla.txt', sep = ' ')
+	master_df.index.name = 'ph'
+	
+	master_df.transpose().to_csv('fort99', sep = ' ')
 	
 	# IMPROVEMENTS NEEDED: CONVERT ALL FLOATS TO 2 DECIMAL PLACES
 	# THIS WILL IMPROVE THE CLEANLINESS OF THE FILE
